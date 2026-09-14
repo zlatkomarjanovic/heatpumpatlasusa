@@ -57,6 +57,8 @@ export type RebateLine = {
   amountHigh: number;
   status: 'open' | 'enrolling' | 'reserved' | 'expired' | 'unknown';
   note: string;
+  /** Internal program page, when we publish one. */
+  href?: string;
 };
 
 export type CalculatorResult = {
@@ -290,30 +292,30 @@ function regionalMultiplier(state: StateRecord | null): number {
  */
 export const STATE_REBATES: Record<string, RebateLine[]> = {
   MA: [
-    { id: 'ma-mass-save-whole-home', program: 'Mass Save whole-home air source heat pump', amountLow: 1250, amountHigh: 10000, status: 'open', note: 'Rebate scales with tons installed and whether the heat pump covers the whole home. Income-qualified tiers can exceed the standard cap.' },
-    { id: 'ma-mass-save-partial', program: 'Mass Save partial-home air source heat pump', amountLow: 500, amountHigh: 2500, status: 'open', note: 'Partial-home projects are eligible for a lower rebate, plus a sizing bonus in some cases.' },
+    { id: 'ma-mass-save-whole-home', program: 'Mass Save whole-home air source heat pump', amountLow: 1250, amountHigh: 10000, status: 'open', note: 'Rebate scales with tons installed and whether the heat pump covers the whole home. Income-qualified tiers can exceed the standard cap.', href: '/rebates/mass-save/' },
+    { id: 'ma-mass-save-partial', program: 'Mass Save partial-home air source heat pump', amountLow: 500, amountHigh: 2500, status: 'open', note: 'Partial-home projects are eligible for a lower rebate, plus a sizing bonus in some cases.', href: '/rebates/mass-save/' },
     { id: 'ma-hear', program: 'Massachusetts HEAR (federal home energy rebate)', amountLow: 0, amountHigh: 8000, status: 'enrolling', note: 'Federal HEAR funds are allocated to Massachusetts; consumer portal timing and income gates have moved. Confirm status before promising a figure.' },
   ],
   ME: [
-    { id: 'me-efficiency-maine-standard', program: 'Efficiency Maine standard heat pump rebate', amountLow: 500, amountHigh: 1000, status: 'open', note: 'Per eligible outdoor unit, with a lifetime cap per housing unit.' },
-    { id: 'me-efficiency-maine-moderate', program: 'Efficiency Maine moderate-income rebate', amountLow: 1000, amountHigh: 2000, status: 'open', note: 'Income-qualified tier.' },
-    { id: 'me-efficiency-maine-low', program: 'Efficiency Maine low-income rebate', amountLow: 3000, amountHigh: 9000, status: 'open', note: 'Per eligible outdoor unit up to a lifetime cap of $9,000 per housing unit.' },
+    { id: 'me-efficiency-maine-standard', program: 'Efficiency Maine standard heat pump rebate', amountLow: 500, amountHigh: 1000, status: 'open', note: 'Per eligible outdoor unit, with a lifetime cap per housing unit.', href: '/rebates/efficiency-maine/' },
+    { id: 'me-efficiency-maine-moderate', program: 'Efficiency Maine moderate-income rebate', amountLow: 1000, amountHigh: 2000, status: 'open', note: 'Income-qualified tier.', href: '/rebates/efficiency-maine/' },
+    { id: 'me-efficiency-maine-low', program: 'Efficiency Maine low-income rebate', amountLow: 3000, amountHigh: 9000, status: 'open', note: 'Per eligible outdoor unit up to a lifetime cap of $9,000 per housing unit.', href: '/rebates/efficiency-maine/' },
     { id: 'me-hear', program: 'Maine HEAR', amountLow: 0, amountHigh: 8000, status: 'reserved', note: 'Maine reached its initial reservation ceiling quickly and paused new applications. Treat as waitlist, not available.' },
   ],
   CO: [
     { id: 'co-hear-space-heating', program: 'Colorado HEAR heat pump for space heating and cooling', amountLow: 3000, amountHigh: 8000, status: 'open', note: '$3,000 standard, or up to $8,000 for qualifying cold-climate equipment. Income limits apply to the higher tier.' },
     { id: 'co-hear-hpwh', program: 'Colorado HEAR heat pump water heater', amountLow: 1750, amountHigh: 1750, status: 'open', note: 'Fixed per-unit rebate.' },
     { id: 'co-state-tax-credit', program: 'Colorado heat pump state tax credit', amountLow: 1000, amountHigh: 3000, status: 'open', note: 'Claimed by the registered contractor and passed through on the invoice, per four tons of installed capacity.' },
-    { id: 'co-xcel', program: 'Xcel Energy Colorado heat pump rebate', amountLow: 400, amountHigh: 2400, status: 'open', note: 'Varies by equipment tier and whether the home is gas-heated.' },
+    { id: 'co-xcel', program: 'Xcel Energy Colorado heat pump rebate', amountLow: 400, amountHigh: 2400, status: 'open', note: 'Varies by equipment tier and whether the home is gas-heated.', href: '/rebates/xcel-energy/' },
     { id: 'co-power-ahead', program: 'Power Ahead Colorado heat pump rebate', amountLow: 1500, amountHigh: 1500, status: 'open', note: 'Denver-region rebate for qualifying ENERGY STAR equipment.' },
   ],
   NY: [
-    { id: 'ny-clean-heat', program: 'NYS Clean Heat heat pump rebate', amountLow: 1000, amountHigh: 8000, status: 'open', note: 'Administered per utility territory; amounts vary by contractor and equipment tier.' },
-    { id: 'ny-hear', program: 'New York HEAR', amountLow: 0, amountHigh: 8000, status: 'open', note: 'New York is one of the states with a fully live consumer portal. Income-qualified.' },
-    { id: 'ny-con-edison', program: 'Con Edison heat pump rebate', amountLow: 1000, amountHigh: 6000, status: 'open', note: 'Utility-level program on top of NYS Clean Heat for qualifying projects.' },
+    { id: 'ny-clean-heat', program: 'NYS Clean Heat heat pump rebate', amountLow: 1000, amountHigh: 8000, status: 'open', note: 'Administered per utility territory; amounts vary by contractor and equipment tier.', href: '/rebates/nys-clean-heat/' },
+    { id: 'ny-hear', program: 'New York HEAR', amountLow: 0, amountHigh: 8000, status: 'open', note: 'New York is one of the states with a fully live consumer portal. Income-qualified.', href: '/rebates/nys-clean-heat/' },
+    { id: 'ny-con-edison', program: 'Con Edison heat pump rebate', amountLow: 1000, amountHigh: 6000, status: 'open', note: 'Utility-level program on top of NYS Clean Heat for qualifying projects.', href: '/rebates/nys-clean-heat/' },
   ],
   VT: [
-    { id: 'vt-efficiency-vermont', program: 'Efficiency Vermont heat pump rebate', amountLow: 500, amountHigh: 4500, status: 'open', note: 'Tiered by income and system type.' },
+    { id: 'vt-efficiency-vermont', program: 'Efficiency Vermont heat pump rebate', amountLow: 500, amountHigh: 4500, status: 'open', note: 'Tiered by income and system type.', href: '/rebates/efficiency-vermont/' },
     { id: 'vt-hear', program: 'Vermont HEAR', amountLow: 0, amountHigh: 8000, status: 'reserved', note: 'Vermont consumed its initial tranche and waitlists new applications.' },
   ],
   CA: [
@@ -325,7 +327,7 @@ export const STATE_REBATES: Record<string, RebateLine[]> = {
     { id: 'wa-commerce-hear', program: 'Washington HEAR (Commerce)', amountLow: 1000, amountHigh: 8000, status: 'open', note: 'Income-qualified; program year funding can close mid-year.' },
   ],
   OR: [
-    { id: 'or-energy-trust', program: 'Energy Trust of Oregon heat pump incentive', amountLow: 400, amountHigh: 2500, status: 'open', note: 'Varies by existing fuel, equipment tier and whether ductwork is included.' },
+    { id: 'or-energy-trust', program: 'Energy Trust of Oregon heat pump incentive', amountLow: 400, amountHigh: 2500, status: 'open', note: 'Varies by existing fuel, equipment tier and whether ductwork is included.', href: '/rebates/energy-trust-oregon/' },
   ],
   MN: [
     { id: 'mn-hear', program: 'Minnesota HEAR', amountLow: 1000, amountHigh: 8000, status: 'enrolling', note: 'Accepted federal funding; portal availability has lagged. Confirm before quoting.' },
@@ -346,7 +348,7 @@ export const STATE_REBATES: Record<string, RebateLine[]> = {
     { id: 'ri-clean-heat', program: 'Rhode Island Clean Heat heat pump rebate', amountLow: 500, amountHigh: 3000, status: 'open', note: 'Utility program, tiered.' },
   ],
   CT: [
-    { id: 'ct-energize', program: 'Energize CT heat pump rebate', amountLow: 500, amountHigh: 3500, status: 'open', note: 'Tiered by income and system.' },
+    { id: 'ct-energize', program: 'Energize CT heat pump rebate', amountLow: 500, amountHigh: 3500, status: 'open', note: 'Tiered by income and system.', href: '/rebates/energize-ct/' },
   ],
   PA: [
     { id: 'pa-hear', program: 'Pennsylvania HEAR', amountLow: 1000, amountHigh: 8000, status: 'enrolling', note: 'Enrolling during 2026.' },
@@ -355,7 +357,7 @@ export const STATE_REBATES: Record<string, RebateLine[]> = {
     { id: 'mi-hear', program: 'Michigan HEAR', amountLow: 1000, amountHigh: 8000, status: 'open', note: 'Launched; funding is first-come.' },
   ],
   WI: [
-    { id: 'wi-focus-on-energy', program: 'Focus on Energy heat pump incentive', amountLow: 400, amountHigh: 2000, status: 'open', note: 'Residential tiered incentive.' },
+    { id: 'wi-focus-on-energy', program: 'Focus on Energy heat pump incentive', amountLow: 400, amountHigh: 2000, status: 'open', note: 'Residential tiered incentive.', href: '/rebates/focus-on-energy/' },
   ],
   GA: [
     { id: 'ga-hear', program: 'Georgia HEAR', amountLow: 1000, amountHigh: 8000, status: 'open', note: 'One of the earlier live programs, with income tiers.' },

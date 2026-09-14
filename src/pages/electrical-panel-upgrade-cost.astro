@@ -12,6 +12,7 @@ import SourceList from '@/components/SourceList.astro';
 import { COST_BANDS, ELECTRICAL_ADDERS } from '@/data/costs';
 import { pickSources } from '@/data/sources';
 import { formatUsd } from '@/lib/calculator';
+import KeywordCluster from '@/components/KeywordCluster.astro';
 
 const path = '/electrical-panel-upgrade-cost/';
 const updated = new Date('2026-09-14');
@@ -269,11 +270,12 @@ const citations = pickSources(['rewiringAmericaPanel', 'eiaElectricity', 'census
 
     <div class="mx-auto mt-16 max-w-3xl space-y-12">
       <Faq items={faqItems} />
+      <KeywordCluster path={path} />
       <RelatedPages
         siblings={[
+          { label: 'Do I need a panel upgrade for a heat pump?', href: '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/' },
           { label: 'Heat pump cost', href: '/heat-pump-cost/' },
           { label: 'Mini split cost', href: '/mini-split-cost/' },
-          { label: 'Water heater cost', href: '/heat-pump-water-heater-cost/' },
         ]}
         parents={[{ label: 'Calculator', href: '/calculator/' }]}
       />

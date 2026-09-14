@@ -88,6 +88,18 @@ const marketCards = [
   { name: 'Seattle, WA', href: '/markets/seattle-wa/', code: 'WA', summary: 'Cheap hydro power, mild winters, and a state program for income-qualified households.' },
 ];
 
+/** Easy branded and question queries a new domain can actually compete for. */
+const easyWins = [
+  { href: '/rebates/mass-save/', title: 'Mass Save heat pump rebate', body: 'Up to $10,000 for a whole-home Massachusetts project. Reserve the rebate before anyone starts work.', meta: 'Massachusetts program', icon: 'gift' },
+  { href: '/rebates/efficiency-maine/', title: 'Efficiency Maine heat pump rebate', body: 'Up to $9,000 lifetime for qualifying Maine homes. Oil-to-heat-pump is the strongest case in the country.', meta: 'Maine program', icon: 'gift' },
+  { href: '/calculator/', title: 'Heat pump cost calculator', body: 'ZIP-level install cost, operating cost, only open rebates, and the cases where a furnace still wins.', meta: 'Free, no account', icon: 'calculator' },
+  { href: '/electrical-panel-upgrade-cost/', title: 'Electrical panel upgrade cost', body: '$1,400 to $5,500 for a typical 200 amp panel. A heat pump does not always need one.', meta: 'Often avoidable', icon: 'bolt' },
+  { href: '/guides/what-size-heat-pump-do-i-need/', title: 'What size heat pump do I need?', body: 'Manual J, not a square-foot rule. Oversizing is the more common and more expensive mistake.', meta: 'Sizing guide', icon: 'scale' },
+  { href: '/guides/do-heat-pumps-work-in-cold-weather/', title: 'Do heat pumps work in cold weather?', body: 'Yes. Cold-climate units keep heating below 0 F. The real question is running cost on the worst nights.', meta: 'Cold climate', icon: 'snowflake' },
+  { href: '/rebates/nys-clean-heat/', title: 'NYSERDA heat pump rebate', body: 'NYS Clean Heat plus New York HEAR. Amounts vary by utility territory and contractor.', meta: 'New York program', icon: 'gift' },
+  { href: '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/', title: 'Do I need a panel upgrade for a heat pump?', body: 'A load calculation decides it. A 100 amp service is enough more often than sales calls admit.', meta: 'Yes or no', icon: 'bolt' },
+];
+
 /** Primary content hubs, each mapped to measured US search demand. */
 const hubs = [
   { href: '/heat-pump-cost/', title: 'Heat pump cost', body: 'Installed cost to install a heat pump for ducted, cold-climate, ductless and geothermal systems, with what pushes each project above the band.', meta: '22,200 monthly US searches', icon: 'dollar' },
@@ -143,7 +155,17 @@ const homeFaqs = [
   {
     question: 'Are heat pump rebates still available in 2026?',
     answer:
-      'The federal 25C heat pump tax credit ended for equipment installed after 2025. State and utility heat pump rebates are still open in several markets, including Mass Save, Efficiency Maine, Xcel Energy and Eversource. We only count a program if we have verified it is accepting applications.',
+      'The federal 25C heat pump tax credit ended for equipment installed after 2025. State and utility heat pump rebates are still open in several markets, including the Mass Save heat pump rebate, the Efficiency Maine heat pump rebate, the NYSERDA heat pump rebate and Efficiency Vermont. We only count a program if we have verified it is accepting applications.',
+  },
+  {
+    question: 'How much is the Mass Save heat pump rebate?',
+    answer:
+      'Whole-home Massachusetts projects can receive up to about $10,000. Partial-home projects are lower, generally $500 to $2,500, with a $500 sizing bonus in some cases. You usually need a reservation before installation. Read the Mass Save heat pump rebate page before you sign.',
+  },
+  {
+    question: 'Do I need a panel upgrade for a heat pump?',
+    answer:
+      'Not always. A load calculation against your service and appliances decides it. A typical 200 amp electrical panel upgrade cost is $1,400 to $5,500 if you do need one. A single-zone mini split on a 200 amp panel with spare capacity usually fits without the upgrade.',
   },
   {
     question: 'Is a heat pump cheaper than a furnace?',
@@ -164,8 +186,8 @@ const homeFaqs = [
     isHub
     faqs={homeFaqs}
     itemList={{
-      name: 'Heat pump cost and rebate guides',
-      items: hubs.map((h) => ({ name: h.title, url: h.href })),
+      name: 'Heat pump cost, rebate and calculator pages',
+      items: [...easyWins.slice(0, 6), ...hubs].map((h) => ({ name: h.title, url: h.href })),
     }}
   />
 
@@ -266,6 +288,32 @@ const homeFaqs = [
   </section>
 
   <div class="container-atlas space-y-24 py-20 lg:space-y-32 lg:py-28">
+    <!-- Easy-win answers a new site can actually rank for -->
+    <Section
+      id="start-here"
+      title="Start with the question you already have"
+      lede="These are the branded rebates, the calculator, and the yes-or-no questions people type. If you already know what you need, skip the national ranges."
+      class="reveal-on-scroll"
+    >
+      <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {easyWins.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-line transition-shadow hover:shadow-lift"
+            >
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700 ring-1 ring-brand-100 transition group-hover:bg-brand-700 group-hover:text-white">
+                <Icon name={item.icon} size={20} />
+              </span>
+              <h3 class="mt-4 text-base font-semibold text-ink-950 group-hover:text-brand-700">{item.title}</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{item.body}</p>
+              <p class="mt-4 text-2xs font-medium text-ink-400">{item.meta}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Section>
+
     <!-- Cost bands + image -->
     <Section
       id="costs"
@@ -568,6 +616,9 @@ const homeFaqs = [
         {[
           { name: 'Mass Save heat pump rebate', href: '/rebates/mass-save/' },
           { name: 'Efficiency Maine heat pump rebate', href: '/rebates/efficiency-maine/' },
+          { name: 'NYSERDA heat pump rebate', href: '/rebates/nys-clean-heat/' },
+          { name: 'Efficiency Vermont heat pump rebate', href: '/rebates/efficiency-vermont/' },
+          { name: 'Energize CT heat pump rebate', href: '/rebates/energize-ct/' },
           { name: 'Xcel Energy heat pump rebate', href: '/rebates/xcel-energy/' },
           { name: 'Eversource heat pump rebate', href: '/rebates/eversource/' },
           { name: 'Heat pump tax credit', href: '/heat-pump-tax-credit/' },

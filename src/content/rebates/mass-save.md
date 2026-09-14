@@ -78,7 +78,7 @@ related:
   - '/heat-pump-vs-oil/'
   - '/markets/boston-ma/'
 ---
-Massachusetts is the most mature heat pump incentive market in the country, and Mass Save is why. The program has been running long enough that most contractors in the state know how to work with it, which sounds like a small thing until you talk to a homeowner in a state where nobody has done the paperwork before.
+The Massachusetts heat pump rebate people search is Mass Save. Massachusetts is the most mature heat pump incentive market in the country, and Mass Save is why. The program has been running long enough that most contractors in the state know how to work with it, which sounds like a small thing until you talk to a homeowner in a state where nobody has done the paperwork before.
 
 The size of the rebate is the headline, but the **order of operations** is what actually determines whether you get paid.
 

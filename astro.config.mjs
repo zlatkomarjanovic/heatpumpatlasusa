@@ -25,7 +25,21 @@ export default defineConfig({
         if (url === 'https://heatpumpatlasusa.com/') {
           return { ...item, lastmod, changefreq: 'daily', priority: 1.0 };
         }
-        if (url.includes('/calculator/') || url.includes('/heat-pump-cost/')) {
+        const easyWins = [
+          '/calculator/',
+          '/rebates/mass-save/',
+          '/rebates/efficiency-maine/',
+          '/electrical-panel-upgrade-cost/',
+          '/guides/what-size-heat-pump-do-i-need/',
+          '/guides/do-heat-pumps-work-in-cold-weather/',
+          '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/',
+          '/rebates/nys-clean-heat/',
+          '/rebates/efficiency-vermont/',
+        ];
+        if (easyWins.some((path) => url.endsWith(path) || url.includes(path))) {
+          return { ...item, lastmod, changefreq: 'weekly', priority: 0.96 };
+        }
+        if (url.includes('/heat-pump-cost/')) {
           return { ...item, lastmod, changefreq: 'weekly', priority: 0.95 };
         }
         if (url.includes('/mini-split-cost/') || url.includes('/heat-pump-vs-furnace/') || url.includes('/rebates/')) {

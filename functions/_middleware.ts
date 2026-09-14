@@ -1,15 +1,21 @@
 /**
- * Force HTTPS at the Worker edge.
+ * Force HTTPS and apex host at the Worker edge.
  *
- * Cloudflare "Always Use HTTPS" should also be on in the zone. This covers
- * requests that still arrive as http via X-Forwarded-Proto.
+ * Static assets are served without this file unless wrangler.toml sets
+ * run_worker_first. Cloudflare "Always Use HTTPS" should also be on.
  */
 export const onRequest = async (context: { request: Request; next: () => Promise<Response> }) => {
   const url = new URL(context.request.url);
-  const proto = context.request.headers.get('x-forwarded-proto') ?? url.protocol.replace(':', '');
+  const host = url.hostname.replace(/\.$/, '').toLowerCase();
+  const protoHeader = context.request.headers.get('x-forwarded-proto');
+  const visitor = context.request.headers.get('cf-visitor') ?? '';
+  const isHttp =
+    protoHeader === 'http' || visitor.includes('"scheme":"http"') || url.protocol === 'http:';
+  const isWww = host === 'www.heatpumpatlasusa.com';
 
-  if (proto === 'http') {
+  if (isHttp || isWww) {
     url.protocol = 'https:';
+    url.hostname = 'heatpumpatlasusa.com';
     return Response.redirect(url.toString(), 301);
   }
 

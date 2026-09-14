@@ -952,7 +952,13 @@ function ResultPanel({
             <ul className="mt-2 space-y-2">
               {(showAllRebates ? result.rebates : openRebates).map((rebate) => (
                 <li key={rebate.id} className="flex items-baseline justify-between gap-3 text-xs">
-                  <span className="text-ink-700">{rebate.program}</span>
+                  {rebate.href ? (
+                    <a href={rebate.href} className="text-brand-700 underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600">
+                      {rebate.program}
+                    </a>
+                  ) : (
+                    <span className="text-ink-700">{rebate.program}</span>
+                  )}
                   <span className="shrink-0 tabular-nums text-ink-900">
                     {formatUsd(rebate.amountLow)} to {formatUsd(rebate.amountHigh)}
                   </span>

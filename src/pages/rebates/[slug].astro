@@ -19,6 +19,7 @@ import SourceList from '@/components/SourceList.astro';
 import { getCollection, render } from 'astro:content';
 import { STATE_BY_CODE } from '@/data/states';
 import { formatUsd } from '@/lib/calculator';
+import KeywordCluster from '@/components/KeywordCluster.astro';
 
 export async function getStaticPaths() {
   const programs = await getCollection('rebates');
@@ -77,13 +78,15 @@ const statusLabel: Record<string, string> = {
   unknown: 'Status unconfirmed',
 };
 
-const relatedMarket = d.stateCodes.includes('MA') && program.id === 'mass-save'
+const relatedMarket = d.stateCodes.includes('MA') && (program.id === 'mass-save' || program.id === 'eversource')
   ? { label: 'Boston, MA market', href: '/markets/boston-ma/', description: 'Local housing stock and contractor context' }
   : d.stateCodes.includes('ME') && program.id === 'efficiency-maine'
     ? { label: 'Portland, ME market', href: '/markets/portland-me/', description: 'The strongest oil conversion case in the country' }
     : d.stateCodes.includes('CO') && program.id === 'xcel-energy'
       ? { label: 'Denver, CO market', href: '/markets/denver-co/', description: 'Xcel territory, HEAR and the state credit' }
-      : null;
+      : d.stateCodes.includes('OR') && program.id === 'energy-trust-oregon'
+        ? { label: 'Seattle, WA market', href: '/markets/seattle-wa/', description: 'Nearby Pacific Northwest climate and rate context' }
+        : null;
 ---
 
 <BaseLayout>
@@ -203,6 +206,7 @@ const relatedMarket = d.stateCodes.includes('MA') && program.id === 'mass-save'
     <div class="mx-auto mt-16 max-w-3xl space-y-12">
       <QuoteCta market={stateNames} />
       <Faq items={faqItems} />
+      <KeywordCluster path={path} />
       <RelatedPages
         parents={[
           { label: 'All rebate programs', href: '/rebates/', description: 'Current status of every program we track' },

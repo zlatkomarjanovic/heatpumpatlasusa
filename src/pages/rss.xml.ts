@@ -18,9 +18,12 @@ export async function GET(context: APIContext) {
     { title: 'Heat pump vs furnace', description: 'State-by-state running cost model, including where the furnace wins.', link: '/heat-pump-vs-furnace/' },
     { title: 'Heat pump vs oil', description: 'Why the Northeast oil conversion is the strongest case in the country.', link: '/heat-pump-vs-oil/' },
     { title: 'Heat pump cost calculator', description: 'ZIP-level installed cost, operating cost, open rebates and payback.', link: '/calculator/' },
-    { title: 'Heat pump rebates still open', description: 'Verified program status for Mass Save, Efficiency Maine, Xcel and Eversource.', link: '/rebates/' },
+    { title: 'Heat pump rebates still open', description: 'Verified program status for Mass Save, Efficiency Maine, NYSERDA, Vermont and more.', link: '/rebates/' },
     { title: 'Mass Save heat pump rebate', description: '2026 amounts, whole-home vs partial-home, and the reservation rule.', link: '/rebates/mass-save/' },
     { title: 'Efficiency Maine heat pump rebate', description: 'Income tiers, caps and which Maine programs are reserved.', link: '/rebates/efficiency-maine/' },
+    { title: 'NYSERDA heat pump rebate', description: 'NYS Clean Heat amounts, New York HEAR, and what no longer stacks.', link: '/rebates/nys-clean-heat/' },
+    { title: 'Efficiency Vermont heat pump rebate', description: 'Open Vermont tiers and why HEAR is waitlisted.', link: '/rebates/efficiency-vermont/' },
+    { title: 'Electrical panel upgrade cost', description: '200 amp panel pricing and when a heat pump actually needs one.', link: '/electrical-panel-upgrade-cost/' },
   ];
 
   const items = [

@@ -19,6 +19,7 @@ import Calculator from '@/components/Calculator.tsx';
 import { COST_BANDS, EFFICIENCY } from '@/data/costs';
 import { pickSources } from '@/data/sources';
 import { formatUsd } from '@/lib/calculator';
+import KeywordCluster from '@/components/KeywordCluster.astro';
 
 const path = '/calculator/';
 const updated = new Date('2026-09-14');
@@ -208,15 +209,16 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
         </p>
       </section>
 
+      <KeywordCluster path={path} />
       <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <Faq items={faqItems} />
         <RelatedPages
           compact
           siblings={[
             { label: 'Heat pump installation cost', href: '/heat-pump-cost/', description: 'Full installed cost breakdown' },
-            { label: 'Mini split installation cost', href: '/mini-split-cost/', description: 'Per-zone ductless pricing' },
-            { label: 'Heat pump operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
-            { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The comparison model, explained' },
+            { label: 'Mass Save heat pump rebate', href: '/rebates/mass-save/', description: 'Massachusetts amounts and reservation rule' },
+            { label: 'Electrical panel upgrade cost', href: '/electrical-panel-upgrade-cost/', description: 'When a 200 amp panel is actually required' },
+            { label: 'What size heat pump do I need?', href: '/guides/what-size-heat-pump-do-i-need/', description: 'Manual J, not a square-foot rule' },
           ]}
         />
       </div>

@@ -60,6 +60,10 @@ const COVERS: Record<string, GuideCover> = {
     image: coldClimate,
     alt: 'Heat pump outdoor unit in winter, an alternative to burning wood pellets',
   },
+  'do-i-need-a-panel-upgrade-for-a-heat-pump': {
+    image: panel,
+    alt: 'Home electrical panel, the service a heat pump may or may not require upgrading',
+  },
 };
 
 export function guideCover(slug: string): GuideCover {
