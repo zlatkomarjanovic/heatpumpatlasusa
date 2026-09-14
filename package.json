@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "icons": "node scripts/generate-icons.mjs",
+    "indexnow": "npx tsx scripts/indexnow.mts"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",

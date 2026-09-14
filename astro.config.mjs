@@ -19,8 +19,22 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) => !page.includes('/404'),
-      changefreq: 'weekly',
-      priority: 0.7,
+      serialize(item) {
+        const url = item.url;
+        if (url === 'https://heatpumpatlasusa.com/') {
+          return { ...item, changefreq: 'daily', priority: 1.0 };
+        }
+        if (url.includes('/calculator/')) {
+          return { ...item, changefreq: 'weekly', priority: 0.9 };
+        }
+        if (url.includes('/rebates/') || url.includes('/heat-pump-cost/')) {
+          return { ...item, changefreq: 'weekly', priority: 0.85 };
+        }
+        if (url.includes('/guides/') || url.includes('/markets/')) {
+          return { ...item, changefreq: 'monthly', priority: 0.75 };
+        }
+        return { ...item, changefreq: 'weekly', priority: 0.7 };
+      },
     }),
   ],
   vite: {

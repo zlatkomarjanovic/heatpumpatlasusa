@@ -1,0 +1,23 @@
+# HeatPumpAtlasUSA
+
+> Data-driven US heat pump costs, operating costs, rebates and switching economics.
+
+HeatPumpAtlasUSA models whether a heat pump pays in a given US home using EIA electricity and gas prices, NOAA heating degree days, Census fuel mix, and a short list of rebate programs that we verify by hand. The calculator publishes losing cases. It does not assume a heat pump always saves money.
+
+## Main pages
+
+- [Home](https://heatpumpatlasusa.com/): Cost ranges and the switching calculator
+- [Calculator](https://heatpumpatlasusa.com/calculator/): Installed cost, running cost, open rebates and payback by ZIP
+- [Heat pump cost](https://heatpumpatlasusa.com/heat-pump-cost/): Installed cost by system type
+- [Operating cost](https://heatpumpatlasusa.com/heat-pump-operating-cost/): Annual running cost by fuel and state
+- [Rebates](https://heatpumpatlasusa.com/rebates/): Programs that are actually open
+- [Markets](https://heatpumpatlasusa.com/markets/): Cities where local context changes the answer
+- [Methodology](https://heatpumpatlasusa.com/methodology/): Sources, assumptions and limitations
+- [About](https://heatpumpatlasusa.com/about/): Who writes this and how the site is funded
+- [Guides](https://heatpumpatlasusa.com/guides/): Longer answers to common questions
+- [Sitemap](https://heatpumpatlasusa.com/sitemap-index.xml)
+
+## Optional
+
+- [RSS](https://heatpumpatlasusa.com/rss.xml)
+- Corrections: editor@heatpumpatlasusa.com

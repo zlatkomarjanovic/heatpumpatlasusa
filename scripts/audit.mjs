@@ -175,7 +175,16 @@ for (const [url, count] of inbound) {
 // ---------------------------------------------------------------------------
 // 4. Required infrastructure files.
 // ---------------------------------------------------------------------------
-for (const required of ['robots.txt', 'sitemap-index.xml', 'rss.xml', 'favicon.svg', 'og-default.svg']) {
+for (const required of [
+  'robots.txt',
+  'sitemap-index.xml',
+  'rss.xml',
+  'favicon.ico',
+  'favicon-48x48.png',
+  'apple-touch-icon.png',
+  'og-default.png',
+  'logo-512.png',
+]) {
   if (!fs.existsSync(path.join(DIST, required))) fail(`Missing required file: ${required}`);
 }
 

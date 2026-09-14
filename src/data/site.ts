@@ -20,6 +20,8 @@ export const SITE = {
   /** Human-readable date of the last data refresh, ISO format. */
   dataUpdated: '2026-09-14',
   founded: '2026',
+  /** Public IndexNow key. The matching file lives at /{key}.txt. */
+  indexNowKey: '7c4e9a2b8f1d6e0a3c5b9d4f8a2e1c70',
 } as const;
 
 /**

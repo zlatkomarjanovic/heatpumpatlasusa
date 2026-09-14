@@ -37,9 +37,16 @@ const { bodyClass = '', heroOverlay = false } = Astro.props;
       // styles (scroll reveal) never hide content from no-JS visitors.
       document.documentElement.classList.add('js');
     </script>
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#10475a" />
+    <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name} feed`} href="/rss.xml" />
+    <link rel="author" href={`${SITE.url}/about/`} />
     <meta name="format-detection" content="telephone=no" />
     <meta name="generator" content={Astro.generator} />
     <meta name="data-revision" content={SITE.dataRevision} />

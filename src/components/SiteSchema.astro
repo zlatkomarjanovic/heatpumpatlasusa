@@ -35,9 +35,15 @@ const orgSchema = {
         availableLanguage: 'English',
       },
       sameAs: ['https://github.com/zlatkomarjanovic/heatpumpatlasusa'],
+      image: {
+        '@type': 'ImageObject',
+        url: `${SITE.url}/og-default.png`,
+        width: 1200,
+        height: 630,
+      },
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE.url}/logo.svg`,
+        url: `${SITE.url}/logo-512.png`,
         width: 512,
         height: 512,
       },
@@ -47,17 +53,11 @@ const orgSchema = {
       '@id': `${SITE.url}/#website`,
       url: SITE.url,
       name: SITE.name,
+      alternateName: SITE.shortName,
       description: SITE.description,
       inLanguage: 'en-US',
       publisher: { '@id': `${SITE.url}/#organization` },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${SITE.url}/guides/?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
+      image: `${SITE.url}/og-default.png`,
     },
   ],
 };

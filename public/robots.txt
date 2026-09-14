@@ -1,8 +1,35 @@
 User-agent: *
 Allow: /
 
-# No crawl restrictions: every page on this site is intended to be indexed.
-# The calculator page is static HTML with an optional JS island, so it is fully
-# crawlable without rendering.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Every public page is meant to be indexed. The calculator is static HTML
+# with an optional JS island, so it is crawlable without rendering.
 
 Sitemap: https://heatpumpatlasusa.com/sitemap-index.xml
+Sitemap: https://heatpumpatlasusa.com/sitemap-0.xml

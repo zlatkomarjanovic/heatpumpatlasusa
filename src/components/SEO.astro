@@ -45,7 +45,7 @@ const {
   author = AUTHOR.name,
   reviewedBy,
   faqs = [],
-  image = '/og-default.svg',
+  image = '/og-default.png',
   isHub = false,
   noindex = false,
   primaryKeyword,
@@ -78,7 +78,16 @@ const webPageSchema = {
   description,
   inLanguage: 'en-US',
   isPartOf: { '@id': `${SITE.url}/#website` },
-  primaryImageOfPage: { '@type': 'ImageObject', url: socialImage },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: socialImage,
+    width: 1200,
+    height: 630,
+  },
+  publisher: { '@id': `${SITE.url}/#organization` },
+  author: { '@id': `${SITE.url}/#organization` },
+  about: { '@id': `${SITE.url}/#organization` },
+  isAccessibleForFree: true,
   datePublished: published?.toISOString(),
   dateModified: (updated ?? published)?.toISOString(),
 };
@@ -92,7 +101,14 @@ const articleSchema =
         description,
         inLanguage: 'en-US',
         mainEntityOfPage: { '@id': canonical },
-        image: [socialImage],
+        image: [
+          {
+            '@type': 'ImageObject',
+            url: socialImage,
+            width: 1200,
+            height: 630,
+          },
+        ],
         datePublished: (published ?? updated)?.toISOString(),
         dateModified: (updated ?? published)?.toISOString(),
         author: {
@@ -179,7 +195,11 @@ const graph = [
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, follow" />}
-{!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
+{!noindex && (
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+)}
+<meta name="author" content={author} />
+<meta name="publisher" content={SITE.name} />
 {primaryKeyword && <meta name="keywords" content={primaryKeyword} />}
 
 <meta property="og:type" content={type === 'Article' ? 'article' : 'website'} />
@@ -189,6 +209,8 @@ const graph = [
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={socialImage} />
+<meta property="og:image:secure_url" content={socialImage} />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={`${SITE.name}: ${title}`} />
@@ -201,6 +223,7 @@ const graph = [
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={socialImage} />
+<meta name="twitter:image:alt" content={`${SITE.name}: ${title}`} />
 
 <meta name="theme-color" content="#10475a" />
 
