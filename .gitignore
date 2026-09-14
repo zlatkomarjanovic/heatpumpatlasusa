@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 .wrangler/
+.wrangler-dry-run/
 .env
 .env.*
 !.env.example
