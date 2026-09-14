@@ -1,0 +1,248 @@
+---
+/**
+ * Rebate hub. Lists every program we track, grouped by status so a paused
+ * program is impossible to mistake for available money.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import Callout from '@/components/Callout.astro';
+import ProgramCard from '@/components/ProgramCard.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getCollection } from 'astro:content';
+import { pickSources } from '@/data/sources';
+
+const path = '/rebates/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Rebates', href: path },
+];
+
+const programs = (await getCollection('rebates')).sort(
+  (a, b) => (b.data.incentives[0]?.amountHigh ?? 0) - (a.data.incentives[0]?.amountHigh ?? 0),
+);
+
+const open = programs.filter((p) => p.data.programStatus === 'open');
+const enrolling = programs.filter((p) => p.data.programStatus === 'enrolling');
+const limited = programs.filter((p) => p.data.programStatus === 'reserved' || p.data.programStatus === 'expired');
+
+const faqItems = [
+  {
+    question: 'Why do you only track a handful of programs?',
+    answer:
+      'Because accuracy beats coverage. Programs change status, exhaust funding and revise amounts faster than any automated feed we evaluated can keep up with, and publishing a stale rebate as available is worse than publishing fewer programs. We track a focused list, verify each one, and record a status and a verification date. If a program is paused or reserved, we say so and exclude it from your calculator total.',
+  },
+  {
+    question: 'Are these amounts guaranteed?',
+    answer:
+      'No. Every amount on this site is our best reading of the published program terms at the date shown, and program terms change. Several of the largest programs now require a reservation or a commitment letter before work begins, and applying after installation can make a project ineligible. Treat these figures as a planning input and confirm the current amount with the program before you sign a contract.',
+  },
+  {
+    question: 'What happened to the federal 25C tax credit?',
+    answer:
+      'The 25C Energy Efficient Home Improvement Credit applied to qualifying heat pumps placed in service through 31 December 2025. For equipment installed in 2026 it is not available. Some official pages still describe the credit as current, which is a real source of confusion. What survived is the state-administered HEAR and HOMES rebate programs, which were created separately and are still funded in many states.',
+  },
+  {
+    question: 'What are HEAR and HOMES?',
+    answer:
+      'Two federally funded, state-administered rebate programs created by the Inflation Reduction Act. HEEHRA, usually shortened to HEAR, funds efficient electric appliances including heat pumps and is income-qualified. HOMES funds whole-home energy retrofits based on measured or modelled savings. States applied for funding independently and launched at very different times, which is why the map is uneven.',
+  },
+  {
+    question: 'Why do some states have nothing?',
+    answer:
+      'Because the programs are run by state energy offices, and some states have not launched consumer-facing portals despite accepting funding. Others launched, exhausted their initial allocation and paused. Texas, Florida and other southeastern states have been slowest to launch. It is a policy difference, not a data gap on our side.',
+  },
+  {
+    question: 'Can I stack programs?',
+    answer:
+      'Sometimes, and the rules are specific to each combination. Colorado and Massachusetts both have stackable structures. The general principle is that federal money and state or utility money can often combine, but two programs funding the same measure sometimes cannot. Confirm the specific stack with the program and your contractor before you assume a total.',
+  },
+];
+
+const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStarTaxCredits']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Rebates and Incentives: Which Programs Are Actually Open"
+    description="We track a focused list of US heat pump rebate programs and record whether each is open, enrolling, or reserved. Paused money is excluded from your calculator total."
+    path={path}
+    type="CollectionPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump rebates"
+    isHub
+  />
+
+  <PageHeader
+    eyebrow="Rebates and incentives"
+    title="Which heat pump programs are actually open"
+    standfirst="Rebate status matters more than rebate size. A $10,000 program that has stopped accepting applications is worth zero, and several of the largest US programs have done exactly that."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: `${open.length} open`, label: `of ${programs.length} programs we track, as of our last verification`, source: 'Verified program by program' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="why" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">Why this page is short on purpose</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              You can find a list of thousands of energy incentives on DSIRE, and you should use it. What DSIRE cannot
+              tell you is whether a program is accepting applications this week, whether a reservation is required before
+              work begins, or whether the funding tranche ran out two months ago.
+            </p>
+            <p>
+              Those are the questions that decide whether you actually get paid. So this hub tracks a smaller number of
+              programs, records a status and a verification date for each one, and feeds the{' '}
+              <a href="/calculator/">calculator</a> with only the programs marked open.
+            </p>
+          </div>
+
+          <Callout tone="caution" title="The 25C problem" class="mt-6">
+            <p>
+              The federal 25C tax credit ended for equipment placed in service after 31 December 2025. Multiple government
+              and nonprofit pages still describe it as available, and a lot of 2026 content was written from those pages.
+              If a rebate total you have been quoted relies on 25C, deduct it and recheck the project.
+            </p>
+          </Callout>
+        </section>
+
+        {open.length > 0 && (
+          <Section id="open" number="1" title="Open now" lede="These programs are accepting applications. Verify the current amount and any reservation requirement before you sign.">
+            <ul class="grid gap-4 sm:grid-cols-2">
+              {open.map((program) => (
+                <li>
+                  <ProgramCard
+                    name={program.data.program}
+                    administrator={program.data.administrator}
+                    href={`/rebates/${program.id}/`}
+                    status={program.data.programStatus}
+                    amountLow={program.data.incentives[0]?.amountLow}
+                    amountHigh={program.data.incentives[0]?.amountHigh}
+                    unit={program.data.incentives[0]?.unit}
+                    summary={program.data.description}
+                    lastVerified={program.data.lastVerified}
+                    incomeGated={program.data.incomeGated}
+                  />
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
+
+        {enrolling.length > 0 && (
+          <Section id="enrolling" number="2" title="Enrolling or launching" lede="These programs are funded and moving, but the consumer portal or the contractor rules may still be settling. Confirm the timeline before planning a project around them.">
+            <ul class="grid gap-4 sm:grid-cols-2">
+              {enrolling.map((program) => (
+                <li>
+                  <ProgramCard
+                    name={program.data.program}
+                    administrator={program.data.administrator}
+                    href={`/rebates/${program.id}/`}
+                    status={program.data.programStatus}
+                    amountLow={program.data.incentives[0]?.amountLow}
+                    amountHigh={program.data.incentives[0]?.amountHigh}
+                    unit={program.data.incentives[0]?.unit}
+                    summary={program.data.description}
+                    lastVerified={program.data.lastVerified}
+                    incomeGated={program.data.incomeGated}
+                  />
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
+
+        {limited.length > 0 && (
+          <Section id="limited" number="3" title="Reserved, paused or expired" lede="Do not plan a project around these. We include them so you can recognise the programs that other pages still advertise as available.">
+            <ul class="grid gap-4 sm:grid-cols-2">
+              {limited.map((program) => (
+                <li>
+                  <ProgramCard
+                    name={program.data.program}
+                    administrator={program.data.administrator}
+                    href={`/rebates/${program.id}/`}
+                    status={program.data.programStatus}
+                    amountLow={program.data.incentives[0]?.amountLow}
+                    amountHigh={program.data.incentives[0]?.amountHigh}
+                    unit={program.data.incentives[0]?.unit}
+                    summary={program.data.description}
+                    lastVerified={program.data.lastVerified}
+                    incomeGated={program.data.incomeGated}
+                  />
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
+
+        <Section id="states" number="4" title="Programs we have not yet covered" lede="We add programs as we can verify them, not as we find them.">
+          <div class="prose-atlas">
+            <p>
+              There are active heat pump programs in most US states, including several we do not yet track in detail. If
+              your state is not listed, the reliable path is your state energy office and your utility, in that order. The
+              state office administers the federal money and the utility runs the equipment rebate.
+            </p>
+            <p>
+              If you think we are missing a significant program, tell us and we will verify it. Corrections are welcome
+              and we record them on the <a href="/methodology/#corrections">methodology page</a>.
+            </p>
+          </div>
+          <Callout tone="caution" title="Do not plan around the 25C tax credit" class="mt-5">
+            <p>
+              The federal 25C Energy Efficient Home Improvement Credit ended for equipment placed in service after 31
+              December 2025, and several official pages still present it as current. Read
+              <a href="/heat-pump-tax-credit/">what actually survived, and what it means for your project</a>.
+            </p>
+          </Callout>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#why', label: 'Why this list is short' },
+              { href: '#open', label: 'Open now' },
+              { href: '#enrolling', label: 'Enrolling' },
+              { href: '#limited', label: 'Reserved or expired' },
+              { href: '#states', label: 'Coverage gaps' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        children={[
+          { label: 'Mass Save (Massachusetts)', href: '/rebates/mass-save/', description: 'The largest whole-home rebate in the US' },
+          { label: 'Efficiency Maine', href: '/rebates/efficiency-maine/', description: 'Oil conversion incentives with income tiers' },
+          { label: 'Xcel Energy (Colorado)', href: '/rebates/xcel-energy/', description: 'Three stackable programs' },
+          { label: 'Eversource', href: '/rebates/eversource/', description: 'MA, CT and NH, plus the heat pump rate' },
+        ]}
+        siblings={[
+          { label: 'Calculator', href: '/calculator/', description: 'Applies only open programs' },
+          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
+          { label: 'Markets', href: '/markets/' },
+        ]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,236 @@
+---
+/**
+ * Markets hub.
+ *
+ * Cities only. We deliberately do not publish a state or city grid, because the
+ * keyword research showed negligible exact-match search volume for city cost
+ * terms. These pages exist because the local context genuinely differs.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import MarketCard from '@/components/MarketCard.astro';
+import Callout from '@/components/Callout.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getCollection } from 'astro:content';
+import { STATES, STATE_BY_CODE, type StateRecord } from '@/data/states';
+import { pickSources } from '@/data/sources';
+
+const path = '/markets/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Markets', href: path },
+];
+
+const markets = (await getCollection('markets')).filter((m) => !m.data.draft);
+
+const faqItems = [
+  {
+    question: 'Why do you only cover a few cities?',
+    answer:
+      'Because city-level search demand for heat pump cost terms is far smaller than most SEO content assumes. In our keyword research, only 8 of 78 priority city keywords had any measurable monthly search volume, and the largest was around 50 searches. Publishing hundreds of templated city pages would create thin, near-duplicate content that does not serve anyone. We publish pages where the housing stock, fuel mix, program or contractor market genuinely differs.',
+  },
+  {
+    question: 'Will you add my city?',
+    answer:
+      'If the local situation is genuinely different in a way that changes the answer, yes. The test is whether we can say something specific about the fuel mix, the climate, the program rules or the housing stock. If the page would just repeat the national content with a city name substituted, we will not publish it, and we would rather tell you that than pad the site.',
+  },
+  {
+    question: 'How do I get the numbers for my area if it is not covered?',
+    answer:
+      'Use the calculator. It resolves any US ZIP code to a state, then applies that state electricity price, natural gas price and heating degree days. That covers the entire country even where we have not written a market page, because the underlying data is state-level federal data rather than something we collected city by city.',
+  },
+  {
+    question: 'What does "installer routing live" mean?',
+    answer:
+      'It means we have verified installer coverage in that market and a quote request will be routed to real contractors rather than held. Markets without it still have the full cost and rebate analysis, but the quote form falls back to sending you through the calculator so you can approach local contractors with a modelled range in hand.',
+  },
+];
+
+const switchingIndexColumns = [
+  { key: 'state', label: 'State' },
+  { key: 'electricity', label: 'Power price', numeric: true },
+  { key: 'gas', label: 'Gas price', numeric: true },
+  { key: 'hdd', label: 'Heating load', numeric: true },
+  { key: 'oil', label: 'Oil share', numeric: true },
+  { key: 'program', label: 'Program status' },
+];
+
+/** A short, prioritised list rather than all fifty states. */
+const FOCUS = ['ME', 'MA', 'VT', 'NH', 'CT', 'RI', 'NY', 'CO', 'WA', 'OR', 'MN', 'CA'];
+
+const indexRows = FOCUS.map((code) => STATE_BY_CODE[code])
+  .filter((s): s is StateRecord => Boolean(s))
+  .map((s) => ({
+    state: s.name,
+    electricity: `${s.electricityCentsPerKwh.toFixed(1)}¢`,
+    gas: `$${s.gasDollarsPerMcf.toFixed(2)}`,
+    hdd: s.heatingDegreeDays.toLocaleString(),
+    oil: `${Math.round(s.fuelOilShare * 100)}%`,
+    program:
+      s.homeEnergyRebateStatus === 'launched'
+        ? 'Live'
+        : s.homeEnergyRebateStatus === 'enrolling'
+          ? 'Enrolling'
+          : s.homeEnergyRebateStatus === 'reserved'
+            ? 'Reserved'
+            : 'Not launched',
+  }));
+
+const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHdd', 'doeHomeUpgrades']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Markets: Where Switching Actually Pays Off"
+    description="Heat pump economics by market. Electricity and gas prices, heating load, oil dependence and program status for the states and cities where switching is most likely to pay."
+    path={path}
+    type="CollectionPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump cost by state"
+    isHub
+  />
+
+  <PageHeader
+    eyebrow="Markets"
+    title="Where a heat pump actually pays off"
+    standfirst="The same equipment has a different answer in every state, because the ratio of electricity price to fuel price is different, the winter is different, and the incentives are different."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: `${markets.length} markets`, label: 'Covered in depth, chosen because the local context genuinely changes the answer' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="why" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">Why the map matters more than the average</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A national heat pump cost page can tell you what equipment costs. It cannot tell you whether the thing is
+              worth doing, because that depends on three local facts that vary enormously across the country.
+            </p>
+            <ul>
+              <li>
+                <strong>What electricity costs where you are.</strong> Nevada at 13.11 cents per kilowatt hour and
+                California at 34.74 cents are not the same market.
+              </li>
+              <li>
+                <strong>What your current fuel costs.</strong> The ratio between the two is what decides the operating
+                cost comparison, and it flips between states.
+              </li>
+              <li>
+                <strong>How cold it gets and how long.</strong> A mild winter and a severe one change both the equipment
+                specification and the annual saving.
+              </li>
+            </ul>
+            <p>
+              Our [keyword research](/methodology/) also found that city-level search demand is far smaller than the
+              content industry assumes. So this hub covers the states systematically, and publishes city pages only where
+              there is something specific to say.
+            </p>
+          </div>
+        </section>
+
+        <Section
+          id="states"
+          number="1"
+          title="State reference data"
+          lede="The twelve states where the heat pump case is strongest, or where the incentive money is largest. Prices are EIA residential averages."
+        >
+          <DataTable
+            caption="Heat pump market reference data by state"
+            columns={switchingIndexColumns}
+            rows={indexRows}
+            mobileLabelKey="state"
+            note="Electricity is EIA residential June 2026. Gas is EIA residential May 2026 per Mcf. Heating load is NOAA population-weighted heating degree days for July 2025 to June 2026. Oil share is Census ACS table B25040. Program status reflects state IRA home energy rebate launch status."
+          />
+        </Section>
+
+        <Section
+          id="cities"
+          number="2"
+          title="Cities covered in depth"
+          lede="Each of these has a housing stock, a program and a contractor market that make it worth its own page."
+        >
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {markets.map((market) => (
+              <li>
+                <MarketCard
+                  name={`${market.data.city}, ${market.data.stateCode}`}
+                  href={`/markets/${market.id}/`}
+                  state={STATE_BY_CODE[market.data.stateCode]}
+                  summary={market.data.description}
+                  routingLive={market.data.routingLive}
+                />
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section id="expansion" number="3" title="What we will add next" lede="Expansion is driven by demand and by whether we can say something useful.">
+          <div class="prose-atlas">
+            <p>
+              The next markets we add will be places where the operating cost case is strong and where we can get real
+              program information: Portland, Oregon; Minneapolis; Hartford; Albany; Buffalo; and possibly Providence.
+              Each one needs verified program details and a specific local angle before it goes live.
+            </p>
+          </div>
+
+          <Callout tone="note" title="On state and city page grids" class="mt-5">
+            <p>
+              If you are looking for a page for every US city, we are not building that. Our research found that exact
+              match search volume for city-level cost terms is close to zero in most metros, and a grid of near-identical
+              pages would be thin content with a city name dropped in. The [calculator](/calculator/) covers the entire
+              country with real state-level data, which is a better answer than a doorway page.
+            </p>
+          </Callout>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#why', label: 'Why location matters' },
+              { href: '#states', label: 'State reference data' },
+              { href: '#cities', label: 'Cities covered' },
+              { href: '#expansion', label: 'What is next' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        children={[
+          { label: 'Boston, MA', href: '/markets/boston-ma/', description: 'Oil and gas mix, mature rebate program' },
+          { label: 'Portland, ME', href: '/markets/portland-me/', description: 'Strongest oil conversion case in the US' },
+          { label: 'Denver, CO', href: '/markets/denver-co/', description: 'Three stackable programs, contested operating case' },
+          { label: 'Seattle, WA', href: '/markets/seattle-wa/', description: 'Cheap hydro power, best operating economics' },
+        ]}
+        siblings={[
+          { label: 'Operating cost by state', href: '/heat-pump-operating-cost/' },
+          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/' },
+          { label: 'Calculator', href: '/calculator/' },
+        ]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

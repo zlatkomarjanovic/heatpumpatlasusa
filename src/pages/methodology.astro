@@ -1,0 +1,347 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import Callout from '@/components/Callout.astro';
+import DataTable from '@/components/DataTable.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { EFFICIENCY, ENERGY_UNITS, BASE_KWH_THERMAL_PER_SQFT_PER_HDD, REGION_MULTIPLIERS } from '@/data/costs';
+import { FUEL_REFERENCE } from '@/data/states';
+import { NATIONAL_AVERAGE } from '@/data/states';
+import { SOURCES } from '@/data/sources';
+import type { Citation } from '@/types/content';
+import { SITE } from '@/data/site';
+
+const path = '/methodology/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Methodology', href: path },
+];
+
+const allSources = Object.values(SOURCES);
+
+const assumptionColumns = [
+  { key: 'input', label: 'Input' },
+  { key: 'value', label: 'Value used' },
+  { key: 'source', label: 'Basis', hideOnMobile: true },
+];
+const assumptionRows = [
+  { input: 'Electricity price', value: 'State residential average', source: 'EIA Electric Power Monthly, table 5.6.A' },
+  { input: 'Natural gas price', value: 'State residential average per Mcf', source: 'EIA Natural Gas Monthly, table 20' },
+  { input: 'Heating oil', value: `$${FUEL_REFERENCE.heatingOilDollarsPerGallon.toFixed(2)} per gallon`, source: 'EIA heating oil reference price' },
+  { input: 'Propane', value: `$${FUEL_REFERENCE.propaneDollarsPerGallon.toFixed(2)} per gallon`, source: 'EIA propane reference price' },
+  { input: 'Climate', value: 'Population-weighted heating degree days', source: 'NOAA Climate Prediction Center' },
+  { input: 'Heat pump efficiency, cold climate', value: `Seasonal COP ${EFFICIENCY.ashpColdClimate}`, source: 'Published seasonal performance for cold-climate equipment' },
+  { input: 'Heat pump efficiency, standard', value: `Seasonal COP ${EFFICIENCY.ashpStandard}`, source: 'Published seasonal performance for standard equipment' },
+  { input: 'Ductless efficiency', value: `Seasonal COP ${EFFICIENCY.ductless}`, source: 'No duct loss, published seasonal performance' },
+  { input: 'Duct loss, ducted', value: `${Math.round(EFFICIENCY.ductLossDucted * 100)}%`, source: 'Published duct loss estimates for unconditioned ducts' },
+  { input: 'Gas furnace efficiency', value: `${Math.round(EFFICIENCY.gasFurnace * 100)}% AFUE`, source: 'Federal minimum and typical installed equipment' },
+  { input: 'Oil and propane efficiency', value: `${Math.round(EFFICIENCY.oilFurnace * 100)}% AFUE`, source: 'Typical installed equipment age mix' },
+  { input: 'Gas heat content', value: `${ENERGY_UNITS.thermsPerMcf} therms per Mcf`, source: 'EIA residential heat content convention' },
+  { input: 'Grid carbon intensity', value: '0.85 lb CO2 per kWh', source: 'US grid average, eGRID class factor' },
+  { input: 'Heating load coefficient', value: `${BASE_KWH_THERMAL_PER_SQFT_PER_HDD} kWh thermal per sqft per HDD`, source: 'Calibrated against published US space heating consumption' },
+];
+
+const regionalColumns = [
+  { key: 'region', label: 'Region' },
+  { key: 'factor', label: 'Labor factor', numeric: true },
+  { key: 'highCost', label: 'High-cost states', hideOnMobile: true },
+];
+const regionalRows = Object.entries(REGION_MULTIPLIERS).map(([region, factor]) => ({
+  region,
+  factor: `${factor.toFixed(2)}x`,
+  highCost:
+    region === 'West'
+      ? 'California, Washington, Hawaii, Alaska add 1.12x'
+      : region === 'Northeast'
+        ? 'Massachusetts, New York, Connecticut, Rhode Island, New Jersey add 1.12x'
+        : region === 'South'
+          ? 'District of Columbia adds 1.12x'
+          : 'None',
+}));
+---
+
+<BaseLayout>
+  <SEO
+    title="Methodology: How Every Number on This Site Is Produced"
+    description="Our data sources, the calculator's assumptions, how we verify rebate programs, what the model cannot know, and how to report an error."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="heat pump cost methodology"
+  />
+
+  <PageHeader
+    eyebrow="Methodology"
+    title="How these numbers are produced"
+    standfirst="Every figure on this site is either a published government statistic or a modelled estimate with a stated method. This page separates the two, lists the assumptions, and explains what the model cannot know."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: SITE.dataRevision, label: 'Current data revision. Every page shows its own last updated date.' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="principles" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">Four principles</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              This is a category with a lot of confident wrong numbers in it, including from official sources. We built
+              the site around four rules to avoid adding to the pile.
+            </p>
+            <ol>
+              <li>
+                <strong>Separate verified data from modelled estimates.</strong> Electricity prices are verified. Installed
+                cost is modelled. The site labels them differently and never presents a model output as a measurement.
+              </li>
+              <li>
+                <strong>Publish the losing cases.</strong> In many states and for many fuels, a heat pump is the wrong
+                financial answer. Saying so is more useful than a uniform sales pitch, and it is the only way the tool
+                stays trustworthy.
+              </li>
+              <li>
+                <strong>Assume the data rots.</strong> Energy prices change monthly, rebate programs change weekly, and
+                tax credits expire. Every page carries an update date, and rebate pages carry a separate verification
+                date.
+              </li>
+              <li>
+                <strong>Never manufacture a number.</strong> Where we cannot support a figure, the calculator says so and
+                widens its range rather than filling the gap with an average.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <Section
+          id="verified"
+          number="1"
+          title="What is verified data"
+          lede="These inputs are published statistics, refreshed on a schedule, and traceable to a primary source."
+        >
+          <ul class="space-y-3">
+            {[
+              { name: 'Electricity prices', detail: 'EIA Electric Power Monthly table 5.6.A, state residential average. June 2026 is the most recent published month at the time of this revision. EIA publishes roughly two months behind and revises prior months.' },
+              { name: 'Natural gas prices', detail: 'EIA Natural Gas Monthly table 20, state residential per thousand cubic feet. May 2026 used for the current revision.' },
+              { name: 'Heating oil and propane', detail: 'EIA weekly reference prices. These are regional and seasonal, and the national reference price is used where state data is thin.' },
+              { name: 'Climate', detail: 'NOAA Climate Prediction Center population-weighted heating degree days, state monthly and seasonal accumulations.' },
+              { name: 'Heating fuel mix', detail: 'US Census American Community Survey table B25040, share of occupied units by main heating fuel.' },
+              { name: 'Housing vintage', detail: 'Census ACS table B25034, year structure built, used as an envelope efficiency input.' },
+            ].map((item) => (
+              <li class="flex gap-3">
+                <span class="bg-save-600 mt-1.5 h-2 w-2 shrink-0 rounded-full" aria-hidden="true"></span>
+                <div>
+                  <p class="text-ink-900 text-sm font-semibold">{item.name}</p>
+                  <p class="text-ink-600 mt-0.5 text-sm leading-relaxed">{item.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section
+          id="modelled"
+          number="2"
+          title="What is modelled, and how"
+          lede="Everything downstream of those inputs is a model. Here is the whole model."
+        >
+          <div class="prose-atlas">
+            <h3>Installed cost</h3>
+            <p>
+              Cost bands come from published 2026 contractor and consumer pricing, cross-checked against regional
+              contractor quotes and against published national ranges from consumer sources. They are then adjusted by a
+              regional labor factor and, in high-cost states, an additional factor. The bands are wide on purpose: two
+              contractors bidding the same house frequently differ by 40 percent, so a narrow band would be false
+              precision.
+            </p>
+
+            <h3>Heating load</h3>
+            <p>
+              If you provide your annual heating spend, the calculator backs the heating load out of it using your current
+              fuel and its assumed efficiency. That is the high-confidence path. If you do not, it models the load from
+              floor area, heating degree days, insulation quality and build vintage. The second path is marked as lower
+              confidence in the result.
+            </p>
+
+            <h3>Operating cost</h3>
+            <p>
+              Each option is priced per million BTU of heat actually delivered, which accounts for both the fuel price and
+              the efficiency of the equipment. Heat pumps are modelled at a seasonal coefficient of performance rather
+              than a rated lab figure, and ducted systems take a duct loss penalty. Natural gas is converted using{' '}
+              {ENERGY_UNITS.thermsPerMcf} therms per Mcf.
+            </p>
+
+            <h3>Totals and payback</h3>
+            <p>
+              The ten-year total is undiscounted and covers up-front cost after open rebates plus ten years of operating
+              cost. Payback is simple, not discounted, and the calculator reports no payback when the operating cost
+              difference is zero or negative rather than producing an infinite or misleading figure.
+            </p>
+          </div>
+        </Section>
+
+        <Section
+          id="assumptions"
+          number="3"
+          title="Every assumption, in one table"
+          lede="If you want to check our arithmetic, this is everything you need."
+        >
+          <DataTable
+            caption="Model assumptions and their basis"
+            columns={assumptionColumns}
+            rows={assumptionRows}
+            mobileLabelKey="input"
+            note="Constants are versioned with the site data revision. If you think one is wrong, tell us and we will publish the correction."
+          />
+        </Section>
+
+        <Section
+          id="regional"
+          number="4"
+          title="Regional cost factors"
+          lede="The same equipment costs different amounts to install in different parts of the country. This is the adjustment applied."
+        >
+          <DataTable
+            caption="Regional labor factors applied to national cost bands"
+            columns={regionalColumns}
+            rows={regionalRows}
+            mobileLabelKey="region"
+            note="Factors are modelled from regional labor cost indices and observed contractor pricing, not from a survey. They exist so the calculator does not quietly treat a Boston install and an Oklahoma install as identical."
+          />
+        </Section>
+
+        <Section
+          id="rebates"
+          number="5"
+          title="How rebates are handled"
+          lede="This is the part of the site most likely to be wrong, and we treat it accordingly."
+        >
+          <div class="prose-atlas">
+            <p>
+              We do not scrape a national incentive database and republish it. Programs change status faster than any
+              automated feed we evaluated, and a stale "available" label is worse than no label because it can lead
+              someone into an ineligible installation.
+            </p>
+            <p>
+              Instead, we maintain a short list of programs, verify each one against the administrator's own page, and
+              record three things: the status, the verification date and the specific conditions. The calculator includes
+              only programs marked <strong>open</strong>. Programs that are reserved or paused are excluded from the total
+              and labelled, not removed, so you can recognise the programs that other sites are still advertising.
+            </p>
+            <p>
+              There is one pattern worth knowing about. Several programs require a reservation or a rebate commitment
+              letter <em>before</em> installation, and applying afterward can disqualify the project. If a page tells you
+              the amount without telling you the order of operations, it is incomplete.
+            </p>
+          </div>
+
+          <Callout tone="caution" title="On the 25C tax credit" class="mt-5">
+            <p>
+              The federal 25C Energy Efficient Home Improvement Credit applied through 31 December 2025 and is not
+              available for equipment placed in service in 2026. Several official pages still present the credit as
+              current, which has propagated into a large amount of 2026 content. If any estimate you have been given relies
+              on 25C money, subtract it and recheck the project.
+            </p>
+          </Callout>
+        </Section>
+
+        <Section
+          id="limitations"
+          number="6"
+          title="What the model cannot know"
+          lede="The honest list. Every item here can move a real project off the modelled result."
+        >
+          <ul class="space-y-4">
+            {[
+              { title: 'Your actual utility tariff', body: 'We use EIA state averages, which are revenue divided by sales. They include fixed customer charges and are not the rate on your bill. Someone on a time-of-use rate, a heat pump rate, or a municipal utility can be materially off.' },
+              { title: 'Your duct condition', body: 'We assume a standard duct loss. Leaky, undersized or poorly routed ducts in unconditioned space can lose far more than that, and the ductless-versus-ducted decision often turns on this.' },
+              { title: 'Your measured air leakage', body: 'Insulation quality is a three-level user estimate, not a blower door result. A tight house and a leaky house with the same square footage and vintage can differ by 30 percent on load.' },
+              { title: 'Your contractor', body: 'A correctly sized system installed well performs close to the model. An oversized system that short-cycles, or one installed with a poor air seal, will not. This is the single largest source of real-world variance.' },
+              { title: 'Future energy prices', body: 'The model uses current prices. Any projection over ten years is a bet, and we would rather show you a current-price total than a forecast we cannot defend.' },
+              { title: 'Comfort and noise', body: 'Model quality, indoor humidity in winter, and outdoor unit noise are real reasons people are satisfied or dissatisfied. None of them appear in a cost model.' },
+            ].map((item) => (
+              <li class="border-line bg-white rounded-lg border p-5">
+                <h3 class="text-ink-900 text-sm font-semibold">{item.title}</h3>
+                <p class="text-ink-600 mt-1.5 text-sm leading-relaxed">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section
+          id="corrections"
+          number="7"
+          title="Corrections"
+          lede="If we are wrong, we want to know, and we will say so."
+        >
+          <div class="prose-atlas">
+            <p>
+              Energy and incentive data changes constantly, and we will get things wrong. If you spot an error, particularly
+              a rebate amount, a program status or a rate that has moved, email us at{' '}
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a> with the page and the source you are looking at.
+            </p>
+            <p>
+              Substantive corrections are updated on the page and the last updated date changes. We do not quietly edit
+              numbers, because the update date is part of how you should judge whether to trust the figure.
+            </p>
+          </div>
+        </Section>
+
+        <Section id="privacy" number="8" title="Privacy and data handling">
+          <div class="prose-atlas">
+            <p>
+              The calculator runs entirely in your browser. It resolves your ZIP against a bundled table, computes against
+              bundled energy data, and sends nothing. There is no analytics call inside the calculator and no account.
+            </p>
+            <p>
+              If you submit a quote request, that is a separate deliberate action. The request carries your ZIP, your
+              contact details and the scenario summary you can see on the form, and it goes to installers who cover your
+              area. We do not sell your details to lead brokers, and you can ask us to delete a submitted request by
+              emailing us.
+            </p>
+          </div>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#principles', label: 'Four principles' },
+              { href: '#verified', label: 'Verified data' },
+              { href: '#modelled', label: 'Modelled estimates' },
+              { href: '#assumptions', label: 'All assumptions' },
+              { href: '#regional', label: 'Regional factors' },
+              { href: '#rebates', label: 'Rebate handling' },
+              { href: '#limitations', label: 'Limitations' },
+              { href: '#corrections', label: 'Corrections' },
+              { href: '#privacy', label: 'Privacy' },
+              { href: '#sources', label: 'Sources' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <RelatedPages
+        siblings={[
+          { label: 'About us', href: '/about/', description: 'Who writes this and why' },
+          { label: 'Calculator', href: '/calculator/', description: 'The model, running' },
+          { label: 'Rebates', href: '/rebates/', description: 'Program status' },
+        ]}
+      />
+      <SourceList sources={allSources} title="Full source list" updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

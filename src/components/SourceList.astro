@@ -1,0 +1,69 @@
+---
+/**
+ * Citation / source list.
+ *
+ * Rendered at the foot of every substantive page. `primary` distinguishes
+ * primary published data from editorial benchmarks, which is central to the
+ * site's trust positioning.
+ */
+import type { Citation } from '@/types/content';
+
+interface Props {
+  sources: Citation[];
+  title?: string;
+  updated?: Date;
+  class?: string;
+}
+
+const { sources, title = 'Sources and data', updated, class: className = '' } = Astro.props;
+---
+
+<section
+  id="sources"
+  class:list={['not-prose border-line scroll-mt-24 border-t pt-6', className]}
+  aria-labelledby="sources-heading"
+>
+  <div class="flex flex-wrap items-baseline justify-between gap-3">
+    <h2 id="sources-heading" class="text-ink-900 font-serif text-lg">{title}</h2>
+    {updated && (
+      <p class="text-ink-500 text-xs">
+        Verified{' '}
+        <time datetime={updated.toISOString()}>
+          {updated.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </time>
+      </p>
+    )}
+  </div>
+
+  <ul class="mt-4 space-y-3">
+    {sources.map((source) => (
+      <li class="flex gap-3">
+        <span
+          class:list={['mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full', source.primary ? 'bg-save-600' : 'bg-ink-300']}
+          aria-hidden="true"
+        ></span>
+        <div class="min-w-0">
+          <p class="text-sm leading-snug">
+            <a
+              href={source.url}
+              rel="nofollow noopener"
+              target="_blank"
+              class="text-brand-700 hover:text-brand-800 font-medium underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600"
+            >
+              {source.label}
+            </a>
+            {source.publisher && <span class="text-ink-500"> &middot; {source.publisher}</span>}
+          </p>
+          {source.supports && <p class="text-ink-500 mt-0.5 text-xs leading-snug">{source.supports}</p>}
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  <p class="text-ink-500 mt-4 text-xs leading-relaxed">
+    <span class="text-save-600 font-semibold">Green dot</span> marks a primary government, program or utility source.
+    <span class="text-ink-400 font-semibold">Grey dot</span> marks a secondary benchmark or editorial reference.
+    Our full method, including how modelled figures are produced, is on the
+    <a href="/methodology/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">methodology page</a>.
+  </p>
+</section>

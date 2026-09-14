@@ -1,0 +1,283 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { COST_BANDS, ELECTRICAL_ADDERS } from '@/data/costs';
+import { pickSources } from '@/data/sources';
+import { formatUsd } from '@/lib/calculator';
+
+const path = '/electrical-panel-upgrade-cost/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Panel upgrade cost', href: path },
+];
+
+const faqItems = [
+  {
+    question: 'How much does an electrical panel upgrade cost?',
+    answer:
+      'A straightforward 200 amp panel replacement runs about $1,400 to $5,500 installed. That includes the panel, breakers, labor and a permit. If the service entrance, meter or mast also has to change, the price moves into the $5,000 to $18,000 range. The single biggest variable is whether the utility side has to be touched, because that adds coordination, inspection and often a trench.',
+  },
+  {
+    question: 'Do I need a panel upgrade for a heat pump?',
+    answer:
+      'Not always, and anyone who tells you otherwise without doing a load calculation is guessing. A modern heat pump draws a significant but manageable current. The constraint usually appears when the heat pump is added to an existing 100 amp service that already carries an electric range, a dryer and electric backup heat. A licensed electrician runs a load calculation against your actual service and appliances, and that calculation, not a rule of thumb, decides.',
+  },
+  {
+    question: 'How do I know if I have a 100 or 200 amp service?',
+    answer:
+      'Look at the main breaker at the top of the panel. The number on it, usually 100 or 200, is your service size. If the panel has fuses rather than breakers, it is almost certainly undersized. If you cannot find the number, or the panel is in a hard-to-reach place, an electrician will identify it in a few minutes as part of a quote.',
+  },
+  {
+    question: 'Can a heat pump be installed on a 100 amp service?',
+    answer:
+      'Sometimes. A ductless mini split with a single zone often fits within the existing service if there is capacity or a spare 240 volt breaker. A whole-home ducted heat pump with electric backup heat is much harder, because backup heat elements draw heavily in cold weather. In many cases the practical workaround is a heat pump with a gas or existing-fuel backup, which avoids the large electric draw entirely.',
+  },
+  {
+    question: 'Does a panel upgrade qualify for any incentives?',
+    answer:
+      'Sometimes. Some state programs and some utilities treat panel upgrades as an enabling measure for electrification and will fund part of it, especially where it is required to install the heat pump. It is rarely covered on its own. Check whether your state program lists electrical upgrades as an eligible measure before assuming, and note that some require pre-approval.',
+  },
+  {
+    question: 'Should I upgrade the panel before or after the heat pump?',
+    answer:
+      'Before, and ideally as part of the same project. If the heat pump is installed first and the panel cannot carry it, you have an expensive problem and a system that may not be legally operable. Get an electrician to look at the service at the same time as your heat pump quote, so both numbers are on the table before you commit.',
+  },
+];
+
+const sizeColumns = [
+  { key: 'service', label: 'Service size' },
+  { key: 'low', label: 'Low', numeric: true },
+  { key: 'high', label: 'High', numeric: true },
+  { key: 'fits', label: 'Typical heat pump fit', hideOnMobile: true },
+];
+const sizeRows = [
+  { service: '100A to 100A, panel swap only', low: formatUsd(1200), high: formatUsd(3200), fits: 'Ductless single zone, sometimes multi-zone' },
+  { service: '100A to 200A upgrade', low: formatUsd(1400), high: formatUsd(5500), fits: 'Most ducted and ductless projects' },
+  { service: '200A panel replacement', low: formatUsd(1500), high: formatUsd(4800), fits: 'Already sufficient, replacement for age' },
+  { service: 'Service entrance upgrade', low: formatUsd(5000), high: formatUsd(18000), fits: 'Large all-electric homes, 400A service' },
+  { service: 'Fuse box to breakers', low: formatUsd(2500), high: formatUsd(9000), fits: 'Wiring remediation often required as well' },
+];
+
+const driverColumns = [
+  { key: 'driver', label: 'Cost driver' },
+  { key: 'impact', label: 'Typical impact', numeric: true },
+  { key: 'note', label: 'What it means', hideOnMobile: true },
+];
+const driverRows = [
+  { driver: 'Panel and breakers', impact: '$600 to $1,800', note: 'The equipment itself. Prices moved up with copper and aluminum.' },
+  { driver: 'Permit and inspection', impact: '$150 to $600', note: 'Varies widely by jurisdiction. Some cities require the utility to disconnect and reconnect.' },
+  { driver: 'Service entrance and meter', impact: '$1,500 to $6,000', note: 'Only needed if the service capacity changes or the mast is inadequate.' },
+  { driver: 'Utility coordination', impact: '$0 to $2,500', note: 'Disconnect and reconnect fees, sometimes a new meter base.' },
+  { driver: 'Wiring remediation', impact: '$1,000 to $8,000', note: 'Older homes sometimes need circuit work to meet current code once inspected.' },
+  { driver: 'Generator or EV readiness', impact: '$300 to $2,000', note: 'Interlock kit, transfer switch, or a dedicated EV circuit added at the same time.' },
+];
+
+const citations = pickSources(['rewiringAmericaPanel', 'eiaElectricity', 'censusVintage', 'doeHomeUpgrades']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Electrical Panel Upgrade Cost in 2026: When a Heat Pump Forces It"
+    description="A 200 amp panel upgrade costs $1,400 to $5,500 installed, and a service entrance change runs far more. See when a heat pump actually requires it, and how to avoid it."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="electrical panel upgrade cost"
+  />
+
+  <PageHeader
+    eyebrow="Cost guide"
+    title="Electrical panel upgrade cost, and when you actually need one"
+    standfirst="This is the line item that turns a comfortable heat pump budget into a difficult conversation. It is also frequently avoidable, and the difference comes down to one calculation."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '$1,400 to $5,500', label: 'Typical 200 amp panel upgrade, installed, including permit', source: 'Modelled from published 2026 electrical pricing' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A 200 amp panel upgrade costs roughly <strong>$1,400 to $5,500</strong> installed, including the panel,
+              breakers, labor and a permit. If the service entrance, meter or mast also needs changing, expect{' '}
+              <strong>$5,000 to $18,000</strong>, because the utility becomes involved.
+            </p>
+            <p>
+              Whether your heat pump project needs any of this is not a rule of thumb. It is a load calculation against
+              your specific service and appliances. Anyone who tells you a heat pump requires a panel upgrade without
+              running that calculation is guessing, and the guess is expensive.
+            </p>
+          </div>
+          <Callout tone="caution" title="Get this priced before you sign" class="mt-6">
+            <p>
+              A panel upgrade discovered after the heat pump is installed is a far worse problem than one discovered
+              before. Ask every contractor who quotes you to confirm the service size and state whether a load
+              calculation supports the install.
+            </p>
+          </Callout>
+        </section>
+
+        <Section id="cost" number="1" title="Panel and service cost by situation" lede="Match the row to your house, then get an electrician's opinion rather than a contractor's guess.">
+          <DataTable
+            caption="Electrical panel and service upgrade costs, 2026"
+            columns={sizeColumns}
+            rows={sizeRows}
+            mobileLabelKey="service"
+            note="Includes equipment, standard labor and permit. Excludes wiring remediation, which is common in pre-1950 housing and is priced after inspection."
+          />
+        </Section>
+
+        <Section id="drivers" number="2" title="What actually drives the price" lede="The panel itself is rarely the biggest line item.">
+          <DataTable
+            caption="Cost drivers on a panel upgrade"
+            columns={driverColumns}
+            rows={driverRows}
+            mobileLabelKey="driver"
+            note="Ranges are modelled from published electrical contractor pricing. Utility coordination fees vary by state and by whether the meter can stay energized during the work."
+          />
+        </Section>
+
+        <Section id="when-needed" number="3" title="When a heat pump actually needs a panel upgrade" lede="The honest answer is that it depends on the rest of your house, not just the heat pump.">
+          <div class="prose-atlas">
+            <p>
+              A heat pump by itself is usually manageable. The problem appears when it is added to a service that is
+              already near capacity. A 100 amp service serving an electric range, an electric dryer, a water heater and a
+              couple of window air conditioners has little headroom. Add a ducted heat pump with electric backup heat and
+              the calculation stops working.
+            </p>
+            <p>
+              Two things commonly avoid the upgrade. A ductless mini split draws less than a whole-home ducted system, so
+              it fits into more existing services. And a heat pump with a non-electric backup, whether existing gas,
+              propane or a retained oil system, avoids the large electric resistance draw that causes most of the
+              problem.
+            </p>
+          </div>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-lg border border-save-100 bg-save-50 p-5">
+              <p class="text-save-700 text-sm font-semibold">Usually fits without an upgrade</p>
+              <ul class="text-ink-700 mt-3 space-y-2 text-sm">
+                {[
+                  'Single-zone ductless mini split',
+                  'Heat pump with non-electric backup heat',
+                  '200 amp service with available capacity',
+                  'A house with no electric range or dryer',
+                ].map((item) => (
+                  <li class="flex gap-2">
+                    <span aria-hidden="true" class="text-save-600">&#8226;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="rounded-lg border border-heat-100 bg-heat-50 p-5">
+              <p class="text-heat-700 text-sm font-semibold">Often requires an upgrade</p>
+              <ul class="text-ink-700 mt-3 space-y-2 text-sm">
+                {[
+                  'Whole-home ducted heat pump with electric backup',
+                  '100 amp service with electric range and dryer',
+                  'Fuse box rather than a breaker panel',
+                  'Multiple large electric appliances added together',
+                ].map((item) => (
+                  <li class="flex gap-2">
+                    <span aria-hidden="true" class="text-heat-600">&#8226;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="avoid" number="4" title="How to avoid the upgrade, when it is avoidable" lede="These are legitimate engineering choices, not workarounds.">
+          <div class="prose-atlas">
+            <ul>
+              <li>
+                <strong>Choose ductless where the house allows it.</strong> A multi-zone ductless system can heat a home
+                with meaningfully lower peak electrical demand than a ducted system with resistance backup.
+              </li>
+              <li>
+                <strong>Keep a dual fuel arrangement.</strong> Let the existing gas or oil system handle the coldest
+                weeks. This removes the backup heat elements that usually trigger the upgrade.
+              </li>
+              <li>
+                <strong>Look at load management devices.</strong> A controller that sheds the backup heat elements or an
+                EV charger while the heat pump runs can reduce the calculated load without changing the service. These
+                are code-recognised in many jurisdictions now.
+              </li>
+              <li>
+                <strong>Time the upgrade with other work.</strong> If you know you want an EV charger or a solar
+                connection in the next few years, do the panel once and do it properly rather than twice.
+              </li>
+            </ul>
+          </div>
+        </Section>
+
+        <Section id="incentives" number="5" title="Incentives for the electrical work">
+          <div class="prose-atlas">
+            <p>
+              Some state and utility programs treat an electrical panel upgrade as an enabled measure and will fund part
+              of it when it is required for an electrification project. It is rarely covered on its own, and programs
+              that do cover it usually require the electrical work to be pre-approved and performed by an approved
+              contractor.
+            </p>
+            <p>
+              The <a href="/rebates/">rebates hub</a> tracks which programs are open and which include electrical
+              measures. Confirm the details with the program, because coverage for this line item changes more often than
+              for the heat pump itself.
+            </p>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#cost', label: 'Cost by situation' },
+              { href: '#drivers', label: 'Price drivers' },
+              { href: '#when-needed', label: 'When it is needed' },
+              { href: '#avoid', label: 'How to avoid it' },
+              { href: '#incentives', label: 'Incentives' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
+          { label: 'Mini split cost', href: '/mini-split-cost/' },
+          { label: 'Water heater cost', href: '/heat-pump-water-heater-cost/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

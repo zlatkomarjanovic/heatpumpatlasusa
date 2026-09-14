@@ -1,0 +1,329 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { STATES, type StateRecord } from '@/data/states';
+import { EFFICIENCY, ENERGY_UNITS } from '@/data/costs';
+import { FUEL_REFERENCE } from '@/data/states';
+import { pickSources } from '@/data/sources';
+
+const path = '/heat-pump-operating-cost/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Operating cost', href: path },
+];
+
+/**
+ * Delivered cost per million BTU of useful heat.
+ *
+ * This is the only fair way to compare fuels: it prices the heat that actually
+ * reaches the room, after equipment efficiency and duct losses.
+ *
+ * Conversions used:
+ *   1 kWh = 3,412 BTU, so 1 MMBtu = 293.1 kWh
+ *   1 Mcf of natural gas = 10.27 therms, 1 therm = 100,000 BTU
+ *   1 gallon of heating oil = 138,527 BTU
+ *   1 gallon of propane = 91,500 BTU
+ *
+ * Note on interpretation: EIA state prices are revenue divided by sales, so they
+ * include fixed customer charges spread across consumption. A household using
+ * more than average therefore pays less per unit than the figure shown, which
+ * slightly favours the heat pump in reality versus this table.
+ */
+const KWH_PER_MMBTU = 1_000_000 / 3412;
+
+/** Cost in dollars per MMBtu of delivered heat. */
+function operatingCosts(state: StateRecord) {
+  // Electricity: price per MMBtu of delivered heat at seasonal COP, including duct loss.
+  const elecPerInputMmbBtu = (state.electricityCentsPerKwh / 100) * KWH_PER_MMBTU;
+  const seasonalCopDucted = EFFICIENCY.ashpColdClimate * (1 - EFFICIENCY.ductLossDucted);
+  const seasonalCopDuctless = EFFICIENCY.ductless * (1 - EFFICIENCY.ductLossDuctless);
+
+  // Natural gas, per MMBtu delivered.
+  const gasPerMcf = state.gasDollarsPerMcf ?? 19.83;
+  const gasPerTherm = gasPerMcf / ENERGY_UNITS.thermsPerMcf;
+  const gasPerDeliveredMmbtu = (gasPerTherm / EFFICIENCY.gasFurnace) * 10;
+
+  // Oil and propane, per MMBtu delivered.
+  const oilBtuPerGallon = ENERGY_UNITS.kwhPerGallonOil * 3412;
+  const propaneBtuPerGallon = ENERGY_UNITS.kwhPerGallonPropane * 3412;
+  const oilPerDeliveredMmbtu =
+    FUEL_REFERENCE.heatingOilDollarsPerGallon / ((oilBtuPerGallon / 1_000_000) * EFFICIENCY.oilFurnace);
+  const propanePerDeliveredMmbtu =
+    FUEL_REFERENCE.propaneDollarsPerGallon / ((propaneBtuPerGallon / 1_000_000) * EFFICIENCY.propaneFurnace);
+
+  return {
+    heatPumpDucted: elecPerInputMmbBtu / seasonalCopDucted,
+    heatPumpDuctless: elecPerInputMmbBtu / seasonalCopDuctless,
+    gas: gasPerDeliveredMmbtu,
+    oil: oilPerDeliveredMmbtu,
+    propane: propanePerDeliveredMmbtu,
+    resistance: elecPerInputMmbBtu,
+  };
+}
+
+/**
+ * The fuels a state actually uses, so the verdict compares against something real.
+ * A state where 56 percent of homes burn oil should not be judged against gas.
+ */
+const ELECTRIC_FOCUS = ['ME', 'MA', 'VT', 'NY', 'CT', 'RI', 'NH', 'NJ', 'PA', 'CO', 'MN', 'WI', 'MI', 'WA', 'OR', 'CA'];
+
+const stateRows = ELECTRIC_FOCUS.map((code) => STATES.find((s) => s.code === code))
+  .filter((s): s is StateRecord => Boolean(s))
+  .map((s) => {
+    const c = operatingCosts(s);
+
+    // Build the incumbent comparison from the state's real fuel mix.
+    const incumbents: { label: string; cost: number }[] = [];
+    if (s.fuelOilShare >= 0.08) incumbents.push({ label: 'oil', cost: c.oil });
+    if (s.fuelOilShare < 0.08 || s.utilityGasShare >= 0.4) {
+      incumbents.push({ label: 'gas', cost: c.gas });
+    }
+    if (s.utilityGasShare < 0.2) incumbents.push({ label: 'propane', cost: c.propane });
+
+    const primary = incumbents.sort((a, b) => a.cost - b.cost)[0] ?? { label: 'gas', cost: c.gas };
+    const heatPumpWins = c.heatPumpDucted < primary.cost;
+
+    return {
+      state: s.name,
+      electricity: `${s.electricityCentsPerKwh.toFixed(1)}¢`,
+      hp: `$${c.heatPumpDucted.toFixed(1)}`,
+      gas: `$${c.gas.toFixed(1)}`,
+      oil: `$${c.oil.toFixed(1)}`,
+      propane: `$${c.propane.toFixed(1)}`,
+      verdict: heatPumpWins ? 'Heat pump wins' : `${primary.label[0].toUpperCase()}${primary.label.slice(1)} wins`,
+    };
+  });
+
+const columns = [
+  { key: 'state', label: 'State' },
+  { key: 'electricity', label: 'Power price', numeric: true },
+  { key: 'hp', label: 'Heat pump', numeric: true, emphasis: true },
+  { key: 'gas', label: 'Natural gas', numeric: true },
+  { key: 'oil', label: 'Heating oil', numeric: true },
+  { key: 'propane', label: 'Propane', numeric: true },
+  { key: 'verdict', label: 'Cheapest to run', emphasis: true },
+];
+
+const faqItems = [
+  {
+    question: 'How much does it cost to run a heat pump per year?',
+    answer:
+      'For a typical 1,800 square foot home in a 5,000 degree day climate, roughly $900 to $1,900 per year for space heating, depending on your electricity price and how well the house is sealed. In a severe climate like Maine or Minnesota, it can exceed $2,200. In a mild climate like Texas or Florida, space heating is a minor part of the bill. The calculator produces a specific figure for your ZIP because the range is too wide to be useful as a national number.',
+  },
+  {
+    question: 'Is a heat pump cheaper to run than gas?',
+    answer:
+      'Sometimes, and it depends almost entirely on the ratio of electricity price to gas price in your state. The efficient way to compare is cost per million BTU of delivered heat. In states where electricity is cheap relative to gas, like Washington or Idaho, the heat pump usually wins. In states with high electricity and cheap gas, like Texas or Utah, a 90 percent gas furnace often wins. Our state table shows the actual numbers rather than a slogan.',
+  },
+  {
+    question: 'Is a heat pump cheaper to run than oil?',
+    answer:
+      'Usually, and often by a wide margin. Heating oil is an expensive way to buy heat, and heat pumps in the Northeast are two to three times more efficient than an oil boiler or furnace. This is why the oil conversion case in Maine, Vermont, New Hampshire and parts of Massachusetts and New York is the strongest in the country. The advantage shrinks if you are comparing against a modern condensing oil boiler and your electricity is expensive.',
+  },
+  {
+    question: 'Is a heat pump cheaper than electric resistance?',
+    answer:
+      'Yes, reliably, in every state. Electric baseboard heat converts one unit of electricity into one unit of heat. A heat pump moves two to three units of heat per unit of electricity, so it is two to three times cheaper to run on the same tariff. If you currently heat with baseboard or a space heater, this is the most certain saving in the whole category.',
+  },
+  {
+    question: 'Will a heat pump raise my electricity bill?',
+    answer:
+      'Your electricity bill will rise, because you are now heating with electricity. The question is whether the total of your electricity and fuel bills falls. It usually does for oil, propane and resistance heat, and it often does not for natural gas in states with expensive power. Look at the combined bill, not the electric line alone, and be suspicious of any estimate that shows a big saving without explaining your local rate.',
+  },
+  {
+    question: 'Do heat pumps lose efficiency in cold weather?',
+    answer:
+      'Capacity falls as it gets colder, and efficiency falls somewhat, but a modern cold-climate unit still runs at a coefficient of performance above 1.5 well below zero Fahrenheit. The practical consequence is that the unit is less efficient in January than in October, and that a correctly sized system with appropriate backup heat matters more than the headline efficiency rating. We model a seasonal coefficient of performance rather than a single lab number for this reason.',
+  },
+];
+
+const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noaaHdd', 'censusFuel', 'epriCalculator']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Operating Cost: What It Costs to Run, State by State"
+    description="Compare the cost of delivered heat from a heat pump, gas furnace, oil boiler and propane in 2026. See which fuel actually wins in each state, and why it flips."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump operating cost"
+  />
+
+  <PageHeader
+    eyebrow="Operating cost"
+    title="What a heat pump costs to run, and when it loses"
+    standfirst="Installed cost is a one-time negotiation. Operating cost is the number that decides whether you were right. It comes down to one ratio: what you pay for electricity against what you pay for your current fuel."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '$900 to $1,900', label: 'Annual space heating, typical US home in a 5,000 degree day climate', source: 'Modelled from EIA rates' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The one comparison that matters</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              Comparing a heat pump to a furnace by comparing a kilowatt hour to a therm is meaningless. They are
+              different units of energy, and the machines convert them at different rates. The only fair comparison is{' '}
+              <strong>cost per million BTU of heat actually delivered into your house</strong>.
+            </p>
+            <p>
+              That number accounts for the price of the fuel, the efficiency of the equipment, and the duct losses that
+              steal part of what you paid for. Once you calculate it for your state, the picture is usually clear, and it
+              is not the same picture everywhere. In Maine, a heat pump crushes oil. In Texas, a heat pump is often a
+              worse financial decision than a cheap gas furnace.
+            </p>
+          </div>
+
+          <Callout tone="modelled" title="What the table below is" class="mt-6">
+            <p>
+              Delivered cost per million BTU, modelled from EIA state energy prices, published seasonal efficiencies and
+              assumed duct losses of {Math.round(EFFICIENCY.ductLossDucted * 100)} percent for ducted systems. Bidirectional
+              gas prices are May 2026. Electricity is June 2026. Oil and propane use autumn reference prices. It is a
+              comparison model, not a bill.
+            </p>
+          </Callout>
+        </section>
+
+        <Section
+          id="table"
+          number="1"
+          title="Delivered heating cost by state, 2026"
+          lede="Lower is better. The heat pump column is a ducted cold-climate system. Ductless performs slightly better because it avoids duct losses."
+        >
+          <DataTable
+            caption="Cost per million BTU of delivered heat by state"
+            columns={columns}
+            rows={stateRows}
+            mobileLabelKey="state"
+            note="Heat pump modelled at a seasonal coefficient of performance of 2.9 for cold-climate ducted equipment, reduced by 15 percent duct loss. Gas at 90 percent AFUE. Oil and propane at 82 percent AFUE. States not listed have small heat pump or oil markets or a lower switching priority."
+          />
+        </Section>
+
+        <Section
+          id="why-flips"
+          number="2"
+          title="Why the answer flips so hard between states"
+          lede="It comes down to a ratio that most comparison pages ignore."
+        >
+          <div class="prose-atlas">
+            <p>
+              The heat pump wins when electricity is cheap relative to your current fuel, and loses when it is
+              expensive relative to that fuel. Two ratios drive nearly all of it.
+            </p>
+            <ul>
+              <li>
+                <strong>The spark spread.</strong> Electricity per kilowatt hour divided by gas per therm. When gas is
+                cheap and power is expensive, which describes Texas, Utah and several plains states, the furnace wins.
+              </li>
+              <li>
+                <strong>The oil ratio.</strong> Heating oil is priced per gallon and delivers a fixed amount of heat, so
+                it is almost always expensive per million BTU. This is why the Northeast flips so hard.
+              </li>
+            </ul>
+            <p>
+              The efficiency advantage of the heat pump is roughly a factor of three against resistance heat and roughly
+              two and a half to three against a decent furnace. That advantage gets erased when electricity costs three
+              times as much per unit of energy as gas, which is exactly what happens in the high-cost power states.
+            </p>
+          </div>
+        </Section>
+
+        <Section
+          id="cold"
+          number="3"
+          title="What cold weather actually does"
+          lede="Efficiency and capacity both fall as the outdoor temperature drops. Both are modelled, and both matter."
+        >
+          <div class="prose-atlas">
+            <p>
+              A heat pump's coefficient of performance is a curve, not a number. At mild temperatures it can exceed 4. At
+              zero degrees Fahrenheit a good cold-climate unit is closer to 1.5 to 2. That is still better than electric
+              resistance, but it is not the number on the marketing sheet.
+            </p>
+            <p>
+              This is why we use a seasonal coefficient of performance rather than a rated figure. In a 7,000 degree day
+              climate, a system is running in genuinely cold conditions for a large share of its annual hours, and the
+              seasonal number is what your bill sees. The practical implication is that backup heat strategy, sizing and
+              building envelope all matter more in a severe climate than in a mild one.
+            </p>
+          </div>
+          <Callout tone="note" title="Retrofit first, sometimes" class="mt-5">
+            <p>
+              If your house is drafty, insulation and air sealing can reduce the required system size, which reduces both
+              the installed cost and the operating cost. In some houses that work is a better first dollar than the heat
+              pump itself, and it is usually eligible for its own incentives.
+            </p>
+          </Callout>
+        </Section>
+
+        <Section id="versus" number="4" title="Head-to-head comparisons">
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {[
+              { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', body: 'The state-by-state model, including where the furnace wins.' },
+              { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', body: 'The Northeast conversion case, where the math is strongest.' },
+              { label: 'Will it raise my electric bill?', href: '/guides/heat-pump-electric-bill/', body: 'Why the electric line rises and how to judge the total.' },
+              { label: 'Dual fuel systems', href: '/guides/dual-fuel-heat-pumps/', body: 'Running a heat pump and a furnace together, and where it wins.' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="border-line shadow-card hover:shadow-lift flex h-full flex-col rounded-lg border bg-white p-5 transition-shadow">
+                  <span class="text-ink-950 text-base font-semibold">{item.label}</span>
+                  <span class="text-ink-600 mt-2 text-sm leading-relaxed">{item.body}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The comparison that matters' },
+              { href: '#table', label: 'Cost by state' },
+              { href: '#why-flips', label: 'Why it flips' },
+              { href: '#cold', label: 'Cold weather effects' },
+              { href: '#versus', label: 'Head-to-head' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'What it costs to install' },
+          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/' },
+          { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/', description: 'Get your own number' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

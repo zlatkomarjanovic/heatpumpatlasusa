@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Page not found', href: '/404/' },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="Page not found"
+    description="That page does not exist. Here are the main heat pump cost and rebate resources."
+    path="/404/"
+    type="WebPage"
+    breadcrumbs={crumbs}
+    noindex
+  />
+
+  <div class="container-atlas py-16 lg:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-brand-700 text-xs font-semibold tracking-wider uppercase">404</p>
+      <h1 class="mt-3 text-3xl sm:text-4xl">That page does not exist</h1>
+      <p class="text-ink-600 mt-4 leading-relaxed">
+        The link may be outdated, or the page may have moved. The main resources are below, and the calculator resolves
+        any US ZIP code.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/calculator/" class="bg-brand-700 hover:bg-brand-800 inline-flex items-center rounded-md px-5 py-3 text-sm font-semibold text-white transition-colors">
+          See your real cost
+        </a>
+        <a href="/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-5 py-3 text-sm font-semibold transition-colors">
+          Back to the homepage
+        </a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl">
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Installed cost bands' },
+          { label: 'Mini split cost', href: '/mini-split-cost/', description: 'Ductless pricing by zone' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Running cost by state' },
+          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The contested comparison' },
+          { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', description: 'The strongest conversion case' },
+          { label: 'Rebates', href: '/rebates/', description: 'Which programs are open' },
+          { label: 'Markets', href: '/markets/', description: 'Where switching pays off' },
+          { label: 'Methodology', href: '/methodology/', description: 'How the numbers work' },
+        ]}
+      />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,203 @@
+---
+/**
+ * Comparisons hub.
+ *
+ * A single landing page for every head-to-head on the site, plus one featured
+ * six-row comparison so the page carries a real answer above the fold, not just
+ * a link list.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import ComparisonTable from '@/components/ComparisonTable.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import type { CompareRow } from '@/types/content';
+
+const path = '/compare/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Compare', href: path },
+];
+
+const comparisons = [
+  {
+    href: '/heat-pump-vs-furnace/',
+    title: 'Heat pump vs gas furnace',
+    body: 'The comparison the gas industry would rather you did not model. We show the states where cheap gas still wins on running cost, and the states where the heat pump pulls clearly ahead.',
+    tag: 'Most searched',
+  },
+  {
+    href: '/heat-pump-vs-oil/',
+    title: 'Heat pump vs oil',
+    body: 'Heating oil delivers heat at roughly $40 per million BTU. A cold-climate heat pump does it for about half that in Maine. This is the strongest operating-cost case in the country.',
+    tag: 'Biggest saving',
+  },
+  {
+    href: '/guides/heat-pump-vs-electric-baseboard/',
+    title: 'Heat pump vs electric baseboard',
+    body: 'Swapping resistance baseboard for a heat pump cuts the heating portion of the bill by roughly two thirds, because the heat pump moves three to four units of heat per unit of electricity.',
+    tag: 'Easiest win',
+  },
+  {
+    href: '/guides/ducted-vs-ductless-heat-pump/',
+    title: 'Ducted vs ductless heat pump',
+    body: 'If you have good ducts a ducted system is usually cheaper and tidier. If you do not, a ductless mini split avoids thousands in duct work. The house usually makes the call.',
+    tag: 'Layout choice',
+  },
+  {
+    href: '/guides/air-source-vs-geothermal-heat-pump/',
+    title: 'Air source vs geothermal',
+    body: 'Geothermal is more efficient and quieter, and costs two to four times as much to install. We show the runtime and rate conditions where the ground loop earns its premium.',
+    tag: 'Premium option',
+  },
+  {
+    href: '/guides/dual-fuel-heat-pumps/',
+    title: 'Dual fuel vs heat pump only',
+    body: 'Keeping the furnace as a cold-snap backup and running the heat pump the rest of the year. In cheap-gas states with a real winter, the hybrid can beat either system alone.',
+    tag: 'Hybrid',
+  },
+  {
+    href: '/guides/heat-pump-vs-pellet-stove/',
+    title: 'Heat pump vs pellet stove',
+    body: 'Cheap, hands-on zone heat if pellets are cheap where you live, against hands-off whole-home heating and cooling. Two different jobs more than two versions of the same one.',
+    tag: 'Effort vs ease',
+  },
+];
+
+/** Featured six-row comparison: a ducted heat pump against a modern gas furnace. */
+const featuredRows: CompareRow[] = [
+  {
+    criterion: 'Upfront installed cost',
+    left: '$9,500 to $22,000 for a ducted air source system, before incentives.',
+    right: '$4,500 to $9,000 for a gas furnace, if a gas line already exists.',
+    verdict: 'right',
+    note: 'The furnace is cheaper to install almost everywhere. The gap narrows once rebates and the value of built-in cooling are counted.',
+  },
+  {
+    criterion: 'Annual running cost',
+    left: 'Low where electricity is cheap or the incumbent fuel is oil or propane.',
+    right: 'Low where natural gas is cheap and the climate is mild.',
+    verdict: 'depends',
+    note: 'This is the whole game, and it flips by state. Model your ZIP in the calculator.',
+  },
+  {
+    criterion: 'Cooling included',
+    left: 'Yes. A heat pump is an air conditioner that also heats.',
+    right: 'No. A furnace heats only, so you still buy and run a separate AC.',
+    verdict: 'left',
+    note: 'If you were going to replace the AC anyway, the heat pump absorbs that cost.',
+  },
+  {
+    criterion: 'Cold-weather performance',
+    left: 'Cold-climate models hold capacity into the low teens Fahrenheit and below.',
+    right: 'Full rated output at any outdoor temperature.',
+    verdict: 'right',
+    note: 'The furnace never loses capacity in the cold. A correctly sized cold-climate heat pump closes most, not all, of the gap.',
+  },
+  {
+    criterion: 'Rebates and incentives',
+    left: 'Eligible for most utility and state heat pump programs, worth up to several thousand dollars.',
+    right: 'Rarely incentivised, and increasingly penalised in electrification programs.',
+    verdict: 'left',
+    note: 'Only count rebates that are actually open. We track that program by program.',
+  },
+  {
+    criterion: 'Lifespan and maintenance',
+    left: '12 to 18 years. Runs year-round, so more annual hours on the compressor.',
+    right: '15 to 25 years for the furnace, plus a separate AC on its own clock.',
+    verdict: 'depends',
+    note: 'One machine to maintain versus two, against a furnace that typically lasts a few years longer.',
+  },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Comparisons: Furnace, Oil, Baseboard, Geothermal and More"
+    description="Heat pump comparisons in one place: vs furnace, vs oil, vs baseboard, ducted vs ductless and air source vs geothermal, each modelled with real energy prices."
+    path={path}
+    type="CollectionPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="heat pump comparison"
+    isHub
+  />
+
+  <PageHeader
+    eyebrow="Compare"
+    title="Compare a heat pump to the system you already have"
+    standfirst="Seven head-to-head breakdowns, each one modelled on real EIA prices and NOAA climate data rather than assumed. Start with the featured comparison, then dig into the one that matches your house."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '7 comparisons', label: 'From gas furnace to geothermal to pellets, including where staying put is cheaper' }}
+  />
+
+  <div class="container-atlas space-y-20 py-12 lg:space-y-28 lg:py-16">
+    <Section
+      id="featured"
+      title="Featured: ducted heat pump vs gas furnace"
+      lede="The single most searched comparison, across six criteria that actually move the decision. The edge column names a winner on each row, including the rows where the furnace wins."
+    >
+      <ComparisonTable
+        leftLabel="Ducted heat pump"
+        rightLabel="Gas furnace"
+        rows={featuredRows}
+        caption="Ducted air source heat pump compared with a modern gas furnace across six criteria"
+        note="Cost ranges are modelled from 2026 pricing and are not quotes. Running-cost winners depend on your state, which is why the calculator asks for your ZIP."
+      />
+      <div class="mt-6">
+        <a
+          href="/calculator/"
+          class="inline-flex items-center gap-2 rounded-lg bg-brand-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-800"
+        >
+          Model this for your ZIP
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </Section>
+
+    <Section
+      id="all"
+      title="Every comparison we publish"
+      lede="Each one is a full page with the numbers, the assumptions and the cases where the answer is no."
+    >
+      <ul class="grid gap-5 sm:grid-cols-2">
+        {comparisons.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-line transition-shadow hover:shadow-lift"
+            >
+              <span class="text-2xs font-semibold tracking-wide text-brand-700 uppercase">{item.tag}</span>
+              <h3 class="mt-2 text-lg font-semibold text-ink-950 group-hover:text-brand-700">{item.title}</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{item.body}</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                Read the comparison
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Section>
+
+    <RelatedPages
+      siblings={[
+        { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Installed cost by system type' },
+        { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
+        { label: 'Calculator', href: '/calculator/', description: 'Model your own switch' },
+        { label: 'Guides', href: '/guides/', description: 'Plain-English answers' },
+      ]}
+    />
+
+    <QuoteCta />
+  </div>
+</BaseLayout>

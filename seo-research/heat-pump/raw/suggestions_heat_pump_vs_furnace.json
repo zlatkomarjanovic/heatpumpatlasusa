@@ -1,0 +1,5188 @@
+{
+  "id": "09141532-2475-0399-0000-0af94069635b",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "total_count": 102,
+  "items": [
+    {
+      "keyword": "heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 02:58:50 +00:00",
+        "competition": 0.58,
+        "competition_level": "MEDIUM",
+        "cpc": 6.5,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 6.78,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 4400,
+          "2026-07": 5400,
+          "2026-06": 5400,
+          "2026-05": 5400,
+          "2026-04": 5400,
+          "2026-03": 6600,
+          "2026-02": 6600,
+          "2026-01": 9900,
+          "2025-12": 8100,
+          "2025-11": 6600,
+          "2025-10": 5400,
+          "2025-09": 4400
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "product_considerations",
+          "people_also_ask",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-07-30 16:06:07 +00:00",
+        "previous_updated_time": "2026-05-16 05:46:00 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8.6,
+        "dofollow": 6.1,
+        "referring_pages": 6.8,
+        "referring_domains": 4.6,
+        "referring_main_domains": 4.5,
+        "rank": 80.4,
+        "main_domain_rank": 441.8,
+        "last_updated_time": "2026-07-30 16:06:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:46:34 +00:00"
+      }
+    },
+    {
+      "keyword": "electric furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 00:43:49 +00:00",
+        "competition": 0.34,
+        "competition_level": "MEDIUM",
+        "cpc": 1.17,
+        "search_volume": 390,
+        "low_top_of_page_bid": 0.04,
+        "high_top_of_page_bid": 3.75,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 260,
+          "2026-07": 260,
+          "2026-06": 260,
+          "2026-05": 260,
+          "2026-04": 320,
+          "2026-03": 390,
+          "2026-02": 590,
+          "2026-01": 880,
+          "2025-12": 590,
+          "2025-11": 480,
+          "2025-10": 390,
+          "2025-09": 260
+        },
+        "search_volume_trend": {
+          "yearly": 24
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=electric%20furnace%20vs%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 128,
+        "last_updated_time": "2026-09-08 08:23:32 +00:00",
+        "previous_updated_time": "2026-07-04 01:10:10 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8.6,
+        "dofollow": 3.9,
+        "referring_pages": 4.2,
+        "referring_domains": 2.6,
+        "referring_main_domains": 2.5,
+        "rank": 26.5,
+        "main_domain_rank": 482.3,
+        "last_updated_time": "2026-09-08 08:23:35 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 08:41:28 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 19:21:59 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 6.91,
+        "search_volume": 320,
+        "low_top_of_page_bid": 1.82,
+        "high_top_of_page_bid": 9.36,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 170,
+          "2026-07": 260,
+          "2026-06": 210,
+          "2026-05": 260,
+          "2026-04": 320,
+          "2026-03": 320,
+          "2026-02": 320,
+          "2026-01": 590,
+          "2025-12": 480,
+          "2025-11": 390,
+          "2025-10": 320,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -35,
+          "quarterly": -19,
+          "yearly": -35
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "questions_and_answers",
+          "related_searches"
+        ],
+        "se_results_count": 18300000,
+        "last_updated_time": "2025-12-14 07:57:52 +00:00",
+        "previous_updated_time": "2025-10-26 23:22:25 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 3.4,
+        "dofollow": 1.5,
+        "referring_pages": 1.9,
+        "referring_domains": 1.6,
+        "referring_main_domains": 1.6,
+        "rank": 24,
+        "main_domain_rank": 522.3,
+        "last_updated_time": "2025-12-14 07:57:52 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 17:03:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs ac furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 11:30:47 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 4.62,
+        "search_volume": 320,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 6.28,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 590,
+          "2026-07": 720,
+          "2026-06": 480,
+          "2026-05": 390,
+          "2026-04": 260,
+          "2026-03": 260,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": 23,
+          "yearly": 127
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20ac%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 137,
+        "last_updated_time": "2026-09-09 05:49:29 +00:00",
+        "previous_updated_time": "2026-07-06 11:42:57 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5,
+        "dofollow": 3.5,
+        "referring_pages": 4.2,
+        "referring_domains": 3.5,
+        "referring_main_domains": 3.4,
+        "rank": 41.7,
+        "main_domain_rank": 465.1,
+        "last_updated_time": "2026-09-09 05:49:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:51:24 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace air conditioner",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 06:55:42 +00:00",
+        "competition": 0.52,
+        "competition_level": "MEDIUM",
+        "cpc": 5.71,
+        "search_volume": 320,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 8.75,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12582
+        ],
+        "monthly_searches": {
+          "2026-07": 720,
+          "2026-06": 480,
+          "2026-05": 390,
+          "2026-04": 260,
+          "2026-03": 260,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 210,
+          "2025-08": 260
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": 85,
+          "yearly": 177
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 12,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20air%20conditioner&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 9780000,
+        "last_updated_time": "2024-10-07 01:33:32 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 91.6,
+        "dofollow": 54.7,
+        "referring_pages": 85.6,
+        "referring_domains": 36.4,
+        "referring_main_domains": 35.3,
+        "rank": 113.4,
+        "main_domain_rank": 518,
+        "last_updated_time": "2024-10-07 01:33:34 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:09:15 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace and air conditioner",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 20:49:33 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 4.62,
+        "search_volume": 320,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 6.28,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 590,
+          "2026-07": 720,
+          "2026-06": 480,
+          "2026-05": 390,
+          "2026-04": 260,
+          "2026-03": 260,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": 23,
+          "yearly": 127
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20and%20air%20conditioner&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 135,
+        "last_updated_time": "2026-09-09 05:49:11 +00:00",
+        "previous_updated_time": "2026-07-06 09:39:52 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5,
+        "dofollow": 3.7,
+        "referring_pages": 4.2,
+        "referring_domains": 3.4,
+        "referring_main_domains": 3.3,
+        "rank": 44.8,
+        "main_domain_rank": 453.9,
+        "last_updated_time": "2026-09-09 05:49:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:03:05 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace and ac",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 11:42:33 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 4.62,
+        "search_volume": 320,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 6.28,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 590,
+          "2026-07": 720,
+          "2026-06": 480,
+          "2026-05": 390,
+          "2026-04": 260,
+          "2026-03": 260,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": 23,
+          "yearly": 127
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 8,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20and%20ac&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "perspectives",
+          "images",
+          "short_videos",
+          "related_searches"
+        ],
+        "se_results_count": 23400000,
+        "last_updated_time": "2025-08-29 03:24:58 +00:00",
+        "previous_updated_time": "2025-06-11 18:39:23 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.3,
+        "dofollow": 4.6,
+        "referring_pages": 5,
+        "referring_domains": 3.6,
+        "referring_main_domains": 3.5,
+        "rank": 42.1,
+        "main_domain_rank": 515.1,
+        "last_updated_time": "2025-08-29 03:25:01 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:02:26 +00:00"
+      }
+    },
+    {
+      "keyword": "cost of heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 04:20:17 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "cpc": 5.66,
+        "search_volume": 260,
+        "low_top_of_page_bid": 0.16,
+        "high_top_of_page_bid": 8.52,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-07": 210,
+          "2026-06": 140,
+          "2026-05": 260,
+          "2026-04": 210,
+          "2026-03": 260,
+          "2026-02": 320,
+          "2026-01": 480,
+          "2025-12": 390,
+          "2025-11": 320,
+          "2025-10": 260,
+          "2025-09": 170,
+          "2025-08": 260
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": -19,
+          "yearly": -19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=cost%20of%20heat%20pump%20vs%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "questions_and_answers",
+          "related_searches"
+        ],
+        "se_results_count": 112,
+        "last_updated_time": "2026-09-10 16:59:55 +00:00",
+        "previous_updated_time": "2026-07-06 19:20:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7.9,
+        "dofollow": 3.2,
+        "referring_pages": 3.5,
+        "referring_domains": 2.4,
+        "referring_main_domains": 2.3,
+        "rank": 17.5,
+        "main_domain_rank": 512.5,
+        "last_updated_time": "2026-09-10 16:59:56 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 04:35:15 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 11:14:44 +00:00",
+        "competition": 0.26,
+        "competition_level": "LOW",
+        "cpc": 4.19,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.73,
+        "high_top_of_page_bid": 5.2,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 90,
+          "2026-07": 110,
+          "2026-06": 110,
+          "2026-05": 110,
+          "2026-04": 170,
+          "2026-03": 170,
+          "2026-02": 170,
+          "2026-01": 260,
+          "2025-12": 260,
+          "2025-11": 260,
+          "2025-10": 260,
+          "2025-09": 170
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": -18,
+          "yearly": -47
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 97,
+        "last_updated_time": "2026-09-13 12:56:14 +00:00",
+        "previous_updated_time": "2026-07-07 17:33:44 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 40.7,
+        "dofollow": 26.8,
+        "referring_pages": 34.9,
+        "referring_domains": 16,
+        "referring_main_domains": 14.6,
+        "rank": 55.2,
+        "main_domain_rank": 410.6,
+        "last_updated_time": "2026-09-13 12:56:14 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-05-01 18:18:20 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs propane furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 22:26:21 +00:00",
+        "competition": 0.38,
+        "competition_level": "MEDIUM",
+        "cpc": 1.73,
+        "search_volume": 170,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 4.73,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 140,
+          "2026-06": 140,
+          "2026-05": 110,
+          "2026-04": 110,
+          "2026-03": 170,
+          "2026-02": 210,
+          "2026-01": 260,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 110,
+          "2025-08": 140
+        },
+        "search_volume_trend": {
+          "quarterly": 27
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20propane%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 122,
+        "last_updated_time": "2026-09-13 12:56:32 +00:00",
+        "previous_updated_time": "2026-07-09 10:22:23 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 4.7,
+        "dofollow": 2.7,
+        "referring_pages": 2.8,
+        "referring_domains": 0.7,
+        "referring_main_domains": 0.7,
+        "rank": 11,
+        "main_domain_rank": 455.3,
+        "last_updated_time": "2026-09-13 12:56:35 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 20:46:14 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace efficiency",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 18:11:48 +00:00",
+        "competition": 0.44,
+        "competition_level": "MEDIUM",
+        "search_volume": 140,
+        "low_top_of_page_bid": 0.14,
+        "high_top_of_page_bid": 7.49,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 30,
+          "2026-06": 1300,
+          "2026-05": 10,
+          "2026-04": 20,
+          "2026-03": 30,
+          "2026-02": 50,
+          "2026-01": 40,
+          "2025-12": 40,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": -67,
+          "quarterly": -99,
+          "yearly": -86
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 6,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20efficiency&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "short_videos",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 129,
+        "last_updated_time": "2026-08-11 12:47:26 +00:00",
+        "previous_updated_time": "2026-06-09 17:48:59 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9.2,
+        "dofollow": 7.4,
+        "referring_pages": 8.2,
+        "referring_domains": 6.1,
+        "referring_main_domains": 5.8,
+        "rank": 66.7,
+        "main_domain_rank": 436.5,
+        "last_updated_time": "2026-08-11 12:47:27 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 01:10:02 +00:00"
+      }
+    },
+    {
+      "keyword": "electric heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 05:19:15 +00:00",
+        "competition": 0.37,
+        "competition_level": "MEDIUM",
+        "cpc": 21.07,
+        "search_volume": 140,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 5.26,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 170,
+          "2026-07": 170,
+          "2026-06": 140,
+          "2026-05": 140,
+          "2026-04": 110,
+          "2026-03": 140,
+          "2026-02": 170,
+          "2026-01": 170,
+          "2025-12": 140,
+          "2025-11": 170,
+          "2025-10": 140,
+          "2025-09": 140
+        },
+        "search_volume_trend": {
+          "quarterly": 21,
+          "yearly": 55
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 6,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=electric%20heat%20pump%20vs%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 124,
+        "last_updated_time": "2026-07-11 14:13:47 +00:00",
+        "previous_updated_time": "2026-01-25 05:51:35 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9.3,
+        "dofollow": 7.4,
+        "referring_pages": 8.3,
+        "referring_domains": 6.2,
+        "referring_main_domains": 5.9,
+        "rank": 64.3,
+        "main_domain_rank": 443.9,
+        "last_updated_time": "2026-07-11 14:15:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 15:12:26 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs oil furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 21:44:11 +00:00",
+        "competition": 0.31,
+        "competition_level": "LOW",
+        "cpc": 1.59,
+        "search_volume": 140,
+        "low_top_of_page_bid": 0.08,
+        "high_top_of_page_bid": 10.3,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 110,
+          "2026-06": 90,
+          "2026-05": 140,
+          "2026-04": 140,
+          "2026-03": 170,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 170,
+          "2025-10": 140,
+          "2025-09": 140,
+          "2025-08": 140
+        },
+        "search_volume_trend": {
+          "monthly": 22,
+          "quarterly": -21
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20oil%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 115,
+        "last_updated_time": "2026-07-09 10:22:22 +00:00",
+        "previous_updated_time": "2026-05-27 04:29:30 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8.1,
+        "dofollow": 6.2,
+        "referring_pages": 7.1,
+        "referring_domains": 3.4,
+        "referring_main_domains": 3.1,
+        "rank": 35.1,
+        "main_domain_rank": 567.6,
+        "last_updated_time": "2026-07-09 10:22:23 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 03:42:32 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs natural gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 10:41:28 +00:00",
+        "competition": 0.38,
+        "competition_level": "MEDIUM",
+        "cpc": 0.25,
+        "search_volume": 90,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 2.79,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 70,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 70,
+          "2026-01": 110,
+          "2025-12": 90,
+          "2025-11": 110,
+          "2025-10": 110,
+          "2025-09": 50,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "yearly": -22
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 6,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20natural%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "discussions_and_forums",
+          "people_also_ask",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 126,
+        "last_updated_time": "2026-07-16 02:40:29 +00:00",
+        "previous_updated_time": "2026-05-29 01:36:15 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.1,
+        "dofollow": 4.9,
+        "referring_pages": 5.3,
+        "referring_domains": 3.6,
+        "referring_main_domains": 3.5,
+        "rank": 67.5,
+        "main_domain_rank": 421.1,
+        "last_updated_time": "2026-07-16 02:40:30 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:03:05 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump efficiency vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 12:09:31 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 4.04,
+        "search_volume": 70,
+        "low_top_of_page_bid": 0.03,
+        "high_top_of_page_bid": 6.09,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 30,
+          "2026-04": 40,
+          "2026-03": 50,
+          "2026-02": 70,
+          "2026-01": 110,
+          "2025-12": 110,
+          "2025-11": 140,
+          "2025-10": 110,
+          "2025-09": 50,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "monthly": 40,
+          "quarterly": 133
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 17,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20efficiency%20vs%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "perspectives",
+          "carousel",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 13800000,
+        "last_updated_time": "2025-12-19 17:13:51 +00:00",
+        "previous_updated_time": "2025-11-01 22:23:07 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 31.4,
+        "dofollow": 27.7,
+        "referring_pages": 29.5,
+        "referring_domains": 14.7,
+        "referring_main_domains": 14.1,
+        "rank": 92.2,
+        "main_domain_rank": 529.2,
+        "last_updated_time": "2025-12-19 17:13:51 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:23:26 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace cost calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 07:40:53 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 9.3,
+        "search_volume": 50,
+        "low_top_of_page_bid": 2.09,
+        "high_top_of_page_bid": 5.7,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 50,
+          "2026-06": 50,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 50,
+          "2026-02": 70,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 50
+        },
+        "search_volume_trend": {
+          "monthly": -20,
+          "quarterly": -20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20cost%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 102,
+        "last_updated_time": "2026-07-29 06:28:42 +00:00",
+        "previous_updated_time": "2026-06-03 09:47:12 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 36.5,
+        "dofollow": 23.8,
+        "referring_pages": 30.8,
+        "referring_domains": 13.7,
+        "referring_main_domains": 12.3,
+        "rank": 30.3,
+        "main_domain_rank": 403.2,
+        "last_updated_time": "2026-07-29 06:28:43 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:27:49 +00:00"
+      }
+    },
+    {
+      "keyword": "forced-air furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 07:52:33 +00:00",
+        "competition": 0.2,
+        "competition_level": "LOW",
+        "cpc": 0.75,
+        "search_volume": 50,
+        "low_top_of_page_bid": 0.02,
+        "high_top_of_page_bid": 2.24,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 50,
+          "2026-06": 30,
+          "2026-05": 50,
+          "2026-04": 40,
+          "2026-03": 50,
+          "2026-02": 90,
+          "2026-01": 90,
+          "2025-12": 50,
+          "2025-11": 50,
+          "2025-10": 40,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=forced-air%20furnace%20vs%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "discussions_and_forums",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 122,
+        "last_updated_time": "2026-07-29 13:29:08 +00:00",
+        "previous_updated_time": "2026-06-04 09:56:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.5,
+        "dofollow": 5.2,
+        "referring_pages": 5.4,
+        "referring_domains": 3.5,
+        "referring_main_domains": 3.4,
+        "rank": 59.5,
+        "main_domain_rank": 447.1,
+        "last_updated_time": "2026-07-29 13:29:15 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-08 00:10:27 +00:00"
+      }
+    },
+    {
+      "keyword": "electric furnace vs heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 04:58:44 +00:00",
+        "competition": 0.61,
+        "competition_level": "MEDIUM",
+        "cpc": 1.22,
+        "search_volume": 40,
+        "low_top_of_page_bid": 0.03,
+        "high_top_of_page_bid": 2.05,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 40,
+          "2026-03": 30,
+          "2026-02": 50,
+          "2026-01": 140,
+          "2025-12": 70,
+          "2025-11": 50,
+          "2025-10": 50,
+          "2025-09": 20,
+          "2025-08": 30
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=electric%20furnace%20vs%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 111,
+        "last_updated_time": "2026-08-16 16:41:31 +00:00",
+        "previous_updated_time": "2026-06-12 09:51:21 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 40.4,
+        "dofollow": 30.7,
+        "referring_pages": 33.1,
+        "referring_domains": 21.7,
+        "referring_main_domains": 20.4,
+        "rank": 77.6,
+        "main_domain_rank": 556.3,
+        "last_updated_time": "2026-08-16 16:41:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 08:55:06 +00:00"
+      }
+    },
+    {
+      "keyword": "cost to run heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 23:05:18 +00:00",
+        "competition": 0.26,
+        "competition_level": "LOW",
+        "cpc": 2.7,
+        "search_volume": 40,
+        "low_top_of_page_bid": 0.23,
+        "high_top_of_page_bid": 4.81,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 30,
+          "2026-06": 30,
+          "2026-05": 30,
+          "2026-04": 30,
+          "2026-03": 40,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 30,
+          "2025-09": 20,
+          "2025-08": 40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 8
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=cost%20to%20run%20heat%20pump%20vs%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "questions_and_answers",
+          "related_searches"
+        ],
+        "se_results_count": 118,
+        "last_updated_time": "2026-08-17 00:46:29 +00:00",
+        "previous_updated_time": "2026-06-13 04:31:44 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5,
+        "dofollow": 4.1,
+        "referring_pages": 4.3,
+        "referring_domains": 3.1,
+        "referring_main_domains": 3,
+        "rank": 48.9,
+        "main_domain_rank": 569.3,
+        "last_updated_time": "2026-08-17 00:46:29 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-30 06:25:30 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump system vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 19:12:37 +00:00",
+        "competition": 0.42,
+        "competition_level": "MEDIUM",
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.06,
+        "high_top_of_page_bid": 3.36,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 40,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 40,
+          "2025-12": 70,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": -50
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20system%20vs%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "questions_and_answers",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 137,
+        "last_updated_time": "2026-08-29 17:05:22 +00:00",
+        "previous_updated_time": "2026-02-25 17:48:27 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.2,
+        "dofollow": 5.1,
+        "referring_pages": 5.4,
+        "referring_domains": 3.6,
+        "referring_main_domains": 3.5,
+        "rank": 67.9,
+        "main_domain_rank": 467.6,
+        "last_updated_time": "2026-08-29 17:05:26 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 14:35:19 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump cost vs furnace and a c",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 17:07:32 +00:00",
+        "competition": 0.55,
+        "competition_level": "MEDIUM",
+        "cpc": 2.05,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.9,
+        "high_top_of_page_bid": 7.6,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 70,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 40,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -43,
+          "yearly": 33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 8
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20cost%20vs%20furnace%20and%20a%20c&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 127,
+        "last_updated_time": "2026-08-29 17:09:11 +00:00",
+        "previous_updated_time": "2026-03-11 01:02:07 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7,
+        "dofollow": 5.3,
+        "referring_pages": 6.1,
+        "referring_domains": 4.8,
+        "referring_main_domains": 4.7,
+        "rank": 61.5,
+        "main_domain_rank": 570.1,
+        "last_updated_time": "2026-08-29 17:09:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-05 08:11:36 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump cost vs furnace and ac",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 01:28:37 +00:00",
+        "competition": 0.4,
+        "competition_level": "MEDIUM",
+        "cpc": 3.73,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.05,
+        "high_top_of_page_bid": 7.12,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 40,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 30,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "monthly": 75,
+          "quarterly": 75,
+          "yearly": 133
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20cost%20vs%20furnace%20and%20ac&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 120,
+        "last_updated_time": "2026-08-29 17:08:50 +00:00",
+        "previous_updated_time": "2026-03-11 01:05:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7,
+        "dofollow": 5.3,
+        "referring_pages": 6.1,
+        "referring_domains": 4.8,
+        "referring_main_domains": 4.7,
+        "rank": 61.5,
+        "main_domain_rank": 570.1,
+        "last_updated_time": "2026-08-29 17:08:52 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:14:56 +00:00"
+      }
+    },
+    {
+      "keyword": "propane furnace vs electric heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 13:22:02 +00:00",
+        "competition": 0.17,
+        "competition_level": "LOW",
+        "cpc": 0.06,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.04,
+        "high_top_of_page_bid": 3.39,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 40,
+          "2026-01": 40,
+          "2025-12": 40,
+          "2025-11": 40,
+          "2025-10": 30,
+          "2025-09": 20,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "yearly": 100
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=propane%20furnace%20vs%20electric%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 124,
+        "last_updated_time": "2026-09-03 12:23:10 +00:00",
+        "previous_updated_time": "2026-08-27 11:26:10 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8,
+        "dofollow": 5.2,
+        "referring_pages": 5.6,
+        "referring_domains": 3.1,
+        "referring_main_domains": 3,
+        "rank": 29.4,
+        "main_domain_rank": 421.7,
+        "last_updated_time": "2026-09-03 12:23:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 18:18:47 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace operating costs",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 02:19:54 +00:00",
+        "competition": 0.33,
+        "competition_level": "MEDIUM",
+        "cpc": 0.07,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.36,
+        "high_top_of_page_bid": 5.46,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 30,
+          "2025-10": 40,
+          "2025-09": 40,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20operating%20costs&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "questions_and_answers",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 112,
+        "last_updated_time": "2026-08-16 04:36:20 +00:00",
+        "previous_updated_time": "2026-06-09 17:50:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 4.2,
+        "dofollow": 3.3,
+        "referring_pages": 3.5,
+        "referring_domains": 2.5,
+        "referring_main_domains": 2.4,
+        "rank": 31.9,
+        "main_domain_rank": 549,
+        "last_updated_time": "2026-08-16 04:36:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 23:03:11 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace colorado",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 20:56:10 +00:00",
+        "competition": 0.49,
+        "competition_level": "MEDIUM",
+        "cpc": 21.11,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.08,
+        "high_top_of_page_bid": 27.84,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 30,
+          "2026-04": 50,
+          "2026-03": 40,
+          "2026-02": 30,
+          "2026-01": 40,
+          "2025-12": 40,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20colorado&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 137,
+        "last_updated_time": "2026-08-29 16:48:57 +00:00",
+        "previous_updated_time": "2025-04-11 20:35:28 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 4,
+        "dofollow": 3.5,
+        "referring_pages": 3.7,
+        "referring_domains": 2.4,
+        "referring_main_domains": 2.4,
+        "rank": 17.2,
+        "main_domain_rank": 480.1,
+        "last_updated_time": "2026-08-29 16:48:57 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:40:29 +00:00"
+      }
+    },
+    {
+      "keyword": "rv heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 22:06:14 +00:00",
+        "competition": 0.53,
+        "competition_level": "MEDIUM",
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 50,
+          "2025-12": 50,
+          "2025-11": 50,
+          "2025-10": 70,
+          "2025-09": 20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=rv%20heat%20pump%20vs%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 109,
+        "last_updated_time": "2026-09-03 04:47:55 +00:00",
+        "previous_updated_time": "2026-08-27 03:37:56 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 0.7,
+        "dofollow": 0.6,
+        "referring_pages": 0.7,
+        "referring_domains": 0.7,
+        "referring_main_domains": 0.7,
+        "rank": 22.9,
+        "main_domain_rank": 416,
+        "last_updated_time": "2026-09-03 04:47:57 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:29:23 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace and air conditioner",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 17:56:04 +00:00",
+        "competition": 0.71,
+        "competition_level": "HIGH",
+        "cpc": 1.09,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.02,
+        "high_top_of_page_bid": 2.83,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 20,
+          "2026-06": 40,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -75
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "detected_language": "en",
+        "words_count": 8
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-28 16:52:18 +00:00"
+      }
+    },
+    {
+      "keyword": "when to use heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 01:06:29 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 50,
+          "2025-12": 50,
+          "2025-11": 50,
+          "2025-10": 40,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=when%20to%20use%20heat%20pump%20vs%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 134,
+        "last_updated_time": "2026-09-02 04:42:24 +00:00",
+        "previous_updated_time": "2024-03-27 03:59:24 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.1,
+        "dofollow": 4.8,
+        "referring_pages": 5.3,
+        "referring_domains": 3.6,
+        "referring_main_domains": 3.5,
+        "rank": 68.1,
+        "main_domain_rank": 467.3,
+        "last_updated_time": "2026-09-02 04:42:45 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-30 04:44:06 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace reddit",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 22:22:19 +00:00",
+        "competition": 0.06,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 40,
+          "2025-10": 30,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "yearly": -67
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20reddit&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 3630000,
+        "last_updated_time": "2026-03-11 01:04:41 +00:00",
+        "previous_updated_time": "2025-12-23 23:01:50 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 0.3,
+        "dofollow": 0.1,
+        "referring_pages": 0.3,
+        "referring_domains": 0.3,
+        "referring_main_domains": 0.3,
+        "rank": 11.3,
+        "main_domain_rank": 817,
+        "last_updated_time": "2026-03-11 01:04:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "gas furnace and ac vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 20:36:03 +00:00",
+        "competition": 0.7,
+        "competition_level": "HIGH",
+        "cpc": 0.26,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 6,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 40,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 10,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "monthly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-02 19:28:48 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump system vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 21:41:49 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 2.43,
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "yearly": 100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:14:47 +00:00"
+      }
+    },
+    {
+      "keyword": "geothermal heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 09:38:02 +00:00",
+        "competition": 0.04,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 10,
+          "2025-11": 20,
+          "2025-10": 20,
+          "2025-09": 10,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "quarterly": 100,
+          "yearly": 100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=geothermal%20heat%20pump%20vs%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "featured_snippet",
+          "people_also_ask",
+          "organic",
+          "video",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 1570000,
+        "last_updated_time": "2024-04-19 21:34:18 +00:00",
+        "previous_updated_time": "2024-03-09 07:13:00 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 41.1,
+        "dofollow": 21.7,
+        "referring_pages": 40.2,
+        "referring_domains": 18,
+        "referring_main_domains": 17.3,
+        "rank": 60,
+        "main_domain_rank": 441.8,
+        "last_updated_time": "2024-04-19 21:34:19 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 19:58:15 +00:00"
+      }
+    },
+    {
+      "keyword": "dual fuel heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 07:58:47 +00:00",
+        "competition": 0.4,
+        "competition_level": "MEDIUM",
+        "cpc": 2.11,
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.54,
+        "high_top_of_page_bid": 14.17,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 30,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 40,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 10,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 200,
+          "quarterly": 200,
+          "yearly": 200
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 11,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=dual%20fuel%20heat%20pump%20vs%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 6140000,
+        "last_updated_time": "2023-07-30 18:50:15 +00:00",
+        "previous_updated_time": "2023-06-19 04:01:28 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8.6,
+        "dofollow": 4.9,
+        "referring_pages": 8.2,
+        "referring_domains": 5.8,
+        "referring_main_domains": 5.7,
+        "rank": 35,
+        "main_domain_rank": 370.8,
+        "last_updated_time": "2023-07-30 18:50:22 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:09:34 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace california",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 07:39:13 +00:00",
+        "competition": 0.33,
+        "competition_level": "MEDIUM",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 50,
+          "2025-11": 30,
+          "2025-10": 40,
+          "2025-09": 50
+        },
+        "search_volume_trend": {
+          "yearly": -75
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20california&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 127,
+        "last_updated_time": "2026-08-29 17:03:58 +00:00",
+        "previous_updated_time": "2026-04-14 20:56:44 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 0.4,
+        "dofollow": 0.4,
+        "referring_pages": 0.4,
+        "referring_domains": 0.4,
+        "referring_main_domains": 0.4,
+        "rank": 2.8,
+        "main_domain_rank": 370.5,
+        "last_updated_time": "2026-08-29 17:03:58 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:14:47 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 13:37:03 +00:00",
+        "competition": 0.23,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 20,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 30,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 1,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 2980000,
+        "last_updated_time": "2026-03-11 01:01:05 +00:00",
+        "previous_updated_time": "2025-12-23 23:01:55 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 48.5,
+        "dofollow": 31.7,
+        "referring_pages": 41,
+        "referring_domains": 19.6,
+        "referring_main_domains": 18.2,
+        "rank": 71.7,
+        "main_domain_rank": 342.9,
+        "last_updated_time": "2026-03-11 01:01:05 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:56:03 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace ontario calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 05:56:52 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs propane gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:33:25 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-01": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "quarterly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:47:10 +00:00"
+      }
+    },
+    {
+      "keyword": "inverter heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 15:19:40 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 2.54,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 4,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=inverter%20heat%20pump%20vs%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 1130000,
+        "last_updated_time": "2025-01-04 03:48:38 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 41.3,
+        "dofollow": 28.1,
+        "referring_pages": 34.2,
+        "referring_domains": 14.5,
+        "referring_main_domains": 14.2,
+        "rank": 68.4,
+        "main_domain_rank": 559.3,
+        "last_updated_time": "2025-01-04 03:48:40 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 20:00:18 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace bay area",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 15:16:38 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20bay%20area&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "perspectives",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 68,
+        "last_updated_time": "2025-01-15 21:40:31 +00:00",
+        "previous_updated_time": "2024-12-03 17:29:23 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5.3,
+        "dofollow": 4,
+        "referring_pages": 4,
+        "referring_domains": 3.3,
+        "referring_main_domains": 3.3,
+        "rank": 15.2,
+        "main_domain_rank": 408.9,
+        "last_updated_time": "2025-01-15 21:40:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 20:27:03 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump energy savings vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 20:49:34 +00:00",
+        "competition": 0.86,
+        "competition_level": "HIGH",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:36:48 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs electric furnace calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 10:28:09 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 9,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20electric%20furnace%20calculator&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 2370000,
+        "last_updated_time": "2025-02-26 16:34:58 +00:00",
+        "previous_updated_time": "2025-01-15 21:41:32 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 190,
+        "dofollow": 76.6,
+        "referring_pages": 93.2,
+        "referring_domains": 27.4,
+        "referring_main_domains": 25.8,
+        "rank": 104,
+        "main_domain_rank": 436.6,
+        "last_updated_time": "2025-02-26 16:34:59 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs propane furnace operating costs",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 23:21:02 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:16:15 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace in virginia",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 06:42:20 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-03": 10,
+          "2025-11": 10,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 23:03:10 +00:00"
+      }
+    },
+    {
+      "keyword": "seattle heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 13:40:15 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "monthly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=seattle%20heat%20pump%20vs%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 805000,
+        "last_updated_time": "2024-11-16 15:57:25 +00:00",
+        "previous_updated_time": "2024-09-11 10:08:14 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 3.2,
+        "dofollow": 3,
+        "referring_pages": 3.2,
+        "referring_domains": 2.1,
+        "referring_main_domains": 2,
+        "rank": 32.5,
+        "main_domain_rank": 368.1,
+        "last_updated_time": "2024-11-16 15:57:28 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-06 06:21:32 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace portland oregon",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 08:30:28 +00:00",
+        "competition": 0.86,
+        "competition_level": "HIGH",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:03:11 +00:00"
+      }
+    },
+    {
+      "keyword": "mini split heat pump vs oil furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 03:52:28 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 19,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mini%20split%20heat%20pump%20vs%20oil%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "images",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 4800000,
+        "last_updated_time": "2023-04-12 00:57:10 +00:00",
+        "previous_updated_time": "2023-03-01 02:12:55 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 15.2,
+        "dofollow": 10.1,
+        "referring_pages": 14.5,
+        "referring_domains": 9.5,
+        "referring_main_domains": 9.1,
+        "rank": 77.8,
+        "main_domain_rank": 356,
+        "last_updated_time": "2023-04-12 00:57:28 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 15:03:47 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs natural gas furnace calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 12:07:31 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-05-01 18:07:43 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace seattle",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 08:55:36 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 18,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20seattle&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 99,
+        "last_updated_time": "2023-03-13 01:44:09 +00:00",
+        "previous_updated_time": "2023-01-26 03:54:03 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 10.3,
+        "dofollow": 3.4,
+        "referring_pages": 8.3,
+        "referring_domains": 6.8,
+        "referring_main_domains": 6.2,
+        "rank": 41.4,
+        "main_domain_rank": 371.1,
+        "last_updated_time": "2023-03-13 01:44:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 16:48:19 +00:00"
+      }
+    },
+    {
+      "keyword": "boiler vs furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 02:40:17 +00:00",
+        "competition": 0.19,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 11:30:41 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace oregon",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 12:25:46 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 14.77,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20oregon&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 20900000,
+        "last_updated_time": "2023-07-18 18:37:49 +00:00",
+        "previous_updated_time": "2023-06-09 10:34:17 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 4.8,
+        "dofollow": 3.1,
+        "referring_pages": 4.6,
+        "referring_domains": 2.6,
+        "referring_main_domains": 2.5,
+        "rank": 31.9,
+        "main_domain_rank": 311.6,
+        "last_updated_time": "2023-07-18 18:37:51 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 22:41:50 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs oil furnace operating costs",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 06:55:31 +00:00",
+        "competition": 0.5,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20oil%20furnace%20operating%20costs&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 3800000,
+        "last_updated_time": "2024-06-06 06:12:06 +00:00",
+        "previous_updated_time": "2024-04-24 03:03:32 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 39,
+        "dofollow": 26.5,
+        "referring_pages": 33.2,
+        "referring_domains": 20.2,
+        "referring_main_domains": 18.7,
+        "rank": 29.4,
+        "main_domain_rank": 339,
+        "last_updated_time": "2024-06-06 06:12:08 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:02:26 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace operating costs",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 15:17:35 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:27:49 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace southern california",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 00:56:26 +00:00",
+        "competition": 0.71,
+        "competition_level": "HIGH",
+        "cpc": 0.04,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 22:52:12 +00:00"
+      }
+    },
+    {
+      "keyword": "air source heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 00:52:30 +00:00",
+        "competition": 0.6,
+        "competition_level": "MEDIUM",
+        "cpc": 1.69,
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 04:21:56 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace in georgia",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 19:50:56 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-01": 10,
+          "2025-12": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:10:16 +00:00"
+      }
+    },
+    {
+      "keyword": "airstream heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 00:43:08 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 20,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 40,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=airstream%20heat%20pump%20vs%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "video",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 94,
+        "last_updated_time": "2021-11-07 14:19:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 05:23:29 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace vs gas heater",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 04:24:57 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-02": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 20:59:20 +00:00"
+      }
+    },
+    {
+      "keyword": "mini split heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 10:09:10 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 20
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "de",
+        "is_another_language": true,
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mini%20split%20heat%20pump%20vs%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 5550000,
+        "last_updated_time": "2025-04-11 14:04:20 +00:00",
+        "previous_updated_time": "2025-02-26 08:37:13 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 40.3,
+        "dofollow": 28.4,
+        "referring_pages": 33.4,
+        "referring_domains": 14.8,
+        "referring_main_domains": 14.6,
+        "rank": 43.3,
+        "main_domain_rank": 433.7,
+        "last_updated_time": "2025-04-11 14:04:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 16:27:56 +00:00"
+      }
+    },
+    {
+      "keyword": "electric heat pump vs gas furnace cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 03:27:16 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 16:19:31 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs forced air furnace cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 05:18:40 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-01": 10,
+          "2025-10": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:35:29 +00:00"
+      }
+    },
+    {
+      "keyword": "hybrid heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 04:17:32 +00:00",
+        "competition": 0.1,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-28 16:19:52 +00:00"
+      }
+    },
+    {
+      "keyword": "electric furnace vs heat pump comparison",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 05:47:28 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-01": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 17:46:50 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace reddit",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 22:09:45 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:46:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace north carolina",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 08:37:54 +00:00",
+        "competition": 0.21,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 38,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20north%20carolina&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "featured_snippet",
+          "people_also_ask",
+          "organic",
+          "related_searches"
+        ],
+        "se_results_count": 1610000,
+        "last_updated_time": "2021-06-29 16:09:03 +00:00",
+        "previous_updated_time": "2021-05-18 15:53:32 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:59:20 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs high efficiency gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 10:41:15 +00:00",
+        "competition": 0.46,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 20,
+          "2025-09": 20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 9,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20high%20efficiency%20gas%20furnace&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 13300000,
+        "last_updated_time": "2025-01-27 21:32:21 +00:00",
+        "previous_updated_time": "2024-12-14 13:55:28 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 52.5,
+        "dofollow": 35.2,
+        "referring_pages": 45.1,
+        "referring_domains": 19.6,
+        "referring_main_domains": 19.1,
+        "rank": 89,
+        "main_domain_rank": 587.4,
+        "last_updated_time": "2025-01-27 21:32:42 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:56:03 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace in indiana",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 16:00:42 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-01": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:10:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace installation cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 20:09:26 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 43,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20installation%20cost&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches",
+          "multi_carousel"
+        ],
+        "se_results_count": 21500000,
+        "last_updated_time": "2021-12-10 13:47:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:41:23 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace price",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 15:16:50 +00:00",
+        "competition": 0.26,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 22:54:49 +00:00"
+      }
+    },
+    {
+      "keyword": "furnace vs heat pump difference",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 21:47:37 +00:00",
+        "competition": 0.31,
+        "competition_level": "LOW",
+        "cpc": 0.08,
+        "search_volume": 10,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 15.13,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-05-04 06:55:27 +00:00"
+      }
+    },
+    {
+      "keyword": "high-efficiency furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 11:45:09 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 21:36:37 +00:00"
+      }
+    },
+    {
+      "keyword": "electric heat pump vs oil furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 09:52:54 +00:00",
+        "competition": 0.19,
+        "competition_level": "LOW",
+        "cpc": 10.01,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:17:49 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs propane furnace ontario",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 17:00:46 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-03": 10,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:47:06 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump btu vs furnace btu",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 08:23:40 +00:00",
+        "competition": 0.33,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:08:13 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump air handler vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 15:02:06 +00:00",
+        "competition": 0.11,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:46:28 +00:00"
+      }
+    },
+    {
+      "keyword": "natural gas furnace vs electric heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:37:52 +00:00",
+        "competition": 0.1,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 16:31:53 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace atlanta",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 06:03:39 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-06": 10
+        },
+        "search_volume_trend": {
+          "quarterly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 23:07:10 +00:00"
+      }
+    },
+    {
+      "keyword": "electric heat pump vs natural gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 03:00:24 +00:00",
+        "competition": 0.1,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:17:49 +00:00"
+      }
+    },
+    {
+      "keyword": "ductless heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 22:09:37 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-02": 10,
+          "2025-11": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:18:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace california",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 17:02:36 +00:00",
+        "competition": 0.07,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace%20california&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "people_also_search",
+          "discussions_and_forums",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 7390000,
+        "last_updated_time": "2025-10-19 18:02:51 +00:00",
+        "previous_updated_time": "2025-09-02 22:49:33 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 3.3,
+        "dofollow": 2.8,
+        "referring_pages": 3,
+        "referring_domains": 2.1,
+        "referring_main_domains": 2.1,
+        "rank": 16.1,
+        "main_domain_rank": 503.2,
+        "last_updated_time": "2025-10-19 18:02:52 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "house heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 21:51:39 +00:00",
+        "competition": 0.71,
+        "competition_level": "HIGH",
+        "cpc": 6.01,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:23:58 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace massachusetts",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 14:20:45 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:48:07 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace northern california",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 10:39:07 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 14,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20northern%20california&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "last_updated_time": "2022-08-19 17:55:09 +00:00",
+        "previous_updated_time": "2022-07-14 12:57:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7.1,
+        "dofollow": 3.6,
+        "referring_pages": 6.5,
+        "referring_domains": 5.1,
+        "referring_main_domains": 5,
+        "rank": 48.1,
+        "main_domain_rank": 341.6,
+        "last_updated_time": "2022-08-19 17:55:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 22:10:16 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs natural gas furnace cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 13:52:04 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 20:45:16 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace energy cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 11:21:53 +00:00",
+        "competition": 0.86,
+        "competition_level": "HIGH",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "cost of propane furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 17:03:51 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "quarterly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-24 17:08:03 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace in texas",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 15:29:03 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-03": 10,
+          "2026-01": 10
+        },
+        "search_volume_trend": {
+          "quarterly": -100
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 37,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20in%20texas&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "featured_snippet",
+          "people_also_ask",
+          "organic",
+          "related_searches"
+        ],
+        "se_results_count": 5990000,
+        "last_updated_time": "2022-01-28 07:42:02 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 20:17:02 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace washington",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:25:36 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-04": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace%20washington&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "featured_snippet",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 5230000,
+        "last_updated_time": "2021-06-27 23:41:42 +00:00",
+        "previous_updated_time": "2021-05-17 12:17:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:46:28 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace canada",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 08:40:08 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-03": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 17:18:51 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace debate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 13:48:34 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-03 22:35:01 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs forced air gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 23:14:35 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:51:24 +00:00"
+      }
+    },
+    {
+      "keyword": "cost of heat pump vs air conditioner and furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 04:58:57 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12582
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 9
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 06:28:00 +00:00"
+      }
+    },
+    {
+      "keyword": "residential heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 10:42:34 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 3.44,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 20:55:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace humidity",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 05:02:31 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "cpc": 10.89,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:41:23 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs electric furnace efficiency",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 12:01:52 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:45:16 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace san francisco",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 07:55:50 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-05": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-11": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:57:14 +00:00"
+      }
+    },
+    {
+      "keyword": "air source heat pump vs propane furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:12:34 +00:00",
+        "search_volume": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 04:47:57 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs conventional furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-08-25 02:53:30 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:46:28 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace ontario",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 01:29:05 +00:00",
+        "competition": 0.86,
+        "competition_level": "HIGH",
+        "cpc": 0.84,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-06": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "navigational"
+        ],
+        "last_updated_time": "2026-04-27 22:26:44 +00:00"
+      }
+    },
+    {
+      "keyword": "electric forced air furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 09:08:59 +00:00",
+        "competition": 0.1,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 08:46:13 +00:00"
+      }
+    },
+    {
+      "keyword": "home heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 11:41:31 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "cpc": 0.73,
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 23:43:09 +00:00"
+      }
+    },
+    {
+      "keyword": "high efficiency propane furnace vs heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 17:49:05 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-05": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 23:00:45 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump efficiency vs oil furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 12:32:03 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:36:48 +00:00"
+      }
+    }
+  ]
+}

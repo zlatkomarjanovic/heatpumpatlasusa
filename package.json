@@ -1,0 +1,36 @@
+{
+  "name": "heatpumpatlasusa",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Data-driven US heat pump costs, comparisons, rebates and switching economics.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "deploy": "astro build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.3.0",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource-variable/newsreader": "^5.1.1",
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.5.2",
+    "lenis": "^1.3.26",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.14"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.6.0"
+  }
+}

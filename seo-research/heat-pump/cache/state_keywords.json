@@ -1,0 +1,820 @@
+[
+  {
+    "keyword": "mass save heat pump rebate",
+    "volume": 1900,
+    "cpc": 13.85,
+    "comp": "MEDIUM",
+    "kd": 2,
+    "intent": "commercial",
+    "yearly": -33,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates maine",
+    "volume": 1000,
+    "cpc": 7.62,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -32,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "images",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "efficiency maine heat pump rebate",
+    "volume": 720,
+    "cpc": 6.36,
+    "comp": "LOW",
+    "kd": 18,
+    "intent": "informational",
+    "yearly": -38,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "xcel energy heat pump rebate",
+    "volume": 480,
+    "cpc": 1.74,
+    "comp": "MEDIUM",
+    "kd": 18,
+    "intent": "commercial",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates california",
+    "volume": 320,
+    "cpc": 10.78,
+    "comp": "MEDIUM",
+    "kd": 34,
+    "intent": "commercial",
+    "yearly": -33,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates colorado",
+    "volume": 320,
+    "cpc": 33.73,
+    "comp": "MEDIUM",
+    "kd": 35,
+    "intent": "commercial",
+    "yearly": 129,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates massachusetts",
+    "volume": 320,
+    "cpc": 14.39,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -71,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "comed heat pump rebate",
+    "volume": 210,
+    "cpc": 1.67,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -48,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "eversource heat pump rebate",
+    "volume": 210,
+    "cpc": 7.79,
+    "comp": "MEDIUM",
+    "kd": 13,
+    "intent": "commercial",
+    "yearly": -46,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "pge heat pump rebate",
+    "volume": 210,
+    "cpc": 5.97,
+    "comp": "MEDIUM",
+    "kd": 7,
+    "intent": "commercial",
+    "yearly": null,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "national grid heat pump rebate",
+    "volume": 170,
+    "cpc": 2.8,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -33,
+    "ai": true,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "ai_overview",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "pseg heat pump rebate",
+    "volume": 170,
+    "cpc": 3.21,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -19,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums"
+    ]
+  },
+  {
+    "keyword": "duke energy heat pump rebate",
+    "volume": 140,
+    "cpc": 5.1,
+    "comp": "LOW",
+    "kd": 7,
+    "intent": "commercial",
+    "yearly": -48,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "nyserda heat pump rebate",
+    "volume": 110,
+    "cpc": 6.43,
+    "comp": "MEDIUM",
+    "kd": 16,
+    "intent": "commercial",
+    "yearly": -18,
+    "ai": true,
+    "local": false,
+    "features": [
+      "organic",
+      "ai_overview",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "sce heat pump rebate",
+    "volume": 110,
+    "cpc": 3.17,
+    "comp": "LOW",
+    "kd": 14,
+    "intent": "commercial",
+    "yearly": 86,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost colorado",
+    "volume": 70,
+    "cpc": 24.75,
+    "comp": "LOW",
+    "kd": 2,
+    "intent": "informational",
+    "yearly": 29,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "discussions_and_forums",
+      "related_searches",
+      "popular_products"
+    ]
+  },
+  {
+    "keyword": "heat pump installation cost california",
+    "volume": 70,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -64,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "bge heat pump rebate",
+    "volume": 70,
+    "cpc": 8.97,
+    "comp": "MEDIUM",
+    "kd": 5,
+    "intent": "commercial",
+    "yearly": -22,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "con edison heat pump rebate",
+    "volume": 70,
+    "cpc": 3.78,
+    "comp": "MEDIUM",
+    "kd": 5,
+    "intent": "commercial",
+    "yearly": -40,
+    "ai": true,
+    "local": false,
+    "features": [
+      "organic",
+      "ai_overview",
+      "discussions_and_forums",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates vermont",
+    "volume": 70,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": 14,
+    "intent": "commercial",
+    "yearly": -86,
+    "ai": true,
+    "local": false,
+    "features": [
+      "organic",
+      "ai_overview",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost maine",
+    "volume": 50,
+    "cpc": 10.34,
+    "comp": "HIGH",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -43,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump installation cost maine",
+    "volume": 50,
+    "cpc": 7.57,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump installation cost massachusetts",
+    "volume": 50,
+    "cpc": 24.37,
+    "comp": "MEDIUM",
+    "kd": 2,
+    "intent": "informational",
+    "yearly": -60,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates oregon",
+    "volume": 50,
+    "cpc": 8.03,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -64,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost massachusetts",
+    "volume": 40,
+    "cpc": 13.28,
+    "comp": "HIGH",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -67,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches",
+      "popular_products"
+    ]
+  },
+  {
+    "keyword": "heat pump vs furnace colorado",
+    "volume": 30,
+    "cpc": 21.11,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "mini split cost massachusetts",
+    "volume": 30,
+    "cpc": 2.39,
+    "comp": "HIGH",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -50,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "popular_products",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost oregon",
+    "volume": 20,
+    "cpc": 12.51,
+    "comp": "HIGH",
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates illinois",
+    "volume": 20,
+    "cpc": 2.36,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -33,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_search",
+      "images",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates maryland",
+    "volume": 20,
+    "cpc": 12.11,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -67,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates minnesota",
+    "volume": 20,
+    "cpc": 1.65,
+    "comp": "LOW",
+    "kd": 16,
+    "intent": "commercial",
+    "yearly": -33,
+    "ai": true,
+    "local": false,
+    "features": [
+      "organic",
+      "ai_overview",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates new york",
+    "volume": 20,
+    "cpc": 8.65,
+    "comp": "MEDIUM",
+    "kd": 16,
+    "intent": "commercial",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates pennsylvania",
+    "volume": 20,
+    "cpc": 3.19,
+    "comp": "LOW",
+    "kd": 5,
+    "intent": "commercial",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "product_considerations",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost california",
+    "volume": 10,
+    "cpc": null,
+    "comp": "MEDIUM",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "popular_products",
+      "people_also_search",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates georgia",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": 2,
+    "intent": "commercial",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates michigan",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": 2,
+    "intent": "commercial",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches",
+      "images"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates new hampshire",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -75,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump vs furnace california",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "informational",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "discussions_and_forums",
+      "perspectives",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump vs furnace north carolina",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": 38,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": [
+      "featured_snippet",
+      "people_also_ask",
+      "organic",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump cost vermont",
+    "volume": 10,
+    "cpc": null,
+    "comp": "HIGH",
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "images",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates texas",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": 16,
+    "intent": "commercial",
+    "yearly": -50,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump rebates utah",
+    "volume": 10,
+    "cpc": null,
+    "comp": "LOW",
+    "kd": null,
+    "intent": "commercial",
+    "yearly": -50,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump rebates virginia",
+    "volume": 10,
+    "cpc": 8.62,
+    "comp": "LOW",
+    "kd": 14,
+    "intent": "commercial",
+    "yearly": -67,
+    "ai": false,
+    "local": false,
+    "features": [
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump rebates wisconsin",
+    "volume": 10,
+    "cpc": 0.14,
+    "comp": "LOW",
+    "kd": 15,
+    "intent": "commercial",
+    "yearly": -50,
+    "ai": true,
+    "local": false,
+    "features": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+    ]
+  },
+  {
+    "keyword": "heat pump vs furnace arizona",
+    "volume": 0,
+    "cpc": null,
+    "comp": null,
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump vs furnace michigan",
+    "volume": 0,
+    "cpc": null,
+    "comp": null,
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump vs furnace texas",
+    "volume": 0,
+    "cpc": null,
+    "comp": null,
+    "kd": null,
+    "intent": "commercial",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump vs furnace utah",
+    "volume": 0,
+    "cpc": null,
+    "comp": null,
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": []
+  },
+  {
+    "keyword": "heat pump vs gas massachusetts",
+    "volume": 0,
+    "cpc": null,
+    "comp": null,
+    "kd": null,
+    "intent": "informational",
+    "yearly": null,
+    "ai": false,
+    "local": false,
+    "features": []
+  }
+]

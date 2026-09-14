@@ -1,0 +1,220 @@
+---
+/**
+ * Individual rebate program page.
+ *
+ * Renders structured incentive data, status, verification date, FAQ and the
+ * program body, plus a link chain back to the calculator, the national cost page
+ * and the relevant comparison so no program page is an orphan.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getCollection, render } from 'astro:content';
+import { STATE_BY_CODE } from '@/data/states';
+import { formatUsd } from '@/lib/calculator';
+
+export async function getStaticPaths() {
+  const programs = await getCollection('rebates');
+  return programs
+    .filter((p) => !p.data.draft)
+    .map((program) => ({
+      params: { slug: program.id },
+      props: { program },
+    }));
+}
+
+const { program } = Astro.props;
+const { Content } = await render(program);
+const d = program.data;
+
+const path = `/rebates/${program.id}/`;
+const stateNames = d.stateCodes.map((code) => STATE_BY_CODE[code]?.name ?? code).join(', ');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Rebates', href: '/rebates/' },
+  { label: d.program, href: path },
+];
+
+const columns = [
+  { key: 'incentive', label: 'Incentive' },
+  { key: 'amount', label: 'Amount', numeric: true, emphasis: true },
+  { key: 'status', label: 'Status' },
+  { key: 'note', label: 'Notes', hideOnMobile: true },
+];
+const rows = d.incentives.map((i) => ({
+  incentive: i.label,
+  amount:
+    i.amountLow === 0 && i.amountHigh === 0
+      ? 'Rate rider, not a rebate'
+      : i.amountLow === i.amountHigh
+        ? formatUsd(i.amountLow)
+        : `${formatUsd(i.amountLow)} to ${formatUsd(i.amountHigh)}`,
+  status: i.status.charAt(0).toUpperCase() + i.status.slice(1),
+  note: i.note ?? '',
+}));
+const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }));
+
+const statusStyles: Record<string, string> = {
+  open: 'border-save-100 bg-save-50 text-save-700',
+  enrolling: 'border-flag-100 bg-flag-50 text-flag-700',
+  reserved: 'border-heat-100 bg-heat-50 text-heat-700',
+  expired: 'border-line bg-paper-deep text-ink-500',
+  unknown: 'border-line bg-paper-deep text-ink-500',
+};
+const statusLabel: Record<string, string> = {
+  open: 'Open',
+  enrolling: 'Enrolling',
+  reserved: 'Reserved or paused',
+  expired: 'Expired',
+  unknown: 'Status unconfirmed',
+};
+
+const relatedMarket = d.stateCodes.includes('MA') && program.id === 'mass-save'
+  ? { label: 'Boston, MA market', href: '/markets/boston-ma/', description: 'Local housing stock and contractor context' }
+  : d.stateCodes.includes('ME') && program.id === 'efficiency-maine'
+    ? { label: 'Portland, ME market', href: '/markets/portland-me/', description: 'The strongest oil conversion case in the country' }
+    : d.stateCodes.includes('CO') && program.id === 'xcel-energy'
+      ? { label: 'Denver, CO market', href: '/markets/denver-co/', description: 'Xcel territory, HEAR and the state credit' }
+      : null;
+---
+
+<BaseLayout>
+  <SEO
+    title={d.title}
+    description={d.description}
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    published={d.published}
+    updated={d.updated}
+    reviewedBy={d.reviewedBy}
+    faqs={faqItems}
+    primaryKeyword={d.primaryKeyword}
+  />
+
+  <PageHeader
+    eyebrow={`Rebate program · ${stateNames}`}
+    title={d.program}
+    standfirst={d.description}
+    breadcrumbs={crumbs}
+    updated={d.updated}
+    reviewedBy={d.reviewedBy}
+    keyStat={d.keyStat}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-12">
+        <!-- Status strip -->
+        <div class="flex flex-wrap items-center gap-4 rounded-lg border border-line bg-white p-4">
+          <span class:list={['rounded-full border px-3 py-1.5 text-xs font-semibold', statusStyles[d.programStatus]]}>
+            {statusLabel[d.programStatus]}
+          </span>
+          <dl class="flex flex-wrap gap-x-6 gap-y-2 text-xs">
+            <div class="flex gap-1.5">
+              <dt class="text-ink-500">Administrator</dt>
+              <dd class="text-ink-800 font-medium">{d.administrator}</dd>
+            </div>
+            <div class="flex gap-1.5">
+              <dt class="text-ink-500">Last verified</dt>
+              <dd class="text-ink-800 font-medium">
+                <time datetime={d.lastVerified.toISOString()}>
+                  {d.lastVerified.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                </time>
+              </dd>
+            </div>
+            {d.incomeGated && (
+              <div class="flex gap-1.5">
+                <dt class="text-ink-500">Income limits</dt>
+                <dd class="text-flag-700 font-medium">Apply to some tiers</dd>
+              </div>
+            )}
+          </dl>
+          <a
+            href={d.officialUrl}
+            rel="nofollow noopener"
+            target="_blank"
+            class="text-brand-700 hover:text-brand-800 ml-auto text-xs font-semibold underline decoration-brand-200 underline-offset-2"
+          >
+            Official program page
+          </a>
+        </div>
+
+        {d.programStatus === 'reserved' && (
+          <Callout tone="caution" title="This program is not accepting new applications">
+            <p>
+              We keep this page live because other sites still advertise this money as available. If you are planning a
+              project, treat this program as unavailable and check the {stateNames} energy office for the current
+              situation. Confirm before you commit, because a reservation requirement is easy to miss and the
+              consequences are expensive.
+            </p>
+          </Callout>
+        )}
+
+        <Section id="amounts" number="1" title="What the program pays">
+          <DataTable
+            caption={`${d.program} incentive amounts`}
+            columns={columns}
+            rows={rows}
+            mobileLabelKey="incentive"
+            note={`Amounts reflect published program terms as of the verification date above. Program terms change without notice, and several programs require pre-approval before installation.`}
+          />
+        </Section>
+
+        <div class="prose-atlas">
+          <Content />
+        </div>
+
+        <Section id="next" number="2" title="Next steps">
+          <div class="prose-atlas">
+            <p>
+              Confirm the reservation requirement first, because it is the single most expensive detail to get wrong.
+              Then run the <a href="/calculator/">calculator</a>, which applies only programs marked open in your state
+              and will show you the after-rebate range alongside your modelled operating cost.
+            </p>
+            <p>
+              Check the <a href="/heat-pump-cost/">heat pump cost guide</a> if you want to sanity-check the installed
+              band your contractor quotes, and the relevant comparison page if you are still deciding between fuels.
+            </p>
+          </div>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="#amounts" class="text-ink-600 hover:text-brand-700 transition-colors">What it pays</a></li>
+            <li><a href="#sources" class="text-ink-600 hover:text-brand-700 transition-colors">Sources</a></li>
+            <li><a href="#next" class="text-ink-600 hover:text-brand-700 transition-colors">Next steps</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <QuoteCta market={stateNames} />
+      <Faq items={faqItems} />
+      <RelatedPages
+        parents={[
+          { label: 'All rebate programs', href: '/rebates/', description: 'Current status of every program we track' },
+          { label: 'Calculator', href: '/calculator/', description: 'Applies open programs to your situation' },
+        ]}
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Installed cost bands' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Running cost by state' },
+          ...(relatedMarket ? [relatedMarket] : []),
+        ]}
+      />
+      <SourceList sources={d.citations.map((c) => ({ ...c, primary: true }))} updated={d.updated} />
+    </div>
+  </div>
+</BaseLayout>

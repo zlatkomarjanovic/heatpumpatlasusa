@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="HeatPumpAtlasUSA: data-driven US heat pump costs">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#10475a"/>
+  <g transform="translate(72 84)">
+    <g transform="scale(2.4)">
+      <rect width="32" height="32" rx="7" fill="#10475a"/>
+      <path d="M9 21.5c0-4 2.6-6.2 5.5-8.2C16.8 11.8 18 10 18 7.5" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <circle cx="18" cy="7.5" r="2.6" fill="#ffffff"/>
+      <path d="M10 24.5h12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity="0.6"/>
+    </g>
+  </g>
+  <text x="168" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#0a0f14" font-weight="500">HeatPumpAtlas<tspan fill="#155a6e">USA</tspan></text>
+  <text x="72" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#0a0f14" font-weight="500">What a heat pump really costs</text>
+  <text x="72" y="384" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#0a0f14" font-weight="500">and whether it pays where you live</text>
+  <text x="72" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#46525f">ZIP-level installed cost, operating cost, open rebates and payback</text>
+  <text x="72" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#46525f">Built on EIA rates, NOAA climate data and verified program status</text>
+  <g transform="translate(72 560)">
+    <rect x="0" y="0" width="290" height="52" rx="8" fill="#155a6e"/>
+    <text x="145" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#ffffff" font-weight="600">Run the calculator</text>
+  </g>
+  <g transform="translate(392 560)">
+    <rect x="0" y="0" width="270" height="52" rx="8" fill="none" stroke="#cfc8b9" stroke-width="2"/>
+    <text x="135" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#2c3743" font-weight="600">heatpumpatlasusa.com</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+name = "heatpumpatlasusa"
+compatibility_date = "2026-09-14"
+pages_build_output_dir = "dist"
+
+# Bind this after first deploy: wrangler pages project create, then
+# wrangler kv namespace create LEADS and add the id here.
+# [[kv_namespaces]]
+# binding = "LEADS"
+# id = "replace-me"

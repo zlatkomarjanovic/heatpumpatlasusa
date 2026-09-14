@@ -1,0 +1,570 @@
+@import 'tailwindcss';
+
+/*
+ * HeatPumpAtlasUSA design tokens.
+ *
+ * The palette is deliberately restrained: warm paper, ink text, one data
+ * teal for structure, and warm/cool accents reserved for cost direction.
+ * No gradients, no decorative illustration.
+ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader Variable', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, monospace;
+
+  --color-ink-950: #0a0f14;
+  --color-ink-900: #10161d;
+  --color-ink-800: #1c2530;
+  --color-ink-700: #2c3743;
+  --color-ink-600: #46525f;
+  --color-ink-500: #5d6874;
+  --color-ink-400: #7b8592;
+  --color-ink-300: #a3abb5;
+
+  --color-paper: #f7f6f2;
+  --color-paper-deep: #efede7;
+  --color-surface: #ffffff;
+  --color-line: #e2ddd2;
+  --color-line-strong: #cfc8b9;
+
+  --color-brand-50: #eef6f8;
+  --color-brand-100: #d5e9ee;
+  --color-brand-200: #a9d2dc;
+  --color-brand-500: #1d6e85;
+  --color-brand-600: #155a6e;
+  --color-brand-700: #10475a;
+  --color-brand-800: #0c3747;
+  --color-brand-900: #092935;
+
+  --color-heat-50: #fdf3ee;
+  --color-heat-100: #fae1d4;
+  --color-heat-600: #bc4712;
+  --color-heat-700: #98380d;
+
+  --color-cool-50: #eef3fb;
+  --color-cool-100: #d9e5f7;
+  --color-cool-600: #1c5bb0;
+  --color-cool-700: #16488b;
+
+  --color-save-50: #edf7f1;
+  --color-save-100: #d5ecdf;
+  --color-save-600: #15704a;
+  --color-save-700: #115a3c;
+
+  --color-flag-50: #fdf8ec;
+  --color-flag-100: #f9edcf;
+  --color-flag-600: #8d6508;
+  --color-flag-700: #6f4f06;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+
+  --shadow-card: 0 1px 2px rgb(16 22 29 / 0.04), 0 1px 3px rgb(16 22 29 / 0.06);
+  --shadow-lift: 0 4px 12px rgb(16 22 29 / 0.07), 0 1px 3px rgb(16 22 29 / 0.05);
+
+  --radius-card: 0.5rem;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink-800);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv05' 1, 'ss01' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink-950);
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.011em;
+    text-wrap: balance;
+  }
+
+  h5,
+  h6 {
+    color: var(--color-ink-900);
+    font-weight: 600;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  /* Prose styling for markdown-driven article bodies. */
+  .prose-atlas {
+    color: var(--color-ink-700);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .prose-atlas > * + * {
+    margin-top: 1.15em;
+  }
+
+  .prose-atlas h2 {
+    margin-top: 2.25em;
+    margin-bottom: 0.6em;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .prose-atlas h3 {
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+    font-size: 1.1875rem;
+    line-height: 1.4;
+  }
+
+  .prose-atlas h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+    font-size: 1.0625rem;
+    font-family: var(--font-sans);
+    font-weight: 650;
+  }
+
+  .prose-atlas ul,
+  .prose-atlas ol {
+    padding-left: 1.35em;
+  }
+
+  .prose-atlas ul {
+    list-style: disc;
+  }
+
+  .prose-atlas ol {
+    list-style: decimal;
+  }
+
+  .prose-atlas li + li {
+    margin-top: 0.4em;
+  }
+
+  .prose-atlas li::marker {
+    color: var(--color-ink-400);
+  }
+
+  .prose-atlas strong {
+    color: var(--color-ink-900);
+    font-weight: 640;
+  }
+
+  .prose-atlas a:not(.not-prose) {
+    color: var(--color-brand-700);
+    text-decoration: underline;
+    text-decoration-color: var(--color-brand-200);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .prose-atlas a:not(.not-prose):hover {
+    text-decoration-color: var(--color-brand-600);
+  }
+
+  .prose-atlas blockquote {
+    border-left: 3px solid var(--color-brand-200);
+    padding-left: 1em;
+    color: var(--color-ink-600);
+    font-style: normal;
+  }
+
+  .prose-atlas code {
+    background-color: var(--color-paper-deep);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  .prose-atlas hr {
+    border-top: 1px solid var(--color-line);
+    margin-block: 2em;
+  }
+
+  .prose-atlas table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .prose-atlas th {
+    text-align: left;
+    font-weight: 620;
+    color: var(--color-ink-900);
+    background-color: var(--color-paper-deep);
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--color-line-strong);
+    white-space: nowrap;
+  }
+
+  .prose-atlas td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+}
+
+@utility container-atlas {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 90rem; /* 1440px */
+  padding-inline: 1.125rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= 80rem) {
+    padding-inline: 2.75rem;
+  }
+}
+
+/* Narrower measure for reading-heavy blocks that live inside the wide container. */
+@utility container-reading {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 70rem;
+}
+
+@utility container-prose {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 46rem;
+  padding-inline: 1.125rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Subtle reveal, disabled for reduced motion, no layout shift. */
+@utility reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: atlas-reveal 0.4s ease-out both;
+  }
+}
+
+@keyframes atlas-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * Lenis smooth scrolling.
+ *
+ * These classes are applied by the Lenis runtime in BaseLayout. When JS is off
+ * or the user prefers reduced motion, none of this activates and the native
+ * `scroll-behavior: smooth` on <html> remains the fallback.
+ */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/*
+ * Scroll-reveal for sections. The hidden initial state is gated behind
+ * `html.js`, so a visitor or crawler without JavaScript sees every section
+ * fully rendered. Reduced-motion users never get the hidden state either.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  html.js .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * Adaptive header.
+ *
+ * Solid (cream, blurred) by default. On pages that lead with a dark hero the
+ * header carries `.is-over-hero` and floats transparently with light text until
+ * the scroll script adds `.is-solid`, at which point the cream surface fades in.
+ */
+.site-header {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.site-header.is-over-hero:not(.is-solid) {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-brand {
+  color: #fff;
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-brand-accent {
+  color: var(--color-brand-200);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-sub {
+  color: rgb(255 255 255 / 0.68);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-chevron {
+  color: rgb(255 255 255 / 0.6);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-nav-link {
+  color: rgb(255 255 255 / 0.85);
+  background-color: transparent;
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-nav-link:hover {
+  color: #fff;
+  background-color: rgb(255 255 255 / 0.12);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-cta {
+  background-color: rgb(255 255 255 / 0.14);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.28);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-cta:hover {
+  background-color: rgb(255 255 255 / 0.24);
+}
+
+.site-header.is-over-hero:not(.is-solid) .hdr-menu-btn {
+  color: #fff;
+  border-color: rgb(255 255 255 / 0.35);
+}
+
+/* Homepage hero: glass stats, headline accent, trust band */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgb(255 255 255 / 0.1);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.hero-eyebrow-dot {
+  flex-shrink: 0;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+  background-color: #fff;
+  opacity: 0.95;
+}
+
+.hero-headline-accent {
+  color: #b8f0dc;
+  text-shadow: 0 0 28px rgb(184 240 220 / 0.35);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.hero-glass-stat {
+  border-radius: 0.75rem;
+  background-color: rgb(255 255 255 / 0.09);
+  padding: 0.85rem 1rem;
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.16),
+    0 4px 24px rgb(0 0 0 / 0.12);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.hero-trust-band {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-radius: 0.75rem;
+  background-color: rgb(255 255 255 / 0.08);
+  padding: 0.85rem 1rem;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+@media (width >= 40rem) {
+  .hero-trust-band {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.hero-trust-divider {
+  display: none;
+  height: 1.25rem;
+  width: 1px;
+  background-color: rgb(255 255 255 / 0.22);
+}
+
+@media (width >= 40rem) {
+  .hero-trust-divider {
+    display: block;
+  }
+}
+
+/*
+ * FAQ accordion. Native details/summary keeps every answer in the DOM for
+ * crawlers and no-JS visitors. The panel height is animated by a small
+ * progressive-enhancement script; without JS it simply opens instantly.
+ */
+.faq-panel {
+  overflow: hidden;
+}
+
+html.js .faq-panel {
+  transition: height 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Skip link, visible on focus only. */
+/*
+ * Desktop nav dropdowns. Height animates 0fr to 1fr so hover feels like
+ * the panel opening, not just fading in. Reduced-motion users get an
+ * instant open.
+ */
+.nav-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    grid-template-rows 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+.nav-dropdown-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.group:hover > .nav-dropdown,
+.group:focus-within > .nav-dropdown {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown {
+    transition: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  background-color: var(--color-ink-900);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: top 0.15s ease-out;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}

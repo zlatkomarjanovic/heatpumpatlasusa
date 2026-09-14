@@ -1,0 +1,6141 @@
+{
+  "id": "09141532-2475-0399-0000-276396024849",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "total_count": 92,
+  "items": [
+    {
+      "keyword": "mass save heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 08:55:20 +00:00",
+        "competition": 0.52,
+        "competition_level": "MEDIUM",
+        "cpc": 13.85,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 2.78,
+        "high_top_of_page_bid": 14.55,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 1600,
+          "2026-07": 2400,
+          "2026-06": 1900,
+          "2026-05": 2400,
+          "2026-04": 1900,
+          "2026-03": 1900,
+          "2026-02": 1600,
+          "2026-01": 1900,
+          "2025-12": 2400,
+          "2025-11": 2400,
+          "2025-10": 2400,
+          "2025-09": 1900
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -16,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mass%20save%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 100,
+        "last_updated_time": "2026-09-04 17:49:50 +00:00",
+        "previous_updated_time": "2026-06-30 10:19:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 24.3,
+        "dofollow": 11.9,
+        "referring_pages": 19.7,
+        "referring_domains": 11.1,
+        "referring_main_domains": 10,
+        "rank": 74.8,
+        "main_domain_rank": 440.7,
+        "last_updated_time": "2026-09-04 17:49:50 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 16:14:25 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump hot water rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 13:34:48 +00:00",
+        "competition": 0.18,
+        "competition_level": "LOW",
+        "cpc": 6.89,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 1.62,
+        "high_top_of_page_bid": 6.84,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-08": 880,
+          "2026-07": 880,
+          "2026-06": 1000,
+          "2026-05": 1600,
+          "2026-04": 1300,
+          "2026-03": 1900,
+          "2026-02": 2400,
+          "2026-01": 2900,
+          "2025-12": 3600,
+          "2025-11": 1900,
+          "2025-10": 1900,
+          "2025-09": 1900
+        },
+        "search_volume_trend": {
+          "quarterly": -12,
+          "yearly": -54
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 19,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20hot%20water%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 192,
+        "last_updated_time": "2026-06-30 13:00:49 +00:00",
+        "previous_updated_time": "2026-03-30 02:01:15 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1594.7,
+        "dofollow": 1569.8,
+        "referring_pages": 1585.8,
+        "referring_domains": 47.4,
+        "referring_main_domains": 43,
+        "rank": 152.5,
+        "main_domain_rank": 403.6,
+        "last_updated_time": "2026-06-30 13:01:22 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 20:23:26 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 02:07:34 +00:00",
+        "competition": 0.18,
+        "competition_level": "LOW",
+        "cpc": 6.89,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 1.62,
+        "high_top_of_page_bid": 6.84,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 880,
+          "2026-07": 880,
+          "2026-06": 1000,
+          "2026-05": 1600,
+          "2026-04": 1300,
+          "2026-03": 1900,
+          "2026-02": 2400,
+          "2026-01": 2900,
+          "2025-12": 3600,
+          "2025-11": 1900,
+          "2025-10": 1900,
+          "2025-09": 1900
+        },
+        "search_volume_trend": {
+          "quarterly": -12,
+          "yearly": -54
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 22,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 203,
+        "last_updated_time": "2026-09-04 18:57:39 +00:00",
+        "previous_updated_time": "2026-06-30 13:01:28 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 93.6,
+        "dofollow": 70.7,
+        "referring_pages": 85,
+        "referring_domains": 40.4,
+        "referring_main_domains": 37.5,
+        "rank": 167.1,
+        "main_domain_rank": 410.5,
+        "last_updated_time": "2026-09-04 18:57:39 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-27 22:40:53 +00:00"
+      }
+    },
+    {
+      "keyword": "maine heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 14:36:20 +00:00",
+        "competition": 0.4,
+        "competition_level": "MEDIUM",
+        "cpc": 8.87,
+        "search_volume": 880,
+        "low_top_of_page_bid": 2.26,
+        "high_top_of_page_bid": 14.75,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 590,
+          "2026-07": 880,
+          "2026-06": 590,
+          "2026-05": 720,
+          "2026-04": 720,
+          "2026-03": 4400,
+          "2026-02": 390,
+          "2026-01": 720,
+          "2025-12": 590,
+          "2025-11": 880,
+          "2025-10": 880,
+          "2025-09": 720
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=maine%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 103,
+        "last_updated_time": "2026-08-01 11:04:39 +00:00",
+        "previous_updated_time": "2026-05-19 07:40:46 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 20.1,
+        "dofollow": 12.6,
+        "referring_pages": 12.8,
+        "referring_domains": 7.9,
+        "referring_main_domains": 7.1,
+        "rank": 74.2,
+        "main_domain_rank": 302.9,
+        "last_updated_time": "2026-08-01 11:04:40 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 14:44:04 +00:00"
+      }
+    },
+    {
+      "keyword": "efficiency maine heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 04:45:48 +00:00",
+        "competition": 0.21,
+        "competition_level": "LOW",
+        "cpc": 6.36,
+        "search_volume": 720,
+        "low_top_of_page_bid": 2.4,
+        "high_top_of_page_bid": 17.42,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 1000,
+          "2026-06": 1000,
+          "2026-05": 720,
+          "2026-04": 590,
+          "2026-03": 720,
+          "2026-02": 480,
+          "2026-01": 590,
+          "2025-12": 720,
+          "2025-11": 720,
+          "2025-10": 880,
+          "2025-09": 880,
+          "2025-08": 1000
+        },
+        "search_volume_trend": {
+          "quarterly": 39,
+          "yearly": -38
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 18,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=efficiency%20maine%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 100,
+        "last_updated_time": "2026-09-06 16:05:59 +00:00",
+        "previous_updated_time": "2026-06-30 22:28:11 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 572.9,
+        "dofollow": 471.2,
+        "referring_pages": 479.4,
+        "referring_domains": 56.8,
+        "referring_main_domains": 52,
+        "rank": 125.7,
+        "main_domain_rank": 392,
+        "last_updated_time": "2026-09-06 16:06:00 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 15:53:28 +00:00"
+      }
+    },
+    {
+      "keyword": "pse heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-21 21:53:27 +00:00",
+        "competition": 0.47,
+        "competition_level": "MEDIUM",
+        "cpc": 5.26,
+        "search_volume": 590,
+        "low_top_of_page_bid": 2.38,
+        "high_top_of_page_bid": 12.54,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 480,
+          "2026-06": 720,
+          "2026-05": 590,
+          "2026-04": 590,
+          "2026-03": 590,
+          "2026-02": 480,
+          "2026-01": 590,
+          "2025-12": 590,
+          "2025-11": 590,
+          "2025-10": 880,
+          "2025-09": 720,
+          "2025-08": 590
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -19,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pse%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 114,
+        "last_updated_time": "2026-08-02 21:32:55 +00:00",
+        "previous_updated_time": "2026-05-21 03:38:54 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 18.3,
+        "dofollow": 15.2,
+        "referring_pages": 17.3,
+        "referring_domains": 13.8,
+        "referring_main_domains": 13.5,
+        "rank": 55.5,
+        "main_domain_rank": 348.6,
+        "last_updated_time": "2026-08-02 21:34:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:08:31 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel energy heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 12:37:37 +00:00",
+        "competition": 0.34,
+        "competition_level": "MEDIUM",
+        "cpc": 1.74,
+        "search_volume": 480,
+        "low_top_of_page_bid": 0.44,
+        "high_top_of_page_bid": 9.11,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 480,
+          "2026-07": 590,
+          "2026-06": 590,
+          "2026-05": 390,
+          "2026-04": 590,
+          "2026-03": 590,
+          "2026-02": 390,
+          "2026-01": 390,
+          "2025-12": 390,
+          "2025-11": 480,
+          "2025-10": 480,
+          "2025-09": 480
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 18,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20energy%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "people_also_search",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 16200,
+        "last_updated_time": "2026-04-21 16:04:28 +00:00",
+        "previous_updated_time": "2025-10-30 00:31:51 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 110,
+        "dofollow": 95.7,
+        "referring_pages": 103.6,
+        "referring_domains": 33.8,
+        "referring_main_domains": 28.8,
+        "rank": 132.5,
+        "main_domain_rank": 441.3,
+        "last_updated_time": "2026-04-21 16:04:29 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 01:08:26 +00:00"
+      }
+    },
+    {
+      "keyword": "puget sound energy heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 14:42:51 +00:00",
+        "competition": 0.4,
+        "competition_level": "MEDIUM",
+        "cpc": 5.25,
+        "search_volume": 480,
+        "low_top_of_page_bid": 2.72,
+        "high_top_of_page_bid": 10.5,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 390,
+          "2026-07": 390,
+          "2026-06": 480,
+          "2026-05": 480,
+          "2026-04": 480,
+          "2026-03": 480,
+          "2026-02": 390,
+          "2026-01": 390,
+          "2025-12": 390,
+          "2025-11": 390,
+          "2025-10": 590,
+          "2025-09": 480
+        },
+        "search_volume_trend": {
+          "quarterly": -19,
+          "yearly": -34
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=puget%20sound%20energy%20heat%20pump%20rebate&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 15200,
+        "last_updated_time": "2024-09-20 08:08:01 +00:00",
+        "previous_updated_time": "2024-08-09 17:25:39 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 11.3,
+        "dofollow": 4.7,
+        "referring_pages": 11,
+        "referring_domains": 4.9,
+        "referring_main_domains": 4.9,
+        "rank": 42.1,
+        "main_domain_rank": 367.3,
+        "last_updated_time": "2024-09-20 08:08:02 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-06 08:22:31 +00:00"
+      }
+    },
+    {
+      "keyword": "tech clean california heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 16:17:50 +00:00",
+        "competition": 0.12,
+        "competition_level": "LOW",
+        "cpc": 24.66,
+        "search_volume": 390,
+        "low_top_of_page_bid": 2.33,
+        "high_top_of_page_bid": 15.46,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 170,
+          "2026-06": 140,
+          "2026-05": 260,
+          "2026-04": 320,
+          "2026-03": 320,
+          "2026-02": 260,
+          "2026-01": 480,
+          "2025-12": 390,
+          "2025-11": 590,
+          "2025-10": 390,
+          "2025-09": 590,
+          "2025-08": 590
+        },
+        "search_volume_trend": {
+          "monthly": 21,
+          "quarterly": -35,
+          "yearly": -81
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 24,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tech%20clean%20california%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 102,
+        "last_updated_time": "2026-08-03 22:07:44 +00:00",
+        "previous_updated_time": "2026-05-21 17:21:05 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 382.8,
+        "dofollow": 356.8,
+        "referring_pages": 365.8,
+        "referring_domains": 75.9,
+        "referring_main_domains": 66.6,
+        "rank": 169.7,
+        "main_domain_rank": 410.8,
+        "last_updated_time": "2026-08-03 22:07:49 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 23:47:02 +00:00"
+      }
+    },
+    {
+      "keyword": "pge heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 06:46:30 +00:00",
+        "competition": 0.42,
+        "competition_level": "MEDIUM",
+        "cpc": 5.97,
+        "search_volume": 210,
+        "low_top_of_page_bid": 1.28,
+        "high_top_of_page_bid": 11.29,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 210,
+          "2026-06": 210,
+          "2026-05": 210,
+          "2026-04": 170,
+          "2026-03": 170,
+          "2026-02": 170,
+          "2026-01": 170,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 210,
+          "2025-09": 260,
+          "2025-08": 390
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pge%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 102,
+        "last_updated_time": "2026-09-11 11:38:31 +00:00",
+        "previous_updated_time": "2026-07-07 07:20:23 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 79.7,
+        "dofollow": 56.9,
+        "referring_pages": 71.8,
+        "referring_domains": 40.8,
+        "referring_main_domains": 36.5,
+        "rank": 104.7,
+        "main_domain_rank": 372.8,
+        "last_updated_time": "2026-09-11 11:38:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:09:07 +00:00"
+      }
+    },
+    {
+      "keyword": "eversource heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 12:01:41 +00:00",
+        "competition": 0.41,
+        "competition_level": "MEDIUM",
+        "cpc": 7.79,
+        "search_volume": 210,
+        "low_top_of_page_bid": 2.48,
+        "high_top_of_page_bid": 10.27,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 140,
+          "2026-07": 170,
+          "2026-06": 140,
+          "2026-05": 170,
+          "2026-04": 140,
+          "2026-03": 110,
+          "2026-02": 140,
+          "2026-01": 170,
+          "2025-12": 260,
+          "2025-11": 390,
+          "2025-10": 320,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "yearly": -46
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=eversource%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 14800,
+        "last_updated_time": "2026-04-28 21:04:26 +00:00",
+        "previous_updated_time": "2026-03-06 15:23:15 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 34.9,
+        "dofollow": 25.1,
+        "referring_pages": 30.4,
+        "referring_domains": 16.1,
+        "referring_main_domains": 13.5,
+        "rank": 117.1,
+        "main_domain_rank": 502.1,
+        "last_updated_time": "2026-04-28 21:04:26 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 17:52:34 +00:00"
+      }
+    },
+    {
+      "keyword": "colorado heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 21:02:44 +00:00",
+        "competition": 0.28,
+        "competition_level": "LOW",
+        "cpc": 20.34,
+        "search_volume": 210,
+        "low_top_of_page_bid": 3.42,
+        "high_top_of_page_bid": 30,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 320,
+          "2026-07": 320,
+          "2026-06": 210,
+          "2026-05": 210,
+          "2026-04": 170,
+          "2026-03": 260,
+          "2026-02": 170,
+          "2026-01": 170,
+          "2025-12": 110,
+          "2025-11": 140,
+          "2025-10": 90,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "quarterly": 52,
+          "yearly": 88
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 27,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=colorado%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 128,
+        "last_updated_time": "2026-09-13 20:29:18 +00:00",
+        "previous_updated_time": "2026-07-10 12:12:03 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 955.3,
+        "dofollow": 440.6,
+        "referring_pages": 465.8,
+        "referring_domains": 56,
+        "referring_main_domains": 51.3,
+        "rank": 174.8,
+        "main_domain_rank": 384.6,
+        "last_updated_time": "2026-09-13 20:29:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-26 03:41:16 +00:00"
+      }
+    },
+    {
+      "keyword": "comed heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 11:00:35 +00:00",
+        "competition": 0.22,
+        "competition_level": "LOW",
+        "cpc": 1.67,
+        "search_volume": 210,
+        "low_top_of_page_bid": 2.05,
+        "high_top_of_page_bid": 7.07,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 110,
+          "2026-07": 210,
+          "2026-06": 210,
+          "2026-05": 260,
+          "2026-04": 210,
+          "2026-03": 210,
+          "2026-02": 260,
+          "2026-01": 210,
+          "2025-12": 170,
+          "2025-11": 140,
+          "2025-10": 210,
+          "2025-09": 260
+        },
+        "search_volume_trend": {
+          "monthly": -48,
+          "quarterly": -48,
+          "yearly": -48
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=comed%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 111,
+        "last_updated_time": "2026-09-12 04:31:05 +00:00",
+        "previous_updated_time": "2026-07-08 00:27:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 16.8,
+        "dofollow": 13.6,
+        "referring_pages": 15.7,
+        "referring_domains": 10.5,
+        "referring_main_domains": 9.6,
+        "rank": 48.2,
+        "main_domain_rank": 372.4,
+        "last_updated_time": "2026-09-12 04:31:08 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 06:19:34 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 16:06:33 +00:00",
+        "competition": 0.06,
+        "competition_level": "LOW",
+        "search_volume": 170,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 90,
+          "2026-01": 140,
+          "2025-12": 390,
+          "2025-11": 390,
+          "2025-10": 390,
+          "2025-09": 260,
+          "2025-08": 390
+        },
+        "search_volume_trend": {
+          "yearly": -98
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 42,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%202025&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-09-13 12:56:55 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1937.8,
+        "dofollow": 1515.2,
+        "referring_pages": 1667,
+        "referring_domains": 582.2,
+        "referring_main_domains": 529.6,
+        "rank": 239.1,
+        "main_domain_rank": 477,
+        "last_updated_time": "2026-09-13 12:56:55 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:27:49 +00:00"
+      }
+    },
+    {
+      "keyword": "efficiency vermont heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 18:39:17 +00:00",
+        "competition": 0.18,
+        "competition_level": "LOW",
+        "cpc": 2.13,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.18,
+        "high_top_of_page_bid": 5.37,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 110,
+          "2026-07": 210,
+          "2026-06": 210,
+          "2026-05": 140,
+          "2026-04": 110,
+          "2026-03": 140,
+          "2026-02": 140,
+          "2026-01": 140,
+          "2025-12": 140,
+          "2025-11": 110,
+          "2025-10": 170,
+          "2025-09": 260
+        },
+        "search_volume_trend": {
+          "monthly": -48,
+          "quarterly": -48,
+          "yearly": -58
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 12,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=efficiency%20vermont%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-09-13 17:20:49 +00:00",
+        "previous_updated_time": "2026-07-07 21:23:48 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 265.9,
+        "dofollow": 155.9,
+        "referring_pages": 186.4,
+        "referring_domains": 19.5,
+        "referring_main_domains": 18.3,
+        "rank": 124.3,
+        "main_domain_rank": 375.7,
+        "last_updated_time": "2026-09-13 17:20:50 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 08:09:30 +00:00"
+      }
+    },
+    {
+      "keyword": "ppl heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 04:59:44 +00:00",
+        "competition": 0.23,
+        "competition_level": "LOW",
+        "cpc": 1,
+        "search_volume": 170,
+        "low_top_of_page_bid": 0.25,
+        "high_top_of_page_bid": 3.2,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 140,
+          "2026-06": 170,
+          "2026-05": 210,
+          "2026-04": 170,
+          "2026-03": 210,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 210,
+          "2025-11": 170,
+          "2025-10": 210,
+          "2025-09": 170,
+          "2025-08": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": -33,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ppl%20heat%20pump%20rebate&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 44,
+        "last_updated_time": "2025-05-11 23:33:00 +00:00",
+        "previous_updated_time": "2025-03-30 13:30:49 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 25.5,
+        "dofollow": 18,
+        "referring_pages": 24.9,
+        "referring_domains": 7,
+        "referring_main_domains": 6.2,
+        "rank": 56.1,
+        "main_domain_rank": 300.2,
+        "last_updated_time": "2025-05-11 23:33:01 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 17:43:15 +00:00"
+      }
+    },
+    {
+      "keyword": "tax rebate for heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:32:56 +00:00",
+        "competition": 0.25,
+        "competition_level": "LOW",
+        "cpc": 4.56,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.63,
+        "high_top_of_page_bid": 8.65,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 50,
+          "2026-04": 90,
+          "2026-03": 140,
+          "2026-02": 210,
+          "2026-01": 170,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 210,
+          "2025-09": 260,
+          "2025-08": 260
+        },
+        "search_volume_trend": {
+          "monthly": 40,
+          "quarterly": 40,
+          "yearly": -78
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 54,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tax%20rebate%20for%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 128,
+        "last_updated_time": "2026-09-12 18:53:38 +00:00",
+        "previous_updated_time": "2026-07-07 01:10:47 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 11903.1,
+        "dofollow": 10815.3,
+        "referring_pages": 11437.7,
+        "referring_domains": 773.7,
+        "referring_main_domains": 707,
+        "rank": 296.9,
+        "main_domain_rank": 511.1,
+        "last_updated_time": "2026-09-12 18:53:39 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 22:34:30 +00:00"
+      }
+    },
+    {
+      "keyword": "air source heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 12:56:21 +00:00",
+        "competition": 0.08,
+        "competition_level": "LOW",
+        "cpc": 6.84,
+        "search_volume": 140,
+        "low_top_of_page_bid": 3.17,
+        "high_top_of_page_bid": 14.89,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12582
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 40,
+          "2026-06": 90,
+          "2026-05": 90,
+          "2026-04": 210,
+          "2026-03": 320,
+          "2026-02": 170,
+          "2026-01": 210,
+          "2025-12": 140,
+          "2025-11": 170,
+          "2025-10": 110,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "quarterly": -56,
+          "yearly": -88
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 35,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=air%20source%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_search",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 204,
+        "last_updated_time": "2026-07-08 06:43:52 +00:00",
+        "previous_updated_time": "2026-04-29 18:45:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1657.4,
+        "dofollow": 1328.8,
+        "referring_pages": 1441.4,
+        "referring_domains": 505.6,
+        "referring_main_domains": 459.1,
+        "rank": 220.1,
+        "main_domain_rank": 435.9,
+        "last_updated_time": "2026-07-08 06:43:53 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 04:21:56 +00:00"
+      }
+    },
+    {
+      "keyword": "mass save heat pump rebate 2026",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 18:12:35 +00:00",
+        "competition": 0.61,
+        "competition_level": "MEDIUM",
+        "cpc": 14.91,
+        "search_volume": 140,
+        "low_top_of_page_bid": 2.23,
+        "high_top_of_page_bid": 14.27,
+        "categories": [
+          10004,
+          10300
+        ],
+        "monthly_searches": {
+          "2026-08": 210,
+          "2026-07": 260,
+          "2026-06": 260,
+          "2026-05": 260,
+          "2026-04": 210,
+          "2026-03": 210,
+          "2026-02": 110,
+          "2026-01": 170,
+          "2025-12": 50
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 1,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mass%20save%20heat%20pump%20rebate%202026&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 41,
+        "last_updated_time": "2026-07-13 03:05:13 +00:00",
+        "previous_updated_time": "2026-06-02 22:35:42 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 22.8,
+        "dofollow": 11.6,
+        "referring_pages": 17.5,
+        "referring_domains": 9.7,
+        "referring_main_domains": 8.5,
+        "rank": 76.1,
+        "main_domain_rank": 359.1,
+        "last_updated_time": "2026-07-13 03:05:16 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-05 07:05:19 +00:00"
+      }
+    },
+    {
+      "keyword": "heehra heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 22:21:36 +00:00",
+        "competition": 0.01,
+        "competition_level": "LOW",
+        "cpc": 4.66,
+        "search_volume": 110,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 110,
+          "2026-06": 90,
+          "2026-05": 170,
+          "2026-04": 320,
+          "2026-03": 170,
+          "2026-02": 110,
+          "2026-01": 90,
+          "2025-12": 70,
+          "2025-11": 50,
+          "2025-10": 30,
+          "2025-09": 10,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": 22,
+          "quarterly": -35,
+          "yearly": 22
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 23,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heehra%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "related_searches"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-07-13 12:37:21 +00:00",
+        "previous_updated_time": "2026-05-27 22:54:20 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 126.2,
+        "dofollow": 98.7,
+        "referring_pages": 105.8,
+        "referring_domains": 55.2,
+        "referring_main_domains": 49,
+        "rank": 141.5,
+        "main_domain_rank": 430.6,
+        "last_updated_time": "2026-07-13 12:37:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 22:56:35 +00:00"
+      }
+    },
+    {
+      "keyword": "nys heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 01:08:23 +00:00",
+        "competition": 0.67,
+        "competition_level": "HIGH",
+        "cpc": 6.19,
+        "search_volume": 110,
+        "low_top_of_page_bid": 1.96,
+        "high_top_of_page_bid": 10.4,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 110,
+          "2026-06": 140,
+          "2026-05": 110,
+          "2026-04": 170,
+          "2026-03": 110,
+          "2026-02": 90,
+          "2026-01": 110,
+          "2025-12": 90,
+          "2025-11": 90,
+          "2025-10": 140,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": -36,
+          "quarterly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 15,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=nys%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 119,
+        "last_updated_time": "2026-07-12 23:12:56 +00:00",
+        "previous_updated_time": "2026-05-27 22:04:04 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 101.8,
+        "dofollow": 80.2,
+        "referring_pages": 83.5,
+        "referring_domains": 37.5,
+        "referring_main_domains": 35.3,
+        "rank": 115.3,
+        "main_domain_rank": 325.6,
+        "last_updated_time": "2026-07-12 23:12:56 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 17:08:16 +00:00"
+      }
+    },
+    {
+      "keyword": "pseg li heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 04:28:30 +00:00",
+        "competition": 0.3,
+        "competition_level": "LOW",
+        "cpc": 2.71,
+        "search_volume": 110,
+        "low_top_of_page_bid": 1.09,
+        "high_top_of_page_bid": 6.67,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 90,
+          "2026-07": 140,
+          "2026-06": 110,
+          "2026-05": 140,
+          "2026-04": 140,
+          "2026-03": 110,
+          "2026-02": 70,
+          "2026-01": 90,
+          "2025-12": 90,
+          "2025-11": 70,
+          "2025-10": 110,
+          "2025-09": 170
+        },
+        "search_volume_trend": {
+          "monthly": -36,
+          "quarterly": -18,
+          "yearly": 200
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "ie",
+        "is_another_language": true,
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pseg%20li%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-07-18 10:37:16 +00:00",
+        "previous_updated_time": "2026-06-07 13:47:12 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 83.2,
+        "dofollow": 60.3,
+        "referring_pages": 65.1,
+        "referring_domains": 18.6,
+        "referring_main_domains": 17.1,
+        "rank": 104.6,
+        "main_domain_rank": 352,
+        "last_updated_time": "2026-07-18 10:37:16 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 18:14:11 +00:00"
+      }
+    },
+    {
+      "keyword": "sce heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 02:35:50 +00:00",
+        "competition": 0.15,
+        "competition_level": "LOW",
+        "cpc": 3.17,
+        "search_volume": 110,
+        "low_top_of_page_bid": 0.96,
+        "high_top_of_page_bid": 9.13,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 260,
+          "2026-07": 170,
+          "2026-06": 140,
+          "2026-05": 110,
+          "2026-04": 110,
+          "2026-03": 110,
+          "2026-02": 90,
+          "2026-01": 90,
+          "2025-12": 110,
+          "2025-11": 70,
+          "2025-10": 90,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": 53,
+          "quarterly": 86,
+          "yearly": 86
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 14,
+        "detected_language": "it",
+        "is_another_language": true,
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=sce%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 59,
+        "last_updated_time": "2026-07-12 16:28:02 +00:00",
+        "previous_updated_time": "2026-05-02 23:14:33 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 44.5,
+        "dofollow": 26.4,
+        "referring_pages": 42.2,
+        "referring_domains": 27.1,
+        "referring_main_domains": 25.6,
+        "rank": 135.5,
+        "main_domain_rank": 359.8,
+        "last_updated_time": "2026-07-12 16:28:03 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-28 22:04:09 +00:00"
+      }
+    },
+    {
+      "keyword": "nyserda heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 04:33:04 +00:00",
+        "competition": 0.6,
+        "competition_level": "MEDIUM",
+        "cpc": 6.43,
+        "search_volume": 110,
+        "low_top_of_page_bid": 1.83,
+        "high_top_of_page_bid": 8.27,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 90,
+          "2026-07": 110,
+          "2026-06": 110,
+          "2026-05": 140,
+          "2026-04": 140,
+          "2026-03": 140,
+          "2026-02": 90,
+          "2026-01": 90,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 110,
+          "2025-09": 170
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": -18,
+          "yearly": -18
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 16,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=nyserda%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 106,
+        "last_updated_time": "2026-07-12 23:25:28 +00:00",
+        "previous_updated_time": "2026-05-28 03:00:03 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 107.6,
+        "dofollow": 84.5,
+        "referring_pages": 87.5,
+        "referring_domains": 40,
+        "referring_main_domains": 37.5,
+        "rank": 130.9,
+        "main_domain_rank": 481.6,
+        "last_updated_time": "2026-07-12 23:25:29 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 16:37:41 +00:00"
+      }
+    },
+    {
+      "keyword": "denver heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 00:39:58 +00:00",
+        "competition": 0.53,
+        "competition_level": "MEDIUM",
+        "cpc": 19.49,
+        "search_volume": 90,
+        "low_top_of_page_bid": 3.46,
+        "high_top_of_page_bid": 34.07,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 40,
+          "2026-05": 30,
+          "2026-04": 50,
+          "2026-03": 140,
+          "2026-02": 90,
+          "2026-01": 110,
+          "2025-12": 70,
+          "2025-11": 70,
+          "2025-10": 50,
+          "2025-09": 110,
+          "2025-08": 170
+        },
+        "search_volume_trend": {
+          "monthly": 75,
+          "quarterly": 133,
+          "yearly": -36
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 8,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=denver%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 125,
+        "last_updated_time": "2026-07-16 12:35:54 +00:00",
+        "previous_updated_time": "2026-05-03 18:09:20 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 92.1,
+        "dofollow": 67,
+        "referring_pages": 80.8,
+        "referring_domains": 45.9,
+        "referring_main_domains": 41.9,
+        "rank": 108.6,
+        "main_domain_rank": 347.8,
+        "last_updated_time": "2026-07-16 12:35:54 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 10:07:16 +00:00"
+      }
+    },
+    {
+      "keyword": "bosch heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 16:19:41 +00:00",
+        "competition": 0.11,
+        "competition_level": "LOW",
+        "cpc": 3.97,
+        "search_volume": 90,
+        "low_top_of_page_bid": 0.13,
+        "high_top_of_page_bid": 7.55,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 140,
+          "2026-06": 110,
+          "2026-05": 110,
+          "2026-04": 140,
+          "2026-03": 50,
+          "2026-02": 70,
+          "2026-01": 90,
+          "2025-12": 140,
+          "2025-11": 70,
+          "2025-10": 110,
+          "2025-09": 50,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "monthly": 27,
+          "quarterly": 27,
+          "yearly": -64
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 4,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=bosch%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 170,
+        "last_updated_time": "2026-07-14 05:27:29 +00:00",
+        "previous_updated_time": "2025-04-06 21:59:34 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 139.1,
+        "dofollow": 117.4,
+        "referring_pages": 129.8,
+        "referring_domains": 42.2,
+        "referring_main_domains": 39.7,
+        "rank": 72.9,
+        "main_domain_rank": 532.5,
+        "last_updated_time": "2026-07-14 05:27:36 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 14:14:25 +00:00"
+      }
+    },
+    {
+      "keyword": "washington heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 00:57:45 +00:00",
+        "competition": 0.46,
+        "competition_level": "MEDIUM",
+        "cpc": 5.83,
+        "search_volume": 90,
+        "low_top_of_page_bid": 2.55,
+        "high_top_of_page_bid": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 40,
+          "2026-06": 90,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 110,
+          "2026-02": 110,
+          "2026-01": 90,
+          "2025-12": 70,
+          "2025-11": 90,
+          "2025-10": 90,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "monthly": -25,
+          "quarterly": -67,
+          "yearly": -79
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 33,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=washington%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 123,
+        "last_updated_time": "2026-07-14 15:20:47 +00:00",
+        "previous_updated_time": "2026-05-01 09:34:44 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 203.4,
+        "dofollow": 135.2,
+        "referring_pages": 155.5,
+        "referring_domains": 67.8,
+        "referring_main_domains": 58.9,
+        "rank": 142.8,
+        "main_domain_rank": 354.2,
+        "last_updated_time": "2026-07-14 15:20:47 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 02:08:26 +00:00"
+      }
+    },
+    {
+      "keyword": "mitsubishi heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 14:40:52 +00:00",
+        "competition": 0.49,
+        "competition_level": "MEDIUM",
+        "cpc": 5.6,
+        "search_volume": 90,
+        "low_top_of_page_bid": 1.68,
+        "high_top_of_page_bid": 7.96,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12582
+        ],
+        "monthly_searches": {
+          "2026-08": 50,
+          "2026-07": 110,
+          "2026-06": 140,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 140,
+          "2026-02": 40,
+          "2026-01": 90,
+          "2025-12": 110,
+          "2025-11": 90,
+          "2025-10": 50,
+          "2025-09": 70
+        },
+        "search_volume_trend": {
+          "monthly": -55,
+          "quarterly": -64
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mitsubishi%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "short_videos",
+          "related_searches"
+        ],
+        "se_results_count": 527000,
+        "last_updated_time": "2026-04-08 07:52:19 +00:00",
+        "previous_updated_time": "2026-02-20 09:22:45 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 135,
+        "dofollow": 110.1,
+        "referring_pages": 125.5,
+        "referring_domains": 48.1,
+        "referring_main_domains": 45.5,
+        "rank": 97.7,
+        "main_domain_rank": 473.8,
+        "last_updated_time": "2026-04-08 07:55:48 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 15:24:11 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate washington state",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 04:26:48 +00:00",
+        "competition": 0.46,
+        "competition_level": "MEDIUM",
+        "cpc": 5.83,
+        "search_volume": 90,
+        "low_top_of_page_bid": 2.55,
+        "high_top_of_page_bid": 10,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 40,
+          "2026-06": 90,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 110,
+          "2026-02": 110,
+          "2026-01": 90,
+          "2025-12": 70,
+          "2025-11": 90,
+          "2025-10": 90,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "monthly": -25,
+          "quarterly": -67,
+          "yearly": -79
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 33,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%20washington%20state&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 121,
+        "last_updated_time": "2026-07-16 02:55:38 +00:00",
+        "previous_updated_time": "2026-01-02 01:38:34 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 91.7,
+        "dofollow": 61.3,
+        "referring_pages": 64.6,
+        "referring_domains": 27.6,
+        "referring_main_domains": 23.3,
+        "rank": 138.1,
+        "main_domain_rank": 346.1,
+        "last_updated_time": "2026-07-16 02:55:38 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:18:16 +00:00"
+      }
+    },
+    {
+      "keyword": "mass save commercial heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 06:49:03 +00:00",
+        "competition": 0.47,
+        "competition_level": "MEDIUM",
+        "cpc": 9.69,
+        "search_volume": 70,
+        "low_top_of_page_bid": 3.1,
+        "high_top_of_page_bid": 15,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 70,
+          "2026-06": 90,
+          "2026-05": 90,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 50,
+          "2026-01": 50,
+          "2025-12": 50,
+          "2025-11": 70,
+          "2025-10": 50,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "quarterly": -22,
+          "yearly": 75
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mass%20save%20commercial%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-07-27 18:52:05 +00:00",
+        "previous_updated_time": "2026-06-02 21:35:57 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 2095.6,
+        "dofollow": 1285.4,
+        "referring_pages": 1302.3,
+        "referring_domains": 97.4,
+        "referring_main_domains": 83.4,
+        "rank": 76.7,
+        "main_domain_rank": 299.4,
+        "last_updated_time": "2026-07-27 18:52:05 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 16:14:25 +00:00"
+      }
+    },
+    {
+      "keyword": "coned heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 04:20:03 +00:00",
+        "competition": 0.54,
+        "competition_level": "MEDIUM",
+        "cpc": 3.4,
+        "search_volume": 70,
+        "low_top_of_page_bid": 1.64,
+        "high_top_of_page_bid": 4.03,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 50,
+          "2026-06": 50,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 30,
+          "2026-02": 30,
+          "2026-01": 70,
+          "2025-12": 70,
+          "2025-11": 70,
+          "2025-10": 110,
+          "2025-09": 70,
+          "2025-08": 90
+        },
+        "search_volume_trend": {
+          "quarterly": -29,
+          "yearly": -44
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=coned%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "related_searches"
+        ],
+        "se_results_count": 31,
+        "last_updated_time": "2026-07-20 11:59:09 +00:00",
+        "previous_updated_time": "2026-05-31 19:37:16 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 17.1,
+        "dofollow": 13.4,
+        "referring_pages": 14.5,
+        "referring_domains": 10.6,
+        "referring_main_domains": 9.6,
+        "rank": 79.7,
+        "main_domain_rank": 445.3,
+        "last_updated_time": "2026-07-20 11:59:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 00:50:07 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 03:55:31 +00:00",
+        "competition": 0.17,
+        "competition_level": "LOW",
+        "cpc": 18.56,
+        "search_volume": 70,
+        "low_top_of_page_bid": 2.47,
+        "high_top_of_page_bid": 19.51,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 30,
+          "2026-06": 110,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 90,
+          "2026-02": 70,
+          "2026-01": 30,
+          "2025-12": 90,
+          "2025-11": 90,
+          "2025-10": 70,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": 33,
+          "quarterly": -64,
+          "yearly": -64
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 3,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 20,
+        "last_updated_time": "2026-07-14 10:31:43 +00:00",
+        "previous_updated_time": "2026-05-06 01:02:22 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 83.1,
+        "dofollow": 72,
+        "referring_pages": 79.5,
+        "referring_domains": 24.9,
+        "referring_main_domains": 21.6,
+        "rank": 87.9,
+        "main_domain_rank": 360,
+        "last_updated_time": "2026-07-14 10:31:44 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-30 01:31:47 +00:00"
+      }
+    },
+    {
+      "keyword": "georgia power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 17:02:02 +00:00",
+        "competition": 0.41,
+        "competition_level": "MEDIUM",
+        "cpc": 7.64,
+        "search_volume": 70,
+        "low_top_of_page_bid": 2.62,
+        "high_top_of_page_bid": 11.37,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 70,
+          "2026-05": 50,
+          "2026-04": 70,
+          "2026-03": 50,
+          "2026-02": 90,
+          "2026-01": 70,
+          "2025-12": 70,
+          "2025-11": 70,
+          "2025-10": 70,
+          "2025-09": 70,
+          "2025-08": 90
+        },
+        "search_volume_trend": {
+          "quarterly": 40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 26,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=georgia%20power%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "ai_overview",
+          "related_searches"
+        ],
+        "se_results_count": 107,
+        "last_updated_time": "2026-07-19 21:34:22 +00:00",
+        "previous_updated_time": "2026-05-31 02:52:08 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 73.4,
+        "dofollow": 62.5,
+        "referring_pages": 63.8,
+        "referring_domains": 18,
+        "referring_main_domains": 16.2,
+        "rank": 164.4,
+        "main_domain_rank": 452,
+        "last_updated_time": "2026-07-19 21:34:23 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-28 04:54:44 +00:00"
+      }
+    },
+    {
+      "keyword": "seattle city light heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 04:50:46 +00:00",
+        "competition": 0.34,
+        "competition_level": "MEDIUM",
+        "cpc": 16.09,
+        "search_volume": 70,
+        "low_top_of_page_bid": 3.35,
+        "high_top_of_page_bid": 19,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 70,
+          "2026-05": 70,
+          "2026-04": 70,
+          "2026-03": 70,
+          "2026-02": 70,
+          "2026-01": 50,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 70,
+          "2025-09": 70,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 20,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=seattle%20city%20light%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 107,
+        "last_updated_time": "2026-07-18 04:19:20 +00:00",
+        "previous_updated_time": "2026-05-30 03:39:13 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 59.9,
+        "dofollow": 37.1,
+        "referring_pages": 46.2,
+        "referring_domains": 25.1,
+        "referring_main_domains": 16.5,
+        "rank": 103.9,
+        "main_domain_rank": 397.9,
+        "last_updated_time": "2026-07-18 04:19:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 21:16:14 +00:00"
+      }
+    },
+    {
+      "keyword": "bge heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 23:28:00 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 8.97,
+        "search_volume": 70,
+        "low_top_of_page_bid": 2.38,
+        "high_top_of_page_bid": 12.91,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 50,
+          "2026-04": 70,
+          "2026-03": 50,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 90,
+          "2025-11": 90,
+          "2025-10": 90,
+          "2025-09": 90,
+          "2025-08": 90
+        },
+        "search_volume_trend": {
+          "monthly": 40,
+          "quarterly": 40,
+          "yearly": -22
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=bge%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 19,
+        "last_updated_time": "2026-07-20 21:24:24 +00:00",
+        "previous_updated_time": "2026-05-08 03:03:04 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 34.8,
+        "dofollow": 16.6,
+        "referring_pages": 17.2,
+        "referring_domains": 6.5,
+        "referring_main_domains": 5.5,
+        "rank": 72.5,
+        "main_domain_rank": 385.8,
+        "last_updated_time": "2026-07-20 21:24:24 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-25 19:16:17 +00:00"
+      }
+    },
+    {
+      "keyword": "federal tax rebate for heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 10:03:27 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "cpc": 4.72,
+        "search_volume": 70,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 50,
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 50,
+          "2026-04": 70,
+          "2026-03": 90,
+          "2026-02": 70,
+          "2026-01": 50,
+          "2025-12": 110,
+          "2025-11": 110,
+          "2025-10": 110,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "monthly": -29,
+          "yearly": -44
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 58,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=federal%20tax%20rebate%20for%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 161,
+        "last_updated_time": "2026-07-16 07:58:21 +00:00",
+        "previous_updated_time": "2026-05-29 09:58:25 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9247.1,
+        "dofollow": 7866.2,
+        "referring_pages": 8724.7,
+        "referring_domains": 778.5,
+        "referring_main_domains": 710.6,
+        "rank": 313.7,
+        "main_domain_rank": 525.2,
+        "last_updated_time": "2026-07-16 07:58:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 11:21:44 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel rebate heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 05:35:38 +00:00",
+        "competition": 0.47,
+        "competition_level": "MEDIUM",
+        "cpc": 3.69,
+        "search_volume": 70,
+        "low_top_of_page_bid": 0.45,
+        "high_top_of_page_bid": 8.31,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 40,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 70,
+          "2026-01": 70,
+          "2025-12": 70,
+          "2025-11": 40,
+          "2025-10": 70,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "quarterly": 40,
+          "yearly": -59
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 15,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20rebate%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 107,
+        "last_updated_time": "2026-07-17 08:25:20 +00:00",
+        "previous_updated_time": "2026-05-04 07:28:42 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 112.3,
+        "dofollow": 92.1,
+        "referring_pages": 105.4,
+        "referring_domains": 42.3,
+        "referring_main_domains": 37.6,
+        "rank": 127.4,
+        "main_domain_rank": 415.9,
+        "last_updated_time": "2026-07-17 08:25:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 00:43:41 +00:00"
+      }
+    },
+    {
+      "keyword": "energy star heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 06:53:41 +00:00",
+        "competition": 0.03,
+        "competition_level": "LOW",
+        "search_volume": 70,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 30,
+          "2026-06": 40,
+          "2026-05": 70,
+          "2026-04": 140,
+          "2026-03": 110,
+          "2026-02": 70,
+          "2026-01": 70,
+          "2025-12": 70,
+          "2025-11": 50,
+          "2025-10": 30,
+          "2025-09": 50
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -50,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 34,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=energy%20star%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 135,
+        "last_updated_time": "2026-07-20 04:24:05 +00:00",
+        "previous_updated_time": "2026-05-09 20:35:35 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1940.8,
+        "dofollow": 1630.3,
+        "referring_pages": 1731.9,
+        "referring_domains": 483.7,
+        "referring_main_domains": 439.1,
+        "rank": 214,
+        "main_domain_rank": 455.3,
+        "last_updated_time": "2026-07-20 04:24:05 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:22:12 +00:00"
+      }
+    },
+    {
+      "keyword": "ma heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 23:48:45 +00:00",
+        "competition": 0.6,
+        "competition_level": "MEDIUM",
+        "cpc": 11.5,
+        "search_volume": 50,
+        "low_top_of_page_bid": 3.7,
+        "high_top_of_page_bid": 17.46,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 50,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 40,
+          "2026-01": 50,
+          "2025-12": 50,
+          "2025-11": 70,
+          "2025-10": 40,
+          "2025-09": 50,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "monthly": -20,
+          "quarterly": -43,
+          "yearly": -56
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ma%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "perspectives",
+          "paid",
+          "related_searches"
+        ],
+        "se_results_count": 136,
+        "last_updated_time": "2026-06-02 21:53:55 +00:00",
+        "previous_updated_time": "2026-04-11 05:32:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 20.8,
+        "dofollow": 10.4,
+        "referring_pages": 15.7,
+        "referring_domains": 8.1,
+        "referring_main_domains": 6.7,
+        "rank": 63.8,
+        "main_domain_rank": 388.5,
+        "last_updated_time": "2026-06-02 21:54:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-29 16:17:16 +00:00"
+      }
+    },
+    {
+      "keyword": "maryland heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 05:44:08 +00:00",
+        "competition": 0.38,
+        "competition_level": "MEDIUM",
+        "cpc": 10.06,
+        "search_volume": 50,
+        "low_top_of_page_bid": 3.3,
+        "high_top_of_page_bid": 11.18,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 30,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 70,
+          "2026-03": 40,
+          "2026-02": 70,
+          "2026-01": 50,
+          "2025-12": 70,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "quarterly": -25,
+          "yearly": -40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=maryland%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 124,
+        "last_updated_time": "2026-07-27 19:11:23 +00:00",
+        "previous_updated_time": "2026-06-02 23:44:10 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.3,
+        "dofollow": 5.1,
+        "referring_pages": 6.3,
+        "referring_domains": 4.1,
+        "referring_main_domains": 3.6,
+        "rank": 51.4,
+        "main_domain_rank": 301.6,
+        "last_updated_time": "2026-07-27 19:11:24 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 15:14:42 +00:00"
+      }
+    },
+    {
+      "keyword": "pud heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 10:41:13 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 3.22,
+        "search_volume": 50,
+        "low_top_of_page_bid": 1.32,
+        "high_top_of_page_bid": 8.66,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 50,
+          "2026-05": 50,
+          "2026-04": 40,
+          "2026-03": 50,
+          "2026-02": 40,
+          "2026-01": 50,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 70,
+          "2025-09": 50,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": -20,
+          "quarterly": -20,
+          "yearly": -20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 8,
+        "detected_language": "la",
+        "is_another_language": true,
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pud%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 104,
+        "last_updated_time": "2026-08-12 23:50:42 +00:00",
+        "previous_updated_time": "2026-06-02 10:42:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 142.3,
+        "dofollow": 78.2,
+        "referring_pages": 79.7,
+        "referring_domains": 6.6,
+        "referring_main_domains": 6.2,
+        "rank": 120.5,
+        "main_domain_rank": 264.9,
+        "last_updated_time": "2026-08-12 23:51:13 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:46:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate oregon",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 23:33:15 +00:00",
+        "competition": 0.59,
+        "competition_level": "MEDIUM",
+        "cpc": 8.03,
+        "search_volume": 50,
+        "low_top_of_page_bid": 2.57,
+        "high_top_of_page_bid": 14.79,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 50,
+          "2026-05": 30,
+          "2026-04": 40,
+          "2026-03": 70,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 70,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "monthly": -20,
+          "quarterly": 33,
+          "yearly": -64
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 25,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%20oregon&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_search",
+          "people_also_ask",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 580000,
+        "last_updated_time": "2026-02-22 22:06:01 +00:00",
+        "previous_updated_time": "2026-01-06 13:55:57 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 56.7,
+        "dofollow": 50.9,
+        "referring_pages": 52.6,
+        "referring_domains": 17.4,
+        "referring_main_domains": 16,
+        "rank": 118.6,
+        "main_domain_rank": 422.9,
+        "last_updated_time": "2026-02-22 22:06:04 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:48:07 +00:00"
+      }
+    },
+    {
+      "keyword": "mass heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 16:52:47 +00:00",
+        "competition": 0.71,
+        "competition_level": "HIGH",
+        "cpc": 8.45,
+        "search_volume": 50,
+        "low_top_of_page_bid": 3.39,
+        "high_top_of_page_bid": 14.2,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 40,
+          "2026-06": 50,
+          "2026-05": 40,
+          "2026-04": 40,
+          "2026-03": 40,
+          "2026-02": 30,
+          "2026-01": 50,
+          "2025-12": 70,
+          "2025-11": 50,
+          "2025-10": 50,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -25,
+          "quarterly": -40,
+          "yearly": -40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mass%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 39,
+        "last_updated_time": "2026-07-27 18:51:30 +00:00",
+        "previous_updated_time": "2026-06-03 00:20:21 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 20.5,
+        "dofollow": 10.4,
+        "referring_pages": 16.5,
+        "referring_domains": 9.2,
+        "referring_main_domains": 8,
+        "rank": 73,
+        "main_domain_rank": 341.9,
+        "last_updated_time": "2026-07-27 18:51:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 15:45:15 +00:00"
+      }
+    },
+    {
+      "keyword": "colorado heat pump rebate 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 11:19:38 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "search_volume": 40,
+        "categories": [
+          10004,
+          10300
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 50,
+          "2026-01": 30,
+          "2025-12": 90,
+          "2025-11": 90,
+          "2025-10": 40,
+          "2025-09": 70,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 17,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=colorado%20heat%20pump%20rebate%202025&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 112,
+        "last_updated_time": "2026-08-17 03:06:29 +00:00",
+        "previous_updated_time": "2026-05-12 17:54:57 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 477.5,
+        "dofollow": 145.4,
+        "referring_pages": 165,
+        "referring_domains": 49.4,
+        "referring_main_domains": 45.3,
+        "rank": 142,
+        "main_domain_rank": 428.3,
+        "last_updated_time": "2026-08-17 03:06:29 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-07 18:55:13 +00:00"
+      }
+    },
+    {
+      "keyword": "mn heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 18:08:20 +00:00",
+        "competition": 0.17,
+        "competition_level": "LOW",
+        "cpc": 1.56,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.15,
+        "high_top_of_page_bid": 7.55,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 40,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 40,
+          "2025-10": 40,
+          "2025-09": 40,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "yearly": -43
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 32,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mn%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 102,
+        "last_updated_time": "2026-08-15 00:25:24 +00:00",
+        "previous_updated_time": "2026-06-08 03:27:14 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 102.4,
+        "dofollow": 74.5,
+        "referring_pages": 83.2,
+        "referring_domains": 35.4,
+        "referring_main_domains": 31.2,
+        "rank": 155.9,
+        "main_domain_rank": 426.4,
+        "last_updated_time": "2026-08-15 00:25:24 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 16:59:18 +00:00"
+      }
+    },
+    {
+      "keyword": "pse heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 23:17:58 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "cpc": 2.22,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.36,
+        "high_top_of_page_bid": 4.43,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 30,
+          "2026-06": 20,
+          "2026-05": 30,
+          "2026-04": 40,
+          "2026-03": 40,
+          "2026-02": 30,
+          "2026-01": 40,
+          "2025-12": 30,
+          "2025-11": 50,
+          "2025-10": 40,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": 33,
+          "quarterly": 100
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pse%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 103,
+        "last_updated_time": "2026-08-14 16:37:07 +00:00",
+        "previous_updated_time": "2026-06-07 18:27:57 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 17.4,
+        "dofollow": 14.5,
+        "referring_pages": 16.8,
+        "referring_domains": 12.8,
+        "referring_main_domains": 12.7,
+        "rank": 65.6,
+        "main_domain_rank": 414,
+        "last_updated_time": "2026-08-14 16:37:44 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 21:44:26 +00:00"
+      }
+    },
+    {
+      "keyword": "ny state heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 16:43:53 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "cpc": 8.37,
+        "search_volume": 40,
+        "low_top_of_page_bid": 2,
+        "high_top_of_page_bid": 6.86,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 30,
+          "2026-06": 20,
+          "2026-05": 30,
+          "2026-04": 20,
+          "2026-03": 40,
+          "2026-02": 40,
+          "2026-01": 50,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 30,
+          "2025-09": 30,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "monthly": 50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 18,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ny%20state%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 128,
+        "last_updated_time": "2026-08-14 19:59:14 +00:00",
+        "previous_updated_time": "2026-06-07 20:39:52 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 116.4,
+        "dofollow": 89.7,
+        "referring_pages": 94.9,
+        "referring_domains": 44.7,
+        "referring_main_domains": 41.9,
+        "rank": 150.8,
+        "main_domain_rank": 372.8,
+        "last_updated_time": "2026-08-14 20:01:08 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 16:19:03 +00:00"
+      }
+    },
+    {
+      "keyword": "new york state heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 16:42:26 +00:00",
+        "competition": 0.45,
+        "competition_level": "MEDIUM",
+        "cpc": 5.2,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.94,
+        "high_top_of_page_bid": 5.4,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 30,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 50,
+          "2026-03": 50,
+          "2026-02": 30,
+          "2026-01": 40,
+          "2025-12": 30,
+          "2025-11": 50,
+          "2025-10": 50,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 43,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=new%20york%20state%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 119,
+        "last_updated_time": "2026-09-02 10:41:07 +00:00",
+        "previous_updated_time": "2026-08-14 21:10:39 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 156.6,
+        "dofollow": 114.9,
+        "referring_pages": 122.6,
+        "referring_domains": 56.5,
+        "referring_main_domains": 52.7,
+        "rank": 188.5,
+        "main_domain_rank": 404,
+        "last_updated_time": "2026-09-02 10:41:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 16:46:52 +00:00"
+      }
+    },
+    {
+      "keyword": "tva heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 08:59:23 +00:00",
+        "competition": 0.17,
+        "competition_level": "LOW",
+        "cpc": 4.3,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.31,
+        "high_top_of_page_bid": 4.83,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 50,
+          "2026-06": 40,
+          "2026-05": 30,
+          "2026-04": 40,
+          "2026-03": 40,
+          "2026-02": 50,
+          "2026-01": 30,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 50,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "monthly": 25,
+          "quarterly": 67,
+          "yearly": -29
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tva%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-07-26 12:19:52 +00:00",
+        "previous_updated_time": "2026-05-08 14:51:58 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 42.1,
+        "dofollow": 37,
+        "referring_pages": 40.6,
+        "referring_domains": 9.1,
+        "referring_main_domains": 8.6,
+        "rank": 73.9,
+        "main_domain_rank": 329.8,
+        "last_updated_time": "2026-07-26 12:19:54 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 22:08:19 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate virginia",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 16:16:30 +00:00",
+        "competition": 0.52,
+        "competition_level": "MEDIUM",
+        "cpc": 4.56,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.46,
+        "high_top_of_page_bid": 6.65,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 30,
+          "2026-06": 20,
+          "2026-05": 30,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 40,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "quarterly": 50,
+          "yearly": -25
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 14,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%20virginia&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 4610000,
+        "last_updated_time": "2023-10-30 01:11:11 +00:00",
+        "previous_updated_time": "2023-09-15 06:37:05 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 152.3,
+        "dofollow": 89.2,
+        "referring_pages": 131.9,
+        "referring_domains": 42.3,
+        "referring_main_domains": 45.4,
+        "rank": 101.3,
+        "main_domain_rank": 355.4,
+        "last_updated_time": "2023-10-30 01:11:11 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 05:16:57 +00:00"
+      }
+    },
+    {
+      "keyword": "maine heat pump rebate 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 22:47:48 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 2.5,
+        "search_volume": 40,
+        "categories": [
+          10004,
+          10300
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 30,
+          "2025-11": 110,
+          "2025-10": 110,
+          "2025-09": 70,
+          "2025-08": 90
+        },
+        "search_volume_trend": {
+          "yearly": -93
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 11,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=maine%20heat%20pump%20rebate%202025&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 104,
+        "last_updated_time": "2026-07-27 19:58:17 +00:00",
+        "previous_updated_time": "2026-05-07 07:32:17 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 453.7,
+        "dofollow": 400.8,
+        "referring_pages": 406.9,
+        "referring_domains": 54.6,
+        "referring_main_domains": 50.2,
+        "rank": 113.1,
+        "main_domain_rank": 448,
+        "last_updated_time": "2026-07-27 19:58:29 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-03 15:58:45 +00:00"
+      }
+    },
+    {
+      "keyword": "central hudson heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 10:44:00 +00:00",
+        "competition": 0.45,
+        "competition_level": "MEDIUM",
+        "cpc": 13.29,
+        "search_volume": 40,
+        "low_top_of_page_bid": 1.83,
+        "high_top_of_page_bid": 24.81,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 40,
+          "2026-03": 50,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 40,
+          "2025-11": 30,
+          "2025-10": 30,
+          "2025-09": 40,
+          "2025-08": 30
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=central%20hudson%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 87,
+        "last_updated_time": "2026-08-17 06:47:43 +00:00",
+        "previous_updated_time": "2026-06-13 06:42:01 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 60.5,
+        "dofollow": 52.7,
+        "referring_pages": 53.9,
+        "referring_domains": 22.1,
+        "referring_main_domains": 20.4,
+        "rank": 65.7,
+        "main_domain_rank": 508.5,
+        "last_updated_time": "2026-08-17 06:47:44 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 04:48:50 +00:00"
+      }
+    },
+    {
+      "keyword": "nj heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 00:52:50 +00:00",
+        "competition": 0.44,
+        "competition_level": "MEDIUM",
+        "cpc": 7.17,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.7,
+        "high_top_of_page_bid": 6.75,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 30,
+          "2026-06": 40,
+          "2026-05": 50,
+          "2026-04": 30,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 50,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 20,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "monthly": -25,
+          "quarterly": -40,
+          "yearly": -40
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 10,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=nj%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 129,
+        "last_updated_time": "2026-08-14 20:15:55 +00:00",
+        "previous_updated_time": "2026-06-07 21:12:11 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 11.5,
+        "dofollow": 8.9,
+        "referring_pages": 10.4,
+        "referring_domains": 7,
+        "referring_main_domains": 6.5,
+        "rank": 101.4,
+        "main_domain_rank": 319.4,
+        "last_updated_time": "2026-08-14 20:16:49 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 20:42:32 +00:00"
+      }
+    },
+    {
+      "keyword": "tech clean california heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 10:31:04 +00:00",
+        "competition": 0.21,
+        "competition_level": "LOW",
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 70,
+          "2025-10": 40,
+          "2025-09": 50,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "yearly": -91
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 11,
+        "detected_language": "en",
+        "words_count": 8
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tech%20clean%20california%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-08-14 15:58:28 +00:00",
+        "previous_updated_time": "2026-05-08 17:10:28 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 332.4,
+        "dofollow": 316.1,
+        "referring_pages": 322.6,
+        "referring_domains": 55,
+        "referring_main_domains": 48.6,
+        "rank": 107.4,
+        "main_domain_rank": 481.8,
+        "last_updated_time": "2026-08-14 15:58:51 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 23:16:37 +00:00"
+      }
+    },
+    {
+      "keyword": "nh heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 06:49:55 +00:00",
+        "competition": 0.51,
+        "competition_level": "MEDIUM",
+        "cpc": 3.05,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.51,
+        "high_top_of_page_bid": 4.61,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 40,
+          "2026-06": 30,
+          "2026-05": 40,
+          "2026-04": 30,
+          "2026-03": 40,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -33,
+          "yearly": -71
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 1,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=nh%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "ai_overview",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 126,
+        "last_updated_time": "2026-06-02 16:41:47 +00:00",
+        "previous_updated_time": "2026-04-11 00:24:37 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 12.9,
+        "dofollow": 11.4,
+        "referring_pages": 11.9,
+        "referring_domains": 8.5,
+        "referring_main_domains": 7.3,
+        "rank": 75.1,
+        "main_domain_rank": 384.1,
+        "last_updated_time": "2026-06-02 16:42:03 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 17:32:55 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel energy heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 16:23:50 +00:00",
+        "competition": 0.16,
+        "competition_level": "LOW",
+        "cpc": 29.66,
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 20,
+          "2026-06": 30,
+          "2026-05": 30,
+          "2026-04": 30,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 50,
+          "2025-10": 30,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "quarterly": -33,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 15,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20energy%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 102,
+        "last_updated_time": "2026-08-13 19:23:07 +00:00",
+        "previous_updated_time": "2026-06-06 04:44:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 110.3,
+        "dofollow": 90.7,
+        "referring_pages": 104.2,
+        "referring_domains": 42.3,
+        "referring_main_domains": 37.6,
+        "rank": 111,
+        "main_domain_rank": 371.5,
+        "last_updated_time": "2026-08-13 19:24:26 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 01:17:32 +00:00"
+      }
+    },
+    {
+      "keyword": "federal heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 12:06:18 +00:00",
+        "competition": 0.19,
+        "competition_level": "LOW",
+        "cpc": 8.53,
+        "search_volume": 30,
+        "low_top_of_page_bid": 4.84,
+        "high_top_of_page_bid": 14.47,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 50,
+          "2025-11": 50,
+          "2025-10": 40,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "quarterly": 100,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 58,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=federal%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 129,
+        "last_updated_time": "2026-08-30 05:09:26 +00:00",
+        "previous_updated_time": "2026-06-15 12:26:50 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 3376.9,
+        "dofollow": 2983,
+        "referring_pages": 3122.3,
+        "referring_domains": 567.8,
+        "referring_main_domains": 512.8,
+        "rank": 256.7,
+        "main_domain_rank": 528.1,
+        "last_updated_time": "2026-08-30 06:13:47 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 08:57:29 +00:00"
+      }
+    },
+    {
+      "keyword": "seattle heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 13:52:47 +00:00",
+        "competition": 0.6,
+        "competition_level": "MEDIUM",
+        "cpc": 12.59,
+        "search_volume": 30,
+        "low_top_of_page_bid": 6.25,
+        "high_top_of_page_bid": 19,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 40,
+          "2026-05": 40,
+          "2026-04": 50,
+          "2026-03": 30,
+          "2026-02": 10,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 20,
+          "2025-10": 50,
+          "2025-09": 30,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -50,
+          "yearly": -71
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=seattle%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 121,
+        "last_updated_time": "2026-08-14 13:08:02 +00:00",
+        "previous_updated_time": "2026-06-07 07:26:55 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 98.8,
+        "dofollow": 66.6,
+        "referring_pages": 74.2,
+        "referring_domains": 30.5,
+        "referring_main_domains": 22.3,
+        "rank": 99.9,
+        "main_domain_rank": 394.2,
+        "last_updated_time": "2026-08-14 13:09:16 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-28 22:41:09 +00:00"
+      }
+    },
+    {
+      "keyword": "minnesota heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 12:42:49 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "cpc": 2.53,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.93,
+        "high_top_of_page_bid": 3.11,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 30,
+          "2025-12": 20,
+          "2025-11": 30,
+          "2025-10": 30,
+          "2025-09": 50,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "quarterly": 300,
+          "yearly": -43
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 16,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=minnesota%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 103,
+        "last_updated_time": "2026-08-28 06:20:41 +00:00",
+        "previous_updated_time": "2026-06-08 12:22:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 60.4,
+        "dofollow": 49.2,
+        "referring_pages": 52.5,
+        "referring_domains": 18,
+        "referring_main_domains": 15.3,
+        "rank": 113.5,
+        "main_domain_rank": 418.2,
+        "last_updated_time": "2026-08-28 06:20:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 14:09:52 +00:00"
+      }
+    },
+    {
+      "keyword": "sdge heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 22:28:53 +00:00",
+        "competition": 0.04,
+        "competition_level": "LOW",
+        "cpc": 15.9,
+        "search_volume": 30,
+        "low_top_of_page_bid": 3.05,
+        "high_top_of_page_bid": 16.61,
+        "categories": [
+          10004,
+          10281,
+          10282,
+          11117,
+          11238,
+          11284,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 50,
+          "2026-07": 40,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 40,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 25,
+          "quarterly": 150,
+          "yearly": 25
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=sdge%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 111,
+        "last_updated_time": "2026-09-03 02:10:35 +00:00",
+        "previous_updated_time": "2026-08-27 01:03:36 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 75.1,
+        "dofollow": 56,
+        "referring_pages": 57.4,
+        "referring_domains": 14.9,
+        "referring_main_domains": 12.5,
+        "rank": 94.4,
+        "main_domain_rank": 406.7,
+        "last_updated_time": "2026-09-03 02:10:36 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-06-09 17:51:35 +00:00"
+      }
+    },
+    {
+      "keyword": "pepco heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 20:04:30 +00:00",
+        "competition": 0.46,
+        "competition_level": "MEDIUM",
+        "cpc": 12.87,
+        "search_volume": 30,
+        "low_top_of_page_bid": 4.33,
+        "high_top_of_page_bid": 15.5,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 30,
+          "2026-06": 40,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 30,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 40,
+          "2025-11": 50,
+          "2025-10": 30,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "quarterly": -25
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 18,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pepco%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "ai_overview",
+          "related_searches"
+        ],
+        "se_results_count": 88,
+        "last_updated_time": "2026-09-03 17:57:28 +00:00",
+        "previous_updated_time": "2026-08-27 16:48:02 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 24.4,
+        "dofollow": 21.8,
+        "referring_pages": 23.7,
+        "referring_domains": 11.8,
+        "referring_main_domains": 11.1,
+        "rank": 105.6,
+        "main_domain_rank": 389.8,
+        "last_updated_time": "2026-09-03 17:57:28 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:26:17 +00:00"
+      }
+    },
+    {
+      "keyword": "maine heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 19:46:59 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 4.11,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.32,
+        "high_top_of_page_bid": 41.3,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 30,
+          "2026-05": 30,
+          "2026-04": 30,
+          "2026-03": 40,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 40,
+          "2025-09": 40,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 12,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=maine%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 106,
+        "last_updated_time": "2026-08-28 11:40:37 +00:00",
+        "previous_updated_time": "2026-06-15 15:46:49 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 193.2,
+        "dofollow": 88.9,
+        "referring_pages": 94,
+        "referring_domains": 15.6,
+        "referring_main_domains": 14.3,
+        "rank": 93,
+        "main_domain_rank": 375.9,
+        "last_updated_time": "2026-08-28 11:40:38 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-29 16:12:29 +00:00"
+      }
+    },
+    {
+      "keyword": "energy efficient heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 20:35:40 +00:00",
+        "competition": 0,
+        "competition_level": "LOW",
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 40,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 50,
+          "2025-11": 10,
+          "2025-10": 50,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "yearly": -94
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 62,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=energy%20efficient%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-07-29 19:53:37 +00:00",
+        "previous_updated_time": "2026-05-12 12:00:02 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1995.1,
+        "dofollow": 1573.2,
+        "referring_pages": 1702.9,
+        "referring_domains": 568.6,
+        "referring_main_domains": 516.9,
+        "rank": 323,
+        "main_domain_rank": 520.8,
+        "last_updated_time": "2026-07-29 19:53:39 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 13:13:29 +00:00"
+      }
+    },
+    {
+      "keyword": "mass save heat pump rebate form 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 01:09:12 +00:00",
+        "search_volume": 30,
+        "categories": [
+          10012,
+          11093,
+          12387
+        ],
+        "monthly_searches": {
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 30,
+          "2026-01": 40,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 50,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": -100,
+          "quarterly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 14,
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mass%20save%20heat%20pump%20rebate%20form%202025&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 105,
+        "last_updated_time": "2026-09-04 08:21:48 +00:00",
+        "previous_updated_time": "2026-08-28 10:21:17 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 33.9,
+        "dofollow": 18,
+        "referring_pages": 26.3,
+        "referring_domains": 14.3,
+        "referring_main_domains": 13,
+        "rank": 105.8,
+        "main_domain_rank": 394.1,
+        "last_updated_time": "2026-09-04 08:21:49 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "last_updated_time": "2026-05-06 15:41:10 +00:00"
+      }
+    },
+    {
+      "keyword": "rocky mountain power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 23:51:17 +00:00",
+        "competition": 0.02,
+        "competition_level": "LOW",
+        "cpc": 7.33,
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 30,
+          "2026-05": 30,
+          "2026-04": 20,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 40,
+          "2025-11": 30,
+          "2025-10": 30,
+          "2025-09": 40,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": 133,
+          "quarterly": 133
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=rocky%20mountain%20power%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 109,
+        "last_updated_time": "2026-08-27 05:01:30 +00:00",
+        "previous_updated_time": "2026-06-07 03:21:03 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 145.6,
+        "dofollow": 127.9,
+        "referring_pages": 135.8,
+        "referring_domains": 23.8,
+        "referring_main_domains": 18.7,
+        "rank": 110.5,
+        "main_domain_rank": 314.8,
+        "last_updated_time": "2026-08-27 05:01:32 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-28 22:43:28 +00:00"
+      }
+    },
+    {
+      "keyword": "smud heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 11:44:46 +00:00",
+        "competition": 0.21,
+        "competition_level": "LOW",
+        "cpc": 2.59,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.74,
+        "high_top_of_page_bid": 9.58,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 30,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 50,
+          "2025-09": 30,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "monthly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 12,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=smud%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 109,
+        "last_updated_time": "2026-08-26 22:06:57 +00:00",
+        "previous_updated_time": "2026-06-17 18:03:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 49,
+        "dofollow": 43.7,
+        "referring_pages": 45.8,
+        "referring_domains": 8.7,
+        "referring_main_domains": 8.3,
+        "rank": 114.6,
+        "main_domain_rank": 360.3,
+        "last_updated_time": "2026-08-26 22:09:09 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 21:50:25 +00:00"
+      }
+    },
+    {
+      "keyword": "tva heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 07:47:05 +00:00",
+        "competition": 0.1,
+        "competition_level": "LOW",
+        "search_volume": 30,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 50,
+          "2026-01": 50,
+          "2025-12": 50,
+          "2025-11": 40,
+          "2025-10": 70,
+          "2025-09": 50
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 2,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tva%20heat%20pump%20water%20heater%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-09-02 17:10:43 +00:00",
+        "previous_updated_time": "2026-08-26 03:57:00 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 106.1,
+        "dofollow": 88.6,
+        "referring_pages": 99.2,
+        "referring_domains": 32.9,
+        "referring_main_domains": 30.5,
+        "rank": 71.6,
+        "main_domain_rank": 447.3,
+        "last_updated_time": "2026-09-02 17:10:44 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-08 01:13:04 +00:00"
+      }
+    },
+    {
+      "keyword": "illinois heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 21:38:52 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 4.16,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.07,
+        "high_top_of_page_bid": 6.75,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 30,
+          "2026-04": 30,
+          "2026-03": 30,
+          "2026-02": 10,
+          "2026-01": 30,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 40,
+          "2025-09": 20,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "quarterly": -33,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=illinois%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-08-29 05:18:39 +00:00",
+        "previous_updated_time": "2026-06-16 21:09:14 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9.5,
+        "dofollow": 8.4,
+        "referring_pages": 9.5,
+        "referring_domains": 7.4,
+        "referring_main_domains": 7,
+        "rank": 61.4,
+        "main_domain_rank": 439.1,
+        "last_updated_time": "2026-08-29 05:18:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-28 01:14:49 +00:00"
+      }
+    },
+    {
+      "keyword": "efficiency maine heat pump rebate forms",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 07:01:40 +00:00",
+        "competition": 0.12,
+        "competition_level": "LOW",
+        "cpc": 22.6,
+        "search_volume": 30,
+        "low_top_of_page_bid": 5.48,
+        "high_top_of_page_bid": 55.79,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 40,
+          "2026-04": 40,
+          "2026-03": 40,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 40
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": 50,
+          "yearly": -25
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=efficiency%20maine%20heat%20pump%20rebate%20forms&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108000,
+        "last_updated_time": "2026-04-15 02:12:37 +00:00",
+        "previous_updated_time": "2026-02-23 07:52:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 78.6,
+        "dofollow": 67.9,
+        "referring_pages": 68.1,
+        "referring_domains": 6.4,
+        "referring_main_domains": 6,
+        "rank": 80.4,
+        "main_domain_rank": 376.3,
+        "last_updated_time": "2026-04-15 02:17:12 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 19:06:01 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump energy rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 15:27:26 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 6.73,
+        "search_volume": 20,
+        "low_top_of_page_bid": 2.17,
+        "high_top_of_page_bid": 8.89,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 10,
+          "2025-09": 40,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "yearly": -80
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 53,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20energy%20rebate&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "perspectives",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 2920000,
+        "last_updated_time": "2025-02-11 14:20:46 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1301.2,
+        "dofollow": 964.3,
+        "referring_pages": 1166.3,
+        "referring_domains": 496.8,
+        "referring_main_domains": 457.7,
+        "rank": 294,
+        "main_domain_rank": 494.1,
+        "last_updated_time": "2025-02-11 14:20:46 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 22:18:16 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate pennsylvania",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 19:42:31 +00:00",
+        "competition": 0.21,
+        "competition_level": "LOW",
+        "cpc": 2.05,
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.38,
+        "high_top_of_page_bid": 9.06,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 30,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%20pennsylvania&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 344000,
+        "last_updated_time": "2026-02-25 17:47:44 +00:00",
+        "previous_updated_time": "2026-01-09 23:22:38 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 22.4,
+        "dofollow": 17.6,
+        "referring_pages": 19.4,
+        "referring_domains": 6.9,
+        "referring_main_domains": 6.5,
+        "rank": 81.2,
+        "main_domain_rank": 384.5,
+        "last_updated_time": "2026-02-25 17:47:49 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 21:08:13 +00:00"
+      }
+    },
+    {
+      "keyword": "nh heat pump rebate 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 11:03:40 +00:00",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10300
+        ],
+        "monthly_searches": {
+          "2026-05": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 40,
+          "2025-10": 30,
+          "2025-09": 30,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "quarterly": -100,
+          "yearly": -100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-06 04:36:08 +00:00"
+      }
+    },
+    {
+      "keyword": "eweb heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 05:03:00 +00:00",
+        "competition": 0.13,
+        "competition_level": "LOW",
+        "cpc": 6.11,
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.66,
+        "high_top_of_page_bid": 7.2,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 50,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 30,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 20,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "monthly": -60,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=eweb%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 891,
+        "last_updated_time": "2026-03-11 13:41:37 +00:00",
+        "previous_updated_time": "2025-12-24 05:47:59 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5.6,
+        "dofollow": 5.1,
+        "referring_pages": 5.4,
+        "referring_domains": 3.8,
+        "referring_main_domains": 3.5,
+        "rank": 34,
+        "main_domain_rank": 306.9,
+        "last_updated_time": "2026-03-11 13:41:38 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 17:13:22 +00:00"
+      }
+    },
+    {
+      "keyword": "met-ed heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 12:52:59 +00:00",
+        "competition": 0.09,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 20,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "quarterly": 100
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-03 19:22:21 +00:00"
+      }
+    },
+    {
+      "keyword": "north carolina heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 06:45:22 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 30,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 50,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=north%20carolina%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "people_also_search",
+          "related_searches"
+        ],
+        "se_results_count": 530000,
+        "last_updated_time": "2026-02-25 01:21:45 +00:00",
+        "previous_updated_time": "2026-01-08 09:21:22 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 0.9,
+        "dofollow": 0.8,
+        "referring_pages": 0.8,
+        "referring_domains": 0.7,
+        "referring_main_domains": 0.7,
+        "rank": 30.2,
+        "main_domain_rank": 363.4,
+        "last_updated_time": "2026-02-25 01:21:53 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 17:14:47 +00:00"
+      }
+    },
+    {
+      "keyword": "ohio heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 03:58:59 +00:00",
+        "competition": 0.13,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 29,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ohio%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "ai_overview",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 672000,
+        "last_updated_time": "2026-03-01 15:01:37 +00:00",
+        "previous_updated_time": "2026-01-11 06:44:13 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1796.3,
+        "dofollow": 1569.1,
+        "referring_pages": 1657.7,
+        "referring_domains": 437.5,
+        "referring_main_domains": 399.5,
+        "rank": 157.3,
+        "main_domain_rank": 384.5,
+        "last_updated_time": "2026-03-01 15:01:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 20:12:18 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump clothes dryer rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 05:34:48 +00:00",
+        "competition": 0.11,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10010,
+          10081,
+          10423,
+          11595,
+          12829
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 30,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 30,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "quarterly": -50,
+          "yearly": -67
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20clothes%20dryer%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 1090000,
+        "last_updated_time": "2026-03-11 01:02:24 +00:00",
+        "previous_updated_time": "2026-01-11 12:32:42 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 117.7,
+        "dofollow": 73.6,
+        "referring_pages": 104.2,
+        "referring_domains": 40.8,
+        "referring_main_domains": 35.1,
+        "rank": 39.5,
+        "main_domain_rank": 513.9,
+        "last_updated_time": "2026-03-11 01:02:25 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-27 21:10:00 +00:00"
+      }
+    },
+    {
+      "keyword": "sonoma clean power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 00:26:08 +00:00",
+        "competition": 0.38,
+        "competition_level": "MEDIUM",
+        "cpc": 12.17,
+        "search_volume": 20,
+        "low_top_of_page_bid": 2.72,
+        "high_top_of_page_bid": 8.27,
+        "categories": [
+          10004,
+          10295,
+          11262,
+          12110
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=sonoma%20clean%20power%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 17600,
+        "last_updated_time": "2025-12-23 04:50:09 +00:00",
+        "previous_updated_time": "2025-11-08 16:19:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7.9,
+        "dofollow": 6,
+        "referring_pages": 6.2,
+        "referring_domains": 3.2,
+        "referring_main_domains": 2.6,
+        "rank": 45.6,
+        "main_domain_rank": 343.8,
+        "last_updated_time": "2025-12-23 04:50:13 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-28 22:29:43 +00:00"
+      }
+    },
+    {
+      "keyword": "dominion heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 11:09:45 +00:00",
+        "competition": 0.2,
+        "competition_level": "LOW",
+        "cpc": 6.38,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.69,
+        "high_top_of_page_bid": 7.27,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 10,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=dominion%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 34200,
+        "last_updated_time": "2026-03-11 19:48:12 +00:00",
+        "previous_updated_time": "2025-12-24 08:31:11 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.3,
+        "dofollow": 3.9,
+        "referring_pages": 6.1,
+        "referring_domains": 2.3,
+        "referring_main_domains": 2.2,
+        "rank": 46.4,
+        "main_domain_rank": 340.9,
+        "last_updated_time": "2026-03-11 19:48:12 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 14:38:10 +00:00"
+      }
+    },
+    {
+      "keyword": "pepco heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-14 03:35:28 +00:00",
+        "competition": 0.42,
+        "competition_level": "MEDIUM",
+        "cpc": 17.29,
+        "search_volume": 20,
+        "low_top_of_page_bid": 3.21,
+        "high_top_of_page_bid": 18.8,
+        "categories": [
+          10004,
+          10281,
+          10282,
+          11117,
+          11238,
+          11284,
+          12508,
+          13191,
+          13462,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 30,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "quarterly": -50
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-08-14 03:36:12 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebate ontario",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 20:11:24 +00:00",
+        "competition": 0.18,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -50,
+          "quarterly": -50,
+          "yearly": -67
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 33,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebate%20ontario&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 545000,
+        "last_updated_time": "2026-03-11 01:02:41 +00:00",
+        "previous_updated_time": "2025-12-23 23:01:49 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 86.8,
+        "dofollow": 71.5,
+        "referring_pages": 76.2,
+        "referring_domains": 43.9,
+        "referring_main_domains": 41.9,
+        "rank": 161.1,
+        "main_domain_rank": 465.9,
+        "last_updated_time": "2026-03-11 01:02:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 17:03:00 +00:00"
+      }
+    },
+    {
+      "keyword": "tacoma power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 15:28:44 +00:00",
+        "competition": 0.39,
+        "competition_level": "MEDIUM",
+        "cpc": 2,
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.99,
+        "high_top_of_page_bid": 5.03,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 10,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 30,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 10,
+          "2025-09": 10
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=tacoma%20power%20heat%20pump%20rebate&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "video",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 269000,
+        "last_updated_time": "2024-04-01 01:05:42 +00:00",
+        "previous_updated_time": "2024-02-19 16:36:15 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 33.9,
+        "dofollow": 30.2,
+        "referring_pages": 33.8,
+        "referring_domains": 5.2,
+        "referring_main_domains": 4.7,
+        "rank": 60.6,
+        "main_domain_rank": 317.7,
+        "last_updated_time": "2024-04-01 01:05:43 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 23:19:54 +00:00"
+      }
+    },
+    {
+      "keyword": "first energy heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-21 23:23:55 +00:00",
+        "competition": 0.06,
+        "competition_level": "LOW",
+        "cpc": 0.72,
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 20,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "quarterly": -50,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 07:50:39 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump ac rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 00:58:21 +00:00",
+        "competition": 0.55,
+        "competition_level": "MEDIUM",
+        "cpc": 20.43,
+        "search_volume": 20,
+        "low_top_of_page_bid": 2.41,
+        "high_top_of_page_bid": 25.67,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 30,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "quarterly": 300,
+          "yearly": -56
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "keyword_difficulty": 38,
+        "detected_language": "en",
+        "words_count": 4
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20ac%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 5110000,
+        "last_updated_time": "2026-04-14 20:59:13 +00:00",
+        "previous_updated_time": "2026-02-25 18:00:55 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1495.8,
+        "dofollow": 1235.8,
+        "referring_pages": 1332.5,
+        "referring_domains": 482,
+        "referring_main_domains": 442.1,
+        "rank": 233.3,
+        "main_domain_rank": 450.8,
+        "last_updated_time": "2026-04-14 21:00:50 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 21:19:17 +00:00"
+      }
+    },
+    {
+      "keyword": "comed heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 22:18:49 +00:00",
+        "competition": 0.08,
+        "competition_level": "LOW",
+        "cpc": 2.88,
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 10,
+          "2025-10": 10,
+          "2025-09": 20,
+          "2025-08": 30
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-03 11:53:30 +00:00"
+      }
+    },
+    {
+      "keyword": "energize ct heat pump water heater rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 14:46:52 +00:00",
+        "competition": 0.06,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 30,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 30,
+          "2025-09": 20,
+          "2025-08": 10
+        },
+        "search_volume_trend": {
+          "monthly": 100
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 7
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:45:01 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel colorado heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 23:19:09 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "cpc": 3.25,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.45,
+        "high_top_of_page_bid": 13.67,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 30,
+          "2026-07": 20,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": 50,
+          "yearly": -25
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 22,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20colorado%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 106,
+        "last_updated_time": "2026-09-01 16:54:59 +00:00",
+        "previous_updated_time": "2026-06-13 15:56:21 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 748.3,
+        "dofollow": 234,
+        "referring_pages": 254.1,
+        "referring_domains": 53.5,
+        "referring_main_domains": 48.3,
+        "rank": 161.4,
+        "main_domain_rank": 426.2,
+        "last_updated_time": "2026-09-01 16:55:02 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 01:39:04 +00:00"
+      }
+    },
+    {
+      "keyword": "federal heat pump rebate 2025",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 06:59:21 +00:00",
+        "competition": 0.29,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10012,
+          10282,
+          10300,
+          11093,
+          11284,
+          12387
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 10,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 40,
+          "2025-09": 20,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "yearly": -75
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-07-27 20:00:19 +00:00"
+      }
+    },
+    {
+      "keyword": "xcel energy heat pump rebate colorado",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 17:44:23 +00:00",
+        "competition": 0.38,
+        "competition_level": "MEDIUM",
+        "cpc": 1.88,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.27,
+        "high_top_of_page_bid": 15.51,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 40,
+          "2026-01": 40,
+          "2025-12": 20,
+          "2025-11": 30,
+          "2025-10": 20,
+          "2025-09": 20,
+          "2025-08": 50
+        },
+        "search_volume_trend": {
+          "yearly": -86
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 22,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=xcel%20energy%20heat%20pump%20rebate%20colorado&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-08-22 01:37:09 +00:00",
+        "previous_updated_time": "2026-05-06 00:51:25 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 513,
+        "dofollow": 182.8,
+        "referring_pages": 202.1,
+        "referring_domains": 51.3,
+        "referring_main_domains": 45.5,
+        "rank": 161,
+        "main_domain_rank": 426.1,
+        "last_updated_time": "2026-08-22 01:37:09 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-30 01:32:06 +00:00"
+      }
+    },
+    {
+      "keyword": "dominion virginia power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 09:01:31 +00:00",
+        "competition": 0.27,
+        "competition_level": "LOW",
+        "cpc": 2.17,
+        "search_volume": 20,
+        "low_top_of_page_bid": 0.88,
+        "high_top_of_page_bid": 7.82,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 30,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 10,
+          "2025-09": 20,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "keyword_difficulty": 1,
+        "detected_language": "en",
+        "words_count": 6
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=dominion%20virginia%20power%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 21300,
+        "last_updated_time": "2026-03-11 19:47:02 +00:00",
+        "previous_updated_time": "2025-12-24 08:31:48 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 16.8,
+        "dofollow": 13.2,
+        "referring_pages": 16,
+        "referring_domains": 8.5,
+        "referring_main_domains": 7.9,
+        "rank": 97.4,
+        "main_domain_rank": 325.8,
+        "last_updated_time": "2026-03-11 19:47:03 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 14:35:36 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump air conditioner rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 04:22:23 +00:00",
+        "competition": 0.81,
+        "competition_level": "HIGH",
+        "cpc": 7.45,
+        "search_volume": 20,
+        "low_top_of_page_bid": 2.54,
+        "high_top_of_page_bid": 7.41,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12582
+        ],
+        "monthly_searches": {
+          "2026-08": 40,
+          "2026-07": 40,
+          "2026-06": 20,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 10,
+          "2025-10": 20,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "quarterly": 100,
+          "yearly": -20
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "keyword_metrics",
+        "keyword_difficulty": 48,
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20air%20conditioner%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 2670000,
+        "last_updated_time": "2026-04-14 20:56:44 +00:00",
+        "previous_updated_time": "2026-02-25 18:02:03 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1530,
+        "dofollow": 1260,
+        "referring_pages": 1361.7,
+        "referring_domains": 493.8,
+        "referring_main_domains": 452.5,
+        "rank": 271.8,
+        "main_domain_rank": 496.1,
+        "last_updated_time": "2026-04-14 20:59:55 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 22:49:46 +00:00"
+      }
+    },
+    {
+      "keyword": "pacific power heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-23 20:47:17 +00:00",
+        "competition": 0.22,
+        "competition_level": "LOW",
+        "cpc": 12.56,
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.69,
+        "high_top_of_page_bid": 11.12,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 20,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 20,
+          "2025-12": 10,
+          "2025-11": 20,
+          "2025-10": 20,
+          "2025-09": 10,
+          "2025-08": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en",
+        "words_count": 5
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=pacific%20power%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 153000,
+        "last_updated_time": "2025-10-18 16:46:44 +00:00",
+        "previous_updated_time": "2025-08-24 16:30:46 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9.5,
+        "dofollow": 7.2,
+        "referring_pages": 8.9,
+        "referring_domains": 5.3,
+        "referring_main_domains": 4.8,
+        "rank": 50.3,
+        "main_domain_rank": 325.2,
+        "last_updated_time": "2025-10-18 16:46:44 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 19:10:15 +00:00"
+      }
+    }
+  ]
+}

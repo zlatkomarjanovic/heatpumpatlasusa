@@ -1,0 +1,100 @@
+---
+/**
+ * Terms of service.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import { SITE } from '@/data/site';
+
+const path = '/terms/';
+const updated = new Date('2026-09-14');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Terms of service', href: path },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="Terms of Service"
+    description="The terms for using HeatPumpAtlasUSA. Our estimates are modelled reference figures, not quotes or professional advice, and you use them at your own discretion."
+    path={path}
+    type="WebPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="terms of service"
+  />
+
+  <PageHeader
+    eyebrow="Legal"
+    title="Terms of service"
+    standfirst="Plain terms for using the site. The core point: our numbers are modelled estimates for research, not quotes, and not a substitute for a professional assessment."
+    breadcrumbs={crumbs}
+    updated={updated}
+  />
+
+  <div class="container-atlas py-12 lg:py-16">
+    <div class="prose-atlas mx-auto max-w-3xl">
+      <h2>Acceptance</h2>
+      <p>
+        By using {SITE.name} you agree to these terms. If you do not agree, please do not use the site.
+      </p>
+
+      <h2>What the site provides</h2>
+      <p>
+        {SITE.name} publishes cost models, comparisons, rebate summaries and a switching calculator for US residential
+        heat pumps. All figures are modelled estimates built on public data sources. They are intended to help you
+        understand the economics and interrogate contractor quotes, not to replace a load calculation, a site
+        assessment or a firm bid from a licensed contractor.
+      </p>
+
+      <h2>No professional advice</h2>
+      <p>
+        Nothing on the site is engineering, financial, legal or tax advice. Equipment sizing, electrical work and rebate
+        eligibility must be confirmed by qualified professionals and the relevant programs for your specific situation.
+      </p>
+
+      <h2>Estimates are not quotes</h2>
+      <p>
+        Installed cost ranges, operating costs, payback periods and rebate amounts are approximations. Real prices vary
+        by contractor, home condition and timing, and can differ substantially from any modelled figure. Rebate programs
+        change and fund out during the year. Always verify current amounts and eligibility with the administering
+        program before making a decision or signing a contract.
+      </p>
+
+      <h2>Third-party links and referrals</h2>
+      <p>
+        The site links to external sources and may refer you to installers or partners. We do not control third-party
+        sites or services and are not responsible for their content, availability, pricing or conduct. Any transaction
+        you enter with a third party is between you and that party.
+      </p>
+
+      <h2>Intellectual property</h2>
+      <p>
+        The site's original text, data compilations and design are owned by {SITE.name} unless otherwise noted. You may
+        share and cite our pages with attribution and a link. You may not scrape, republish at scale or resell the
+        content without permission. Third-party data and images retain their own licenses and attribution.
+      </p>
+
+      <h2>Limitation of liability</h2>
+      <p>
+        The site is provided on an "as is" and "as available" basis without warranties of any kind. To the fullest
+        extent permitted by law, {SITE.name} is not liable for any loss or damage arising from your use of, or reliance
+        on, the information, estimates or referrals provided here. You use the site and its outputs at your own
+        discretion.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        We may update these terms and will revise the date above. Continued use after an update means you accept the
+        revised terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

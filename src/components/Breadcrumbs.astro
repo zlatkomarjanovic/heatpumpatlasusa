@@ -1,0 +1,44 @@
+---
+/**
+ * Breadcrumbs. Renders visible navigation and is paired with the BreadcrumbList
+ * schema emitted by the SEO component, so both stay driven by the same array.
+ */
+import type { Breadcrumb } from '@/types/seo';
+
+interface Props {
+  items: Breadcrumb[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.length > 1 && (
+  <nav aria-label="Breadcrumb" class="text-ink-500 text-xs sm:text-sm">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+      {items.map((crumb, index) => {
+        const isLast = index === items.length - 1;
+        return (
+          <li class="flex items-center gap-x-2">
+            {crumb.href && !isLast ? (
+              <a
+                href={crumb.href}
+                class="hover:text-brand-700 underline decoration-line-strong decoration-1 underline-offset-2 transition-colors hover:decoration-brand-500"
+              >
+                {crumb.label}
+              </a>
+            ) : (
+              <span class={isLast ? 'text-ink-700 font-medium' : ''} aria-current={isLast ? 'page' : undefined}>
+                {crumb.label}
+              </span>
+            )}
+            {!isLast && (
+              <span aria-hidden="true" class="text-ink-300 select-none">
+                /
+              </span>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </nav>
+)}

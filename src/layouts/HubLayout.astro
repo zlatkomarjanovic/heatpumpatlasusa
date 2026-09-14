@@ -1,0 +1,115 @@
+---
+/**
+ * Layout for hub pages: cost guides, comparison pages and other data-led pages
+ * that are composed from components rather than a markdown body.
+ *
+ * Keeps the same header, sidebar, FAQ, sources and related-page structure as the
+ * article layout so the site reads consistently.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import type { SchemaType, Breadcrumb } from '@/types/seo';
+import PageHeader from '@/components/PageHeader.astro';
+import Faq from '@/components/Faq.astro';
+import SourceList from '@/components/SourceList.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import type { NavItem } from '@/data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  primaryKeyword: string;
+  path: string;
+  breadcrumbs: Breadcrumb[];
+  updated: Date;
+  reviewedBy?: string;
+  eyebrow?: string;
+  standfirst?: string;
+  keyStat?: { value: string; label: string; source?: string };
+  schemaType?: SchemaType;
+  citations?: { label: string; url: string; publisher?: string; supports?: string; primary?: boolean }[];
+  faqs?: { question: string; answer: string }[];
+  related?: { parents?: NavItem[]; siblings?: NavItem[]; children?: NavItem[] };
+  /** Hide the sticky TOC when a page has no sections to list. */
+  showToc?: boolean;
+  tocTitle?: string;
+  showQuoteCta?: boolean;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  primaryKeyword,
+  path,
+  breadcrumbs,
+  updated,
+  reviewedBy,
+  eyebrow,
+  standfirst,
+  keyStat,
+  schemaType = 'WebPage',
+  citations = [],
+  faqs = [],
+  related = {},
+  showToc = true,
+  tocTitle = 'On this page',
+  showQuoteCta = true,
+  noindex = false,
+} = Astro.props;
+---
+
+<BaseLayout>
+  <SEO
+    title={title}
+    description={description}
+    path={path}
+    type={schemaType === 'FAQPage' ? 'Article' : schemaType}
+    breadcrumbs={breadcrumbs}
+    updated={updated}
+    reviewedBy={reviewedBy}
+    faqs={faqs}
+    primaryKeyword={primaryKeyword}
+    isHub={schemaType === 'WebPage' || schemaType === 'CollectionPage'}
+    noindex={noindex}
+  />
+
+  <PageHeader
+    eyebrow={eyebrow}
+    title={title}
+    standfirst={standfirst}
+    breadcrumbs={breadcrumbs}
+    updated={updated}
+    reviewedBy={reviewedBy}
+    keyStat={keyStat}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class:list={['grid gap-12', showToc && 'lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16']}>
+      <div class="min-w-0">
+        <slot />
+      </div>
+
+      {showToc && (
+        <aside class="lg:sticky lg:top-24 lg:h-fit">
+          <nav aria-label="On this page" class="border-line border-l pl-5">
+            <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">{tocTitle}</p>
+            <ul class="mt-3 space-y-2 text-sm">
+              <slot name="toc" />
+            </ul>
+          </nav>
+        </aside>
+      )}
+    </div>
+  </div>
+
+  <div class="container-atlas">
+    <div class="mx-auto max-w-3xl space-y-12">
+      {showQuoteCta && <QuoteCta />}
+      <Faq items={faqs} />
+      <RelatedPages parents={related.parents} siblings={related.siblings} children={related.children} />
+      {citations.length > 0 && <SourceList sources={citations} updated={updated} />}
+    </div>
+  </div>
+</BaseLayout>

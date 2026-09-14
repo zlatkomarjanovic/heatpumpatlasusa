@@ -1,0 +1,32 @@
+---
+/**
+ * Numbered section wrapper for long-form pages. Gives every major block a
+ * consistent heading level, anchor id and optional lede, which keeps heading
+ * hierarchy predictable across the site.
+ */
+interface Props {
+  id?: string;
+  number?: string | number;
+  title: string;
+  lede?: string;
+  /** Renders as h2 by default; use 3 when nesting inside another section. */
+  level?: 2 | 3;
+  class?: string;
+}
+
+const { id, number, title, lede, level = 2, class: className = '' } = Astro.props;
+const Heading = `h${level}` as const;
+---
+
+<section id={id} class:list={['scroll-mt-24', className]}>
+  <div class="flex items-baseline gap-3">
+    {number !== undefined && (
+      <span class="text-brand-600/70 text-sm font-semibold tabular-nums" aria-hidden="true">{number}</span>
+    )}
+    <Heading class={level === 2 ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'}>{title}</Heading>
+  </div>
+  {lede && <p class="text-ink-600 mt-3 max-w-3xl leading-relaxed">{lede}</p>}
+  <div class="mt-5">
+    <slot />
+  </div>
+</section>

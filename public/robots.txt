@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# No crawl restrictions: every page on this site is intended to be indexed.
+# The calculator page is static HTML with an optional JS island, so it is fully
+# crawlable without rendering.
+
+Sitemap: https://heatpumpatlasusa.com/sitemap-index.xml

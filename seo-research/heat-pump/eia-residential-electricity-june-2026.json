@@ -1,0 +1,32 @@
+{
+  "source": "EIA Electric Power Monthly Table 5.6.A",
+  "period": "June 2026",
+  "unit": "cents_per_kwh",
+  "us_residential_average": 18.34,
+  "selected_states": {
+    "Nevada": 13.11,
+    "Nebraska": 13.25,
+    "Utah": 13.37,
+    "Louisiana": 13.49,
+    "Tennessee": 14.07,
+    "Washington": 14.91,
+    "Florida": 15.10,
+    "Texas": 16.39,
+    "Colorado": 17.13,
+    "Illinois": 19.89,
+    "Pennsylvania": 21.73,
+    "Michigan": 22.99,
+    "Connecticut": 24.32,
+    "Vermont": 24.44,
+    "New Jersey": 24.95,
+    "New Hampshire": 27.01,
+    "Alaska": 28.21,
+    "Rhode Island": 29.23,
+    "New York": 29.49,
+    "Maine": 29.59,
+    "Massachusetts": 29.61,
+    "California": 34.74,
+    "Hawaii": 52.72
+  },
+  "implication": "Northeast and California have the strongest rebate search demand and the worst heat-pump operating economics versus gas. Oil and propane conversions still pencil. Gas conversions often do not."
+}

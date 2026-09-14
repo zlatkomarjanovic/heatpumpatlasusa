@@ -1,0 +1,120 @@
+---
+/**
+ * Guides hub.
+ *
+ * Lists every editorial guide in the collection. Kept as a real index so the
+ * guides are reachable by crawlers and not orphaned.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { guideCover } from '@/data/guide-images';
+
+const path = '/guides/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Guides', href: path },
+];
+
+const guides = (await getCollection('guides')).filter((g) => !g.data.draft);
+
+const byTag = guides.reduce<Record<string, typeof guides>>((acc, guide) => {
+  const tag = guide.data.tags[0] ?? 'general';
+  acc[tag] = acc[tag] ?? [];
+  acc[tag].push(guide);
+  return acc;
+}, {});
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Guides"
+    description="Long-form guides on heat pump costs, comparisons and switching economics in the US, with sources and update dates."
+    path={path}
+    type="CollectionPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="heat pump guides"
+    isHub
+  />
+
+  <PageHeader
+    eyebrow="Guides"
+    title="In-depth guides"
+    standfirst="Longer pieces that do not fit the hub structure, each one tied to a specific question and sourced."
+    breadcrumbs={crumbs}
+    updated={updated}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="mx-auto max-w-4xl">
+      {guides.length === 0 ? (
+        <p class="text-ink-600">
+          Guides are published as they are researched and reviewed. In the meantime, the main hubs cover the core
+          questions: <a href="/heat-pump-cost/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">heat pump cost</a>,{' '}
+          <a href="/mini-split-cost/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">mini split cost</a>,{' '}
+          <a href="/heat-pump-vs-furnace/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">heat pump vs furnace</a>, and the{' '}
+          <a href="/calculator/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">calculator</a>.
+        </p>
+      ) : (
+        <div class="space-y-12">
+          {Object.entries(byTag).map(([tag, items]) => (
+            <Section id={tag} title={tag.charAt(0).toUpperCase() + tag.slice(1)}>
+              <ul class="grid gap-5 sm:grid-cols-2">
+                {items.map((guide) => {
+                  const cover = guideCover(guide.id);
+                  return (
+                  <li>
+                    <a
+                      href={`/guides/${guide.id}/`}
+                      class="border-line shadow-card hover:shadow-lift flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-shadow"
+                    >
+                      <Image
+                        src={cover.image}
+                        alt={cover.alt}
+                        widths={[400, 640]}
+                        sizes="(min-width: 640px) 40vw, 100vw"
+                        format="webp"
+                        quality={68}
+                        loading="lazy"
+                        class="aspect-[16/9] w-full object-cover"
+                      />
+                      <span class="flex flex-1 flex-col p-5">
+                        <span class="text-ink-950 text-base font-semibold">{guide.data.title}</span>
+                        <span class="text-ink-600 mt-2 flex-1 text-[0.95rem] leading-relaxed">{guide.data.excerpt ?? guide.data.description}</span>
+                        <span class="text-ink-500 mt-4 text-2xs">
+                          Posted{' '}
+                          {(guide.data.published ?? guide.data.updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                          {' · '}
+                          Updated{' '}
+                          {guide.data.updated.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  );
+                })}
+              </ul>
+            </Section>
+          ))}
+        </div>
+      )}
+
+      <RelatedPages
+        class="mt-14"
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
+          { label: 'Mini split cost', href: '/mini-split-cost/' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/' },
+          { label: 'Rebates', href: '/rebates/' },
+        ]}
+      />
+    </div>
+  </div>
+</BaseLayout>

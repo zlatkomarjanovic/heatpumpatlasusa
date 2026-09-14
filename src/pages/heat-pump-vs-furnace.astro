@@ -1,0 +1,321 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import ComparisonTable from '@/components/ComparisonTable.astro';
+import type { CompareRow } from '@/types/content';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { STATES, type StateRecord } from '@/data/states';
+import { EFFICIENCY, ENERGY_UNITS } from '@/data/costs';
+import { pickSources } from '@/data/sources';
+
+const path = '/heat-pump-vs-furnace/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Heat pump vs furnace', href: path },
+];
+
+const KWH_PER_MMBTU = 1_000_000 / 3412;
+
+/** Delivered heat cost per MMBtu for a heat pump and a 90 percent gas furnace. */
+function compare(state: StateRecord) {
+  const elecPerMmbBtu = (state.electricityCentsPerKwh / 100) * KWH_PER_MMBTU;
+  const cop = EFFICIENCY.ashpColdClimate * (1 - EFFICIENCY.ductLossDucted);
+  const hp = elecPerMmbBtu / cop;
+  const gasPerMcf = state.gasDollarsPerMcf;
+  const gas = ((gasPerMcf / ENERGY_UNITS.thermsPerMcf) / EFFICIENCY.gasFurnace) * 10;
+  const delta = gas - hp;
+  return { hp, gas, delta, hpWins: delta > 0 };
+}
+
+const stateRows = STATES.map((s) => {
+  const c = compare(s);
+  if (!c) return null;
+  return {
+    state: s.name,
+    electricity: `${s.electricityCentsPerKwh.toFixed(1)}¢`,
+    gasPrice: `$${s.gasDollarsPerMcf.toFixed(2)}`,
+    hp: `$${c.hp.toFixed(1)}`,
+    gas: `$${c.gas.toFixed(1)}`,
+    delta: `${c.delta > 0 ? '−' : '+'}$${Math.abs(c.delta).toFixed(1)}`,
+    verdict: c.hpWins ? 'Heat pump' : 'Gas furnace',
+  };
+}).filter(Boolean);
+
+const heatPumpWins = stateRows.filter((r) => r!.verdict === 'Heat pump').length;
+const gasWins = stateRows.length - heatPumpWins;
+
+const columns = [
+  { key: 'state', label: 'State' },
+  { key: 'electricity', label: 'Power', numeric: true },
+  { key: 'gasPrice', label: 'Gas / Mcf', numeric: true },
+  { key: 'hp', label: 'Heat pump', numeric: true, emphasis: true },
+  { key: 'gas', label: 'Gas furnace', numeric: true },
+  { key: 'verdict', label: 'Cheaper to run', emphasis: true },
+];
+
+const comparisonRows: CompareRow[] = [
+  {
+    criterion: 'Up-front installed cost',
+    left: '$9,500 to $22,000 for a ducted system',
+    right: '$3,800 to $12,000 for a replacement',
+    verdict: 'right',
+    note: 'The furnace wins clearly on day one, unless the AC is also being replaced.',
+  },
+  {
+    criterion: 'Cooling included',
+    left: 'Yes, the same system cools in summer',
+    right: 'No, you need a separate air conditioner',
+    verdict: 'left',
+    note: 'This is the single biggest factor most comparisons leave out.',
+  },
+  {
+    criterion: 'Operating cost, cold climate',
+    left: 'Wins in high gas price states',
+    right: 'Wins in low gas price, high power states',
+    verdict: 'depends',
+    note: 'See the state table on this page. Twenty-seven of fifty-one states favour the heat pump in our model.',
+  },
+  {
+    criterion: 'Lifespan',
+    left: '12 to 20 years, compressor-limited',
+    right: '15 to 25 years',
+    verdict: 'right',
+    note: 'Furnaces are mechanically simpler and generally last longer.',
+  },
+  {
+    criterion: 'Maintenance',
+    left: 'Annual service, filters, coils',
+    right: 'Annual service, filters, heat exchanger check',
+    verdict: 'depends',
+    note: 'Comparable in cost. Heat pumps have more components and more to fail.',
+  },
+  {
+    criterion: 'Cold weather performance',
+    left: 'Below zero, output and efficiency both fall',
+    right: 'Unaffected by outdoor temperature',
+    verdict: 'right',
+    note: 'The reason cold-climate rated equipment is worth specifying, and why backup heat exists.',
+  },
+  {
+    criterion: 'Health and safety',
+    left: 'No combustion, no carbon monoxide risk',
+    right: 'Combustion appliance, needs venting and CO monitoring',
+    verdict: 'left',
+  },
+  {
+    criterion: 'Future fuel exposure',
+    left: 'Exposed to electricity prices',
+    right: 'Exposed to gas prices and any carbon policy',
+    verdict: 'depends',
+    note: 'Both are fuel price bets. Neither is a hedge.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'Is a heat pump cheaper than a gas furnace?',
+    answer:
+      'On installed cost, no. A gas furnace replacement is usually several thousand dollars cheaper. On running cost, it depends on your state, and our model shows the heat pump winning in 27 of the 51 jurisdictions with published gas prices. The ratio that matters is your electricity price divided by your gas price. Where gas is cheap and power is expensive, the furnace wins, and that is a real result, not a rounding error.',
+  },
+  {
+    question: 'What about the gas industry claim that furnaces win in 36 states?',
+    answer:
+      'The American Gas Association has published analysis arguing the least efficient gas furnace is cheaper to run than the most efficient electric heat pump in 36 states. Our model finds the heat pump winning in 27 of 51 jurisdictions, using EIA state prices and a seasonal coefficient of performance of about 2.47 including duct losses. The difference is mostly methodology: how you handle duct losses, what seasonal efficiency you assign, and whether you compare at current prices or across price volatility. Both results are within the range of defensible modelling, which tells you the honest answer is that it varies by state and neither side should claim a landslide.',
+  },
+  {
+    question: 'Does a heat pump replace my air conditioner?',
+    answer:
+      'Yes, and this is the argument that most changes the economic case. If your air conditioner is near the end of its life, the alternative to a heat pump is not a furnace. It is a furnace plus a new central air conditioner. Once you price both, the gap narrows substantially, and in some cases closes.',
+  },
+  {
+    question: 'What is a dual fuel system and do I want one?',
+    answer:
+      'A dual fuel system pairs a heat pump with a gas furnace as backup. The heat pump runs in mild weather where it is efficient, and the furnace takes over below a set outdoor temperature where the heat pump is losing efficiency. In a cold climate with cheap gas, this is often the genuinely best answer, and it is worth asking about rather than treating the choice as binary.',
+  },
+  {
+    question: 'How long until a heat pump pays back versus a furnace?',
+    answer:
+      'If the heat pump costs $8,000 more up front and saves $400 a year on running costs, the simple payback is 20 years, which is longer than the equipment lasts. If it saves $1,200 a year, payback is under seven years, which is a good decision. The calculator produces this figure for your ZIP, and it will show no payback when there is no payback rather than manufacturing a number.',
+  },
+];
+
+const citations = pickSources(['eiaElectricity', 'eiaGas', 'agaComparison', 'acDirectComparison', 'epriCalculator', 'censusFuel']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump vs Furnace: The State-by-State Cost Model"
+    description="We modelled delivered heating cost for a heat pump against a 90% gas furnace in every state with published gas prices. The heat pump wins in 27 of 51. See where, and why."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump vs furnace"
+  />
+
+  <PageHeader
+    eyebrow="Comparison"
+    title="Heat pump versus furnace, modelled state by state"
+    standfirst="The gas industry says the furnace wins in 36 states. Some heat pump advocates say the heat pump always wins. We ran the numbers from EIA prices and published the result, including the states where the furnace is the better financial answer."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: `${heatPumpWins} of ${stateRows.length}`, label: 'States where a heat pump beats a 90% gas furnace on running cost in our model' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A gas furnace is almost always cheaper to install. A heat pump is sometimes cheaper to run. Whether
+              "sometimes" includes your house comes down to one ratio: what you pay for a kilowatt hour against what you
+              pay for a therm.
+            </p>
+            <p>
+              Running our model across every state with a published residential gas price, the heat pump comes out
+              cheaper to operate in <strong>{heatPumpWins} of {stateRows.length}</strong> jurisdictions. That is not a
+              landslide in either direction, and it is a more useful result than a slogan. The heat pump tends to win
+              where gas is expensive relative to power, which includes much of New England, the Pacific Northwest and
+              parts of the Midwest. It loses across much of the South and the plains.
+            </p>
+            <p>
+              There is a second factor that most comparisons ignore entirely: a heat pump also replaces your air
+              conditioner. If your AC is near end of life, the real comparison is not furnace against heat pump. It is
+              furnace plus AC against heat pump.
+            </p>
+          </div>
+        </section>
+
+        <Section
+          id="table"
+          number="1"
+          title="Delivered heating cost by state"
+          lede="Cost per million BTU of heat delivered into the house. Lower is better. A negative delta favours the heat pump."
+        >
+          <DataTable
+            caption="Heat pump versus 90% AFUE gas furnace, cost per MMBtu delivered"
+            columns={columns}
+            rows={stateRows as Record<string, string>[]}
+            mobileLabelKey="state"
+            note="Heat pump modelled at seasonal coefficient of performance 2.47 including 15% duct loss. Gas at 90% AFUE. Electricity is EIA residential June 2026. Gas is EIA residential May 2026, published per Mcf and converted using 10.27 therms per Mcf. States without a published residential gas price are omitted."
+          />
+        </Section>
+
+        <Section
+          id="head-to-head"
+          number="2"
+          title="Beyond running cost"
+          lede="Eight criteria, and the honest winner on each. Note how many the furnace takes."
+        >
+          <ComparisonTable
+            caption="Heat pump versus gas furnace by criterion"
+            leftLabel="Heat pump"
+            rightLabel="Gas furnace"
+            rows={comparisonRows}
+            note="Verdicts are our assessment from the modelling on this page and published equipment data, not a manufacturer claim."
+          />
+        </Section>
+
+        <Section
+          id="aga"
+          number="3"
+          title="Taking the gas industry argument seriously"
+          lede="The American Gas Association published a claim that gas wins in 36 states. It is worth engaging with rather than dismissing."
+        >
+          <div class="prose-atlas">
+            <p>
+              The AGA's analysis compares the least efficient gas furnace against the most efficient heat pump and argues
+              the furnace still wins in 36 states. Their conclusion is not absurd, and anyone who tells you the heat pump
+              always wins on running cost is selling something.
+            </p>
+            <p>
+              Our model reaches a narrower result because of three differences in method. We use a seasonal coefficient
+              of performance rather than a peak rated figure, we apply a 15 percent duct loss to ducted heat pumps, and we
+              use current EIA state prices rather than a long-run price assumption. Those choices move several states
+              across the line.
+            </p>
+            <p>
+              The honest conclusion is that the answer is genuinely state-dependent, and that both sides can produce a
+              defensible map. Which is exactly why a ZIP-level model is more useful than a national claim, and why we
+              built one.
+            </p>
+          </div>
+          <Callout tone="caution" title="A furnace is not a bad answer" class="mt-5">
+            <p>
+              In a state where gas is cheap and electricity is expensive, keeping or replacing a gas furnace is a
+              reasonable financial decision. If your utility has a heat pump rate, a dual fuel setup, or expensive
+              winter peaks, the decision changes again. Get the number before deciding, not after.
+            </p>
+          </Callout>
+        </Section>
+
+        <Section
+          id="dual-fuel"
+          number="4"
+          title="The option that ends the argument"
+          lede="A dual fuel system uses each machine where it is best. In cold climates with cheap gas, it is often the right answer."
+        >
+          <div class="prose-atlas">
+            <p>
+              A dual fuel system pairs a heat pump with a gas furnace and switches between them by outdoor temperature.
+              Above the balance point the heat pump runs, because it is efficient and cheap. Below it the furnace runs,
+              because the heat pump's capacity and efficiency have both fallen off.
+            </p>
+            <p>
+              This is not a compromise for people who cannot decide. In a 7,000 degree day climate with a low gas price
+              and a high power price, it can genuinely beat either system alone. Ask your contractor to model the balance
+              point rather than defaulting to a fixed temperature, because the right switchover varies with your
+              equipment, your rate and your house.
+            </p>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#table', label: 'Cost by state' },
+              { href: '#head-to-head', label: 'Beyond running cost' },
+              { href: '#aga', label: 'The gas industry case' },
+              { href: '#dual-fuel', label: 'Dual fuel' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', description: 'Where the case is strongest' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'All fuels, by state' },
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Installed pricing' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

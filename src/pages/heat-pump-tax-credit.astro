@@ -1,0 +1,239 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import SourceList from '@/components/SourceList.astro';
+import { pickSources } from '@/data/sources';
+
+const path = '/heat-pump-tax-credit/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Heat pump tax credit', href: path },
+];
+
+const faqItems = [
+  {
+    question: 'Is the federal heat pump tax credit still available in 2026?',
+    answer:
+      'No. The 25C Energy Efficient Home Improvement Credit applied to qualifying heat pumps placed in service through 31 December 2025. For equipment installed in 2026 it is not available. This is the single most common piece of outdated information in the heat pump category, and it appears on government and nonprofit pages as well as commercial ones.',
+  },
+  {
+    question: 'Why do so many pages still advertise the $2,000 heat pump tax credit?',
+    answer:
+      'Because they were written while the credit was live and have not been updated, and because some official pages have not been revised either. The $2,000 figure was the 25C cap for heat pumps at 30 percent of project cost. If you are reading a page that presents it as current, check the page date before relying on it.',
+  },
+  {
+    question: 'What replaced the tax credit?',
+    answer:
+      'Nothing replaced 25C directly. What survived are the state-administered HEAR and HOMES rebate programs, which were created by the Inflation Reduction Act as separate programs and were not affected by the end of 25C. Those programs are funded through 2031, but they are administered state by state with very uneven launch timing and funding levels.',
+  },
+  {
+    question: 'Do state heat pump tax credits still exist?',
+    answer:
+      'Some do, and they are worth checking because they can be more valuable than the federal credit was. Colorado has a state heat pump tax credit worth roughly $1,000 per four tons installed, claimed by a registered contractor. Other states have their own programs. These are separate from the federal credit and unaffected by its expiry.',
+  },
+  {
+    question: 'Is the geothermal tax credit still available?',
+    answer:
+      'Yes. The 30 percent residential clean energy credit for geothermal heat pumps runs through 2032, which is a different credit from 25C and was not part of the change that ended the efficiency credit. Geothermal is the one heat pump category that retained its federal incentive, which improves the economics of a technology that is otherwise very expensive to install.',
+  },
+  {
+    question: 'What should I check before assuming I get an incentive?',
+    answer:
+      'Three things, in this order. Whether your state has a launched HEAR program and whether it is still accepting applications. Whether your utility runs its own rebate on top of that. And whether the program requires a reservation or pre-approval before installation, because applying afterward can disqualify the project entirely.',
+  },
+];
+
+const citations = pickSources(['irs25c', 'energyStarTaxCredits', 'doeHomeUpgrades', 'dsire', 'coloradoTaxCredit', 'techCleanCalifornia']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Tax Credit in 2026: What Ended and What Remains"
+    description="The federal 25C heat pump tax credit ended for equipment installed after 2025, but many pages still advertise it. Here is what actually applies in 2026 and what to check."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump tax credit"
+  />
+
+  <PageHeader
+    eyebrow="Correction"
+    title="The heat pump tax credit ended, and a lot of pages have not noticed"
+    standfirst="The 25C Energy Efficient Home Improvement Credit applied through 31 December 2025. It is not available for equipment installed in 2026, and still-current-looking pages on government and nonprofit sites are the reason so many people believe otherwise."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: 'Expired', label: 'The 25C efficiency credit for heat pumps, for property placed in service after 31 December 2025' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="status" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The status</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              The 25C credit covered 30 percent of the cost of qualifying equipment, capped at <strong>$2,000 per
+              year</strong> for a heat pump, and it applied to property placed in service through the end of 2025. For a
+              heat pump installed in 2026, it is gone.
+            </p>
+            <p>
+              This matters more than a normal program expiry, because the information environment has not caught up. The
+              credit was the centerpiece of most heat pump cost content for three years, and the pages that were written
+              around it are still ranking. Some of them are on official sites. If you have been quoted a project that
+              assumes $2,000 of federal credit, that money is not there, and the project economics need to be revisited.
+            </p>
+          </div>
+        </section>
+
+        <Section id="survived" number="1" title="What actually survived" lede="Two things, and they are worth understanding because they are now the main federal support.">
+          <div class="prose-atlas">
+            <h3>HEAR and HOMES</h3>
+            <p>
+              The Inflation Reduction Act created two federally funded, state-administered rebate programs as separate
+              measures from 25C. The High-Efficiency Electric Home Rebate program, usually called HEAR or HEEHRA, funds
+              efficient electric appliances including heat pumps and is income-qualified. The HOMES program funds
+              whole-home retrofit savings.
+            </p>
+            <p>
+              Both survived the legislative changes that ended 25C and are funded for commitment through 2031. That
+              sounds generous until you look at the state-by-state rollout, which is genuinely uneven. Some states
+              launched in 2025 and are fully live. Some accepted funding and still had not opened a consumer portal as of
+              mid-2026. Some launched, consumed their entire initial allocation within weeks, and paused. California's
+              single-family HEAR program was fully reserved by February 2026.
+            </p>
+            <p>
+              The <a href="/rebates/">rebates hub</a> tracks which programs are actually open, which is a different
+              question from which programs exist.
+            </p>
+
+            <h3>Geothermal, separately</h3>
+            <p>
+              The 30 percent residential clean energy credit for geothermal heat pumps runs through 2032 and was not
+              affected by the change that ended the efficiency credit. Geothermal is the one heat pump category that kept
+              a substantial federal incentive, which is significant because geothermal installations run $18,000 to
+              $45,000 and a 30 percent credit is worth far more than $2,000 on a project that size.
+            </p>
+          </div>
+        </Section>
+
+        <Section id="state" number="2" title="State credits that still exist" lede="These were always separate from the federal credit, and some are larger than it was.">
+          <div class="prose-atlas">
+            <p>
+              State-level programs are now doing the heavy lifting. Colorado has a heat pump tax credit worth roughly
+              $1,000 per four tons of installed capacity, claimed by a registered contractor and passed through on your
+              invoice. Massachusetts, Maine, Vermont, New York and several other states run substantial programs through
+              their energy offices or utilities.
+            </p>
+            <p>
+              The practical implication is that state research now matters more than it did when a federal credit existed.
+              A household in Massachusetts and a household in Texas have genuinely different economics in 2026, and the
+              difference is larger than it used to be.
+            </p>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="/rebates/mass-save/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Mass Save
+            </a>
+            <a href="/rebates/efficiency-maine/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Efficiency Maine
+            </a>
+            <a href="/rebates/xcel-energy/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Xcel Energy Colorado
+            </a>
+            <a href="/rebates/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              All programs
+            </a>
+          </div>
+        </Section>
+
+        <Section id="check" number="3" title="What to check before you rely on any incentive" lede="Three questions, in this order.">
+          <ol class="space-y-4">
+            {[
+              { n: '1', title: 'Is the program actually open?', body: 'Not "does it exist" but "is it accepting applications this month." Several large programs are funded but reserved, which means new applications are waitlisted and no money is available.' },
+              { n: '2', title: 'Does it require pre-approval?', body: 'Many programs require a reservation or a rebate commitment letter before installation begins, and applying afterward can make the project ineligible. This is the most expensive detail to get wrong.' },
+              { n: '3', title: 'What are the specific conditions?', body: 'Income limits, equipment efficiency thresholds, contractor registration requirements and caps per housing unit. Colorado paying more for cold-climate equipment is a good example of a condition that changes which machine you should buy.' },
+            ].map((item) => (
+              <li class="flex gap-4">
+                <span class="bg-brand-100 text-brand-800 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold" aria-hidden="true">
+                  {item.n}
+                </span>
+                <div>
+                  <p class="text-ink-900 font-semibold">{item.title}</p>
+                  <p class="text-ink-600 mt-1 leading-relaxed">{item.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Section>
+
+        <Section id="impact" number="4" title="What the expiry actually did to project economics">
+          <div class="prose-atlas">
+            <p>
+              For a typical $15,000 ducted heat pump project, losing $2,000 of federal credit is a 13 percent increase in
+              net cost. That is significant but not decisive on its own. What makes it decisive is the interaction with
+              program availability in your state.
+            </p>
+            <p>
+              In Massachusetts, the state rebate reaches $10,000, so the loss of the federal credit matters less. In a
+              state with no launched program and no utility rebate, the loss of the federal credit is the entire incentive
+              picture, and the project has to stand on operating cost savings alone.
+            </p>
+            <p>
+              That means the answer to "is this worth doing" is now more geographically variable than it was in 2024.
+              Which is why the <a href="/calculator/">calculator</a> applies only programs that are open and shows you
+              the real total rather than the one you might have been quoted.
+            </p>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#status', label: 'The status' },
+              { href: '#survived', label: 'What survived' },
+              { href: '#state', label: 'State credits' },
+              { href: '#check', label: 'What to verify' },
+              { href: '#impact', label: 'Effect on economics' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        children={[
+          { label: 'Mass Save', href: '/rebates/mass-save/', description: 'Up to $10,000 in Massachusetts' },
+          { label: 'Efficiency Maine', href: '/rebates/efficiency-maine/', description: 'Income-tiered oil conversion rebates' },
+          { label: 'Xcel Energy Colorado', href: '/rebates/xcel-energy/', description: 'Stacks with a state tax credit' },
+          { label: 'Eversource', href: '/rebates/eversource/', description: 'Three states, plus the heat pump rate' },
+        ]}
+        siblings={[
+          { label: 'All rebate programs', href: '/rebates/' },
+          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
+          { label: 'Calculator', href: '/calculator/' },
+        ]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,62 @@
+---
+/**
+ * Related content module.
+ *
+ * Related pages are passed in explicitly by each page so linking is deliberate
+ * and there are no orphan pages. The component renders a hub-and-spoke block:
+ * parents, siblings and children of the current page.
+ */
+import type { NavItem } from '@/data/site';
+
+interface Props {
+  /** Continue the current hub. */
+  siblings?: NavItem[];
+  /** Go deeper. */
+  children?: NavItem[];
+  /** Go up. */
+  parents?: NavItem[];
+  title?: string;
+  class?: string;
+}
+
+const {
+  siblings = [],
+  children = [],
+  parents = [],
+  title = 'Related pages',
+  class: className = '',
+} = Astro.props;
+
+const groups = [
+  { key: 'parents', label: 'Context', items: parents },
+  { key: 'siblings', label: 'Keep reading', items: siblings },
+  { key: 'children', label: 'Go deeper', items: children },
+].filter((g) => g.items.length > 0);
+---
+
+{groups.length > 0 && (
+  <nav class:list={['not-prose', className]} aria-labelledby="related-heading">
+    <h2 id="related-heading" class="text-ink-900 font-serif text-lg">{title}</h2>
+    <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {groups.map((group) => (
+        <div>
+          <p class="text-ink-500 mb-2.5 text-2xs font-semibold tracking-wider uppercase">{group.label}</p>
+          <ul class="space-y-2.5">
+            {group.items.map((item) => (
+              <li>
+                <a href={item.href} class="group block">
+                  <span class="text-brand-700 group-hover:text-brand-800 text-sm font-medium underline decoration-brand-200 underline-offset-2 group-hover:decoration-brand-600">
+                    {item.label}
+                  </span>
+                  {item.description && (
+                    <span class="text-ink-500 mt-0.5 block text-xs leading-snug">{item.description}</span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </nav>
+)}

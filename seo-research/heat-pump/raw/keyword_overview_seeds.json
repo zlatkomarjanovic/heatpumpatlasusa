@@ -1,0 +1,3779 @@
+{
+  "id": "09141532-2475-0607-0000-9c1515a9845f",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "items": [
+    {
+      "keyword": "200 amp panel upgrade cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 13:03:11 +00:00",
+        "competition": 0.4,
+        "competition_level": "MEDIUM",
+        "cpc": 8.14,
+        "search_volume": 390,
+        "low_top_of_page_bid": 3.34,
+        "high_top_of_page_bid": 12.61,
+        "categories": [
+          10004,
+          10302,
+          11359,
+          12698,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 390,
+          "2026-07": 480,
+          "2026-06": 480,
+          "2026-05": 480,
+          "2026-04": 590,
+          "2026-03": 480,
+          "2026-02": 320,
+          "2026-01": 390,
+          "2025-12": 260,
+          "2025-11": 320,
+          "2025-10": 320,
+          "2025-09": 320
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19,
+          "yearly": 22
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=200%20amp%20panel%20upgrade%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "perspectives",
+          "related_searches",
+          "popular_products"
+        ],
+        "se_results_count": 188,
+        "last_updated_time": "2026-09-08 13:54:35 +00:00",
+        "previous_updated_time": "2026-07-04 07:58:02 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 14.2,
+        "dofollow": 10.5,
+        "referring_pages": 12.5,
+        "referring_domains": 9.9,
+        "referring_main_domains": 9.6,
+        "rank": 54,
+        "main_domain_rank": 468.9,
+        "last_updated_time": "2026-09-08 13:54:35 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-24 20:53:44 +00:00"
+      }
+    },
+    {
+      "keyword": "air source heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 03:39:54 +00:00",
+        "competition": 0.41,
+        "competition_level": "MEDIUM",
+        "cpc": 13.87,
+        "search_volume": 720,
+        "low_top_of_page_bid": 2.16,
+        "high_top_of_page_bid": 10,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 320,
+          "2026-07": 880,
+          "2026-06": 170,
+          "2026-05": 210,
+          "2026-04": 320,
+          "2026-03": 480,
+          "2026-02": 720,
+          "2026-01": 720,
+          "2025-12": 880,
+          "2025-11": 1900,
+          "2025-10": 1000,
+          "2025-09": 1000
+        },
+        "search_volume_trend": {
+          "monthly": -64,
+          "quarterly": 88,
+          "yearly": -75
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 23,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=air%20source%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "popular_products",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 152,
+        "last_updated_time": "2026-08-02 12:19:24 +00:00",
+        "previous_updated_time": "2026-05-19 21:23:19 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 129.2,
+        "dofollow": 105.9,
+        "referring_pages": 117.4,
+        "referring_domains": 55.1,
+        "referring_main_domains": 52.7,
+        "rank": 128.1,
+        "main_domain_rank": 572.3,
+        "last_updated_time": "2026-08-02 12:20:58 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 08:00:31 +00:00"
+      }
+    },
+    {
+      "keyword": "average heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 19:32:52 +00:00",
+        "competition": 0.86,
+        "competition_level": "HIGH",
+        "cpc": 10.74,
+        "search_volume": 70,
+        "low_top_of_page_bid": 1.75,
+        "high_top_of_page_bid": 13.7,
+        "categories": [
+          10002,
+          10028
+        ],
+        "monthly_searches": {
+          "2026-07": 70,
+          "2026-06": 70,
+          "2026-05": 40,
+          "2026-04": 70,
+          "2026-03": 90,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 70,
+          "2025-10": 70,
+          "2025-09": 70,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "quarterly": 75,
+          "yearly": -36
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "average cost of heat pump",
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=average%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 172,
+        "last_updated_time": "2026-07-21 01:03:59 +00:00",
+        "previous_updated_time": "2026-05-08 04:31:36 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 21.2,
+        "dofollow": 19.1,
+        "referring_pages": 19.9,
+        "referring_domains": 13.2,
+        "referring_main_domains": 12.7,
+        "rank": 43.2,
+        "main_domain_rank": 644.9,
+        "last_updated_time": "2026-07-21 01:03:59 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-05-06 05:19:17 +00:00"
+      }
+    },
+    {
+      "keyword": "best heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 11:45:04 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 5.93,
+        "search_volume": 1600,
+        "low_top_of_page_bid": 1.7,
+        "high_top_of_page_bid": 9.15,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1300,
+          "2026-07": 1900,
+          "2026-06": 1600,
+          "2026-05": 1600,
+          "2026-04": 1600,
+          "2026-03": 1600,
+          "2026-02": 1600,
+          "2026-01": 1900,
+          "2025-12": 1600,
+          "2025-11": 1300,
+          "2025-10": 1600,
+          "2025-09": 1600
+        },
+        "search_volume_trend": {
+          "monthly": -32,
+          "quarterly": -19,
+          "yearly": -32
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "best heat pumps",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 36,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=best%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "video",
+          "discussions_and_forums",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 260000000,
+        "last_updated_time": "2026-03-14 20:25:56 +00:00",
+        "previous_updated_time": "2025-11-04 03:41:54 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 214,
+        "dofollow": 184.1,
+        "referring_pages": 201.8,
+        "referring_domains": 100.6,
+        "referring_main_domains": 94.7,
+        "rank": 95.1,
+        "main_domain_rank": 547.3,
+        "last_updated_time": "2026-03-14 20:25:57 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 00:55:55 +00:00"
+      }
+    },
+    {
+      "keyword": "btu calculator heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 10:37:04 +00:00",
+        "competition": 0.28,
+        "competition_level": "LOW",
+        "cpc": 2.35,
+        "search_volume": 110,
+        "low_top_of_page_bid": 0.84,
+        "high_top_of_page_bid": 4.55,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 90,
+          "2026-06": 70,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 90,
+          "2026-02": 110,
+          "2026-01": 140,
+          "2025-12": 110,
+          "2025-11": 110,
+          "2025-10": 140,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "monthly": -22,
+          "yearly": -50
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "btu heat pump calculator",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=btu%20calculator%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 3710000,
+        "last_updated_time": "2026-03-06 22:21:28 +00:00",
+        "previous_updated_time": "2025-12-19 08:43:05 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 782.7,
+        "dofollow": 413.5,
+        "referring_pages": 457.4,
+        "referring_domains": 67.4,
+        "referring_main_domains": 65.2,
+        "rank": 113.3,
+        "main_domain_rank": 310.4,
+        "last_updated_time": "2026-03-06 22:21:28 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 05:12:24 +00:00"
+      }
+    },
+    {
+      "keyword": "cold climate heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 03:00:00 +00:00",
+        "competition": 0.92,
+        "competition_level": "HIGH",
+        "cpc": 5.55,
+        "search_volume": 12100,
+        "low_top_of_page_bid": 1.21,
+        "high_top_of_page_bid": 7.29,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 5400,
+          "2026-06": 4400,
+          "2026-05": 5400,
+          "2026-04": 5400,
+          "2026-03": 8100,
+          "2026-02": 18100,
+          "2026-01": 40500,
+          "2025-12": 18100,
+          "2025-11": 9900,
+          "2025-10": 8100,
+          "2025-09": 5400,
+          "2025-08": 5400
+        },
+        "search_volume_trend": {
+          "monthly": 23
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 22,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=cold%20climate%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "product_considerations",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 186,
+        "last_updated_time": "2026-09-02 23:36:50 +00:00",
+        "previous_updated_time": "2026-05-15 08:18:50 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 206,
+        "dofollow": 166.4,
+        "referring_pages": 191.3,
+        "referring_domains": 102.5,
+        "referring_main_domains": 96.8,
+        "rank": 144.9,
+        "main_domain_rank": 591.4,
+        "last_updated_time": "2026-09-02 23:36:51 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "transactional"
+        ],
+        "last_updated_time": "2026-04-29 13:02:49 +00:00"
+      }
+    },
+    {
+      "keyword": "cold climate heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 10:05:51 +00:00",
+        "competition": 0.3,
+        "competition_level": "LOW",
+        "cpc": 7.86,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.86,
+        "high_top_of_page_bid": 11.08,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 170,
+          "2026-07": 140,
+          "2026-06": 90,
+          "2026-05": 140,
+          "2026-04": 140,
+          "2026-03": 210,
+          "2026-02": 260,
+          "2026-01": 320,
+          "2025-12": 210,
+          "2025-11": 140,
+          "2025-10": 140,
+          "2025-09": 170
+        },
+        "search_volume_trend": {
+          "monthly": 21,
+          "quarterly": 89,
+          "yearly": 55
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 22,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=cold%20climate%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 181,
+        "last_updated_time": "2026-09-13 20:48:15 +00:00",
+        "previous_updated_time": "2026-07-10 11:59:16 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 175.3,
+        "dofollow": 131.5,
+        "referring_pages": 158.3,
+        "referring_domains": 60.9,
+        "referring_main_domains": 57.7,
+        "rank": 123.1,
+        "main_domain_rank": 432.4,
+        "last_updated_time": "2026-09-13 20:48:17 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-26 08:22:39 +00:00"
+      }
+    },
+    {
+      "keyword": "ducted heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 12:21:39 +00:00",
+        "competition": 0.72,
+        "competition_level": "HIGH",
+        "cpc": 10.01,
+        "search_volume": 70,
+        "low_top_of_page_bid": 1.94,
+        "high_top_of_page_bid": 10.52,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 90,
+          "2026-06": 70,
+          "2026-05": 70,
+          "2026-04": 70,
+          "2026-03": 70,
+          "2026-02": 50,
+          "2026-01": 70,
+          "2025-12": 50,
+          "2025-11": 50,
+          "2025-10": 70,
+          "2025-09": 50,
+          "2025-08": 70
+        },
+        "search_volume_trend": {
+          "monthly": 29,
+          "quarterly": 29,
+          "yearly": -47
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 28,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ducted%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "popular_products",
+          "people_also_ask",
+          "organic",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 17,
+        "last_updated_time": "2026-07-20 05:32:11 +00:00",
+        "previous_updated_time": "2026-05-31 07:44:09 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 106.2,
+        "dofollow": 95.2,
+        "referring_pages": 103.3,
+        "referring_domains": 50.2,
+        "referring_main_domains": 49.3,
+        "rank": 157.1,
+        "main_domain_rank": 390.7,
+        "last_updated_time": "2026-07-20 05:32:12 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 14:17:15 +00:00"
+      }
+    },
+    {
+      "keyword": "ductless heat pump",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 04:59:41 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 6.35,
+        "search_volume": 8100,
+        "low_top_of_page_bid": 1.62,
+        "high_top_of_page_bid": 10.57,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 3600,
+          "2026-07": 5400,
+          "2026-06": 5400,
+          "2026-05": 6600,
+          "2026-04": 12100,
+          "2026-03": 12100,
+          "2026-02": 9900,
+          "2026-01": 8100,
+          "2025-12": 6600,
+          "2025-11": 6600,
+          "2025-10": 6600,
+          "2025-09": 6600
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -33,
+          "yearly": -45
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 10,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ductless%20heat%20pump&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "product_considerations",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 186,
+        "last_updated_time": "2026-09-03 05:42:25 +00:00",
+        "previous_updated_time": "2026-06-18 18:38:30 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 199.5,
+        "dofollow": 126,
+        "referring_pages": 173.5,
+        "referring_domains": 88.4,
+        "referring_main_domains": 85,
+        "rank": 102.3,
+        "main_domain_rank": 510.9,
+        "last_updated_time": "2026-09-03 05:42:27 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "last_updated_time": "2026-04-27 07:20:05 +00:00"
+      }
+    },
+    {
+      "keyword": "ductless heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 21:50:51 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 4.61,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.48,
+        "high_top_of_page_bid": 10.46,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 110,
+          "2026-06": 140,
+          "2026-05": 210,
+          "2026-04": 170,
+          "2026-03": 210,
+          "2026-02": 320,
+          "2026-01": 260,
+          "2025-12": 210,
+          "2025-11": 210,
+          "2025-10": 170,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -36,
+          "quarterly": -50,
+          "yearly": -59
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ductless%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 182,
+        "last_updated_time": "2026-09-12 01:50:19 +00:00",
+        "previous_updated_time": "2026-07-07 21:56:48 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 56,
+        "dofollow": 44.5,
+        "referring_pages": 53.1,
+        "referring_domains": 31.3,
+        "referring_main_domains": 30,
+        "rank": 98.8,
+        "main_domain_rank": 454.9,
+        "last_updated_time": "2026-09-12 01:50:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 16:47:12 +00:00"
+      }
+    },
+    {
+      "keyword": "ductless mini split cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 20:03:22 +00:00",
+        "competition": 0.5,
+        "competition_level": "MEDIUM",
+        "cpc": 4.1,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 0.7,
+        "high_top_of_page_bid": 6.09,
+        "categories": [
+          10008
+        ],
+        "monthly_searches": {
+          "2026-07": 3600,
+          "2026-06": 2400,
+          "2026-05": 880,
+          "2026-04": 720,
+          "2026-03": 720,
+          "2026-02": 480,
+          "2026-01": 590,
+          "2025-12": 480,
+          "2025-11": 390,
+          "2025-10": 480,
+          "2025-09": 480,
+          "2025-08": 880
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": 309,
+          "yearly": 309
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 5,
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ductless%20mini%20split%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 197,
+        "last_updated_time": "2026-08-02 17:50:54 +00:00",
+        "previous_updated_time": "2026-05-20 21:50:38 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 38.2,
+        "dofollow": 27.5,
+        "referring_pages": 36.2,
+        "referring_domains": 21.7,
+        "referring_main_domains": 21.2,
+        "rank": 81,
+        "main_domain_rank": 477.7,
+        "last_updated_time": "2026-08-02 17:51:15 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 14:48:13 +00:00"
+      }
+    },
+    {
+      "keyword": "electrical panel upgrade cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 06:38:44 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 10.31,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 3.89,
+        "high_top_of_page_bid": 14.36,
+        "categories": [
+          10004,
+          10302,
+          11359,
+          12686,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1900,
+          "2026-07": 1900,
+          "2026-06": 1900,
+          "2026-05": 1900,
+          "2026-04": 1900,
+          "2026-03": 2400,
+          "2026-02": 1900,
+          "2026-01": 2400,
+          "2025-12": 2900,
+          "2025-11": 1600,
+          "2025-10": 1600,
+          "2025-09": 1900
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 6,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=electrical%20panel%20upgrade%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 125,
+        "last_updated_time": "2026-09-04 19:49:36 +00:00",
+        "previous_updated_time": "2026-06-30 13:19:19 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 40.4,
+        "dofollow": 26.2,
+        "referring_pages": 37.7,
+        "referring_domains": 18.3,
+        "referring_main_domains": 17.7,
+        "rank": 85.8,
+        "main_domain_rank": 503.3,
+        "last_updated_time": "2026-09-04 19:49:37 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 08:41:46 +00:00"
+      }
+    },
+    {
+      "keyword": "ev charger installation cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 11:17:57 +00:00",
+        "competition": 0.51,
+        "competition_level": "MEDIUM",
+        "cpc": 10.54,
+        "search_volume": 3600,
+        "low_top_of_page_bid": 2.24,
+        "high_top_of_page_bid": 11.77,
+        "categories": [
+          10001,
+          10026,
+          10209,
+          10994,
+          12272
+        ],
+        "monthly_searches": {
+          "2026-08": 1900,
+          "2026-07": 2400,
+          "2026-06": 2900,
+          "2026-05": 4400,
+          "2026-04": 4400,
+          "2026-03": 4400,
+          "2026-02": 3600,
+          "2026-01": 3600,
+          "2025-12": 3600,
+          "2025-11": 2900,
+          "2025-10": 3600,
+          "2025-09": 5400
+        },
+        "search_volume_trend": {
+          "monthly": -21,
+          "quarterly": -34,
+          "yearly": -57
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 7,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ev%20charger%20installation%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 195,
+        "last_updated_time": "2026-09-04 00:20:21 +00:00",
+        "previous_updated_time": "2026-06-22 08:56:11 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 20.7,
+        "dofollow": 14.1,
+        "referring_pages": 18.4,
+        "referring_domains": 12.8,
+        "referring_main_domains": 12.3,
+        "rank": 88.4,
+        "main_domain_rank": 492.5,
+        "last_updated_time": "2026-09-04 00:20:21 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 16:39:53 +00:00"
+      }
+    },
+    {
+      "keyword": "federal heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 02:04:11 +00:00",
+        "competition": 0.2,
+        "competition_level": "LOW",
+        "cpc": 9.75,
+        "search_volume": 590,
+        "low_top_of_page_bid": 2.04,
+        "high_top_of_page_bid": 10.01,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 320,
+          "2026-06": 390,
+          "2026-05": 320,
+          "2026-04": 390,
+          "2026-03": 480,
+          "2026-02": 390,
+          "2026-01": 390,
+          "2025-12": 720,
+          "2025-11": 880,
+          "2025-10": 720,
+          "2025-09": 880,
+          "2025-08": 1000
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "yearly": -75
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "federal rebates for heat pumps",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 48,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=federal%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 130,
+        "last_updated_time": "2026-09-07 02:36:14 +00:00",
+        "previous_updated_time": "2026-03-16 14:11:25 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 11933.3,
+        "dofollow": 10833.1,
+        "referring_pages": 11455.8,
+        "referring_domains": 769.1,
+        "referring_main_domains": 701.6,
+        "rank": 274.1,
+        "main_domain_rank": 474.8,
+        "last_updated_time": "2026-09-07 02:36:14 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 08:16:08 +00:00"
+      }
+    },
+    {
+      "keyword": "furnace replacement cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 02:04:24 +00:00",
+        "competition": 0.48,
+        "competition_level": "MEDIUM",
+        "cpc": 9.53,
+        "search_volume": 14800,
+        "low_top_of_page_bid": 2.27,
+        "high_top_of_page_bid": 13.01,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-07": 8100,
+          "2026-06": 6600,
+          "2026-05": 8100,
+          "2026-04": 14800,
+          "2026-03": 12100,
+          "2026-02": 18100,
+          "2026-01": 22200,
+          "2025-12": 22200,
+          "2025-11": 18100,
+          "2025-10": 27100,
+          "2025-09": 9900,
+          "2025-08": 12100
+        },
+        "search_volume_trend": {
+          "monthly": 23,
+          "yearly": -18
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "replace furnace cost",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=furnace%20replacement%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "featured_snippet",
+          "people_also_ask",
+          "discussions_and_forums",
+          "organic",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 191,
+        "last_updated_time": "2026-07-30 08:51:06 +00:00",
+        "previous_updated_time": "2026-05-15 05:15:07 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 18.7,
+        "dofollow": 14.9,
+        "referring_pages": 17.7,
+        "referring_domains": 9.7,
+        "referring_main_domains": 9.7,
+        "rank": 95.9,
+        "main_domain_rank": 503.9,
+        "last_updated_time": "2026-07-30 08:51:22 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 08:43:57 +00:00"
+      }
+    },
+    {
+      "keyword": "geothermal heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 22:30:59 +00:00",
+        "competition": 0.56,
+        "competition_level": "MEDIUM",
+        "cpc": 4.7,
+        "search_volume": 1600,
+        "low_top_of_page_bid": 1.03,
+        "high_top_of_page_bid": 6.57,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 1000,
+          "2026-06": 1000,
+          "2026-05": 1300,
+          "2026-04": 1600,
+          "2026-03": 2400,
+          "2026-02": 1900,
+          "2026-01": 1900,
+          "2025-12": 1600,
+          "2025-11": 1300,
+          "2025-10": 1300,
+          "2025-09": 1300,
+          "2025-08": 1600
+        },
+        "search_volume_trend": {
+          "quarterly": -23,
+          "yearly": -47
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=geothermal%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 170,
+        "last_updated_time": "2026-09-05 02:48:59 +00:00",
+        "previous_updated_time": "2026-07-06 16:49:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 9.8,
+        "dofollow": 7.8,
+        "referring_pages": 8.8,
+        "referring_domains": 5.4,
+        "referring_main_domains": 5.2,
+        "rank": 40.9,
+        "main_domain_rank": 432.1,
+        "last_updated_time": "2026-09-05 02:49:00 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:21:10 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump annual cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-24 12:53:00 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-10": 10,
+          "2025-09": 10,
+          "2025-08": 10
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:48:07 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 18:01:50 +00:00",
+        "competition": 0.3,
+        "competition_level": "LOW",
+        "cpc": 3.61,
+        "search_volume": 590,
+        "low_top_of_page_bid": 0.84,
+        "high_top_of_page_bid": 5.87,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 210,
+          "2026-07": 390,
+          "2026-06": 480,
+          "2026-05": 480,
+          "2026-04": 590,
+          "2026-03": 720,
+          "2026-02": 880,
+          "2026-01": 720,
+          "2025-12": 720,
+          "2025-11": 590,
+          "2025-10": 720,
+          "2025-09": 720
+        },
+        "search_volume_trend": {
+          "monthly": -46,
+          "quarterly": -56,
+          "yearly": -71
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 117,
+        "last_updated_time": "2026-08-02 17:01:45 +00:00",
+        "previous_updated_time": "2026-05-21 03:39:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 4.1,
+        "dofollow": 3.6,
+        "referring_pages": 4.1,
+        "referring_domains": 2.4,
+        "referring_main_domains": 2.3,
+        "rank": 67,
+        "main_domain_rank": 409.1,
+        "last_updated_time": "2026-08-02 17:01:45 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:41:09 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump contractor",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 05:09:23 +00:00",
+        "competition": 0.05,
+        "competition_level": "LOW",
+        "cpc": 33.02,
+        "search_volume": 590,
+        "low_top_of_page_bid": 5.49,
+        "high_top_of_page_bid": 46.07,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1000,
+          "2026-07": 1600,
+          "2026-06": 480,
+          "2026-05": 590,
+          "2026-04": 720,
+          "2026-03": 880,
+          "2026-02": 390,
+          "2026-01": 480,
+          "2025-12": 480,
+          "2025-11": 210,
+          "2025-10": 320,
+          "2025-09": 480
+        },
+        "search_volume_trend": {
+          "monthly": -38,
+          "quarterly": 108,
+          "yearly": 212
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pump contractors",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 14,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20contractor&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "local_pack",
+          "people_also_ask",
+          "organic",
+          "images"
+        ],
+        "se_results_count": 93,
+        "last_updated_time": "2026-05-22 02:18:20 +00:00",
+        "previous_updated_time": "2026-03-18 06:41:47 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 51.7,
+        "dofollow": 36.1,
+        "referring_pages": 41.6,
+        "referring_domains": 10.8,
+        "referring_main_domains": 10.5,
+        "rank": 98.2,
+        "main_domain_rank": 522.9,
+        "last_updated_time": "2026-05-22 02:18:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 20:17:01 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 02:26:35 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 7.77,
+        "search_volume": 5400,
+        "low_top_of_page_bid": 1.89,
+        "high_top_of_page_bid": 9.73,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 3600,
+          "2026-07": 5400,
+          "2026-06": 4400,
+          "2026-05": 4400,
+          "2026-04": 4400,
+          "2026-03": 5400,
+          "2026-02": 5400,
+          "2026-01": 6600,
+          "2025-12": 5400,
+          "2025-11": 4400,
+          "2025-10": 4400,
+          "2025-09": 4400
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -18,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 18,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 170,
+        "last_updated_time": "2026-07-30 18:40:49 +00:00",
+        "previous_updated_time": "2026-05-16 08:59:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 67,
+        "dofollow": 62.2,
+        "referring_pages": 65.4,
+        "referring_domains": 21.2,
+        "referring_main_domains": 20.5,
+        "rank": 116.7,
+        "main_domain_rank": 514.4,
+        "last_updated_time": "2026-07-30 18:40:49 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 20:29:19 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump cost calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 02:24:51 +00:00",
+        "competition": 0.51,
+        "competition_level": "MEDIUM",
+        "cpc": 5.37,
+        "search_volume": 720,
+        "low_top_of_page_bid": 1.73,
+        "high_top_of_page_bid": 5.97,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 720,
+          "2026-06": 880,
+          "2026-05": 590,
+          "2026-04": 480,
+          "2026-03": 590,
+          "2026-02": 720,
+          "2026-01": 880,
+          "2025-12": 720,
+          "2025-11": 720,
+          "2025-10": 720,
+          "2025-09": 590,
+          "2025-08": 720
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": 22,
+          "yearly": -28
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20cost%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 108,
+        "last_updated_time": "2026-08-02 17:02:01 +00:00",
+        "previous_updated_time": "2026-05-20 23:08:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 40.9,
+        "dofollow": 27.4,
+        "referring_pages": 35.1,
+        "referring_domains": 16.2,
+        "referring_main_domains": 14.7,
+        "rank": 63.7,
+        "main_domain_rank": 411.7,
+        "last_updated_time": "2026-08-02 17:02:04 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 19:57:51 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump electricity cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-22 09:02:47 +00:00",
+        "competition": 0.9,
+        "competition_level": "HIGH",
+        "cpc": 6.83,
+        "search_volume": 260,
+        "low_top_of_page_bid": 1.7,
+        "high_top_of_page_bid": 9.83,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 170,
+          "2026-06": 170,
+          "2026-05": 210,
+          "2026-04": 210,
+          "2026-03": 320,
+          "2026-02": 480,
+          "2026-01": 480,
+          "2025-12": 260,
+          "2025-11": 260,
+          "2025-10": 210,
+          "2025-09": 210,
+          "2025-08": 140
+        },
+        "search_volume_trend": {
+          "quarterly": -19
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "electric heat pump cost",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 24,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20electricity%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "top_stories",
+          "related_searches"
+        ],
+        "se_results_count": 52200000,
+        "last_updated_time": "2026-01-31 04:53:20 +00:00",
+        "previous_updated_time": "2025-07-17 07:35:37 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7.6,
+        "dofollow": 7,
+        "referring_pages": 7.1,
+        "referring_domains": 4.7,
+        "referring_main_domains": 4.4,
+        "rank": 46.8,
+        "main_domain_rank": 481.1,
+        "last_updated_time": "2026-01-31 04:53:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:19:16 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump incentives",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 16:32:39 +00:00",
+        "competition": 0.36,
+        "competition_level": "MEDIUM",
+        "cpc": 6.17,
+        "search_volume": 110,
+        "low_top_of_page_bid": 2.53,
+        "high_top_of_page_bid": 10.91,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 70,
+          "2026-06": 90,
+          "2026-05": 110,
+          "2026-04": 70,
+          "2026-03": 140,
+          "2026-02": 110,
+          "2026-01": 170,
+          "2025-12": 170,
+          "2025-11": 140,
+          "2025-10": 140,
+          "2025-09": 170
+        },
+        "search_volume_trend": {
+          "quarterly": -22,
+          "yearly": -67
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 38,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20incentives&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 193,
+        "last_updated_time": "2026-07-11 11:37:40 +00:00",
+        "previous_updated_time": "2026-04-30 21:40:44 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1685.8,
+        "dofollow": 1369.3,
+        "referring_pages": 1478.6,
+        "referring_domains": 512.5,
+        "referring_main_domains": 466.4,
+        "rank": 231.5,
+        "main_domain_rank": 458.6,
+        "last_updated_time": "2026-07-11 11:37:41 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 23:15:00 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump installation cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 23:55:12 +00:00",
+        "competition": 0.15,
+        "competition_level": "LOW",
+        "cpc": 9.97,
+        "search_volume": 22200,
+        "low_top_of_page_bid": 2.08,
+        "high_top_of_page_bid": 12.89,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 14800,
+          "2026-06": 14800,
+          "2026-05": 27100,
+          "2026-04": 27100,
+          "2026-03": 40500,
+          "2026-02": 33100,
+          "2026-01": 33100,
+          "2025-12": 22200,
+          "2025-11": 18100,
+          "2025-10": 18100,
+          "2025-09": 14800,
+          "2025-08": 18100
+        },
+        "search_volume_trend": {
+          "quarterly": -45,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 9,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20installation%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 173,
+        "last_updated_time": "2026-09-02 16:40:21 +00:00",
+        "previous_updated_time": "2026-05-15 01:05:36 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 54.1,
+        "dofollow": 41,
+        "referring_pages": 50.5,
+        "referring_domains": 22.6,
+        "referring_main_domains": 21.8,
+        "rank": 92.1,
+        "main_domain_rank": 559.2,
+        "last_updated_time": "2026-09-02 16:40:24 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 19:53:06 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump installation cost calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 17:15:33 +00:00",
+        "competition": 0.33,
+        "competition_level": "LOW",
+        "cpc": 6.83,
+        "search_volume": 880,
+        "low_top_of_page_bid": 2.27,
+        "high_top_of_page_bid": 9.83,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 320,
+          "2026-07": 390,
+          "2026-06": 590,
+          "2026-05": 1600,
+          "2026-04": 1600,
+          "2026-03": 1900,
+          "2026-02": 1300,
+          "2026-01": 720,
+          "2025-12": 390,
+          "2025-11": 260,
+          "2025-10": 210,
+          "2025-09": 140
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "quarterly": -46,
+          "yearly": 52
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20installation%20cost%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 118,
+        "last_updated_time": "2026-09-06 14:55:27 +00:00",
+        "previous_updated_time": "2026-07-01 00:30:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 29.4,
+        "dofollow": 27.1,
+        "referring_pages": 28.1,
+        "referring_domains": 11.6,
+        "referring_main_domains": 11,
+        "rank": 64.8,
+        "main_domain_rank": 402.8,
+        "last_updated_time": "2026-09-06 14:55:27 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 16:52:18 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump installer near me",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 03:40:11 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "cpc": 24.03,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 6.98,
+        "high_top_of_page_bid": 60,
+        "categories": [
+          10004,
+          10282,
+          11147,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 4400,
+          "2026-06": 4400,
+          "2026-05": 3600,
+          "2026-04": 8100,
+          "2026-03": 5400,
+          "2026-02": 8100,
+          "2026-01": 5400,
+          "2025-12": 6600,
+          "2025-11": 720,
+          "2025-10": 8100,
+          "2025-09": 9900,
+          "2025-08": 6600
+        },
+        "search_volume_trend": {
+          "quarterly": 22,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pump installation near me",
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20installer%20near%20me&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "local_pack",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 15400000,
+        "last_updated_time": "2025-06-14 16:45:41 +00:00",
+        "previous_updated_time": "2024-09-15 17:17:19 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 430,
+        "dofollow": 265.9,
+        "referring_pages": 375.6,
+        "referring_domains": 67,
+        "referring_main_domains": 59.5,
+        "rank": 235.3,
+        "main_domain_rank": 451,
+        "last_updated_time": "2025-06-14 16:50:03 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 22:49:47 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump monthly cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-28 22:23:56 +00:00",
+        "competition": 0.35,
+        "competition_level": "MEDIUM",
+        "cpc": 7.12,
+        "search_volume": 30,
+        "low_top_of_page_bid": 2.32,
+        "high_top_of_page_bid": 10.42,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 30,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 20,
+          "2026-01": 40,
+          "2025-12": 20,
+          "2025-11": 30,
+          "2025-10": 70,
+          "2025-09": 30,
+          "2025-08": 40
+        },
+        "search_volume_trend": {
+          "monthly": 200,
+          "quarterly": 200
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20monthly%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 175,
+        "last_updated_time": "2026-08-29 17:03:47 +00:00",
+        "previous_updated_time": "2026-02-22 22:06:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 69.4,
+        "dofollow": 49,
+        "referring_pages": 57.9,
+        "referring_domains": 31,
+        "referring_main_domains": 28.6,
+        "rank": 49.6,
+        "main_domain_rank": 383.7,
+        "last_updated_time": "2026-08-29 17:03:48 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:46:36 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump operating cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 11:42:53 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 20,
+          "2026-01": 50,
+          "2025-12": 30,
+          "2025-11": 20,
+          "2025-10": 20,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "quarterly": 100
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pump operation cost",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 16,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20operating%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 113000000,
+        "last_updated_time": "2026-03-11 01:02:08 +00:00",
+        "previous_updated_time": "2025-12-23 23:01:52 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 71.9,
+        "dofollow": 55.8,
+        "referring_pages": 59.2,
+        "referring_domains": 27.8,
+        "referring_main_domains": 25.8,
+        "rank": 90.2,
+        "main_domain_rank": 380.7,
+        "last_updated_time": "2026-03-11 01:02:09 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:27:49 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump quotes",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 03:37:33 +00:00",
+        "competition": 0.63,
+        "competition_level": "MEDIUM",
+        "cpc": 68,
+        "search_volume": 50,
+        "low_top_of_page_bid": 17.8,
+        "high_top_of_page_bid": 80,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 50,
+          "2026-07": 50,
+          "2026-06": 30,
+          "2026-05": 70,
+          "2026-04": 50,
+          "2026-03": 70,
+          "2026-02": 50,
+          "2026-01": 50,
+          "2025-12": 40,
+          "2025-11": 40,
+          "2025-10": 50,
+          "2025-09": 50
+        },
+        "search_volume_trend": {
+          "quarterly": 67
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pump quote",
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20quotes&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 16700000,
+        "last_updated_time": "2026-04-08 21:02:06 +00:00",
+        "previous_updated_time": "2026-01-25 11:55:19 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 27.8,
+        "dofollow": 22.3,
+        "referring_pages": 25.1,
+        "referring_domains": 14.7,
+        "referring_main_domains": 14.4,
+        "rank": 46,
+        "main_domain_rank": 393.9,
+        "last_updated_time": "2026-04-08 21:02:07 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:06:49 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump rebates",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 02:50:48 +00:00",
+        "competition": 0.33,
+        "competition_level": "MEDIUM",
+        "cpc": 7.84,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 2.18,
+        "high_top_of_page_bid": 12.11,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1000,
+          "2026-07": 1600,
+          "2026-06": 1600,
+          "2026-05": 1600,
+          "2026-04": 1900,
+          "2026-03": 2400,
+          "2026-02": 1600,
+          "2026-01": 2400,
+          "2025-12": 1900,
+          "2025-11": 1600,
+          "2025-10": 1900,
+          "2025-09": 1600
+        },
+        "search_volume_trend": {
+          "monthly": -38,
+          "quarterly": -38,
+          "yearly": -47
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 43,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20rebates&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 9230000,
+        "last_updated_time": "2026-03-14 17:33:29 +00:00",
+        "previous_updated_time": "2025-11-04 04:30:35 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1636.9,
+        "dofollow": 1350,
+        "referring_pages": 1478.4,
+        "referring_domains": 547.1,
+        "referring_main_domains": 495.9,
+        "rank": 244.5,
+        "main_domain_rank": 533.5,
+        "last_updated_time": "2026-03-14 17:33:33 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-27 22:40:53 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump replacement cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 09:52:26 +00:00",
+        "competition": 0.67,
+        "competition_level": "HIGH",
+        "cpc": 10.01,
+        "search_volume": 1600,
+        "low_top_of_page_bid": 2.53,
+        "high_top_of_page_bid": 13.06,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1300,
+          "2026-07": 1600,
+          "2026-06": 1600,
+          "2026-05": 1600,
+          "2026-04": 1600,
+          "2026-03": 1900,
+          "2026-02": 2400,
+          "2026-01": 2400,
+          "2025-12": 1900,
+          "2025-11": 1300,
+          "2025-10": 1300,
+          "2025-09": 1000
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19,
+          "yearly": 30
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 23,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20replacement%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "perspectives",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 176,
+        "last_updated_time": "2026-07-31 20:06:13 +00:00",
+        "previous_updated_time": "2026-05-18 06:37:56 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 62.2,
+        "dofollow": 57.1,
+        "referring_pages": 61,
+        "referring_domains": 18,
+        "referring_main_domains": 17.6,
+        "rank": 131.8,
+        "main_domain_rank": 485.8,
+        "last_updated_time": "2026-07-31 20:06:17 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 22:56:33 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump savings",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 11:19:33 +00:00",
+        "competition": 0.53,
+        "competition_level": "MEDIUM",
+        "cpc": 11.43,
+        "search_volume": 30,
+        "low_top_of_page_bid": 1.63,
+        "high_top_of_page_bid": 11,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 40,
+          "2026-06": 10,
+          "2026-05": 20,
+          "2026-04": 40,
+          "2026-03": 30,
+          "2026-02": 20,
+          "2026-01": 40,
+          "2025-12": 30,
+          "2025-11": 20,
+          "2025-10": 30,
+          "2025-09": 20,
+          "2025-08": 30
+        },
+        "search_volume_trend": {
+          "monthly": 300,
+          "quarterly": 100
+        }
+      },
+      "keyword_properties": {
+        "keyword_difficulty": 7,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20savings&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 189,
+        "last_updated_time": "2026-08-29 16:48:59 +00:00",
+        "previous_updated_time": "2026-02-25 17:59:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 105.5,
+        "dofollow": 79.1,
+        "referring_pages": 97.5,
+        "referring_domains": 54.6,
+        "referring_main_domains": 52.4,
+        "rank": 86.2,
+        "main_domain_rank": 508.9,
+        "last_updated_time": "2026-08-29 16:49:01 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 21:08:13 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump savings calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 07:10:32 +00:00",
+        "competition": 0.27,
+        "competition_level": "LOW",
+        "cpc": 5.4,
+        "search_volume": 110,
+        "low_top_of_page_bid": 2.27,
+        "high_top_of_page_bid": 8.05,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 110,
+          "2026-07": 140,
+          "2026-06": 140,
+          "2026-05": 110,
+          "2026-04": 110,
+          "2026-03": 110,
+          "2026-02": 90,
+          "2026-01": 140,
+          "2025-12": 140,
+          "2025-11": 90,
+          "2025-10": 140,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": -21,
+          "quarterly": -21,
+          "yearly": -21
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pump saving calculator",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 3,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20savings%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "organic",
+          "related_searches"
+        ],
+        "se_results_count": 119,
+        "last_updated_time": "2026-07-11 11:22:30 +00:00",
+        "previous_updated_time": "2026-05-01 22:34:49 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6,
+        "dofollow": 5.5,
+        "referring_pages": 5.7,
+        "referring_domains": 3.6,
+        "referring_main_domains": 3.4,
+        "rank": 72.6,
+        "main_domain_rank": 468.4,
+        "last_updated_time": "2026-07-11 11:22:32 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 16:52:18 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump size calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 07:51:09 +00:00",
+        "competition": 0.57,
+        "competition_level": "MEDIUM",
+        "cpc": 3.96,
+        "search_volume": 880,
+        "low_top_of_page_bid": 1.2,
+        "high_top_of_page_bid": 4.55,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-07": 590,
+          "2026-06": 590,
+          "2026-05": 720,
+          "2026-04": 720,
+          "2026-03": 720,
+          "2026-02": 880,
+          "2026-01": 1000,
+          "2025-12": 880,
+          "2025-11": 880,
+          "2025-10": 880,
+          "2025-09": 880,
+          "2025-08": 880
+        },
+        "search_volume_trend": {
+          "quarterly": -18,
+          "yearly": -55
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20size%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 93,
+        "last_updated_time": "2026-08-02 01:11:29 +00:00",
+        "previous_updated_time": "2026-05-19 08:21:40 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 628.5,
+        "dofollow": 358.8,
+        "referring_pages": 380.1,
+        "referring_domains": 48,
+        "referring_main_domains": 46.6,
+        "rank": 67.1,
+        "main_domain_rank": 499.3,
+        "last_updated_time": "2026-08-02 01:11:31 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:37:24 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump tax credit",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 03:59:46 +00:00",
+        "competition": 0.12,
+        "competition_level": "LOW",
+        "cpc": 8.05,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 1.61,
+        "high_top_of_page_bid": 9.86,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-07": 720,
+          "2026-06": 590,
+          "2026-05": 880,
+          "2026-04": 1900,
+          "2026-03": 2400,
+          "2026-02": 2400,
+          "2026-01": 1600,
+          "2025-12": 2900,
+          "2025-11": 2900,
+          "2025-10": 2400,
+          "2025-09": 2900,
+          "2025-08": 2900
+        },
+        "search_volume_trend": {
+          "monthly": 22,
+          "quarterly": -18,
+          "yearly": -84
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 34,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20tax%20credit&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 132,
+        "last_updated_time": "2026-07-31 11:55:46 +00:00",
+        "previous_updated_time": "2026-05-17 09:42:27 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1740.8,
+        "dofollow": 1407.5,
+        "referring_pages": 1521.3,
+        "referring_domains": 513.2,
+        "referring_main_domains": 464.9,
+        "rank": 211.7,
+        "main_domain_rank": 468.7,
+        "last_updated_time": "2026-07-31 11:55:47 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 09:39:19 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs ac",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 14:53:18 +00:00",
+        "competition": 0.59,
+        "competition_level": "MEDIUM",
+        "cpc": 4.71,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 0.03,
+        "high_top_of_page_bid": 6.92,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-08": 9900,
+          "2026-07": 14800,
+          "2026-06": 9900,
+          "2026-05": 6600,
+          "2026-04": 6600,
+          "2026-03": 5400,
+          "2026-02": 5400,
+          "2026-01": 6600,
+          "2025-12": 4400,
+          "2025-11": 4400,
+          "2025-10": 5400,
+          "2025-09": 6600
+        },
+        "search_volume_trend": {
+          "monthly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 8,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20ac&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "short_videos",
+          "images",
+          "related_searches"
+        ],
+        "se_results_count": 134,
+        "last_updated_time": "2026-07-30 16:05:51 +00:00",
+        "previous_updated_time": "2026-05-15 14:42:05 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 12.3,
+        "dofollow": 10.5,
+        "referring_pages": 12,
+        "referring_domains": 8.7,
+        "referring_main_domains": 8.6,
+        "rank": 90.5,
+        "main_domain_rank": 444.1,
+        "last_updated_time": "2026-07-30 16:05:53 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:05:13 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs boiler",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 09:03:28 +00:00",
+        "competition": 0.05,
+        "competition_level": "LOW",
+        "cpc": 4.18,
+        "search_volume": 170,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 5.65,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          13803
+        ],
+        "monthly_searches": {
+          "2026-07": 210,
+          "2026-06": 140,
+          "2026-05": 140,
+          "2026-04": 170,
+          "2026-03": 210,
+          "2026-02": 210,
+          "2026-01": 210,
+          "2025-12": 260,
+          "2025-11": 210,
+          "2025-10": 260,
+          "2025-09": 140,
+          "2025-08": 110
+        },
+        "search_volume_trend": {
+          "monthly": 50,
+          "quarterly": 50,
+          "yearly": 50
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20boiler&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "perspectives",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 121,
+        "last_updated_time": "2026-05-26 13:34:07 +00:00",
+        "previous_updated_time": "2026-04-04 15:08:20 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 7.5,
+        "dofollow": 3.4,
+        "referring_pages": 7.4,
+        "referring_domains": 4.9,
+        "referring_main_domains": 4.7,
+        "rank": 24.6,
+        "main_domain_rank": 408.2,
+        "last_updated_time": "2026-05-26 13:34:07 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 20:58:57 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 02:58:50 +00:00",
+        "competition": 0.58,
+        "competition_level": "MEDIUM",
+        "cpc": 6.5,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 6.78,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 4400,
+          "2026-07": 5400,
+          "2026-06": 5400,
+          "2026-05": 5400,
+          "2026-04": 5400,
+          "2026-03": 6600,
+          "2026-02": 6600,
+          "2026-01": 9900,
+          "2025-12": 8100,
+          "2025-11": 6600,
+          "2025-10": 5400,
+          "2025-09": 4400
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 13,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "product_considerations",
+          "people_also_ask",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-07-30 16:06:07 +00:00",
+        "previous_updated_time": "2026-05-16 05:46:00 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 8.6,
+        "dofollow": 6.1,
+        "referring_pages": 6.8,
+        "referring_domains": 4.6,
+        "referring_main_domains": 4.5,
+        "rank": 80.4,
+        "main_domain_rank": 441.8,
+        "last_updated_time": "2026-07-30 16:06:10 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 20:46:34 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs gas furnace",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 12:47:48 +00:00",
+        "competition": 0.43,
+        "competition_level": "MEDIUM",
+        "cpc": 3.03,
+        "search_volume": 1600,
+        "low_top_of_page_bid": 0.03,
+        "high_top_of_page_bid": 4.6,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 1000,
+          "2026-07": 1000,
+          "2026-06": 1300,
+          "2026-05": 1000,
+          "2026-04": 1000,
+          "2026-03": 1600,
+          "2026-02": 1900,
+          "2026-01": 2900,
+          "2025-12": 1900,
+          "2025-11": 1600,
+          "2025-10": 1600,
+          "2025-09": 1000
+        },
+        "search_volume_trend": {
+          "quarterly": -23
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "heat pumps vs gas furnaces",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 6,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20gas%20furnace&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "short_videos",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 130,
+        "last_updated_time": "2026-07-31 20:06:06 +00:00",
+        "previous_updated_time": "2026-05-18 06:37:18 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6,
+        "dofollow": 5,
+        "referring_pages": 5.3,
+        "referring_domains": 3.5,
+        "referring_main_domains": 3.4,
+        "rank": 63.8,
+        "main_domain_rank": 407.9,
+        "last_updated_time": "2026-07-31 20:06:07 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-29 16:31:12 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs mini split",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 07:22:38 +00:00",
+        "competition": 0.81,
+        "competition_level": "HIGH",
+        "cpc": 4.53,
+        "search_volume": 1600,
+        "low_top_of_page_bid": 0.1,
+        "high_top_of_page_bid": 7.68,
+        "categories": [
+          10009,
+          10418
+        ],
+        "monthly_searches": {
+          "2026-08": 1900,
+          "2026-07": 2400,
+          "2026-06": 1900,
+          "2026-05": 1600,
+          "2026-04": 1600,
+          "2026-03": 1600,
+          "2026-02": 1600,
+          "2026-01": 1600,
+          "2025-12": 1300,
+          "2025-11": 1300,
+          "2025-10": 1600,
+          "2025-09": 1300
+        },
+        "search_volume_trend": {
+          "monthly": -21
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20mini%20split&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "perspectives",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 168,
+        "last_updated_time": "2026-05-18 06:37:52 +00:00",
+        "previous_updated_time": "2026-03-15 04:14:21 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 105.3,
+        "dofollow": 98.2,
+        "referring_pages": 103.7,
+        "referring_domains": 36.6,
+        "referring_main_domains": 36,
+        "rank": 52.5,
+        "main_domain_rank": 414.7,
+        "last_updated_time": "2026-05-18 06:37:52 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-27 20:40:27 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs oil",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 15:41:36 +00:00",
+        "competition": 0.14,
+        "competition_level": "LOW",
+        "search_volume": 20,
+        "low_top_of_page_bid": 1.49,
+        "high_top_of_page_bid": 12.12,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 30,
+          "2026-01": 30,
+          "2025-12": 30,
+          "2025-11": 30,
+          "2025-10": 30,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "monthly": 100,
+          "quarterly": 100
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "oil vs heat pump",
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20oil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "perspectives",
+          "video",
+          "carousel",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 133000000,
+        "last_updated_time": "2025-12-23 23:01:48 +00:00",
+        "previous_updated_time": "2025-10-19 18:01:49 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1.6,
+        "dofollow": 0.5,
+        "referring_pages": 0.7,
+        "referring_domains": 0.6,
+        "referring_main_domains": 0.6,
+        "rank": 15.7,
+        "main_domain_rank": 341.5,
+        "last_updated_time": "2025-12-23 23:01:50 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 16:52:18 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump vs propane",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 04:44:36 +00:00",
+        "competition": 0.15,
+        "competition_level": "LOW",
+        "cpc": 3.68,
+        "search_volume": 90,
+        "low_top_of_page_bid": 0.07,
+        "high_top_of_page_bid": 3.59,
+        "categories": [
+          10004,
+          10282,
+          11284,
+          12584
+        ],
+        "monthly_searches": {
+          "2026-08": 70,
+          "2026-07": 70,
+          "2026-06": 50,
+          "2026-05": 70,
+          "2026-04": 90,
+          "2026-03": 70,
+          "2026-02": 110,
+          "2026-01": 170,
+          "2025-12": 170,
+          "2025-11": 140,
+          "2025-10": 110,
+          "2025-09": 90
+        },
+        "search_volume_trend": {
+          "quarterly": 40,
+          "yearly": -22
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "propane vs heat pump",
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20vs%20propane&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 130,
+        "last_updated_time": "2026-07-13 12:25:59 +00:00",
+        "previous_updated_time": "2026-05-03 12:14:07 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 5.2,
+        "dofollow": 2.9,
+        "referring_pages": 3,
+        "referring_domains": 0.6,
+        "referring_main_domains": 0.6,
+        "rank": 11.1,
+        "main_domain_rank": 404.9,
+        "last_updated_time": "2026-07-13 12:26:00 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-28 01:49:17 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump water heater",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 00:49:21 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 2.87,
+        "search_volume": 40500,
+        "low_top_of_page_bid": 0.47,
+        "high_top_of_page_bid": 5.25,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 33100,
+          "2026-06": 27100,
+          "2026-05": 33100,
+          "2026-04": 40500,
+          "2026-03": 40500,
+          "2026-02": 40500,
+          "2026-01": 40500,
+          "2025-12": 40500,
+          "2025-11": 40500,
+          "2025-10": 49500,
+          "2025-09": 40500,
+          "2025-08": 40500
+        },
+        "search_volume_trend": {
+          "monthly": 22,
+          "yearly": -18
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 11,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20water%20heater&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "images",
+          "product_considerations",
+          "related_searches"
+        ],
+        "se_results_count": 197,
+        "last_updated_time": "2026-09-02 12:45:00 +00:00",
+        "previous_updated_time": "2026-05-14 21:13:48 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 103.4,
+        "dofollow": 83.4,
+        "referring_pages": 95.1,
+        "referring_domains": 48.9,
+        "referring_main_domains": 45.1,
+        "rank": 97,
+        "main_domain_rank": 568,
+        "last_updated_time": "2026-09-02 12:45:02 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "transactional",
+        "last_updated_time": "2026-04-27 21:11:12 +00:00"
+      }
+    },
+    {
+      "keyword": "heat pump water heater cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 08:21:58 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 4.34,
+        "search_volume": 1300,
+        "low_top_of_page_bid": 0.55,
+        "high_top_of_page_bid": 7.47,
+        "categories": [
+          10004,
+          10282,
+          13191,
+          13462
+        ],
+        "monthly_searches": {
+          "2026-07": 1000,
+          "2026-06": 880,
+          "2026-05": 1300,
+          "2026-04": 1600,
+          "2026-03": 1600,
+          "2026-02": 1300,
+          "2026-01": 1300,
+          "2025-12": 1300,
+          "2025-11": 1600,
+          "2025-10": 1600,
+          "2025-09": 1600,
+          "2025-08": 1300
+        },
+        "search_volume_trend": {
+          "monthly": 14,
+          "quarterly": -23,
+          "yearly": -23
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=heat%20pump%20water%20heater%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 187,
+        "last_updated_time": "2026-08-01 05:34:58 +00:00",
+        "previous_updated_time": "2026-05-19 01:16:17 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 28,
+        "dofollow": 22.1,
+        "referring_pages": 24.1,
+        "referring_domains": 5.5,
+        "referring_main_domains": 5.4,
+        "rank": 43.5,
+        "main_domain_rank": 532.5,
+        "last_updated_time": "2026-08-01 05:34:59 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "foreign_intent": [
+          "commercial"
+        ],
+        "last_updated_time": "2026-04-27 22:18:25 +00:00"
+      }
+    },
+    {
+      "keyword": "home electrification",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 08:40:54 +00:00",
+        "competition": 0.23,
+        "competition_level": "LOW",
+        "cpc": 6.7,
+        "search_volume": 90,
+        "low_top_of_page_bid": 2.91,
+        "high_top_of_page_bid": 11.9,
+        "categories": [
+          10004,
+          10302,
+          11359,
+          12686,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 110,
+          "2026-07": 50,
+          "2026-06": 40,
+          "2026-05": 90,
+          "2026-04": 90,
+          "2026-03": 140,
+          "2026-02": 90,
+          "2026-01": 90,
+          "2025-12": 70,
+          "2025-11": 70,
+          "2025-10": 70,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": 120,
+          "quarterly": 175,
+          "yearly": -81
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 4,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=home%20electrification&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "product_considerations",
+          "perspectives",
+          "related_searches",
+          "images"
+        ],
+        "se_results_count": 138,
+        "last_updated_time": "2026-07-11 11:15:23 +00:00",
+        "previous_updated_time": "2026-05-26 13:34:59 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 470.6,
+        "dofollow": 450.9,
+        "referring_pages": 464.5,
+        "referring_domains": 66.8,
+        "referring_main_domains": 61.4,
+        "rank": 93.8,
+        "main_domain_rank": 319.2,
+        "last_updated_time": "2026-07-11 11:16:20 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational",
+          "navigational"
+        ],
+        "last_updated_time": "2026-04-28 06:39:51 +00:00"
+      }
+    },
+    {
+      "keyword": "how much does a heat pump cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 09:52:47 +00:00",
+        "competition": 0.79,
+        "competition_level": "HIGH",
+        "cpc": 5.62,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 1.35,
+        "high_top_of_page_bid": 6.16,
+        "categories": [
+          10004,
+          10281,
+          11117,
+          11238,
+          12508,
+          13464
+        ],
+        "monthly_searches": {
+          "2026-08": 1900,
+          "2026-07": 2400,
+          "2026-06": 2400,
+          "2026-05": 1600,
+          "2026-04": 1600,
+          "2026-03": 1900,
+          "2026-02": 1900,
+          "2026-01": 2400,
+          "2025-12": 1900,
+          "2025-11": 1900,
+          "2025-10": 1900,
+          "2025-09": 1600
+        },
+        "search_volume_trend": {
+          "monthly": -21,
+          "quarterly": -21,
+          "yearly": 19
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 4,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=how%20much%20does%20a%20heat%20pump%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "related_searches"
+        ],
+        "se_results_count": 179,
+        "last_updated_time": "2026-09-04 18:38:04 +00:00",
+        "previous_updated_time": "2026-06-30 14:04:53 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 29.7,
+        "dofollow": 21.1,
+        "referring_pages": 27.9,
+        "referring_domains": 14.6,
+        "referring_main_domains": 13.8,
+        "rank": 65.3,
+        "main_domain_rank": 590.4,
+        "last_updated_time": "2026-09-04 18:38:05 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:26:45 +00:00"
+      }
+    },
+    {
+      "keyword": "how much electricity does a heat pump use",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 22:11:50 +00:00",
+        "competition": 0.16,
+        "competition_level": "LOW",
+        "cpc": 2.51,
+        "search_volume": 260,
+        "low_top_of_page_bid": 0.05,
+        "high_top_of_page_bid": 5.95,
+        "categories": [
+          10004,
+          10308,
+          11401
+        ],
+        "monthly_searches": {
+          "2026-08": 140,
+          "2026-07": 170,
+          "2026-06": 140,
+          "2026-05": 170,
+          "2026-04": 210,
+          "2026-03": 210,
+          "2026-02": 320,
+          "2026-01": 480,
+          "2025-12": 320,
+          "2025-11": 260,
+          "2025-10": 260,
+          "2025-09": 210
+        },
+        "search_volume_trend": {
+          "monthly": -18,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=how%20much%20electricity%20does%20a%20heat%20pump%20use&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 124,
+        "last_updated_time": "2026-09-10 10:49:27 +00:00",
+        "previous_updated_time": "2026-07-06 16:45:05 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 6.6,
+        "dofollow": 5.6,
+        "referring_pages": 6.4,
+        "referring_domains": 4.9,
+        "referring_main_domains": 4.5,
+        "rank": 29,
+        "main_domain_rank": 446.1,
+        "last_updated_time": "2026-09-10 10:49:27 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 21:47:38 +00:00"
+      }
+    },
+    {
+      "keyword": "hvac replacement cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 06:11:04 +00:00",
+        "competition": 0.69,
+        "competition_level": "HIGH",
+        "cpc": 13.26,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 3.08,
+        "high_top_of_page_bid": 16.75,
+        "categories": [
+          10004,
+          10282,
+          11284
+        ],
+        "monthly_searches": {
+          "2026-07": 6600,
+          "2026-06": 8100,
+          "2026-05": 8100,
+          "2026-04": 8100,
+          "2026-03": 8100,
+          "2026-02": 6600,
+          "2026-01": 6600,
+          "2025-12": 4400,
+          "2025-11": 4400,
+          "2025-10": 5400,
+          "2025-09": 5400,
+          "2025-08": 6600
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -19,
+          "yearly": -33
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 15,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=hvac%20replacement%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "related_searches"
+        ],
+        "se_results_count": 133,
+        "last_updated_time": "2026-09-03 09:04:49 +00:00",
+        "previous_updated_time": "2026-05-16 05:37:47 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 17.9,
+        "dofollow": 12.7,
+        "referring_pages": 16.1,
+        "referring_domains": 10.9,
+        "referring_main_domains": 10.8,
+        "rank": 105.8,
+        "main_domain_rank": 487.6,
+        "last_updated_time": "2026-09-03 09:05:22 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 06:09:05 +00:00"
+      }
+    },
+    {
+      "keyword": "insulation cost",
+      "keyword_info": {
+        "last_updated_time": "2026-08-29 10:52:37 +00:00",
+        "competition": 0.97,
+        "competition_level": "HIGH",
+        "cpc": 4.57,
+        "search_volume": 2400,
+        "low_top_of_page_bid": 0.5,
+        "high_top_of_page_bid": 9.03,
+        "categories": [
+          10004,
+          10282,
+          11283,
+          13797
+        ],
+        "monthly_searches": {
+          "2026-07": 1900,
+          "2026-06": 1600,
+          "2026-05": 1900,
+          "2026-04": 1900,
+          "2026-03": 2400,
+          "2026-02": 2400,
+          "2026-01": 2900,
+          "2025-12": 2400,
+          "2025-11": 2400,
+          "2025-10": 2400,
+          "2025-09": 2400,
+          "2025-08": 2400
+        },
+        "search_volume_trend": {
+          "monthly": 19,
+          "yearly": -34
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "insulation costs",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 2,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=insulation%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "popular_products",
+          "discussions_and_forums",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 188,
+        "last_updated_time": "2026-07-31 11:43:07 +00:00",
+        "previous_updated_time": "2026-05-17 13:34:33 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 59.4,
+        "dofollow": 43.4,
+        "referring_pages": 59.1,
+        "referring_domains": 11.1,
+        "referring_main_domains": 10.6,
+        "rank": 74.1,
+        "main_domain_rank": 449.3,
+        "last_updated_time": "2026-07-31 11:43:07 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-27 23:04:56 +00:00"
+      }
+    },
+    {
+      "keyword": "ira heat pump rebate",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 09:58:43 +00:00",
+        "competition": 0.64,
+        "competition_level": "MEDIUM",
+        "search_volume": 10,
+        "categories": [
+          10004,
+          10295,
+          11173,
+          13603
+        ],
+        "monthly_searches": {
+          "2026-08": 10,
+          "2026-07": 10,
+          "2026-06": 10,
+          "2026-05": 10,
+          "2026-04": 10,
+          "2026-03": 10,
+          "2026-02": 10,
+          "2026-01": 10,
+          "2025-12": 10,
+          "2025-11": 20,
+          "2025-10": 30,
+          "2025-09": 20
+        },
+        "search_volume_trend": {
+          "yearly": -80
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 65,
+        "detected_language": "en"
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=ira%20heat%20pump%20rebate&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 173000,
+        "last_updated_time": "2026-03-27 00:15:52 +00:00",
+        "previous_updated_time": "2026-02-04 18:48:34 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 3305,
+        "dofollow": 2674.8,
+        "referring_pages": 2886.8,
+        "referring_domains": 879.7,
+        "referring_main_domains": 810.2,
+        "rank": 296.3,
+        "main_domain_rank": 502.8,
+        "last_updated_time": "2026-03-27 00:19:43 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-28 00:32:09 +00:00"
+      }
+    },
+    {
+      "keyword": "mini split cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 02:21:47 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 4.02,
+        "search_volume": 6600,
+        "low_top_of_page_bid": 0.64,
+        "high_top_of_page_bid": 6.5,
+        "categories": [
+          10001,
+          10024,
+          10185,
+          13856
+        ],
+        "monthly_searches": {
+          "2026-08": 8100,
+          "2026-07": 12100,
+          "2026-06": 9900,
+          "2026-05": 8100,
+          "2026-04": 6600,
+          "2026-03": 6600,
+          "2026-02": 4400,
+          "2026-01": 5400,
+          "2025-12": 4400,
+          "2025-11": 4400,
+          "2025-10": 5400,
+          "2025-09": 5400
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -18
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 8,
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mini%20split%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "popular_products",
+          "people_also_ask",
+          "organic",
+          "perspectives",
+          "related_searches"
+        ],
+        "se_results_count": 192,
+        "last_updated_time": "2026-07-30 14:36:39 +00:00",
+        "previous_updated_time": "2026-05-16 05:14:30 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 39.6,
+        "dofollow": 27.7,
+        "referring_pages": 36.7,
+        "referring_domains": 21.2,
+        "referring_main_domains": 20.8,
+        "rank": 87.8,
+        "main_domain_rank": 560.3,
+        "last_updated_time": "2026-07-30 14:36:40 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 16:00:17 +00:00"
+      }
+    },
+    {
+      "keyword": "mini split cost calculator",
+      "keyword_info": {
+        "last_updated_time": "2026-09-13 12:35:35 +00:00",
+        "competition": 0.61,
+        "competition_level": "MEDIUM",
+        "cpc": 5.48,
+        "search_volume": 170,
+        "low_top_of_page_bid": 1.64,
+        "high_top_of_page_bid": 7.01,
+        "categories": [
+          10004,
+          10300,
+          11328
+        ],
+        "monthly_searches": {
+          "2026-08": 210,
+          "2026-07": 260,
+          "2026-06": 320,
+          "2026-05": 390,
+          "2026-04": 170,
+          "2026-03": 140,
+          "2026-02": 90,
+          "2026-01": 90,
+          "2025-12": 170,
+          "2025-11": 70,
+          "2025-10": 90,
+          "2025-09": 110
+        },
+        "search_volume_trend": {
+          "monthly": -19,
+          "quarterly": -34,
+          "yearly": 24
+        }
+      },
+      "keyword_properties": {
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mini%20split%20cost%20calculator&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "related_searches"
+        ],
+        "se_results_count": 163,
+        "last_updated_time": "2026-09-13 05:06:46 +00:00",
+        "previous_updated_time": "2026-07-09 01:58:38 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 1.4,
+        "dofollow": 0.8,
+        "referring_pages": 1.4,
+        "referring_domains": 1,
+        "referring_main_domains": 0.9,
+        "rank": 18.5,
+        "main_domain_rank": 263.6,
+        "last_updated_time": "2026-09-13 05:06:50 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "informational",
+        "last_updated_time": "2026-04-29 16:33:56 +00:00"
+      }
+    },
+    {
+      "keyword": "mini split installation cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-14 01:12:38 +00:00",
+        "competition": 0.74,
+        "competition_level": "HIGH",
+        "cpc": 9.63,
+        "search_volume": 12100,
+        "low_top_of_page_bid": 2.6,
+        "high_top_of_page_bid": 12.97,
+        "categories": [
+          10008
+        ],
+        "monthly_searches": {
+          "2026-08": 8100,
+          "2026-07": 12100,
+          "2026-06": 14800,
+          "2026-05": 18100,
+          "2026-04": 14800,
+          "2026-03": 14800,
+          "2026-02": 12100,
+          "2026-01": 12100,
+          "2025-12": 8100,
+          "2025-11": 9900,
+          "2025-10": 9900,
+          "2025-09": 9900
+        },
+        "search_volume_trend": {
+          "monthly": -33,
+          "quarterly": -45,
+          "yearly": -55
+        }
+      },
+      "keyword_properties": {
+        "synonym_clustering_algorithm": "text_processing",
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=mini%20split%20installation%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "organic",
+          "people_also_ask",
+          "discussions_and_forums",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 182,
+        "last_updated_time": "2026-07-30 08:37:31 +00:00",
+        "previous_updated_time": "2026-05-15 04:42:19 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 2.7,
+        "dofollow": 2,
+        "referring_pages": 2.5,
+        "referring_domains": 1.9,
+        "referring_main_domains": 1.8,
+        "rank": 48.2,
+        "main_domain_rank": 405.6,
+        "last_updated_time": "2026-07-30 08:37:35 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "foreign_intent": [
+          "informational"
+        ],
+        "last_updated_time": "2026-04-29 14:18:59 +00:00"
+      }
+    },
+    {
+      "keyword": "multi zone mini split cost",
+      "keyword_info": {
+        "last_updated_time": "2026-09-12 17:54:11 +00:00",
+        "competition": 1,
+        "competition_level": "HIGH",
+        "cpc": 0.66,
+        "search_volume": 30,
+        "low_top_of_page_bid": 0.56,
+        "high_top_of_page_bid": 3.91,
+        "categories": [
+          10001,
+          10024,
+          10185,
+          13856
+        ],
+        "monthly_searches": {
+          "2026-08": 20,
+          "2026-07": 90,
+          "2026-06": 30,
+          "2026-05": 20,
+          "2026-04": 20,
+          "2026-03": 20,
+          "2026-02": 10,
+          "2026-01": 20,
+          "2025-12": 20,
+          "2025-11": 20,
+          "2025-10": 30,
+          "2025-09": 30
+        },
+        "search_volume_trend": {
+          "monthly": -78,
+          "quarterly": -33,
+          "yearly": -60
+        }
+      },
+      "keyword_properties": {
+        "core_keyword": "cost of multi zone mini split",
+        "synonym_clustering_algorithm": "text_processing",
+        "keyword_difficulty": 10,
+        "detected_language": "de",
+        "is_another_language": true
+      },
+      "serp_info": {
+        "check_url": "https://www.google.com/search?q=multi%20zone%20mini%20split%20cost&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+        "serp_item_types": [
+          "ai_overview",
+          "popular_products",
+          "people_also_ask",
+          "organic",
+          "video",
+          "related_searches"
+        ],
+        "se_results_count": 188,
+        "last_updated_time": "2026-08-28 03:38:07 +00:00",
+        "previous_updated_time": "2026-06-15 08:48:41 +00:00"
+      },
+      "avg_backlinks_info": {
+        "backlinks": 165.3,
+        "dofollow": 118.6,
+        "referring_pages": 131.4,
+        "referring_domains": 4.1,
+        "referring_main_domains": 3.9,
+        "rank": 101.2,
+        "main_domain_rank": 468.4,
+        "last_updated_time": "2026-08-28 03:38:08 +00:00"
+      },
+      "search_intent_info": {
+        "main_intent": "commercial",
+        "last_updated_time": "2026-04-29 14:45:17 +00:00"
+      }
+    }
+  ]
+}

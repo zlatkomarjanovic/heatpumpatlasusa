@@ -1,0 +1,124 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import Callout from '@/components/Callout.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import { SITE } from '@/data/site';
+
+const path = '/about/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: path },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="About HeatPumpAtlasUSA"
+    description="Who runs this site, how we make money, and why we publish the cases where a heat pump is the wrong financial answer."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="about heatpumpatlasusa"
+  />
+
+  <PageHeader
+    eyebrow="About"
+    title="A heat pump cost site that publishes the losing cases"
+    standfirst="Most heat pump content in the US is written to produce a lead. That produces a predictable bias, and the bias is the reason homeowners distrust the category."
+    breadcrumbs={crumbs}
+    updated={updated}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="mx-auto max-w-3xl space-y-12">
+      <div class="prose-atlas">
+        <h2>The problem we are trying to solve</h2>
+        <p>
+          Search for a heat pump cost in the US and you will land on one of three things: a national average range copied
+          from another site, a manufacturer page written by a marketing department, or a lead marketplace that wants your
+          phone number before it tells you anything.
+        </p>
+        <p>
+          Almost none of them will tell you that in your state, with your current fuel, a heat pump may not save you
+          money. That is the most important thing a homeowner in this category needs to know, and the market has a
+          structural reason not to say it.
+        </p>
+
+        <h2>What we do differently</h2>
+        <p>
+          We built a cost model that prices heat per million BTU rather than quoting a national average. It uses state
+          electricity and gas prices from the EIA, heating degree days from NOAA, and heating fuel distribution from the
+          Census. Then it publishes the result, including the states where the incumbent system wins.
+        </p>
+        <p>
+          We also treat rebate status as a first-class field rather than a footnote. Several of the largest US programs
+          have exhausted their funding and paused applications, and a lot of content still advertises that money as
+          available. We label it instead.
+        </p>
+
+        <h2>What we do not do</h2>
+        <ul>
+          <li>We do not publish a page for every US city. Our own research found the search demand is not there.</li>
+          <li>We do not scrape a national incentive database and republish it. We verify a focused list instead.</li>
+          <li>We do not quote the expired federal 25C tax credit as if it were current.</li>
+          <li>We do not tell you a heat pump always saves money. Sometimes it does not.</li>
+        </ul>
+
+        <h2>How this site makes money</h2>
+        <p>
+          Through installer referrals in a small number of markets where we can verify coverage. A homeowner who runs the
+          calculator can choose to send their scenario to installers who work in their ZIP code, and those installers pay
+          for the introduction.
+        </p>
+        <p>
+          That model only works if the recommendations are honest. A site that talks homeowners into bad projects gets a
+          few months of revenue and then nothing, because the installers stop buying and the homeowners stop coming back.
+          Publishing the losing cases is not a moral position here, it is the commercially sensible one.
+        </p>
+
+        <h2>What we are not</h2>
+        <p>
+          We are not an installer, we do not sell equipment, and we do not do site visits. We are not a substitute for a
+          load calculation by a competent contractor. The{' '}
+          <a href="/methodology/">methodology page</a> sets out exactly what our model knows and what it cannot know, and
+          the second list is longer.
+        </p>
+
+        <h2>Editorial standards</h2>
+        <p>
+          Pages are written and reviewed internally, and every page carries a last updated date. Rebate pages carry a
+          separate verification date. Where we cite a source, we link it, and we mark primary government or program
+          sources differently from secondary benchmarks.
+        </p>
+        <p>
+          If you find an error, particularly in a rebate amount or a rate, please tell us. We publish corrections rather
+          than quietly editing numbers.
+        </p>
+      </div>
+
+      <Callout tone="note" title="Get in touch">
+        <p>
+          Corrections, data questions, and installer partnership enquiries all go to{' '}
+          <a href={`mailto:${SITE.email}`} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{SITE.email}</a>.
+          If you are a contractor and want to be considered for a market, tell us which ZIP codes you cover and how you
+          handle heat pump sizing.
+        </p>
+      </Callout>
+
+      <RelatedPages
+        siblings={[
+          { label: 'Methodology', href: '/methodology/', description: 'How every number is produced' },
+          { label: 'Calculator', href: '/calculator/', description: 'The model, running' },
+          { label: 'Markets', href: '/markets/', description: 'Where switching pays off' },
+          { label: 'Rebates', href: '/rebates/', description: 'Program status' },
+        ]}
+      />
+    </div>
+  </div>
+</BaseLayout>

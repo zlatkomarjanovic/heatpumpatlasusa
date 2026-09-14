@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-14",
+  "currency": "USD",
+  "note": "DataForSEO AI-optimized responses omitted exact cost fields on most calls. Spend below is reconstructed from published DataForSEO list prices and request counts. Treat as an estimate, not an invoice.",
+  "pricing_assumptions_usd": {
+    "labs_keyword_overview_live": 0.01,
+    "labs_keyword_suggestions_live": 0.05,
+    "labs_bulk_traffic_estimation_live": 0.01,
+    "labs_relevant_pages_live": 0.10,
+    "labs_ranked_keywords_live": 0.10,
+    "google_ads_search_volume_live": 0.075,
+    "google_trends_explore_live": 0.009,
+    "serp_google_organic_live_regular_depth_10": 0.002
+  },
+  "requests": [
+    {"endpoint": "/v3/dataforseo_labs/google/keyword_overview/live", "count": 3, "unit_cost": 0.01, "keywords_sent": 487, "purpose": "national seeds, 50-state patterns, priority cities"},
+    {"endpoint": "/v3/dataforseo_labs/google/keyword_suggestions/live", "count": 5, "unit_cost": 0.05, "purpose": "heat pump cost, mini split cost, rebate, vs furnace, calculator, geothermal"},
+    {"endpoint": "/v3/dataforseo_labs/google/bulk_traffic_estimation/live", "count": 2, "unit_cost": 0.01, "domains": 30, "purpose": "competitor traffic"},
+    {"endpoint": "/v3/dataforseo_labs/google/relevant_pages/live", "count": 3, "unit_cost": 0.10, "purpose": "EnergySage, HomeGuide, Rewiring America"},
+    {"endpoint": "/v3/dataforseo_labs/google/ranked_keywords/live", "count": 3, "unit_cost": 0.10, "purpose": "HomeGuide/Angi ranked keywords; 2 filter errors"},
+    {"endpoint": "/v3/keywords_data/google_ads/search_volume/live", "count": 2, "unit_cost": 0.075, "keywords_sent": 348, "purpose": "full state universe + priority cities"},
+    {"endpoint": "/v3/keywords_data/google_trends/explore/live", "count": 1, "unit_cost": 0.009, "purpose": "5-year US trends + state map"},
+    {"endpoint": "/v3/serp/google/organic/live/regular", "count": 27, "unit_cost": 0.002, "purpose": "representative live SERPs"}
+  ],
+  "totals": {
+    "estimated_spend_usd": 1.193,
+    "estimated_spend_range_usd": [1.10, 2.50],
+    "keywords_analyzed": 1064,
+    "keywords_queried_including_zero_volume": 1400,
+    "live_serps_analyzed": 27,
+    "keywords_with_cached_serp_features": 739,
+    "states_analyzed": 50,
+    "cities_analyzed": 175,
+    "cache_policy": "All raw responses saved under seo-research/heat-pump/raw/. No endpoint was re-queried after cache."
+  }
+}

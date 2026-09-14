@@ -1,0 +1,94 @@
+---
+/**
+ * Program / rebate card.
+ *
+ * Used on the rebates hub, state pages and market pages. Status is always
+ * visible because a paused program is the single most common source of bad
+ * advice in this niche.
+ */
+import { formatUsd } from '@/lib/calculator';
+import type { ProgramStatus } from '@/types/content';
+
+interface Props {
+  name: string;
+  administrator: string;
+  href: string;
+  status: ProgramStatus;
+  amountLow?: number;
+  amountHigh?: number;
+  unit?: string;
+  summary?: string;
+  lastVerified?: Date;
+  incomeGated?: boolean;
+  class?: string;
+}
+
+const {
+  name,
+  administrator,
+  href,
+  status,
+  amountLow,
+  amountHigh,
+  unit,
+  summary,
+  lastVerified,
+  incomeGated = false,
+  class: className = '',
+} = Astro.props;
+
+const statusStyles: Record<ProgramStatus, { label: string; className: string }> = {
+  open: { label: 'Open', className: 'bg-save-100 text-save-700 border-save-100' },
+  enrolling: { label: 'Enrolling', className: 'bg-flag-100 text-flag-700 border-flag-100' },
+  reserved: { label: 'Reserved / waitlist', className: 'bg-heat-100 text-heat-700 border-heat-100' },
+  expired: { label: 'Expired', className: 'bg-paper-deep text-ink-500 border-line' },
+  unknown: { label: 'Status unconfirmed', className: 'bg-paper-deep text-ink-500 border-line' },
+};
+
+const s = statusStyles[status];
+
+const amountLabel =
+  amountLow !== undefined && amountHigh !== undefined
+    ? amountLow === amountHigh
+      ? formatUsd(amountLow)
+      : `${formatUsd(amountLow)} to ${formatUsd(amountHigh)}`
+    : null;
+---
+
+<article class:list={['border-line shadow-card hover:shadow-lift flex h-full flex-col rounded-lg border bg-white p-5 transition-shadow', className]}>
+  <div class="flex items-start justify-between gap-3">
+    <div class="min-w-0">
+      <h3 class="text-ink-950 text-base leading-snug font-semibold">
+        <a href={href} class="hover:text-brand-700 transition-colors">{name}</a>
+      </h3>
+      <p class="text-ink-500 mt-1 text-xs">{administrator}</p>
+    </div>
+    <span class:list={['shrink-0 rounded-full border px-2.5 py-1 text-2xs font-semibold whitespace-nowrap', s.className]}>
+      {s.label}
+    </span>
+  </div>
+
+  {amountLabel && (
+    <p class="text-ink-950 mt-4 flex items-baseline gap-1.5">
+      <span class="font-serif text-2xl leading-none font-medium tabular-nums">{amountLabel}</span>
+      {unit && <span class="text-ink-500 text-xs">{unit}</span>}
+    </p>
+  )}
+
+  {summary && <p class="text-ink-600 mt-3 flex-1 text-sm leading-relaxed">{summary}</p>}
+
+  <div class="text-ink-500 border-line mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 border-t pt-3 text-2xs">
+    {incomeGated && <span class="text-flag-700 font-medium">Income limits apply</span>}
+    {lastVerified && (
+      <span>
+        Verified{' '}
+        <time datetime={lastVerified.toISOString()}>
+          {lastVerified.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+        </time>
+      </span>
+    )}
+    <a href={href} class="text-brand-700 hover:text-brand-800 ml-auto font-semibold underline decoration-brand-200 underline-offset-2">
+      Details
+    </a>
+  </div>
+</article>

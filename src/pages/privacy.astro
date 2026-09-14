@@ -1,0 +1,105 @@
+---
+/**
+ * Privacy policy. Written to match how the site actually behaves: the
+ * calculator runs client-side and transmits nothing, and a quote request is a
+ * deliberate, separate action.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import { SITE } from '@/data/site';
+
+const path = '/privacy/';
+const updated = new Date('2026-09-14');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Privacy policy', href: path },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="Privacy Policy"
+    description="How HeatPumpAtlasUSA handles data. The calculator runs entirely in your browser and transmits nothing. A quote request is a separate, deliberate action."
+    path={path}
+    type="WebPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="privacy policy"
+  />
+
+  <PageHeader
+    eyebrow="Legal"
+    title="Privacy policy"
+    standfirst="The short version: the calculator runs in your browser and sends nothing. We only receive information you deliberately submit, such as a quote request."
+    breadcrumbs={crumbs}
+    updated={updated}
+  />
+
+  <div class="container-atlas py-12 lg:py-16">
+    <div class="prose-atlas mx-auto max-w-3xl">
+      <h2>The short version</h2>
+      <p>
+        {SITE.name} is a data and reference site. The cost calculator runs entirely in your browser against a bundled
+        table of energy and climate data. Your ZIP code, home details and any figures you enter are not sent to us and
+        are not stored on a server. Nothing leaves your device unless you choose to submit a quote request.
+      </p>
+
+      <h2>Information we receive</h2>
+      <h3>Calculator inputs</h3>
+      <p>
+        None. The calculator is a client-side model. The ZIP, square footage, fuel type and other inputs stay in your
+        browser and are discarded when you close the page.
+      </p>
+      <h3>Quote requests</h3>
+      <p>
+        If you submit a request for installer quotes, you provide contact details such as your name, email, phone and
+        location, along with the project details you enter. We use that information to connect you with vetted
+        installers who can quote your project, and to follow up about your request. We share it only with the
+        installers or partners relevant to your enquiry.
+      </p>
+      <h3>Email</h3>
+      <p>
+        If you email us at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, we receive whatever you include in that
+        message and use it to reply.
+      </p>
+
+      <h2>Analytics and cookies</h2>
+      <p>
+        We aim to keep tracking minimal. If we use privacy-respecting, aggregate analytics to understand which pages are
+        useful, that data is not tied to your identity. The calculator itself contains no analytics. Any cookies we set
+        are limited to what is needed to operate the site, and you can block cookies in your browser without losing
+        access to the content or the calculator.
+      </p>
+
+      <h2>Advertising and affiliate links</h2>
+      <p>
+        Some outbound links may be affiliate or partner links, and quote requests may be monetised through installer
+        referrals. That relationship never changes the modelled numbers or which rebates we mark as open. See the
+        <a href="/disclaimer/">disclaimer</a> for how we handle that.
+      </p>
+
+      <h2>Data retention and your choices</h2>
+      <p>
+        We keep quote-request and email information only as long as needed to handle your enquiry and meet legal
+        obligations. You can ask us to access or delete the personal information you have submitted by emailing
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Because the calculator stores nothing on our side, there is
+        nothing for us to delete from it.
+      </p>
+
+      <h2>Children</h2>
+      <p>The site is intended for adults making home energy decisions and is not directed at children.</p>
+
+      <h2>Changes</h2>
+      <p>
+        We update this policy when our practices change and revise the date above. Continued use of the site after an
+        update means you accept the revised policy.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

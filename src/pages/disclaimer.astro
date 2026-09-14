@@ -1,0 +1,91 @@
+---
+/**
+ * Disclaimer: estimate accuracy, editorial independence and affiliate relationships.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import { SITE } from '@/data/site';
+
+const path = '/disclaimer/';
+const updated = new Date('2026-09-14');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Disclaimer', href: path },
+];
+---
+
+<BaseLayout>
+  <SEO
+    title="Disclaimer"
+    description="How to read our numbers, and how we make money. Estimates are modelled, not quotes, and affiliate or referral income never changes the model or the rebate status we publish."
+    path={path}
+    type="WebPage"
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryKeyword="disclaimer"
+  />
+
+  <PageHeader
+    eyebrow="Legal"
+    title="Disclaimer"
+    standfirst="How to read our numbers, and how the site makes money. The two are kept strictly separate."
+    breadcrumbs={crumbs}
+    updated={updated}
+  />
+
+  <div class="container-atlas py-12 lg:py-16">
+    <div class="prose-atlas mx-auto max-w-3xl">
+      <h2>Estimates, not quotes</h2>
+      <p>
+        Every cost figure on {SITE.name} is a modelled estimate. Installed costs are regional ranges built from
+        published pricing, and operating costs come from federal energy and climate data applied to a physics-based
+        model. Two contractors bidding the same job routinely differ by 30 percent or more, and real utility tariffs are
+        more complex than a state average. Treat our numbers as a way to understand the economics and pressure-test a
+        quote, not as a bid.
+      </p>
+
+      <h2>Rebate accuracy</h2>
+      <p>
+        We hand-verify a short list of rebate programs and record a status for each. Programs fund out and get paused
+        during the year, and eligibility rules are detailed. Only programs we mark as open are counted in an
+        after-rebate total. Always confirm the current amount and your eligibility with the administering program before
+        you rely on it. See the <a href="/methodology/#rebates">methodology</a> for how we verify.
+      </p>
+
+      <h2>Not professional advice</h2>
+      <p>
+        The site does not provide engineering, financial, tax or legal advice. Equipment sizing needs a load
+        calculation, electrical work needs a licensed electrician, and rebate and tax questions need the relevant
+        program or a qualified advisor for your situation.
+      </p>
+
+      <h2>How we make money, and how we keep it separate</h2>
+      <p>
+        {SITE.name} may earn revenue through installer referrals when you request quotes, and some outbound links may be
+        affiliate links. That is how a free, ad-light reference site sustains itself. It does not change anything you
+        read:
+      </p>
+      <ul>
+        <li>The model uses the same public data and the same code regardless of any partner.</li>
+        <li>We publish the cases where a heat pump is the wrong financial choice, including where staying put is cheaper.</li>
+        <li>Rebate status reflects whether a program is actually open, never whether it benefits us.</li>
+      </ul>
+      <p>
+        If we ever cannot keep a recommendation independent of a commercial relationship, we will not publish it.
+      </p>
+
+      <h2>External sources and images</h2>
+      <p>
+        We cite public data from sources including the EIA, NOAA and the US Census, and we do not control those sites.
+        Placeholder photography is used under its respective license with attribution. Full source details are on the
+        <a href="/methodology/">methodology page</a>.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions or corrections: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

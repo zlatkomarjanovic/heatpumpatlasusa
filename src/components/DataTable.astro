@@ -1,0 +1,112 @@
+---
+/**
+ * Data table with a caption, sticky header on wide screens and a stacked mobile
+ * representation so nothing is hidden behind horizontal scroll on small phones.
+ *
+ * Rows are passed as data, not markup, so the same table can be reused by pages
+ * and by the calculator result panel.
+ */
+import type { Column, Row } from '@/types/content';
+
+interface Props {
+  caption: string;
+  columns: Column[];
+  rows: Row[];
+  /** Optional footnote rendered under the table. */
+  note?: string;
+  /** Key used to build the mobile stacked card heading. */
+  mobileLabelKey?: string;
+  class?: string;
+}
+
+const { caption, columns, rows, note, mobileLabelKey = 'label', class: className = '' } = Astro.props;
+const captionId = `tbl-${caption.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+---
+
+<figure class:list={['not-prose', className]}>
+  <div class="border-line shadow-card overflow-hidden rounded-lg border bg-white">
+    <!-- Desktop and tablet table -->
+    <div class="hidden overflow-x-auto sm:block">
+      <table class="w-full border-collapse text-sm" aria-describedby={captionId}>
+        <caption id={captionId} class="sr-only">{caption}</caption>
+        <thead>
+          <tr class="bg-paper-deep">
+            {columns.map((col) => (
+              <th
+                scope="col"
+                class:list={[
+                  'text-ink-900 border-line-strong border-b px-4 py-3 font-semibold whitespace-nowrap',
+                  col.numeric ? 'text-right' : 'text-left',
+                  col.hideOnMobile && 'hidden lg:table-cell',
+                ]}
+              >
+                {col.label}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr class="border-line hover:bg-paper/70 border-b transition-colors last:border-0">
+              {columns.map((col, index) => {
+                const value = row[col.key];
+                const display = value === null || value === undefined || value === '' ? 'Not published' : value;
+                const isMuted = value === null || value === undefined || value === '';
+                return (
+                  <td
+                    class:list={[
+                      'px-4 py-3 align-top',
+                      col.numeric ? 'text-right tabular-nums' : 'text-left',
+                      index === 0 ? 'text-ink-900 font-medium' : 'text-ink-700',
+                      col.emphasis && 'text-ink-950 font-semibold',
+                      isMuted && 'text-ink-400 italic',
+                      col.hideOnMobile && 'hidden lg:table-cell',
+                    ]}
+                  >
+                    {display}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile stacked cards -->
+    <div class="sm:hidden">
+      <p class="bg-paper-deep text-ink-900 border-line border-b px-4 py-2.5 text-sm font-semibold">{caption}</p>
+      <ul class="divide-line divide-y">
+        {rows.map((row) => (
+          <li class="px-4 py-3">
+            <p class="text-ink-950 text-sm font-semibold">{row[mobileLabelKey] ?? row[columns[0].key]}</p>
+            <dl class="mt-2 space-y-1">
+              {columns
+                .filter((c) => c.key !== mobileLabelKey && c.key !== columns[0].key)
+                .map((col) => {
+                  const value = row[col.key];
+                  const display =
+                    value === null || value === undefined || value === '' ? 'Not published' : value;
+                  return (
+                    <div class="flex items-baseline justify-between gap-4 text-sm">
+                      <dt class="text-ink-500 shrink-0">{col.label}</dt>
+                      <dd
+                        class:list={[
+                          'text-right tabular-nums',
+                          value === null || value === undefined || value === '' ? 'text-ink-400 italic' : 'text-ink-800',
+                          col.emphasis && 'text-ink-950 font-semibold',
+                        ]}
+                      >
+                        {display}
+                      </dd>
+                    </div>
+                  );
+                })}
+            </dl>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  {note && <figcaption class="text-ink-500 mt-2.5 text-xs leading-relaxed">{note}</figcaption>}
+</figure>

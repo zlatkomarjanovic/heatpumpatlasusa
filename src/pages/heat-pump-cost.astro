@@ -1,0 +1,422 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { COST_BANDS, ELECTRICAL_ADDERS, REGION_MULTIPLIERS } from '@/data/costs';
+import { STATE_BY_CODE, type StateRecord } from '@/data/states';
+import { pickSources } from '@/data/sources';
+import { formatUsd } from '@/lib/calculator';
+
+const path = '/heat-pump-cost/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Heat pump cost', href: path },
+];
+
+const faqs = [
+  {
+    question: 'How much does a heat pump cost installed in the US in 2026?',
+    answer:
+      'For the most common case, a ducted air source heat pump replacing an existing system in a 1,800 to 2,200 square foot home, expect roughly $9,500 to $22,000 installed before incentives. A like-for-like replacement that reuses existing line sets and ductwork often lands between $7,000 and $16,000. Cold-climate equipment adds $2,500 to $6,000 because the outdoor unit is a different class of machine. Ductless mini splits are cheaper per zone and are priced on the mini split page.',
+  },
+  {
+    question: 'Why is the range so wide?',
+    answer:
+      'Because the job is not the same job. The equipment is usually $4,000 to $9,000 of the total. The rest is labor, line sets, controls, permit, and whatever the contractor finds. A house with existing ducts, a 200 amp panel and a clear path to the outdoor unit is a straightforward job. A 1920s house with no ducts, a full panel and a second floor that is hard to reach is not. The honest number is a range, and any page that gives you a single figure is simplifying away the part that matters.',
+  },
+  {
+    question: 'Does a heat pump cost more than a furnace replacement?',
+    answer:
+      'Yes, typically. A gas furnace replacement runs about $3,800 to $12,000 installed. The gap is real. The comparison that matters is not the furnace alone, though, because a heat pump also replaces your air conditioner. Adding a new central air conditioner to a furnace replacement pushes the combined cost toward or past the heat pump. That is why the operating cost and 10-year pages exist, and why the calculator prices both paths.',
+  },
+  {
+    question: 'What pushes a project above these bands?',
+    answer:
+      'New ductwork, a 200 amp panel upgrade, asbestos or code remediation, long line set runs, a second outdoor unit, a new condensate route through a finished ceiling, and anything involving a crawlspace. Electrical work is the most common surprise, priced separately on the electrical panel upgrade page.',
+  },
+  {
+    question: 'Are these prices before or after rebates?',
+    answer:
+      'Before. These bands are the contractor invoice. Rebates are applied separately, they vary enormously by state and income, and several of the largest programs have run out of reservation capacity. The rebate hub tracks which programs are actually open, and the calculator applies only open programs to your total.',
+  },
+  {
+    question: 'Has the federal tax credit changed the math?',
+    answer:
+      'It has changed it a lot, and most pages have not caught up. The 25C Energy Efficient Home Improvement Credit applied to heat pumps installed through the end of 2025. For equipment placed in service in 2026 it is no longer available. The state-administered HEAR and HOMES rebate programs were created separately and many are still funded, which is why state-level rebate research matters more now than it did when 25C was live.',
+  },
+];
+
+const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
+
+const bandColumns = [
+  { key: 'system', label: 'System' },
+  { key: 'low', label: 'Low', numeric: true },
+  { key: 'high', label: 'High', numeric: true },
+  { key: 'ducts', label: 'Existing ducts', hideOnMobile: true },
+  { key: 'note', label: 'What moves it', hideOnMobile: true },
+];
+const bandRows = [
+  {
+    band: COST_BANDS['ducted-ashp-replacement'],
+    note: 'Line set and duct reuse, no surprises',
+  },
+  {
+    band: COST_BANDS['ducted-ashp-standard'],
+    note: 'New equipment, existing ducts',
+  },
+  {
+    band: COST_BANDS['ducted-ashp-cold-climate'],
+    note: 'Cold-climate unit, low-ambient controls',
+  },
+  {
+    band: COST_BANDS['ductless-single-zone'],
+    note: 'One head, one outdoor unit',
+  },
+  {
+    band: COST_BANDS['ductless-multi-zone'],
+    note: 'Three to five heads',
+  },
+  {
+    band: COST_BANDS['geothermal'],
+    note: 'Ground loop, excavation or drilling',
+  },
+].map(({ band, note }) => ({
+  system: band.label,
+  low: formatUsd(band.low),
+  high: formatUsd(band.high),
+  ducts: band.assumesExistingDucts ? 'Required' : 'Not used',
+  note,
+}));
+
+/** Cost by region, derived from the same bands so the page cannot drift. */
+const regionColumns = [
+  { key: 'region', label: 'Region' },
+  { key: 'factor', label: 'Labor factor', numeric: true },
+  { key: 'standard', label: 'Standard ducted', numeric: true },
+  { key: 'cold', label: 'Cold-climate', numeric: true },
+  { key: 'mini', label: 'Single-zone mini split', numeric: true },
+];
+const regionRows = Object.entries(REGION_MULTIPLIERS).map(([region, factor]) => ({
+  region,
+  factor: `${factor.toFixed(2)}x`,
+  standard: `${formatUsd(COST_BANDS['ducted-ashp-standard'].low * factor, { compact: true })} to ${formatUsd(COST_BANDS['ducted-ashp-standard'].high * factor, { compact: true })}`,
+  cold: `${formatUsd(COST_BANDS['ducted-ashp-cold-climate'].low * factor, { compact: true })} to ${formatUsd(COST_BANDS['ducted-ashp-cold-climate'].high * factor, { compact: true })}`,
+  mini: `${formatUsd(COST_BANDS['ductless-single-zone'].low * factor, { compact: true })} to ${formatUsd(COST_BANDS['ductless-single-zone'].high * factor, { compact: true })}`,
+}));
+
+/** Highest-cost states, for the "where it costs more" table. */
+const HIGH_COST = ['HI', 'CA', 'MA', 'AK', 'NY', 'CT', 'WA', 'RI', 'NJ', 'VT'];
+const highCostColumns = [
+  { key: 'state', label: 'State' },
+  { key: 'electricity', label: 'Electricity', numeric: true },
+  { key: 'factor', label: 'Cost factor', numeric: true },
+  { key: 'standard', label: 'Ducted installed', numeric: true },
+];
+const highCostRows = HIGH_COST.map((code) => STATE_BY_CODE[code])
+  .filter(Boolean)
+  .map((s: StateRecord) => {
+    const factor = (REGION_MULTIPLIERS[s.region] ?? 1) * 1.12;
+    return {
+      state: s.name,
+      electricity: `${s.electricityCentsPerKwh.toFixed(1)}¢`,
+      factor: `${factor.toFixed(2)}x`,
+      standard: `${formatUsd(COST_BANDS['ducted-ashp-standard'].low * factor, { compact: true })} to ${formatUsd(COST_BANDS['ducted-ashp-standard'].high * factor, { compact: true })}`,
+    };
+  });
+
+const citations = pickSources([
+  'eiaElectricity',
+  'rewiringAmericaCosts',
+  'rewiringAmericaPanel',
+  'thisOldHouseCost',
+  'irs25c',
+  'energyStarTaxCredits',
+  'censusFuel',
+]);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Cost in 2026: What You Actually Pay Installed"
+    description="A US heat pump costs $9,500 to $22,000 installed for a typical ducted system in 2026. See the full bands, what pushes a project higher, and how your state changes it."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump installation cost"
+  />
+
+  <PageHeader
+    eyebrow="Cost guide"
+    title="What a heat pump costs, and what that number is hiding"
+    standfirst="A ducted air source heat pump costs roughly $9,500 to $22,000 installed for a typical US home in 2026. The useful question is which end of that range you are on, and why."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '$9.5k to $22k', label: 'Installed ducted heat pump, typical US home, before incentives', source: 'Modelled from published 2026 contractor pricing' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <!-- Answer first -->
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A ducted air source heat pump, installed, in a typical 1,800 to 2,200 square foot US home, runs about
+              <strong>$9,500 to $22,000 before incentives</strong>. If you are replacing an existing ducted system and
+              the line set and ductwork can be reused, the range narrows to roughly <strong>$7,000 to $16,000</strong>.
+              Cold-climate equipment, which is what you need in most of the Northeast and upper Midwest, adds a few
+              thousand dollars on top.
+            </p>
+            <p>
+              That range is wide because the job is wide. The outdoor unit and indoor unit are usually $4,000 to $9,000
+              of what you pay. Everything else is labor, line sets, controls, a permit, and what the house demands. Two
+              contractors bidding the same house often land $6,000 apart, and neither one is wrong.
+            </p>
+          </div>
+
+          <Callout tone="modelled" title="How to read these figures" class="mt-6">
+            <p>
+              These bands are modelled from published 2026 contractor and consumer pricing, adjusted for regional labor.
+              They are not quotes and they are not a survey of invoices. See the{' '}
+              <a href="/methodology/">methodology</a> for the source list and the regional factors.
+            </p>
+          </Callout>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/calculator/" class="bg-brand-700 hover:bg-brand-800 inline-flex items-center rounded-md px-5 py-3 text-sm font-semibold text-white transition-colors">
+              Model it for my ZIP
+            </a>
+            <a href="/heat-pump-operating-cost/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-5 py-3 text-sm font-semibold transition-colors">
+              What it costs to run
+            </a>
+          </div>
+        </section>
+
+        <!-- Bands -->
+        <Section
+          id="bands"
+          number="1"
+          title="Installed cost by system type"
+          lede="Pick the row that describes your project, not the system you want. The project decides the price."
+        >
+          <DataTable
+            caption="US installed heat pump cost bands, 2026"
+            columns={bandColumns}
+            rows={bandRows}
+            mobileLabelKey="system"
+            note="Includes equipment, standard labor and permit. Excludes ductwork, electrical upgrades, asbestos remediation and anything discovered after work starts."
+          />
+        </Section>
+
+        <!-- What moves cost -->
+        <Section
+          id="drivers"
+          number="2"
+          title="The five things that actually move your price"
+          lede="Equipment brand is not on this list, and in most quotes it matters less than homeowners expect."
+        >
+          <div class="space-y-5">
+            {[
+              {
+                title: 'Ductwork, or the absence of it',
+                body: 'If you have usable ducts, you are buying equipment and labor. If your ducts are undersized, leaking or nonexistent, you are buying a construction project. New ductwork can add $3,000 to $12,000 depending on how much of the house is finished. A 1920s house with steam radiators is the classic case where ductless wins on cost, not just on convenience.',
+                tag: 'Most common swing',
+              },
+              {
+                title: 'Electrical capacity',
+                body: 'A heat pump draws real current, especially with electric backup heat. A 100 amp service with an electric range and dryer often cannot support it without an upgrade. A 200 amp panel swap runs $1,400 to $5,500. A service entrance change can run far more. This is the single most common line item that appears after the contract is signed, which is why the calculator flags it before you get quotes.',
+                tag: 'Most common surprise',
+              },
+              {
+                title: 'Line set and refrigerant',
+                body: 'A like-for-like swap reusing the existing line set is the cheapest project you can have. Moving the outdoor unit, changing refrigerant type, or relocating the indoor unit adds labor and materials. Long runs also mean more refrigerant, more brazing and more time.',
+              },
+              {
+                title: 'Cold-climate equipment',
+                body: 'A cold-climate heat pump holds capacity at low outdoor temperatures, which requires a different compressor and control strategy. In a 7,000 degree day climate this is the right machine. It costs more up front and less over ten years than a standard unit struggling through January.',
+              },
+              {
+                title: 'Local labor market',
+                body: 'New England and the West Coast run 15 to 20 percent above the national average for this work. Florida and Texas run below it. The regions table below shows the factor applied to the same equipment.',
+              },
+            ].map((item) => (
+              <div class="border-line bg-white rounded-lg border p-5">
+                <div class="flex items-start justify-between gap-4">
+                  <h3 class="text-ink-950 text-base font-semibold">{item.title}</h3>
+                  {item.tag && (
+                    <span class="bg-brand-50 text-brand-700 border-brand-100 shrink-0 rounded-full border px-2.5 py-1 text-2xs font-semibold">
+                      {item.tag}
+                    </span>
+                  )}
+                </div>
+                <p class="text-ink-600 mt-2 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <!-- Regions -->
+        <Section
+          id="regions"
+          number="3"
+          title="How region changes the same job"
+          lede="The equipment does not get more expensive in Seattle. The labor, the permit and the logistics do."
+        >
+          <DataTable
+            caption="Regional labor factors applied to the national bands"
+            columns={regionColumns}
+            rows={regionRows}
+            mobileLabelKey="region"
+            note="Factors are modelled from regional labor cost indices and published local pricing, not from a survey. They exist to keep the calculator honest about geography."
+          />
+        </Section>
+
+        <!-- High cost states -->
+        <Section
+          id="high-cost"
+          number="4"
+          title="Where heat pumps cost the most"
+          lede="These states combine high labor costs with high electricity prices, which is a difficult pairing for this technology."
+        >
+          <DataTable
+            caption="Highest-installed-cost states for ducted heat pumps"
+            columns={highCostColumns}
+            rows={highCostRows}
+            mobileLabelKey="state"
+            note="Electricity is the EIA residential average for June 2026. The cost factor combines the regional labor factor with the high-cost-state premium."
+          />
+        </Section>
+
+        <!-- Electrical -->
+        <Section
+          id="electrical"
+          number="5"
+          title="Electrical work, priced separately"
+          lede="This is the add-on that turns a $12,000 project into a $17,000 project. Budget for it before you sign."
+        >
+          <div class="grid gap-4 sm:grid-cols-3">
+            {[
+              ELECTRICAL_ADDERS.dedicated240vCircuit,
+              ELECTRICAL_ADDERS.panelUpgrade,
+              ELECTRICAL_ADDERS.serviceUpgrade,
+            ].map((adder) => (
+              <div class="border-line bg-white rounded-lg border p-5">
+                <p class="text-ink-500 text-2xs font-medium tracking-wide uppercase">{adder.label}</p>
+                <p class="text-ink-950 mt-2 font-serif text-xl font-medium">
+                  {formatUsd(adder.low, { compact: true })} to {formatUsd(adder.high, { compact: true })}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p class="text-ink-600 mt-4 text-sm leading-relaxed">
+            Full detail, including when a panel upgrade is genuinely required and when a contractor is padding the
+            quote, is on the{' '}
+            <a href="/electrical-panel-upgrade-cost/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">
+              electrical panel upgrade cost page
+            </a>.
+          </p>
+        </Section>
+
+        <!-- Comparing to furnace -->
+        <Section
+          id="versus"
+          number="6"
+          title="Compared to just replacing the furnace"
+          lede="This is the comparison that decides most projects, and the one most sites avoid."
+        >
+          <div class="prose-atlas">
+            <p>
+              A gas furnace replacement runs about $3,800 to $12,000 installed. On up-front cost alone, the furnace wins,
+              usually by several thousand dollars. That is true and it is worth stating plainly.
+            </p>
+            <p>
+              The comparison changes when you account for the fact that a heat pump also replaces your air conditioner.
+              If the AC is at the end of its life, the alternative is not a furnace. It is a furnace plus a new central
+              air conditioner, which pushes the combined cost toward the heat pump. It changes again on running cost,
+              where the answer depends entirely on where you live and what you currently burn.
+            </p>
+            <p>
+              We modelled that comparison state by state on the{' '}
+              <a href="/heat-pump-vs-furnace/">heat pump versus furnace page</a>, including the states where the gas
+              furnace is genuinely cheaper to run. If you heat with oil, read the{' '}
+              <a href="/heat-pump-vs-oil/">oil comparison</a> instead, because the case is much stronger.
+            </p>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+
+        <!-- Inline FAQ handled by layout -->
+        <Section id="next" number="7" title="What to do with this number">
+          <div class="prose-atlas">
+            <p>
+              Take the range you got from the calculator, not this page, and use it to interrogate quotes. Ask each
+              contractor to break the scope into equipment, labor, electrical and any duct work. The contractor who
+              separates those lines is usually the one who has thought about your house.
+            </p>
+            <p>
+              Then check your state program before you sign, not after. Several of the largest rebates now require a
+              reservation or a rebate commitment letter before work begins, which means the wrong order of operations can
+              cost you thousands.
+            </p>
+          </div>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#bands', label: 'Cost by system type' },
+              { href: '#drivers', label: 'What moves the price' },
+              { href: '#regions', label: 'Regional differences' },
+              { href: '#high-cost', label: 'Most expensive states' },
+              { href: '#electrical', label: 'Electrical add-ons' },
+              { href: '#versus', label: 'Compared to a furnace' },
+              { href: '#next', label: 'What to do next' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        children={[
+          { label: 'Mini split cost', href: '/mini-split-cost/', description: 'Ductless pricing by zone' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
+          { label: 'Panel upgrade cost', href: '/electrical-panel-upgrade-cost/', description: 'The most common add-on' },
+          { label: 'Water heater cost', href: '/heat-pump-water-heater-cost/', description: 'The other heat pump project' },
+          { label: 'Will it raise my electric bill?', href: '/guides/heat-pump-electric-bill/', description: 'The combined-bill question' },
+          { label: 'Dual fuel systems', href: '/guides/dual-fuel-heat-pumps/', description: 'When keeping the furnace wins' },
+        ]}
+        siblings={[
+          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/' },
+          { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/' },
+          { label: 'Rebates', href: '/rebates/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/', description: 'Turn this range into a local number' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

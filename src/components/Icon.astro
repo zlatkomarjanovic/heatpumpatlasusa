@@ -1,0 +1,57 @@
+---
+/**
+ * Small inline icon set.
+ *
+ * Stroke-based, currentColor, no external requests. Kept intentionally minimal
+ * so icons read as UI wayfinding rather than decoration.
+ */
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 20, class: className = '' } = Astro.props;
+
+const paths: Record<string, string> = {
+  dollar:
+    'M10 2.5v15M13.5 5.5c-.8-.8-2.1-1.3-3.5-1.3-2.2 0-3.8 1.1-3.8 2.8 0 1.6 1.3 2.3 3.8 2.9 2.6.6 3.9 1.4 3.9 3.1 0 1.8-1.7 2.9-4 2.9-1.6 0-3-.6-3.8-1.5',
+  split:
+    'M3 4.5h14v7H3zM3 7.8h14M6 15h8M8 11.5v3.5M12 11.5v3.5',
+  scale:
+    'M10 2.5v15M4 6h12M4 6l-2 5a2.5 2.5 0 0 0 5 0L5 6M16 6l-2 5a2.5 2.5 0 0 0 5 0l-2-5M5 17.5h10',
+  droplet: 'M10 2.5c3 3.7 5.3 6.3 5.3 9.1A5.3 5.3 0 0 1 10 17a5.3 5.3 0 0 1-5.3-5.4C4.7 8.8 7 6.2 10 2.5z',
+  bolt: 'M11 2.5 4.5 11H9l-1 6.5L15.5 9H11l0-6.5z',
+  tag: 'M3.5 10.4V4a1 1 0 0 1 1-1h6.4a1 1 0 0 1 .7.3l5.1 5.1a1.4 1.4 0 0 1 0 2l-5.4 5.4a1.4 1.4 0 0 1-2 0L3.8 11.1a1 1 0 0 1-.3-.7zM7 7.5h.01',
+  book: 'M3.5 4.2A1.7 1.7 0 0 1 5.2 3H10v13H5.2A1.7 1.7 0 0 0 3.5 17V4.2zM16.5 4.2A1.7 1.7 0 0 0 14.8 3H10v13h4.8a1.7 1.7 0 0 1 1.7 1V4.2z',
+  home: 'M3 9.5 10 3.5l7 6M4.7 8v8.5h10.6V8',
+  snowflake:
+    'M10 2.5v15M3.5 6.2l13 7.6M3.5 13.8l13-7.6M10 2.5 8 4.6M10 2.5l2 2.1M10 17.5l-2-2.1M10 17.5l2-2.1',
+  flame:
+    'M10 2.8c.6 2.4-1.4 3.2-1.4 5.1 0 .8.5 1.5 1.4 1.5s1.4-.7 1.4-1.6c1 .9 2 2.3 2 4.1A3.4 3.4 0 0 1 10 15.4a3.4 3.4 0 0 1-3.4-3.4c0-3.4 3-4.4 3.4-9.2z',
+  calculator: 'M5 2.5h10a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1zM6.5 5h7M6.5 9h1M9.5 9h1M12.5 9h1M6.5 12h1M9.5 12h1M12.5 12v3M6.5 15h4',
+  spark: 'M10 2.5l1.8 4.7L16.5 9l-4.7 1.8L10 15.5l-1.8-4.7L3.5 9l4.7-1.8L10 2.5z',
+  gift: 'M4 8.5h12V16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8.5zM3 6h14v2.5H3zM10 6v11M10 6C9 3.5 6 3.5 6 5.4 6 6.4 7 6 10 6zM10 6c1-2.5 4-2.5 4-.6 0 1-1 .6-4 .6z',
+  route: 'M6 16.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM14 7.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 5.5H8.5A2.5 2.5 0 0 0 6 8v4.5',
+  'arrow-right': 'M3.5 10h12M11 5.5 15.5 10 11 14.5',
+};
+
+const d = paths[name] ?? paths['spark'];
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 20 20"
+  fill="none"
+  aria-hidden="true"
+  class={className}
+>
+  <path
+    d={d}
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

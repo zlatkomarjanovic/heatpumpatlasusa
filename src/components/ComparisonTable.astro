@@ -1,0 +1,95 @@
+---
+/**
+ * Side-by-side comparison table for two systems.
+ *
+ * The verdict column is required and must carry a real conclusion, including
+ * rows where the incumbent wins. That is the point of the component.
+ */
+import type { CompareRow } from '@/types/content';
+
+interface Props {
+  leftLabel: string;
+  rightLabel: string;
+  rows: CompareRow[];
+  caption: string;
+  note?: string;
+  class?: string;
+}
+
+const { leftLabel, rightLabel, rows, caption, note, class: className = '' } = Astro.props;
+
+const verdictStyles = {
+  left: { label: leftLabel, className: 'bg-cool-50 text-cool-700 border-cool-100' },
+  right: { label: rightLabel, className: 'bg-heat-50 text-heat-700 border-heat-100' },
+  depends: { label: 'Depends', className: 'bg-paper-deep text-ink-600 border-line' },
+};
+---
+
+<figure class:list={['not-prose', className]}>
+  <div class="border-line shadow-card overflow-hidden rounded-lg border bg-white">
+    <!-- Desktop table -->
+    <div class="hidden md:block">
+      <table class="w-full border-collapse text-sm">
+        <caption class="sr-only">{caption}</caption>
+        <thead>
+          <tr class="bg-paper-deep">
+            <th scope="col" class="text-ink-900 border-line-strong border-b px-4 py-3 text-left font-semibold">Criterion</th>
+            <th scope="col" class="text-ink-900 border-line-strong border-b px-4 py-3 text-left font-semibold">{leftLabel}</th>
+            <th scope="col" class="text-ink-900 border-line-strong border-b px-4 py-3 text-left font-semibold">{rightLabel}</th>
+            <th scope="col" class="text-ink-900 border-line-strong border-b px-4 py-3 text-left font-semibold whitespace-nowrap">Edge</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => {
+            const v = verdictStyles[row.verdict];
+            return (
+              <tr class="border-line hover:bg-paper/70 border-b align-top transition-colors last:border-0">
+                <th scope="row" class="text-ink-900 px-4 py-3 text-left font-medium">{row.criterion}</th>
+                <td class:list={['text-ink-700 px-4 py-3', row.verdict === 'left' && 'bg-cool-50/40']}>{row.left}</td>
+                <td class:list={['text-ink-700 px-4 py-3', row.verdict === 'right' && 'bg-heat-50/40']}>{row.right}</td>
+                <td class="px-4 py-3">
+                  <span class:list={['inline-block rounded-full border px-2.5 py-0.5 text-2xs font-semibold', v.className]}>
+                    {row.verdict === 'depends' ? 'Depends' : v.label}
+                  </span>
+                  {row.note && <p class="text-ink-500 mt-1.5 text-xs leading-snug">{row.note}</p>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile stacked -->
+    <div class="md:hidden">
+      <p class="bg-paper-deep text-ink-900 border-line border-b px-4 py-2.5 text-sm font-semibold">{caption}</p>
+      <ul class="divide-line divide-y">
+        {rows.map((row) => {
+          const v = verdictStyles[row.verdict];
+          return (
+            <li class="px-4 py-4">
+              <div class="flex items-start justify-between gap-3">
+                <p class="text-ink-950 text-sm font-semibold">{row.criterion}</p>
+                <span class:list={['shrink-0 rounded-full border px-2.5 py-0.5 text-2xs font-semibold', v.className]}>
+                  {row.verdict === 'depends' ? 'Depends' : v.label}
+                </span>
+              </div>
+              <dl class="mt-3 space-y-2">
+                <div>
+                  <dt class="text-ink-500 text-2xs font-medium tracking-wide uppercase">{leftLabel}</dt>
+                  <dd class="text-ink-700 mt-0.5 text-sm">{row.left}</dd>
+                </div>
+                <div>
+                  <dt class="text-ink-500 text-2xs font-medium tracking-wide uppercase">{rightLabel}</dt>
+                  <dd class="text-ink-700 mt-0.5 text-sm">{row.right}</dd>
+                </div>
+              </dl>
+              {row.note && <p class="text-ink-500 mt-2 text-xs leading-snug">{row.note}</p>}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </div>
+  {note && <figcaption class="text-ink-500 mt-2.5 text-xs leading-relaxed">{note}</figcaption>}
+</figure>

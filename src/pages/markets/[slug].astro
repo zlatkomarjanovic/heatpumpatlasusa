@@ -1,0 +1,210 @@
+---
+/**
+ * Individual market page.
+ *
+ * Renders the market body plus the local reference data, the operating cost
+ * comparison for that state, and the program cards that apply.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import ProgramCard from '@/components/ProgramCard.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { getCollection, render } from 'astro:content';
+import { STATE_BY_CODE } from '@/data/states';
+import { EFFICIENCY, ENERGY_UNITS } from '@/data/costs';
+import { FUEL_REFERENCE } from '@/data/states';
+
+export async function getStaticPaths() {
+  const markets = await getCollection('markets');
+  return markets
+    .filter((m) => !m.data.draft)
+    .map((market) => ({
+      params: { slug: market.id },
+      props: { market },
+    }));
+}
+
+const { market } = Astro.props;
+const { Content } = await render(market);
+const d = market.data;
+const state = STATE_BY_CODE[d.stateCode];
+
+const path = `/markets/${market.id}/`;
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Markets', href: '/markets/' },
+  { label: `${d.city}, ${d.stateCode}`, href: path },
+];
+
+/** All rebate programs that apply to this state. */
+const programs = (await getCollection('rebates')).filter((p) =>
+  p.data.stateCodes.includes(d.stateCode),
+);
+
+const KWH_PER_MMBTU = 1_000_000 / 3412;
+
+const localColumns = [
+  { key: 'metric', label: 'Metric' },
+  { key: 'value', label: 'Value', numeric: true, emphasis: true },
+  { key: 'source', label: 'Source', hideOnMobile: true },
+];
+
+const localRows = [
+  { metric: 'Residential electricity', value: `${state.electricityCentsPerKwh.toFixed(2)}¢/kWh`, source: 'EIA, June 2026' },
+  {
+    metric: 'Residential natural gas',
+    value: `$${state.gasDollarsPerMcf.toFixed(2)}/Mcf`,
+    source: 'EIA, May 2026 (or regional estimate)',
+  },
+  { metric: 'Heating degree days', value: state.heatingDegreeDays.toLocaleString(), source: 'NOAA, Jul 2025 to Jun 2026' },
+  { metric: 'Homes heated with oil', value: `${Math.round(state.fuelOilShare * 100)}%`, source: 'Census ACS B25040' },
+  { metric: 'Homes heated with gas', value: `${Math.round(state.utilityGasShare * 100)}%`, source: 'Census ACS B25040' },
+  { metric: 'Homes heated with electricity', value: `${Math.round(state.electricShare * 100)}%`, source: 'Census ACS B25040' },
+];
+
+/** Operating cost comparison for this state, in dollars per MMBtu delivered. */
+const elecPerMmbBtu = (state.electricityCentsPerKwh / 100) * KWH_PER_MMBTU;
+const seasonalCop = EFFICIENCY.ashpColdClimate * (1 - EFFICIENCY.ductLossDucted);
+const hpCost = elecPerMmbBtu / seasonalCop;
+const gasCost = ((state.gasDollarsPerMcf / ENERGY_UNITS.thermsPerMcf) / EFFICIENCY.gasFurnace) * 10;
+const oilCost =
+  FUEL_REFERENCE.heatingOilDollarsPerGallon /
+  ((ENERGY_UNITS.kwhPerGallonOil * 3412 / 1_000_000) * EFFICIENCY.oilFurnace);
+const propaneCost =
+  FUEL_REFERENCE.propaneDollarsPerGallon /
+  ((ENERGY_UNITS.kwhPerGallonPropane * 3412 / 1_000_000) * EFFICIENCY.propaneFurnace);
+
+const costRows = [
+  { fuel: 'Heat pump, cold-climate ducted', cost: `$${hpCost.toFixed(1)}`, note: 'At a seasonal COP of 2.47 including duct loss' },
+  ...(gasCost ? [{ fuel: 'Natural gas furnace', cost: `$${gasCost.toFixed(1)}`, note: 'At 90% AFUE' }] : []),
+  { fuel: 'Heating oil', cost: `$${oilCost.toFixed(1)}`, note: 'At 82% AFUE and the autumn reference price' },
+  { fuel: 'Propane', cost: `$${propaneCost.toFixed(1)}`, note: 'At 82% AFUE and the autumn reference price' },
+];
+
+const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }));
+---
+
+<BaseLayout>
+  <SEO
+    title={d.title}
+    description={d.description}
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    published={d.published}
+    updated={d.updated}
+    reviewedBy={d.reviewedBy}
+    faqs={faqItems}
+    primaryKeyword={d.primaryKeyword}
+  />
+
+  <PageHeader
+    eyebrow={`Market guide · ${state.name}`}
+    title={d.title}
+    standfirst={d.description}
+    breadcrumbs={crumbs}
+    updated={d.updated}
+    reviewedBy={d.reviewedBy}
+    keyStat={d.keyStat}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-12">
+        <Section id="local-data" number="1" title={`${state.name} reference data`} lede="The four numbers that decide whether a heat pump makes sense here.">
+          <DataTable
+            caption={`${state.name} energy and housing reference data`}
+            columns={localColumns}
+            rows={localRows}
+            mobileLabelKey="metric"
+            note="All figures are state-level. We do not publish ZIP-level utility tariffs, because maintaining accurate tariff data is a separate engineering problem and a wrong number is worse than an honest state average."
+          />
+        </Section>
+
+        <Section id="operating" number="2" title="Delivered heating cost here" lede="Cost per million BTU of heat that actually reaches the room. Lower is better.">
+          <DataTable
+            caption={`${state.name} cost per MMBtu delivered by fuel`}
+            columns={[
+              { key: 'fuel', label: 'Heat source' },
+              { key: 'cost', label: 'Per MMBtu', numeric: true, emphasis: true },
+              { key: 'note', label: 'Assumption', hideOnMobile: true },
+            ]}
+            rows={costRows}
+            mobileLabelKey="fuel"
+            note="Modelled from state prices and standard efficiency assumptions. Your actual delivered cost depends on your tariff, your equipment and your duct condition."
+          />
+        </Section>
+
+        <div class="prose-atlas">
+          <Content />
+        </div>
+
+        {programs.length > 0 && (
+          <Section id="programs" number="3" title={`Programs in ${state.name}`} lede="Status verified program by program. Paused money is labelled.">
+            <ul class="grid gap-4 sm:grid-cols-2">
+              {programs.map((program) => (
+                <li>
+                  <ProgramCard
+                    name={program.data.program}
+                    administrator={program.data.administrator}
+                    href={`/rebates/${program.id}/`}
+                    status={program.data.programStatus}
+                    amountLow={program.data.incentives[0]?.amountLow}
+                    amountHigh={program.data.incentives[0]?.amountHigh}
+                    unit={program.data.incentives[0]?.unit}
+                    summary={program.data.description}
+                    lastVerified={program.data.lastVerified}
+                    incomeGated={program.data.incomeGated}
+                  />
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="#local-data" class="text-ink-600 hover:text-brand-700 transition-colors">Local data</a></li>
+            <li><a href="#operating" class="text-ink-600 hover:text-brand-700 transition-colors">Operating cost</a></li>
+            {programs.length > 0 && (
+              <li><a href="#programs" class="text-ink-600 hover:text-brand-700 transition-colors">Programs</a></li>
+            )}
+            <li><a href="#sources" class="text-ink-600 hover:text-brand-700 transition-colors">Sources</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <QuoteCta market={`${d.city}, ${d.stateCode}`} />
+      <Faq items={faqItems} />
+      <RelatedPages
+        parents={[
+          { label: 'All markets', href: '/markets/', description: 'Where switching pays off' },
+          { label: 'Calculator', href: '/calculator/', description: 'Model your own situation' },
+        ]}
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Installed cost bands' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'All fuels by state' },
+          { label: 'Will it raise my electric bill?', href: '/guides/heat-pump-electric-bill/', description: 'The combined-bill question' },
+          ...(programs[0]
+            ? [{ label: programs[0].data.program, href: `/rebates/${programs[0].id}/`, description: 'Local program details' }]
+            : []),
+        ]}
+      />
+      <SourceList
+        sources={d.citations.map((c) => ({ ...c, primary: true }))}
+        updated={d.updated}
+      />
+    </div>
+  </div>
+</BaseLayout>

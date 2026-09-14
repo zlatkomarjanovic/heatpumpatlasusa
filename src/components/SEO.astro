@@ -1,0 +1,184 @@
+---
+/**
+ * SEO component.
+ *
+ * Single source of truth for title, meta description, canonicals, Open Graph,
+ * Twitter cards and JSON-LD. Every page should render this exactly once.
+ *
+ * Schema is opt-in per type so we never emit markup that does not describe the
+ * page, which is the usual cause of structured data warnings.
+ */
+import { SITE, AUTHOR } from '@/data/site';
+import type { Breadcrumb, SchemaType } from '@/types/seo';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Path with trailing slash, e.g. "/heat-pump-cost/". */
+  path: string;
+  type?: SchemaType;
+  breadcrumbs?: Breadcrumb[];
+  published?: Date;
+  updated?: Date;
+  author?: string;
+  reviewedBy?: string;
+  faqs?: { question: string; answer: string }[];
+  /** Override the social share image path. */
+  image?: string;
+  /** Set true for hub/collection pages that should not claim Article schema. */
+  isHub?: boolean;
+  /** Suppress indexing for genuinely thin pages. */
+  noindex?: boolean;
+  /** Primary search keyword, used only for internal tracking comments. */
+  primaryKeyword?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  type = 'WebPage',
+  breadcrumbs = [],
+  published,
+  updated,
+  author = AUTHOR.name,
+  reviewedBy,
+  faqs = [],
+  image = '/og-default.svg',
+  isHub = false,
+  noindex = false,
+  primaryKeyword,
+} = Astro.props;
+
+const canonical = new URL(path, SITE.url).href;
+const socialImage = new URL(image, SITE.url).href;
+
+/**
+ * Title assembly.
+ *
+ * Search engines truncate around 60 characters. Rather than always appending
+ * the brand and pushing every title past that, the brand suffix is only added
+ * when it fits, and long editorial titles are left to stand alone.
+ */
+const BRAND_SUFFIX = ` | ${SITE.name}`;
+const fullTitle =
+  title.includes(SITE.name)
+    ? title
+    : title.length + BRAND_SUFFIX.length <= 60
+      ? `${title}${BRAND_SUFFIX}`
+      : title;
+
+const webPageSchema = {
+  '@type': isHub || type === 'CollectionPage' ? 'CollectionPage' : 'WebPage',
+  '@id': canonical,
+  url: canonical,
+  name: fullTitle,
+  description,
+  inLanguage: 'en-US',
+  isPartOf: { '@id': `${SITE.url}/#website` },
+  primaryImageOfPage: { '@type': 'ImageObject', url: socialImage },
+  datePublished: published?.toISOString(),
+  dateModified: (updated ?? published)?.toISOString(),
+};
+
+const articleSchema =
+  type === 'Article'
+    ? {
+        '@type': 'Article',
+        '@id': `${canonical}#article`,
+        headline: title,
+        description,
+        inLanguage: 'en-US',
+        mainEntityOfPage: { '@id': canonical },
+        image: [socialImage],
+        datePublished: (published ?? updated)?.toISOString(),
+        dateModified: (updated ?? published)?.toISOString(),
+        author: [{ '@type': 'Organization', name: author, url: new URL(AUTHOR.url, SITE.url).href }],
+        reviewedBy: reviewedBy
+          ? [{ '@type': 'Organization', name: reviewedBy }]
+          : undefined,
+        publisher: { '@id': `${SITE.url}/#organization` },
+        isAccessibleForFree: true,
+      }
+    : null;
+
+const faqSchema =
+  type === 'FAQPage' && faqs.length > 0
+    ? {
+        '@type': 'FAQPage',
+        '@id': `${canonical}#faq`,
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      }
+    : null;
+
+const softwareSchema =
+  type === 'SoftwareApplication'
+    ? {
+        '@type': 'WebApplication',
+        '@id': `${canonical}#app`,
+        name: 'HeatPumpAtlasUSA Switching Cost Calculator',
+        url: canonical,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Any modern web browser',
+        description,
+        isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        publisher: { '@id': `${SITE.url}/#organization` },
+      }
+    : null;
+
+const breadcrumbSchema =
+  breadcrumbs.length > 1
+    ? {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonical}#breadcrumbs`,
+        itemListElement: breadcrumbs.map((crumb, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: crumb.label,
+          item: crumb.href ? new URL(crumb.href, SITE.url).href : undefined,
+        })),
+      }
+    : null;
+
+const graph = [
+  webPageSchema,
+  articleSchema,
+  faqSchema,
+  softwareSchema,
+  breadcrumbSchema,
+].filter(Boolean);
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+{!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
+{primaryKeyword && <meta name="keywords" content={primaryKeyword} />}
+
+<meta property="og:type" content={type === 'Article' ? 'article' : 'website'} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={`${SITE.name}: ${title}`} />
+{published && <meta property="article:published_time" content={published.toISOString()} />}
+{updated && <meta property="article:modified_time" content={updated.toISOString()} />}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImage} />
+
+<meta name="theme-color" content="#10475a" />
+
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />

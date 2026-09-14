@@ -1,0 +1,13 @@
+{
+  "name": "HeatPumpAtlasUSA",
+  "short_name": "Heat Pump Atlas",
+  "description": "Data-driven heat pump costs, comparisons, rebates and switching economics for US homeowners.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f2",
+  "theme_color": "#10475a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

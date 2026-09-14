@@ -1,0 +1,299 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { COST_BANDS } from '@/data/costs';
+import { pickSources } from '@/data/sources';
+import { formatUsd } from '@/lib/calculator';
+
+const path = '/mini-split-cost/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Mini split cost', href: path },
+];
+
+const faqItems = [
+  {
+    question: 'How much does a mini split cost installed?',
+    answer:
+      'A single-zone ductless mini split runs roughly $2,800 to $8,500 installed. A multi-zone system with three to five indoor heads runs $6,500 to $20,000. The outdoor unit is shared in a multi-zone system, which is why the second and third heads cost less than the first but still add a real amount of labor and line set.',
+  },
+  {
+    question: 'Why is a mini split cheaper than a ducted heat pump for some houses?',
+    answer:
+      'Because it does not need ducts. If your house has steam radiators, baseboard heat or no ductwork at all, a ducted heat pump means building a duct system, which can add $3,000 to $12,000 and tear up finished space. A ductless system sidesteps that entirely. For a house that already has good ducts, the ducted system is more comfortable and usually cheaper per unit of capacity.',
+  },
+  {
+    question: 'How much does each additional zone cost?',
+    answer:
+      'In a multi-zone system, expect roughly $1,500 to $3,200 per additional indoor head including the line set and labor, with the number rising for long runs and for heads that need condensate pumped somewhere. Some contractors price per zone and some price the whole job, which is why quotes for the same three rooms can differ by $6,000.',
+  },
+  {
+    question: 'Do mini splits work in cold climates?',
+    answer:
+      'Cold-climate ductless units do. A standard mini split loses capacity as outdoor temperature drops and is usually paired with backup heat below roughly 5 degrees Fahrenheit. A cold-climate rated ductless unit keeps most of its rated capacity well below zero. If you are in New England, the upper Midwest or mountain states, specify the cold-climate rating and expect to pay for it.',
+  },
+  {
+    question: 'Do mini splits qualify for rebates?',
+    answer:
+      'Often yes, and sometimes on better terms than ducted systems, because many programs treat ductless as a measure that avoids duct losses. The rebate programs vary by state and some specifically exclude or cap ductless. The rebates hub tracks current status, and the calculator applies only the programs that are open in your state.',
+  },
+  {
+    question: 'Can I install a mini split myself?',
+    answer:
+      'There are DIY kits sold with pre-charged line sets, and they work for some homeowners. The catch is that a vacuum must be pulled on the line set and the system charged correctly, warranties often require a licensed installer, and a botched install will not be covered. On a $3,000 project the labor is usually a few hundred dollars, which is not where the risk-reward sits.',
+  },
+];
+
+const zoneColumns = [
+  { key: 'zones', label: 'Configuration' },
+  { key: 'capacity', label: 'Typical capacity', hideOnMobile: true },
+  { key: 'low', label: 'Low', numeric: true },
+  { key: 'high', label: 'High', numeric: true },
+  { key: 'best', label: 'Usually fits', hideOnMobile: true },
+];
+
+const zoneRows = [
+  { zones: '1 zone (single head)', capacity: '9k to 12k BTU', low: formatUsd(2800), high: formatUsd(8500), best: 'One room, garage, addition, or a first step' },
+  { zones: '2 zones', capacity: '18k to 24k BTU', low: formatUsd(5200), high: formatUsd(12000), best: 'Two bedrooms, or main floor plus a bonus room' },
+  { zones: '3 zones', capacity: '24k to 30k BTU', low: formatUsd(7200), high: formatUsd(16000), best: 'Typical main floor of an older home' },
+  { zones: '4 zones', capacity: '30k to 36k BTU', low: formatUsd(9500), high: formatUsd(18500), best: 'Whole small home, or a home without ducts' },
+  { zones: '5 or more zones', capacity: '36k to 48k BTU', low: formatUsd(12000), high: formatUsd(22000), best: 'Larger home or a house that needs two outdoor units' },
+];
+
+/** Cost breakdown for a typical three-zone project. */
+const breakdownColumns = [
+  { key: 'item', label: 'Line item' },
+  { key: 'share', label: 'Share of total', numeric: true },
+  { key: 'low', label: 'Low', numeric: true },
+  { key: 'high', label: 'High', numeric: true },
+];
+const breakdownRows = [
+  { item: 'Outdoor condenser, one unit', share: '25 to 35%', low: formatUsd(1800), high: formatUsd(5200) },
+  { item: 'Indoor heads, three units', share: '20 to 30%', low: formatUsd(1500), high: formatUsd(4500) },
+  { item: 'Line sets, three runs', share: '12 to 18%', low: formatUsd(900), high: formatUsd(2700) },
+  { item: 'Labor, mounting, commissioning', share: '20 to 30%', low: formatUsd(1500), high: formatUsd(4500) },
+  { item: 'Electrical and condensate', share: '5 to 12%', low: formatUsd(400), high: formatUsd(1800) },
+  { item: 'Permit', share: '1 to 3%', low: formatUsd(80), high: formatUsd(450) },
+];
+
+const citations = pickSources(['rewiringAmericaCosts', 'thisOldHouseCost', 'eiaElectricity', 'massSaveHeatPumps']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Mini Split Cost in 2026: Per-Zone Installed Prices"
+    description="A single-zone mini split costs $2,800 to $8,500 installed. Multi-zone systems run $6,500 to $20,000. See per-zone pricing, the cost breakdown, and when ductless beats ducted."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="mini split installation cost"
+  />
+
+  <PageHeader
+    eyebrow="Cost guide"
+    title="Mini split cost, by zone, without the per-room guesswork"
+    standfirst="Ductless pricing is not a function of square footage. It is a function of how many heads you need, how far the line sets run, and where the condensate goes."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '$2,800 to $8,500', label: 'Single-zone ductless mini split, installed, before incentives', source: 'Modelled from published 2026 pricing' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A single-zone ductless mini split, installed, costs about <strong>$2,800 to $8,500</strong>. A multi-zone
+              system with three to five indoor heads runs <strong>$6,500 to $20,000</strong>. The second head costs less
+              than the first because the outdoor unit is already there, but it is not free. Each additional head adds
+              roughly $1,500 to $3,200 in equipment, line set, labor and condensate routing.
+            </p>
+            <p>
+              If you are comparing this to a ducted heat pump, the honest framing is different. For a house that already
+              has good ductwork, ducted is usually cheaper and more comfortable. For a house with steam radiators,
+              baseboard heat or no ducts at all, ductless avoids a construction project that can cost more than the
+              equipment.
+            </p>
+          </div>
+
+          <Callout tone="note" title="Ductless is the most quote-sensitive job in HVAC" class="mt-6">
+            <p>
+              Because there is no equipment package that defines the scope, contractors price ductless very differently.
+              Two quotes for the same three rooms coming in at $8,000 and $17,000 is normal, and the gap is usually labor
+              and line set length, not the machines.
+            </p>
+          </Callout>
+        </section>
+
+        <Section
+          id="zones"
+          number="1"
+          title="Installed cost by number of zones"
+          lede="Match the row to your house, then get three quotes inside that band before you believe any single figure."
+        >
+          <DataTable
+            caption="US mini split installed cost by zone count, 2026"
+            columns={zoneColumns}
+            rows={zoneRows}
+            mobileLabelKey="zones"
+            note="Includes equipment, standard labor, line sets and a permit. Excludes a 200 amp panel upgrade, drywall repair, and very long line runs. Regional factors of 0.92 to 1.20 apply on top of these national bands."
+          />
+        </Section>
+
+        <Section
+          id="breakdown"
+          number="2"
+          title="Where the money goes on a three-zone job"
+          lede="This is the breakdown to ask a contractor for. If they cannot split their quote this way, ask why."
+        >
+          <DataTable
+            caption="Typical three-zone mini split cost breakdown"
+            columns={breakdownColumns}
+            rows={breakdownRows}
+            mobileLabelKey="item"
+            note="Shares are modelled from the national band structure, not from a survey of invoices. They are here to give you a shape to compare quotes against."
+          />
+        </Section>
+
+        <Section
+          id="ductless-vs-ducted"
+          number="3"
+          title="When ductless beats a ducted heat pump"
+          lede="This is the actual decision, and it usually comes down to whether ducts exist rather than which system is better in the abstract."
+        >
+          <div class="overflow-hidden rounded-lg border border-line">
+            <table class="w-full border-collapse text-sm">
+              <caption class="sr-only">Ductless versus ducted heat pump decision</caption>
+              <thead>
+                <tr class="bg-paper-deep">
+                  <th scope="col" class="border-b border-line-strong px-4 py-3 text-left font-semibold text-ink-900">Situation</th>
+                  <th scope="col" class="border-b border-line-strong px-4 py-3 text-left font-semibold text-ink-900">Better choice</th>
+                  <th scope="col" class="border-b border-line-strong px-4 py-3 text-left font-semibold text-ink-900">Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { s: 'Good existing ducts', c: 'Ducted heat pump', w: 'Lower cost per square foot, even temperatures, filters at one point' },
+                  { s: 'Steam or hot water radiators, no ducts', c: 'Ductless', w: 'Avoids a duct build that can exceed the equipment cost' },
+                  { s: 'Electric baseboard', c: 'Ductless', w: 'Easiest retrofit, biggest operating cost reduction per dollar' },
+                  { s: 'A cold room or addition', c: 'Ductless', w: 'One head solves one room without touching the central system' },
+                  { s: 'Energy efficiency in a cold climate', c: 'Either, specified correctly', w: 'Both have cold-climate ratings. Ductless avoids duct loss; ducted avoids low indoor humidity swings' },
+                  { s: 'Tight budget on a whole house', c: 'Often ducted', w: 'Multi-zone ductless for a whole house gets expensive quickly' },
+                ].map((row) => (
+                  <tr class="border-b border-line last:border-0">
+                    <th scope="row" class="px-4 py-3 text-left font-medium text-ink-900">{row.s}</th>
+                    <td class="px-4 py-3 text-ink-700 font-medium">{row.c}</td>
+                    <td class="px-4 py-3 text-ink-600">{row.w}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+
+        <Section
+          id="hidden"
+          number="4"
+          title="Three costs that show up after the contract"
+          lede="None of these are dishonest. They are hard to price until someone looks in the attic."
+        >
+          <div class="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                label: 'Condensate routing',
+                range: `${formatUsd(150, { compact: true })} to ${formatUsd(900, { compact: true })}`,
+                body: 'Each head produces water in cooling season. If gravity drainage is impossible, you need a pump and a route to a drain.',
+              },
+              {
+                label: 'Long line set runs',
+                range: `${formatUsd(400, { compact: true })} to ${formatUsd(1800, { compact: true })}`,
+                body: 'A head on the far side of a house needs more copper, more refrigerant and more labor. Distance is the splitter of mini split quotes.',
+              },
+              {
+                label: 'Panel capacity',
+                range: `${formatUsd(1400, { compact: true })} to ${formatUsd(5500, { compact: true })}`,
+                body: 'A 100 amp service may not carry a multi-zone outdoor unit alongside an electric range and dryer.',
+              },
+            ].map((item) => (
+              <div class="border-line bg-white rounded-lg border p-5">
+                <p class="text-ink-500 text-2xs font-medium tracking-wide uppercase">{item.label}</p>
+                <p class="text-ink-950 mt-2 font-serif text-lg font-medium">{item.range}</p>
+                <p class="text-ink-600 mt-2 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+
+        <Section
+          id="rebates"
+          number="5"
+          title="Rebates for ductless systems"
+          lede="Ductless is often treated differently from ducted in rebate programs, and sometimes more favourably."
+        >
+          <div class="prose-atlas">
+            <p>
+              Several state and utility programs treat ductless as a measure that avoids duct losses, which raises the
+              modelled efficiency and can raise the rebate. Others cap the number of heads or exclude ductless entirely.
+              The difference is worth checking before you choose a system type for pricing reasons rather than comfort
+              reasons.
+            </p>
+            <p>
+              We track the programs and their current status on the <a href="/rebates/">rebates hub</a>. The{' '}
+              <a href="/calculator/">calculator</a> applies only programs marked open, and it will deliberately understate
+              your total rather than show you money that is not there.
+            </p>
+          </div>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#zones', label: 'Cost by zones' },
+              { href: '#breakdown', label: 'Cost breakdown' },
+              { href: '#ductless-vs-ducted', label: 'Ductless vs ducted' },
+              { href: '#hidden', label: 'Hidden costs' },
+              { href: '#rebates', label: 'Rebates' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Ducted and cold-climate pricing' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'What it costs to run' },
+          { label: 'Panel upgrade cost', href: '/electrical-panel-upgrade-cost/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+/**
+ * Individual guide page.
+ */
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { getCollection, render } from 'astro:content';
+import type { NavItem } from '@/data/site';
+import { guideCover } from '@/data/guide-images';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides
+    .filter((g) => !g.data.draft)
+    .map((guide) => ({
+      params: { slug: guide.id },
+      props: { guide },
+    }));
+}
+
+const { guide } = Astro.props;
+const { Content, headings } = await render(guide);
+const d = guide.data;
+
+const path = `/guides/${guide.id}/`;
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Guides', href: '/guides/' },
+  { label: d.title, href: path },
+];
+
+const related = (d.related ?? []).map((href) => {
+  const label = href
+    .replace(/^\/|\/$/g, '')
+    .split('/')
+    .map((part) => part.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()))
+    .join(' ');
+  return { label, href } satisfies NavItem;
+});
+
+const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }));
+
+const cover = guideCover(guide.id);
+---
+
+<ArticleLayout
+  title={d.title}
+  description={d.description}
+  primaryKeyword={d.primaryKeyword}
+  updated={d.updated}
+  published={d.published}
+  reviewedBy={d.reviewedBy}
+  breadcrumbs={crumbs}
+  path={path}
+  citations={d.citations.map((c) => ({ ...c, primary: true }))}
+  faqs={faqItems}
+  keyStat={d.keyStat}
+  eyebrow="Guide"
+  standfirst={d.description}
+  related={{ siblings: related }}
+  headings={headings}
+  coverImage={cover.image}
+  coverAlt={cover.alt}
+>
+  <Content />
+</ArticleLayout>

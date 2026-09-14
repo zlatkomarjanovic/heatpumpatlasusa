@@ -1,0 +1,248 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { EFFICIENCY } from '@/data/costs';
+import { NATIONAL_AVERAGE } from '@/data/states';
+import { pickSources } from '@/data/sources';
+import { formatUsd } from '@/lib/calculator';
+
+const path = '/heat-pump-water-heater-cost/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Heat pump water heater cost', href: path },
+];
+
+const faqItems = [
+  {
+    question: 'How much does a heat pump water heater cost installed?',
+    answer:
+      'Expect roughly $1,800 to $5,200 installed for a 50 to 80 gallon hybrid unit, including standard labor and a permit. The unit itself is typically $1,200 to $3,000 depending on tank size, first-hour rating and brand. Tight spaces, a new dedicated circuit, or a condensate route that needs a pump all push the install toward the top of the range.',
+  },
+  {
+    question: 'Is a heat pump water heater worth it?',
+    answer:
+      'It depends on what you are replacing. Against an old electric resistance tank, it is one of the best returns in home energy: the same hot water for roughly a third of the electricity, with a payback that often lands in three to six years before incentives. Against a natural gas tank in a state with cheap gas and expensive electricity, the payback can be longer than the equipment lasts. Check your rates before assuming.',
+  },
+  {
+    question: 'Do heat pump water heaters qualify for rebates and tax credits?',
+    answer:
+      'Frequently yes, and often at better terms than larger projects, because the units are comparatively cheap and the measure is easy to verify. Many state programs and utilities list heat pump water heaters explicitly. The federal 25C credit that applied through 2025 is no longer available for equipment installed in 2026. Check the rebates hub for current programs in your state.',
+  },
+  {
+    question: 'Why does a heat pump water heater need space around it?',
+    answer:
+      'It works by moving heat from the surrounding air into the tank, so it needs a volume of air it can draw from, typically several hundred cubic feet. A small closet will not work without ducting. It also produces condensate and cools and dehumidifies the space around it, which is a benefit in a humid basement and a drawback in a tight conditioned closet.',
+  },
+  {
+    question: 'Does a heat pump water heater need a new electrical circuit?',
+    answer:
+      'Usually it can replace an existing electric water heater on the same circuit, since the draw is lower. If you are replacing a gas water heater, you may need a new 240 volt circuit, which is typically $350 to $1,200 depending on the run and the available panel capacity. There is also a 120 volt plug-in category now, which avoids the circuit work entirely at the cost of slower recovery.',
+  },
+  {
+    question: 'How does it perform in a cold climate?',
+    answer:
+      'A heat pump water heater in an unconditioned cold basement works, but at lower efficiency, because it is drawing from colder air. In a conditioned space it cools that space, which reduces its effective efficiency because you paid to heat that air. It also provides useful dehumidification, which is a genuine benefit in a damp basement. In a cold climate, the honest positioning is a moderate efficiency improvement over resistance rather than a dramatic one.',
+  },
+];
+
+const specColumns = [
+  { key: 'size', label: 'Tank size' },
+  { key: 'unit', label: 'Unit price', numeric: true },
+  { key: 'installed', label: 'Installed', numeric: true },
+  { key: 'fits', label: 'Usually fits', hideOnMobile: true },
+];
+const specRows = [
+  { size: '40 to 50 gallon', unit: `${formatUsd(1200)} to ${formatUsd(2200)}`, installed: `${formatUsd(1800)} to ${formatUsd(3800)}`, fits: 'One to three people' },
+  { size: '65 to 66 gallon', unit: `${formatUsd(1500)} to ${formatUsd(2600)}`, installed: `${formatUsd(2200)} to ${formatUsd(4300)}`, fits: 'Three to four people, most common choice' },
+  { size: '80 gallon', unit: `${formatUsd(1900)} to ${formatUsd(3200)}`, installed: `${formatUsd(2700)} to ${formatUsd(5200)}`, fits: 'Four or more people, or high simultaneous demand' },
+  { size: '120V plug-in unit', unit: `${formatUsd(1300)} to ${formatUsd(2000)}`, installed: `${formatUsd(1500)} to ${formatUsd(2900)}`, fits: 'Where a 240V circuit is not available' },
+];
+
+const savingsColumns = [
+  { key: 'old', label: 'Replacing' },
+  { key: 'annualOld', label: 'Old annual cost', numeric: true },
+  { key: 'annualNew', label: 'HPWH annual cost', numeric: true, emphasis: true },
+  { key: 'save', label: 'Saving / year', emphasis: true },
+  { key: 'payback', label: 'Payback', numeric: true },
+];
+const savingsRows = [
+  { old: 'Electric resistance tank', annualOld: formatUsd(570), annualNew: formatUsd(190), save: formatUsd(380), payback: '3 to 6 years' },
+  { old: 'Natural gas tank, cheap gas state', annualOld: formatUsd(260), annualNew: formatUsd(190), save: formatUsd(70), payback: '15+ years' },
+  { old: 'Natural gas tank, expensive power state', annualOld: formatUsd(320), annualNew: formatUsd(280), save: formatUsd(40), payback: '20+ years' },
+  { old: 'Propane tank', annualOld: formatUsd(720), annualNew: formatUsd(210), save: formatUsd(510), payback: '3 to 5 years' },
+];
+
+const citations = pickSources(['doeHomeUpgrades', 'energyStarTaxCredits', 'eiaElectricity', 'eiaGas', 'irs25c', 'massSaveHeatPumps']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump Water Heater Cost in 2026: Installed Prices and Real Payback"
+    description="A heat pump water heater costs $1,800 to $5,200 installed. See pricing by tank size, which situations pay back fast, and which ones do not pay back at all."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump water heater cost"
+  />
+
+  <PageHeader
+    eyebrow="Cost guide"
+    title="Heat pump water heater cost, and when it is the better first project"
+    standfirst="For a household on electric resistance hot water, this is often the highest-return efficiency upgrade available. For a household on cheap natural gas, it frequently is not. The difference is your rates."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: '$1,800 to $5,200', label: 'Installed heat pump water heater, 50 to 80 gallon, before incentives', source: 'Modelled from published 2026 pricing' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              A heat pump water heater, installed, costs about <strong>$1,800 to $5,200</strong> for a 50 to 80 gallon
+              unit. The equipment is $1,200 to $3,000 of that. The rest is labor, permit, and whatever the installation
+              site demands in terms of condensate handling, air volume and a possible new circuit.
+            </p>
+            <p>
+              It is one of the few energy upgrades with a genuinely short payback, but only if you are replacing electric
+              resistance or propane. Against cheap natural gas, the honest answer is that it usually does not pay back
+              inside the equipment's life. This page shows both cases rather than only the flattering one.
+            </p>
+          </div>
+          <Callout tone="modelled" title="A smaller project with the same operating logic" class="mt-6">
+            <p>
+              A water heater runs year-round, so its operating cost is easier to predict than space heating. That makes
+              the heat pump water heater a better first electrification project for many households than a heat pump
+              HVAC system, and a lower-risk way to find out whether you like the technology.
+            </p>
+          </Callout>
+        </section>
+
+        <Section id="pricing" number="1" title="Cost by tank size" lede="First-hour rating matters more than tank size. A larger tank with a heat pump can recover slower than you expect.">
+          <DataTable
+            caption="Heat pump water heater cost by tank size, 2026"
+            columns={specColumns}
+            rows={specRows}
+            mobileLabelKey="size"
+            note="Includes unit, standard install, permit and condensate handling. Excludes a new 240V circuit where one is not present, drywall work, and condensate pump installation where gravity drainage is not possible."
+          />
+        </Section>
+
+        <Section id="payback" number="2" title="Payback depends entirely on what you are replacing" lede="This is the table most guides leave out.">
+          <DataTable
+            caption="Annual operating cost and payback by incumbent water heater type"
+            columns={savingsColumns}
+            rows={savingsRows}
+            mobileLabelKey="old"
+            note="Modelled for a four-person household using roughly 60 gallons per day, at a national average electricity price of 18.34 cents per kWh and a seasonal coefficient of performance of 2.4 for the hybrid unit. Gas and propane priced on EIA and reference rates. Your rates will move these numbers."
+          />
+          <Callout tone="caution" title="The gas case is genuinely weak" class="mt-5">
+            <p>
+              If you heat water with cheap natural gas, a heat pump water heater is usually a comfort or dehumidification
+              decision rather than a financial one. We would rather tell you that than have you discover it after the
+              installation.
+            </p>
+          </Callout>
+        </Section>
+
+        <Section id="space" number="3" title="The installation constraint nobody mentions first" lede="It needs air, and it needs somewhere for the condensate to go.">
+          <div class="prose-atlas">
+            <p>
+              A heat pump water heater absorbs heat from the air around it, so it needs a large enough volume of air to
+              draw from, typically several hundred cubic feet. A small closed closet will not work without ducting, which
+              adds cost and complexity. A basement, garage or utility room usually does.
+            </p>
+            <p>
+              It also produces condensate, which has to drain somewhere, and it cools and dehumidifies the space around
+              it. In a humid basement that is a benefit. In a closet adjacent to living space it can make the room
+              noticeably cool. Check both before you buy.
+            </p>
+          </div>
+        </Section>
+
+        <Section id="electrical" number="4" title="Electrical requirements" lede="Often simpler than a heat pump installation, but not always free.">
+          <div class="prose-atlas">
+            <ul>
+              <li>
+                <strong>Replacing an electric resistance tank:</strong> usually a straight swap on the existing 240 volt
+                circuit, because the heat pump draws less current than the elements it replaces.
+              </li>
+              <li>
+                <strong>Replacing a gas tank:</strong> you need a circuit that may not exist. A new 240 volt run is
+                typically $350 to $1,200 depending on distance and panel capacity.
+              </li>
+              <li>
+                <strong>120 volt plug-in units:</strong> a newer category that runs on an ordinary outlet, avoiding the
+                circuit work entirely. The trade-off is slower recovery, which matters for larger households.
+              </li>
+            </ul>
+          </div>
+        </Section>
+
+        <Section id="rebates" number="5" title="Rebates and incentives">
+          <div class="prose-atlas">
+            <p>
+              Heat pump water heaters appear explicitly in many state and utility programs, and they are frequently
+              among the better-funded measures because efficiency programs can verify them easily. Some programs stack a
+              utility rebate with a state program.
+            </p>
+            <p>
+              The federal 25C credit, which covered these units through 2025, is no longer available for equipment
+              installed in 2026. Several pages have not caught up with that, including some government pages. Current
+              program status is tracked on the <a href="/rebates/">rebates hub</a>.
+            </p>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#pricing', label: 'Cost by size' },
+              { href: '#payback', label: 'Payback by replacement' },
+              { href: '#space', label: 'Space constraints' },
+              { href: '#electrical', label: 'Electrical needs' },
+              { href: '#rebates', label: 'Rebates' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'The HVAC project, priced' },
+          { label: 'Panel upgrade cost', href: '/electrical-panel-upgrade-cost/' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,333 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import DataTable from '@/components/DataTable.astro';
+import Callout from '@/components/Callout.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import Faq from '@/components/Faq.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import { STATE_BY_CODE, type StateRecord } from '@/data/states';
+import { EFFICIENCY, ENERGY_UNITS } from '@/data/costs';
+import { FUEL_REFERENCE } from '@/data/states';
+import { pickSources } from '@/data/sources';
+
+const path = '/heat-pump-vs-oil/';
+const updated = new Date('2026-09-14');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Heat pump vs oil', href: path },
+];
+
+const KWH_PER_MMBTU = 1_000_000 / 3412;
+
+/** Delivered heat cost per MMBtu: heat pump against an oil boiler or furnace. */
+function hpPerMmbBtu(state: StateRecord, cop: number, ductLoss: number) {
+  return ((state.electricityCentsPerKwh / 100) * KWH_PER_MMBTU) / (cop * (1 - ductLoss));
+}
+
+const OIL_COST_PER_MMBTU =
+  FUEL_REFERENCE.heatingOilDollarsPerGallon /
+  ((ENERGY_UNITS.kwhPerGallonOil * 3412 / 1_000_000) * EFFICIENCY.oilFurnace);
+
+const OIL_STATES = ['ME', 'VT', 'NH', 'MA', 'CT', 'RI', 'NY', 'PA', 'NJ', 'MD', 'DE', 'VA', 'WI', 'MN', 'MI', 'AK'];
+
+const columns = [
+  { key: 'state', label: 'State' },
+  { key: 'oilShare', label: 'Homes on oil', numeric: true },
+  { key: 'hp', label: 'Heat pump', numeric: true, emphasis: true },
+  { key: 'oil', label: 'Oil system', numeric: true },
+  { key: 'save', label: 'Saving per MMBtu', emphasis: true },
+  { key: 'pct', label: 'Cheaper', numeric: true },
+];
+
+const stateRows = OIL_STATES.map((code) => STATE_BY_CODE[code])
+  .filter((s): s is StateRecord => Boolean(s))
+  .map((s) => {
+    const hp = hpPerMmbBtu(s, EFFICIENCY.ashpColdClimate, EFFICIENCY.ductLossDucted);
+    const save = OIL_COST_PER_MMBTU - hp;
+    return {
+      state: s.name,
+      oilShare: `${Math.round(s.fuelOilShare * 100)}%`,
+      hp: `$${hp.toFixed(1)}`,
+      oil: `$${OIL_COST_PER_MMBTU.toFixed(1)}`,
+      save: `$${save.toFixed(1)}`,
+      pct: `${Math.round((save / OIL_COST_PER_MMBTU) * 100)}%`,
+    };
+  });
+
+const annualColumns = [
+  { key: 'home', label: 'Home type' },
+  { key: 'gallons', label: 'Oil use', numeric: true },
+  { key: 'oilAnnual', label: 'Oil cost / yr', numeric: true },
+  { key: 'hpAnnual', label: 'Heat pump / yr', numeric: true, emphasis: true },
+  { key: 'save', label: 'Saving / yr', emphasis: true },
+];
+
+/** Annual comparison for a Maine-grade climate at a Northeast power price. */
+const ME = STATE_BY_CODE['ME'];
+const HDD_FACTOR = 7826;
+function annualOilCost(gallons: number) {
+  return gallons * FUEL_REFERENCE.heatingOilDollarsPerGallon;
+}
+function annualHpCost(gallons: number) {
+  const deliveredMmbtu = gallons * (ENERGY_UNITS.kwhPerGallonOil * 3412) / 1_000_000 * EFFICIENCY.oilFurnace;
+  return deliveredMmbtu * hpPerMmbBtu(ME, EFFICIENCY.ashpColdClimate, EFFICIENCY.ductLossDucted);
+}
+
+const annualRows = [
+  { home: 'Small, well sealed, 1,000 sqft', gallons: 450 },
+  { home: 'Typical 1,500 to 1,800 sqft', gallons: 750 },
+  { home: 'Older 2,000 sqft, average envelope', gallons: 1050 },
+  { home: 'Large or leaky, 2,500 sqft plus', gallons: 1400 },
+].map((row) => {
+  const oil = annualOilCost(row.gallons);
+  const hp = annualHpCost(row.gallons);
+  return {
+    home: row.home,
+    gallons: `${row.gallons.toLocaleString()} gal`,
+    oilAnnual: `$${Math.round(oil).toLocaleString('en-US')}`,
+    hpAnnual: `$${Math.round(hp).toLocaleString('en-US')}`,
+    save: `$${Math.round(oil - hp).toLocaleString('en-US')}`,
+  };
+});
+
+const faqItems = [
+  {
+    question: 'Is a heat pump cheaper to run than oil heat?',
+    answer:
+      'Almost always, and usually by a wide margin. Heating oil delivered at around $3.60 a gallon and burned at 82 percent efficiency costs roughly $32 per million BTU of delivered heat. A cold-climate heat pump on Maine electricity at 29.6 cents per kilowatt hour costs roughly $14 per million BTU after duct losses. That is less than half. Even on the most expensive electricity in the country, oil loses.',
+  },
+  {
+    question: 'Why is the oil conversion case stronger than the gas conversion case?',
+    answer:
+      'Because oil is a more expensive way to buy heat than gas in nearly every market. Natural gas has become cheap in the US, which is why a gas furnace can beat a heat pump on running cost in states with expensive electricity. Heating oil has not followed, so the heat pump efficiency advantage translates directly into a bill reduction. The two comparisons genuinely have different answers, which is why we publish them separately.',
+  },
+  {
+    question: 'How much can I save per year switching from oil?',
+    answer:
+      'For a typical 1,500 to 1,800 square foot Maine home burning around 750 gallons a year, the annual saving in our model is roughly $6,000 across the oil versus heat pump difference at current prices. That is a large number because oil is an expensive fuel and the heat pump is roughly three times more efficient. The saving shrinks for smaller homes and grows for leakier ones. The calculator produces a specific figure using your own spend.',
+  },
+  {
+    question: 'Do I need to keep my oil system as backup?',
+    answer:
+      'Many Northeast households keep the oil boiler as a backup through the first winter, which is a reasonable hedge. It costs nothing to keep it, and it lets you verify the heat pump handles your coldest weeks before you remove anything. If your oil system is at the end of its life, the decision is simpler. If it is a newer condensing boiler, the money you save by keeping it running as a cold-weather backup can be worth the hassle.',
+  },
+  {
+    question: 'What breaks the oil case?',
+    answer:
+      'Three things. First, extremely cheap electricity, which exists in some Northwest markets but not in the Northeast. Second, an unusually efficient modern condensing oil boiler, which narrows but does not close the gap. Third, oversized equipment or a house with severe distribution problems, where the heat pump cannot deliver the heat where it is needed. In all three cases the case weakens, but in normal Northeast conditions oil rarely wins.',
+  },
+  {
+    question: 'What incentives apply to an oil conversion?',
+    answer:
+      'This is the strongest rebate situation in the country. Maine, Vermont, Massachusetts, Connecticut and New York all have substantial programs, and several of them pay more for whole-home conversions that remove the oil system entirely. Maine has historically paid up to $9,000 for low-income households. Program funding moves fast, which is why we track status rather than quoting permanent amounts. Check the rebates hub and verify before you commit.',
+  },
+];
+
+const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 'efficiencyMaineRebates', 'noaaHdd', 'epriCalculator']);
+---
+
+<BaseLayout>
+  <SEO
+    title="Heat Pump vs Oil Heat: Why the Northeast Conversion Pays Off"
+    description="Oil heat costs roughly $32 per million BTU delivered. A cold-climate heat pump costs about half that. See the state-by-state math and why oil loses where gas sometimes wins."
+    path={path}
+    type="Article"
+    breadcrumbs={crumbs}
+    updated={updated}
+    faqs={faqItems}
+    primaryKeyword="heat pump vs oil"
+  />
+
+  <PageHeader
+    eyebrow="Comparison"
+    title="Heat pump versus oil, the strongest conversion case in the country"
+    standfirst="Oil is the most expensive common way to heat a US home. That makes the Northeast the one region where the heat pump wins on operating cost almost regardless of what you pay for electricity."
+    breadcrumbs={crumbs}
+    updated={updated}
+    keyStat={{ value: 'About 50%', label: 'Running cost reduction switching from oil to a cold-climate heat pump in Maine', source: 'Modelled from EIA and NOAA data' }}
+  />
+
+  <div class="container-atlas py-10 lg:py-14">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <section id="answer" class="scroll-mt-24">
+          <h2 class="text-xl sm:text-2xl">The short answer</h2>
+          <div class="prose-atlas mt-4">
+            <p>
+              Yes, and by a wide margin. Heating oil at around ${FUEL_REFERENCE.heatingOilDollarsPerGallon.toFixed(2)} a
+              gallon burned at 82 percent efficiency costs roughly <strong>${OIL_COST_PER_MMBTU.toFixed(0)} per million
+              BTU</strong> of delivered heat. A cold-climate heat pump running on Maine electricity at{' '}
+              {ME.electricityCentsPerKwh.toFixed(1)} cents per kilowatt hour, after duct losses, costs roughly{' '}
+              <strong>${hpPerMmbBtu(ME, EFFICIENCY.ashpColdClimate, EFFICIENCY.ductLossDucted).toFixed(0)} per million
+              BTU</strong>.
+            </p>
+            <p>
+              That is less than half, in the most electricity-expensive state in the continental US. The comparison is
+              not close in the way the gas comparison is close. It is the reason Maine has the highest per-capita heat
+              pump adoption in the country despite having expensive power.
+            </p>
+          </div>
+
+          <Callout tone="note" title="Why this differs from the furnace comparison" class="mt-6">
+            <p>
+              Gas is cheap in the US and electricity is not, which is why the{' '}
+              <a href="/heat-pump-vs-furnace/">furnace comparison</a> is genuinely contested. Oil did not follow gas
+              prices down to the same degree, so the heat pump's efficiency advantage survives the price ratio. Same
+              machine, different incumbent, different result.
+            </p>
+          </Callout>
+        </section>
+
+        <Section
+          id="table"
+          number="1"
+          title="Cost per million BTU, oil states"
+          lede="Electricity price varies by state, but oil loses everywhere in this table because oil is expensive per unit of heat."
+        >
+          <DataTable
+            caption="Heat pump versus oil heat, cost per MMBtu delivered"
+            columns={columns}
+            rows={stateRows}
+            mobileLabelKey="state"
+            note="Heat pump at seasonal coefficient of performance 2.47 including 15% duct loss. Oil at 82% AFUE and $3.62 per gallon, the autumn 2026 reference price. Electricity is EIA residential June 2026. Oil share is Census ACS table B25040."
+          />
+        </Section>
+
+        <Section
+          id="annual"
+          number="2"
+          title="What that looks like on an annual bill"
+          lede="Modelled for a Maine-grade climate, using Maine's electricity price. Other Northeast states will be within 10 to 15 percent of these figures."
+        >
+          <DataTable
+            caption="Annual heating cost, oil versus heat pump, Maine climate"
+            columns={annualColumns}
+            rows={annualRows}
+            mobileLabelKey="home"
+            note="Oil consumption is a starting assumption per home size, not a measured figure. Use your own gallon usage or annual spend in the calculator for a specific number. Cooling is excluded, as is the value of the air conditioning the heat pump also provides."
+          />
+          <Callout tone="modelled" title="This is the number to verify against your own usage" class="mt-5">
+            <p>
+              If your oil company shows your annual gallons on the delivery slip, and most do, that is a far better input
+              than any table. Enter it in the calculator as annual spend and the model will calibrate to your actual
+              house.
+            </p>
+          </Callout>
+        </Section>
+
+        <Section
+          id="payback"
+          number="3"
+          title="The payback question"
+          lede="This is where the oil case becomes genuinely compelling rather than merely favourable."
+        >
+          <div class="prose-atlas">
+            <p>
+              A whole-home heat pump conversion in Maine costs roughly $12,000 to $26,000 installed. A replacement oil
+              boiler costs $6,000 to $12,000, so switching carries a real up-front premium. The difference is that the
+              heat pump produces a running cost saving large enough to matter.
+            </p>
+            <p>
+              At a modelled saving in the range of $1,500 to $3,500 per year for a typical home, and with Maine rebates
+              that can reach $9,000 for income-qualified households, payback frequently lands inside the equipment's
+              service life. That is a different conclusion from the gas states, where we often show no payback at all.
+              Run your own numbers, because the difference between a good decision and a bad one here is entirely in your
+              oil usage and your rebate tier.
+            </p>
+          </div>
+        </Section>
+
+        <Section
+          id="caveats"
+          number="4"
+          title="Three things that narrow or break the case"
+          lede="None of these are common in the Northeast, but they are real."
+        >
+          <ul class="space-y-4">
+            {[
+              { title: 'A modern condensing oil boiler', body: 'A newer, well-maintained boiler at 90 percent efficiency narrows the gap by about 10 percent. It does not close it, because the heat pump still delivers roughly three units of heat per unit of electricity.' },
+              { title: 'Distribution problems', body: 'If you heat with hydronic baseboard, a heat pump needs either ductwork or a high-temperature air-to-water system. That is a more expensive project than a forced-air conversion and the economics shift.' },
+              { title: 'Oversized equipment or a poor install', body: 'A badly sized heat pump will run on backup heat through the coldest weeks, which destroys the operating cost advantage. The install matters more than the price here.' },
+            ].map((item) => (
+              <li class="border-line bg-white rounded-lg border p-5">
+                <h3 class="text-ink-950 text-base font-semibold">{item.title}</h3>
+                <p class="text-ink-600 mt-2 text-sm leading-relaxed">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section
+          id="incentives"
+          number="5"
+          title="Incentives make the oil case stronger"
+          lede="The Northeast has both the best economics and the best-funded programs. That is unusual and it is worth using."
+        >
+          <div class="prose-atlas">
+            <p>
+              Maine, Vermont, Massachusetts, Connecticut, New York and Rhode Island all run substantial heat pump
+              programs, and several pay a premium for whole-home conversions that remove oil equipment entirely. Combined
+              with federal HEAR funding in states where it has launched, the up-front gap narrows substantially.
+            </p>
+            <p>
+              Program funding is the fragile part. Maine and Vermont both reached reservation limits and paused new
+              applications at points during their rollout. Verify status before scheduling work, and check whether your
+              program requires a reservation before installation, because applying afterward is not always allowed.
+            </p>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="/rebates/efficiency-maine/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Efficiency Maine
+            </a>
+            <a href="/rebates/mass-save/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Mass Save
+            </a>
+            <a href="/rebates/eversource/" class="border-line-strong text-ink-700 hover:bg-paper-deep inline-flex items-center rounded-md border bg-white px-4 py-2.5 text-sm font-semibold transition-colors">
+              Eversource
+            </a>
+          </div>
+        </Section>
+
+        <QuoteCta variant="inline" />
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#answer', label: 'The short answer' },
+              { href: '#table', label: 'Cost by state' },
+              { href: '#annual', label: 'Annual savings' },
+              { href: '#payback', label: 'Payback' },
+              { href: '#caveats', label: 'What breaks the case' },
+              { href: '#incentives', label: 'Incentives' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+      <Faq items={faqItems} />
+      <RelatedPages
+        siblings={[
+          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The contested comparison' },
+          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'All fuels compared' },
+          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
+        ]}
+        parents={[{ label: 'Calculator', href: '/calculator/' }]}
+      />
+      <SourceList sources={citations} updated={updated} />
+    </div>
+  </div>
+</BaseLayout>

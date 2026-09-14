@@ -1,0 +1,37 @@
+{
+  "estimated_us_organic_etv": {
+    "forbes.com": 8486806,
+    "energy.gov": 2503105,
+    "thumbtack.com": 1257314,
+    "angi.com": 750525,
+    "carrier.com": 479962,
+    "trane.com": 329428,
+    "homeguide.com": 256504,
+    "thisoldhouse.com": 209305,
+    "energysage.com": 147364,
+    "homewyse.com": 111253,
+    "bryant.com": 98261,
+    "modernize.com": 52476,
+    "porch.com": 23277,
+    "masssave.com": 16606,
+    "rewiringamerica.org": 14903,
+    "fixr.com": 14889,
+    "efficiencymaine.com": 6446,
+    "hvac.com": 5509,
+    "dsireusa.org": 3334,
+    "heatpumpnetwork.com": 31.6,
+    "electrifyatlas.com": 7.8,
+    "rebatepeek.com": 0.008,
+    "heatpumpcalculator.com": 0
+  },
+  "heat_pump_specific_notes": {
+    "rewiringamerica.org": "Only ~15k US ETV but owns several heat-pump cost/education URLs. Nonprofit calculator, no installer marketplace. 25C pages still live after expiry.",
+    "energysage.com": "147k ETV is mostly solar/electricity education. Heat pump marketplace exists. Mini-split and vs-AC pages rank, but not #1 on core cost terms.",
+    "homeguide.com": "256k ETV sitewide. Heat pump cost page is not dominating the 22k installation-cost SERP.",
+    "angi.com": "Lead marketplace. Already has city cost URLs such as /ma/boston and /co/denver. Wins more on near-me than on research queries.",
+    "masssave.com": "16.6k ETV and owns Massachusetts rebate demand.",
+    "heatpumpnetwork.com": "Almost no organic traffic yet. Already publishing 2026 rebate-by-state content.",
+    "electrifyatlas.com": "Almost no organic traffic. Already covering HEEHRA status.",
+    "oem_pages": "Bryant and Carrier rank with thin 2026 cost guides. Easy to beat on usefulness, harder on brand."
+  }
+}

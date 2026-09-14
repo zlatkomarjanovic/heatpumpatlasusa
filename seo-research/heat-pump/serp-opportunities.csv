@@ -1,0 +1,35 @@
+Keyword,Cluster,Volume,KD,CPC,SERP Weakness,AI Overview,Local Pack,Reddit/Forum,Wrong Country,Gov/OEM Dominant,Lead Marketplaces,Page Type Gap,Difficulty Band,Notes
+heat pump installation cost,national-cost,22200,9,9.97,9,yes,no,yes,yes,partial,no,ZIP cost+rebate calculator,EASY,Reddit #1; UK YouTube; local Denver contractor ranks nationally; HomeGuide absent from top 8
+heat pump cost,national-cost,5400,18,7.77,8,yes,no,yes,yes,partial,late,US-specific installed cost with local rates,EASY,Reddit #1; Carrier Canada page; HomeGuide only #8
+how much does a heat pump cost,national-cost,1900,4,5.62,8,yes,no,yes,yes,partial,no,same as national cost hub,EASY,Same weak pattern; UK video and Canadian Carrier
+heat pump cost calculator,calculator,720,,5.37,8,yes,no,no,no,no,no,national ZIP calculator,EASY,Utility/co-op tools and a pool calculator rank; no strong national consumer calculator
+heat pump savings calculator,calculator,110,3,5.4,8,no,no,yes,no,partial,no,operating-cost + payback tool,EASY,ENERGY STAR generic tool; rural co-op pages; Reddit
+heat pump installation cost calculator,calculator,210,,4.1,7,yes,no,no,no,no,no,installed-cost calculator,EASY,Same weak calculator SERP family
+mini split cost,mini-split,6600,8,4.02,8,yes,no,yes,no,partial,no,zone-based mini split calculator,EASY,Reddit #1; Della DIY store; local VA contractor; shopping units
+mini split installation cost,mini-split,12100,,9.63,8,yes,no,yes,no,partial,no,installed mini split by zones,EASY,Reddit #1; Facebook group; Home Depot service; Homewyse
+ductless mini split cost,mini-split,1000,5,4.1,7,yes,no,yes,no,partial,no,ductless vs ducted comparison,EASY,Overlaps mini split SERP
+heat pump vs furnace,comparison,6600,13,6.5,6,yes,no,yes,no,yes,no,local fuel-price comparison tool,MEDIUM,Carrier/Trane/Lennox plus Reddit and AGA gas-lobby page
+heat pump vs gas furnace,comparison,1600,6,3.03,6,yes,no,yes,no,yes,no,state-level operating cost,MEDIUM,OEM-heavy; Reddit #1; AGA claims gas wins in 36 states
+heat pump vs oil,comparison,low,, ,8,yes,no,yes,no,partial,no,Northeast oil-to-HP calculator,EASY,Reddit/Facebook/forums; EnergySage present; oil dealers rank
+heat pump electricity cost,operating,low,, ,8,yes,no,yes,no,no,no,ZIP kWh operating cost,EASY,Reddit/Facebook; personal blogs; EnergySage generic
+heat pump water heater cost,related,1300,,4.34,5,yes,no,yes,no,partial,no,HPWH cost+rebate page,MEDIUM,Rewiring America strong; Home Depot; CR; OEMs
+geothermal heat pump cost,related,1600,,4.7,6,yes,no,yes,no,yes,no,GSHP cost reality check,MEDIUM,Carrier/Bryant/EnergySage; local contractors; YouTube
+heat pump rebates,rebate-national,1900,43,7.84,4,yes,no,yes,no,yes,no,do not chase generic national rebate,HARD,Efficiency Maine and Mass Save steal national query; ENERGY STAR still pushes expired 25C
+heat pump tax credit,rebate-national,1900,34,8.05,3,yes,no,no,no,yes,no,expired-credit explainer only,HARD,IRS/ENERGY STAR/Rewiring America still rank for expired 25C; volume falling
+ira heat pump rebate,rebate-national,low,, ,3,yes,no,no,no,yes,no,state HEAR/HOMES status hub,HARD,.gov and state energy offices dominate
+mass save heat pump rebate,rebate-program,1900,2,13.85,2,no,no,yes,no,yes,no,supporting Mass Save explainer + calculator,HARD,Mass Save owns navigational SERP; local contractors can rank #7+
+heat pump rebates maine,rebate-state,880,,8.87,3,yes,no,yes,no,yes,no,Maine stack + quote CTA,HARD,Efficiency Maine / Maine.gov dominate; contractor blogs outdated
+heat pump rebates colorado,rebate-state,320,35,33.73,5,yes,no,no,no,yes,no,CO credit + Xcel stack,MEDIUM,State energy office and Xcel; contractor updates can rank
+heat pump rebates massachusetts,rebate-state,320,,14.39,3,yes,no,no,no,yes,no,MA cost after Mass Save,HARD,Program site gravity
+heat pump cost boston,geo-city,0-10,,,8,yes,likely,yes,no,no,yes,only if installer coverage exists,EASY,Reddit + local contractors + Angi city page; volume is the problem
+heat pump cost denver,geo-city,20,,9.66,7,yes,no,yes,no,no,yes,Denver launch market page,EASY,Local HVAC sites and Angi; 20 monthly searches
+heat pump cost seattle,geo-city,50,,8.85,6,yes,no,yes,no,no,no,Seattle launch market page,MEDIUM,Best city volume found; still tiny
+heat pump installer near me,local,6600,,24.03,2,no,yes,no,no,no,yes,do not target as SEO page,HARD,Local pack + Angi/HomeGuide/Lowe's; new domain will not win
+electrical panel upgrade cost,related,1900,6,10.31,8,yes,no,yes,no,no,no,panel + heat pump bundle,EASY,Reddit/Facebook/local electricians; Rewiring America #1
+furnace replacement cost,related,14800,13,9.53,6,yes,no,yes,no,yes,no,switch-vs-replace comparison,MEDIUM,Higher volume adjacent term; Carrier/Home Depot/Reddit
+cold climate heat pump,system,12100,22,5.55,5,yes,no,yes,no,yes,no,CCHP buyer guide + ZIP tool,MEDIUM,Reddit #1 but OEM glossary pages are strong
+xcel energy heat pump rebate,utility-rebate,480,18,1.74,6,no,no,no,no,partial,no,utility program explainer,MEDIUM,Program-brand search is the real geo opportunity
+eversource heat pump rebate,utility-rebate,210,13,7.79,6,yes,no,no,no,partial,no,utility program explainer,MEDIUM,Same pattern
+pge heat pump rebate,utility-rebate,210,7,5.97,6,yes,no,no,no,partial,no,utility program explainer,MEDIUM,Same pattern
+nyserda heat pump rebate,utility-rebate,110,16,6.43,5,yes,no,no,no,yes,no,NY Clean Heat explainer,MEDIUM,NYSERDA gravity
+efficiency maine heat pump rebate,rebate-program,720,18,6.36,3,yes,no,yes,no,yes,no,supporting calculator not homepage clone,HARD,Program site wins

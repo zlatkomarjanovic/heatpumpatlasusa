@@ -1,0 +1,73 @@
+---
+/**
+ * Market card for city and state pages.
+ *
+ * Shows the three figures that actually decide whether switching pays off in a
+ * place: electricity price, heating demand and whether incentive money is open.
+ */
+import type { StateRecord } from '@/data/states';
+
+interface Props {
+  name: string;
+  href: string;
+  state: StateRecord;
+  city?: string;
+  summary?: string;
+  routingLive?: boolean;
+  class?: string;
+}
+
+const { name, href, state, summary, routingLive = false, class: className = '' } = Astro.props;
+
+const rebateLabel: Record<StateRecord['homeEnergyRebateStatus'], { text: string; className: string }> = {
+  launched: { text: 'Rebate live', className: 'text-save-700 bg-save-50 border-save-100' },
+  enrolling: { text: 'Enrolling', className: 'text-flag-700 bg-flag-50 border-flag-100' },
+  planned: { text: 'Not launched', className: 'text-ink-500 bg-paper-deep border-line' },
+  reserved: { text: 'Reserved', className: 'text-heat-700 bg-heat-50 border-heat-100' },
+};
+
+const badge = rebateLabel[state.homeEnergyRebateStatus];
+
+const oilShare = Math.round(state.fuelOilShare * 100);
+const hddBand =
+  state.heatingDegreeDays >= 7000
+    ? 'Severe heating load'
+    : state.heatingDegreeDays >= 5000
+      ? 'Heavy heating load'
+      : state.heatingDegreeDays >= 3000
+        ? 'Moderate heating load'
+        : 'Light heating load';
+---
+
+<article class:list={['border-line shadow-card hover:shadow-lift flex h-full flex-col rounded-lg border bg-white p-5 transition-shadow', className]}>
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-ink-950 text-base font-semibold">
+      <a href={href} class="hover:text-brand-700 transition-colors">{name}</a>
+    </h3>
+    <span class:list={['shrink-0 rounded-full border px-2.5 py-1 text-2xs font-semibold whitespace-nowrap', badge.className]}>
+      {badge.text}
+    </span>
+  </div>
+
+  <dl class="mt-4 grid grid-cols-3 gap-3">
+    <div>
+      <dt class="text-ink-500 text-2xs">Electricity</dt>
+      <dd class="text-ink-950 mt-0.5 text-sm font-semibold tabular-nums">{state.electricityCentsPerKwh.toFixed(1)}&cent;</dd>
+    </div>
+    <div>
+      <dt class="text-ink-500 text-2xs">Heating load</dt>
+      <dd class="text-ink-950 mt-0.5 text-sm font-semibold tabular-nums">{state.heatingDegreeDays.toLocaleString()}</dd>
+    </div>
+    <div>
+      <dt class="text-ink-500 text-2xs">Oil heat</dt>
+      <dd class="text-ink-950 mt-0.5 text-sm font-semibold tabular-nums">{oilShare}%</dd>
+    </div>
+  </dl>
+
+  {summary && <p class="text-ink-600 mt-4 flex-1 text-sm leading-relaxed">{summary}</p>}
+
+  <p class="text-ink-500 border-line mt-4 border-t pt-3 text-2xs">
+    {hddBand}
+    {routingLive && <span class="text-save-700 ml-1.5 font-semibold">&middot; Installer routing live</span>}
+  </p>
+</article>

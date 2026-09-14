@@ -1,0 +1,166 @@
+---
+/**
+ * Layout for long-form editorial pages driven by a content collection entry.
+ *
+ * Renders the shared article chrome: header, body slot, FAQ, sources and related
+ * pages, plus Article schema through the SEO component.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SEO from '@/components/SEO.astro';
+import type { Breadcrumb } from '@/types/seo';
+import PageHeader from '@/components/PageHeader.astro';
+import Faq from '@/components/Faq.astro';
+import SourceList from '@/components/SourceList.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
+import RelatedPages from '@/components/RelatedPages.astro';
+import type { NavItem } from '@/data/site';
+import { Image } from 'astro:assets';
+import type { ImageMetadata, MarkdownHeading } from 'astro';
+
+interface Props {
+  title: string;
+  description: string;
+  primaryKeyword: string;
+  updated: Date;
+  published?: Date;
+  reviewedBy?: string;
+  breadcrumbs: Breadcrumb[];
+  path: string;
+  citations: { label: string; url: string; publisher?: string; supports?: string; primary?: boolean }[];
+  faqs: { question: string; answer: string }[];
+  keyStat?: { value: string; label: string; source?: string };
+  eyebrow?: string;
+  standfirst?: string;
+  related?: { parents?: NavItem[]; siblings?: NavItem[]; children?: NavItem[] };
+  /** Show the full quote CTA at the foot of the article. */
+  showQuoteCta?: boolean;
+  /** Markdown headings, used to auto-build the "On this page" table of contents. */
+  headings?: MarkdownHeading[];
+  /** Optional full-bleed cover image shown between the header and the body. */
+  coverImage?: ImageMetadata;
+  coverAlt?: string;
+}
+
+const {
+  title,
+  description,
+  primaryKeyword,
+  updated,
+  published,
+  reviewedBy,
+  breadcrumbs,
+  path,
+  citations,
+  faqs,
+  keyStat,
+  eyebrow,
+  standfirst,
+  related = {},
+  showQuoteCta = true,
+  headings = [],
+  coverImage,
+  coverAlt = '',
+} = Astro.props;
+
+/**
+ * Build the on-page table of contents from the article's H2s. If a page passes
+ * its own `toc` slot we defer to that; otherwise we render this list. When there
+ * are no H2s and no slot, the aside is dropped and the article runs full width.
+ */
+const tocItems = headings.filter((h) => h.depth === 2 && h.text.trim().length > 0);
+const hasSlotToc = Astro.slots.has('toc');
+const showToc = hasSlotToc || tocItems.length > 0;
+---
+
+<BaseLayout>
+  <SEO
+    title={title}
+    description={description}
+    path={path}
+    type="Article"
+    breadcrumbs={breadcrumbs}
+    published={published}
+    updated={updated}
+    reviewedBy={reviewedBy}
+    faqs={faqs}
+    primaryKeyword={primaryKeyword}
+  />
+
+  <PageHeader
+    eyebrow={eyebrow}
+    title={title}
+    standfirst={standfirst}
+    breadcrumbs={breadcrumbs}
+    updated={updated}
+    reviewedBy={reviewedBy}
+    keyStat={keyStat}
+    flush={Boolean(coverImage)}
+  />
+
+  {
+    coverImage && (
+      <div class="relative w-full overflow-hidden bg-ink-900">
+        <Image
+          src={coverImage}
+          alt={coverAlt}
+          widths={[768, 1280, 1920]}
+          sizes="100vw"
+          format="webp"
+          quality={72}
+          loading="eager"
+          fetchpriority="high"
+          class="h-[80vh] min-h-[22rem] w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-950/35 via-transparent to-transparent"></div>
+      </div>
+    )
+  }
+
+  <div class="container-atlas py-14 lg:py-28">
+    <div class={`grid gap-12 lg:gap-16 ${showToc ? 'lg:grid-cols-[minmax(0,1fr)_16rem]' : ''}`}>
+      <article class="prose-atlas min-w-0">
+        <slot />
+
+        {showQuoteCta && <QuoteCta variant="inline" class="my-10" />}
+      </article>
+
+      {
+        showToc && (
+          <aside class="lg:sticky lg:top-24 lg:h-fit">
+            <nav aria-label="On this page" class="border-line border-l pl-5">
+              <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+              <ul class="mt-3 space-y-2 text-sm">
+                {hasSlotToc ? (
+                  <slot name="toc" />
+                ) : (
+                  tocItems.map((h) => (
+                    <li>
+                      <a
+                        href={`#${h.slug}`}
+                        class="text-ink-600 hover:text-brand-700 block leading-snug transition"
+                      >
+                        {h.text}
+                      </a>
+                    </li>
+                  ))
+                )}
+              </ul>
+            </nav>
+          </aside>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="container-atlas">
+    <div class="mx-auto max-w-3xl space-y-12">
+      <Faq items={faqs} />
+      <RelatedPages
+        parents={related.parents}
+        siblings={related.siblings}
+        children={related.children}
+      />
+      {citations.length > 0 && <SourceList sources={citations} updated={updated} />}
+    </div>
+  </div>
+</BaseLayout>
