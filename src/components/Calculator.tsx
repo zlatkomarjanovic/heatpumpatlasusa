@@ -1057,7 +1057,7 @@ function LeadCapture({
           </button>
           {status === 'error' && (
             <p className="col-span-full text-xs text-flag-100">
-              Could not send just now. Email partners@heatpumpatlasusa.com and we will route it.
+              Could not send just now. Try again in a minute, or use the editorial contact on the About page.
             </p>
           )}
         </div>

@@ -13,7 +13,7 @@ import Faq from '@/components/Faq.astro';
 import SourceList from '@/components/SourceList.astro';
 import QuoteCta from '@/components/QuoteCta.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
-import { AUTHOR, SITE, type NavItem } from '@/data/site';
+import { AUTHOR, type NavItem } from '@/data/site';
 import KeywordCluster from '@/components/KeywordCluster.astro';
 import { Image } from 'astro:assets';
 import type { ImageMetadata, MarkdownHeading } from 'astro';
@@ -140,8 +140,8 @@ const showToc = hasSlotToc || tocItems.length > 0;
               </time>
             </>
           )}
-          . Sources are listed below. If a figure looks wrong, email{' '}
-          <a href={`mailto:${SITE.email}`} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{SITE.email}</a>.
+          . Sources are listed below. If a figure looks wrong,{' '}
+          <a href="/about/#contact" class="text-brand-700 underline decoration-brand-200 underline-offset-2">contact editorial</a>.
         </p>
 
         {showQuoteCta && <QuoteCta variant="inline" class="my-10" />}

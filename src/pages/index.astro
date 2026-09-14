@@ -91,11 +91,11 @@ const marketCards = [
 /** Primary content hubs, each mapped to measured US search demand. */
 const hubs = [
   { href: '/heat-pump-cost/', title: 'Heat pump cost', body: 'Installed cost to install a heat pump for ducted, cold-climate, ductless and geothermal systems, with what pushes each project above the band.', meta: '22,200 monthly US searches', icon: 'dollar' },
-  { href: '/mini-split-cost/', title: 'Mini split cost', body: 'Ductless mini split cost per zone, and why two quotes for the same three rooms can differ by $6,000.', meta: '12,100 monthly US searches', icon: 'split' },
+  { href: '/mini-split-cost/', title: 'Mini split installation cost', body: 'Ductless mini split cost per zone, and why two quotes for the same three rooms can differ by $6,000.', meta: '12,100 monthly US searches', icon: 'split' },
   { href: '/heat-pump-vs-furnace/', title: 'Heat pump vs furnace', body: 'Heat pump vs gas furnace modelled ZIP by ZIP, including the states where the furnace actually wins on running cost.', meta: '8,200 combined searches', icon: 'flame' },
   { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'Northeast oil-to-heat-pump conversion economics, where the operating cost case is strongest in the country.', meta: 'Highest switching pressure', icon: 'droplet' },
-  { href: '/heat-pump-operating-cost/', title: 'Operating cost', body: 'Heat pump operating cost per year by state electricity price, climate and the fuel you burn today.', meta: 'Rates from EIA', icon: 'bolt' },
-  { href: '/rebates/', title: 'Rebates and programs', body: 'Which heat pump rebates are actually open right now, and which ones have quietly run out of money.', meta: 'Verified program by program', icon: 'gift' },
+  { href: '/heat-pump-operating-cost/', title: 'Heat pump operating cost', body: 'Heat pump operating cost per year by state electricity price, climate and the fuel you burn today.', meta: 'Rates from EIA', icon: 'bolt' },
+  { href: '/rebates/', title: 'Heat pump rebates', body: 'Which heat pump rebates are actually open right now, and which ones have quietly run out of money.', meta: 'Verified program by program', icon: 'gift' },
 ];
 
 const steps = [
@@ -114,7 +114,13 @@ const comparisons = [
   { href: '/guides/dual-fuel-heat-pumps/', title: 'Dual fuel vs heat pump only', body: 'Keeping the furnace as backup, and when that pays.' },
 ];
 
-const dataSources = ['EIA energy prices', 'NOAA climate', 'US Census housing', 'NREL ResStock', 'Verified rebate programs'];
+const dataSources = [
+  { label: 'EIA energy prices', href: 'https://www.eia.gov/electricity/monthly/' },
+  { label: 'NOAA climate', href: 'https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/' },
+  { label: 'US Census housing', href: 'https://data.census.gov/table?q=B25040' },
+  { label: 'NREL ResStock', href: 'https://resstock.nrel.gov/' },
+  { label: 'ENERGY STAR', href: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source' },
+];
 
 const guides = (await getCollection('guides'))
   .filter((g) => !g.data.draft)
@@ -149,8 +155,8 @@ const homeFaqs = [
 
 <BaseLayout heroOverlay>
   <SEO
-    title="Heat Pump Cost (2026)"
-    description="Heat pump cost in the US: $9,500 to $22,000 installed for a typical ducted system. Free calculator for installation cost, operating cost, open rebates and payback by ZIP."
+    title="Heat Pump Cost 2026: Prices, Rebates"
+    description="Heat pump cost in the US is $9,500 to $22,000 installed. Free calculator for installation cost, rebates, and payback by ZIP."
     path={path}
     type="WebPage"
     updated={updated}
@@ -243,8 +249,16 @@ const homeFaqs = [
       <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center sm:gap-7">
         <p class="text-2xs font-semibold tracking-wider text-ink-500 uppercase">Every number traces to public data</p>
         <ul class="flex flex-wrap justify-center gap-2.5">
-          {dataSources.map((label) => (
-            <li class="rounded-full bg-paper px-3.5 py-1.5 text-xs font-medium text-ink-700 ring-1 ring-line">{label}</li>
+          {dataSources.map((source) => (
+            <li>
+              <a
+                href={source.href}
+                rel="noopener"
+                class="rounded-full bg-paper px-3.5 py-1.5 text-xs font-medium text-ink-700 ring-1 ring-line transition-colors hover:bg-brand-50 hover:text-brand-800 hover:ring-brand-300"
+              >
+                {source.label}
+              </a>
+            </li>
           ))}
         </ul>
       </div>
@@ -301,7 +315,7 @@ const homeFaqs = [
     <!-- How the model works -->
     <Section
       id="how-it-works"
-      title="How the switching calculator works"
+      title="Heat pump cost calculator, step by step"
       lede="A deterministic model, not a lead funnel. The same code that runs in your browser is documented in full, so you can check every number instead of trusting it."
       class="reveal-on-scroll"
     >
@@ -325,7 +339,7 @@ const homeFaqs = [
       <div class="grid gap-0 lg:grid-cols-2">
         <div class="order-2 flex flex-col justify-center p-8 sm:p-10 lg:order-1 lg:p-12">
           <p class="text-2xs font-semibold tracking-wider text-brand-700 uppercase">Ductless mini splits</p>
-          <h2 class="mt-3 text-2xl sm:text-3xl">No ducts? A mini split is usually the cheapest way in.</h2>
+          <h2 class="mt-3 text-2xl sm:text-3xl">Mini split cost when you have no ducts</h2>
           <p class="mt-4 leading-relaxed text-ink-600">
             A single-zone ductless mini split heats and cools one room from roughly $2,800 to $8,500 installed. Multi-zone
             systems scale by the number of indoor heads, which is where quotes diverge most. We price it per zone so you
@@ -358,7 +372,7 @@ const homeFaqs = [
     <!-- Hubs -->
     <Section
       id="guides"
-      title="Start with the question you actually have"
+      title="Heat pump cost, rebates and comparisons"
       lede="Each hub is built around a search demand we measured, from heat pump cost to mini split cost to heat pump vs furnace, and each one links back to the calculator so a national range becomes a local number."
       class="reveal-on-scroll"
     >
@@ -386,7 +400,7 @@ const homeFaqs = [
       <div class="grid gap-0 lg:grid-cols-2">
         <div class="p-8 sm:p-10 lg:p-12">
           <p class="text-xs font-semibold tracking-wider text-brand-200 uppercase">Cold climate heat pumps</p>
-          <h2 class="mt-3 text-2xl text-white sm:text-3xl">Yes, they work below freezing. The question is what they cost to run.</h2>
+          <h2 class="mt-3 text-2xl text-white sm:text-3xl">Do heat pumps work in cold weather? Yes. The question is running cost.</h2>
           <p class="mt-4 leading-relaxed text-white/70">
             Modern cold-climate heat pumps hold capacity into the low teens Fahrenheit and below. The real decision is
             economic: against cheap natural gas the furnace can still win, while against oil and propane the heat pump
@@ -419,7 +433,7 @@ const homeFaqs = [
     <!-- Compare -->
     <Section
       id="compare"
-      title="Compare a heat pump to the system you have"
+      title="Heat pump vs furnace, oil and more"
       lede="Six head-to-head breakdowns, each one modelled rather than assumed, including the cases where staying put is the cheaper answer."
       class="reveal-on-scroll"
     >
@@ -454,7 +468,7 @@ const homeFaqs = [
     <!-- States -->
     <Section
       id="states"
-      title="Where switching pressure is highest"
+      title="Heat pump cost by state"
       lede="Ranked by a blend of cold-weather heating load, how much of the state still burns oil, and what electricity costs. These are the states where a heat pump project is most likely to be worth modelling."
       class="reveal-on-scroll"
     >
@@ -476,7 +490,7 @@ const homeFaqs = [
     {guides.length > 0 && (
       <Section
         id="guide-library"
-        title="Guides that answer the big questions"
+        title="Heat pump guides: worth it, sizing and bills"
         lede="Long-form, sourced and updated. These are the plain-English answers people search for before they ever ask a contractor."
         class="reveal-on-scroll"
       >

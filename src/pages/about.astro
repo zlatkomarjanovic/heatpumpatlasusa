@@ -117,12 +117,28 @@ const crumbs = [
       </div>
 
       <Callout tone="note" title="Get in touch">
-        <p>
-          Corrections, data questions, and installer partnership enquiries all go to{' '}
-          <a href={`mailto:${SITE.email}`} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{SITE.email}</a>.
-          If you are a contractor and want to be considered for a market, tell us which ZIP codes you cover and how you
-          handle heat pump sizing.
+        <p id="contact">
+          Corrections, data questions, and installer partnership enquiries go to the editorial desk. Use the button
+          below. If you are a contractor and want to be considered for a market, tell us which ZIP codes you cover and
+          how you handle heat pump sizing.
         </p>
+        <p class="mt-3">
+          <a
+            href="/about/#contact"
+            data-contact
+            data-user="editor"
+            data-domain={SITE.domain}
+            class="text-brand-700 underline decoration-brand-200 underline-offset-2"
+          >
+            Email editorial
+          </a>
+        </p>
+        <script>
+          const link = document.querySelector<HTMLAnchorElement>('a[data-contact]');
+          if (link?.dataset.user && link.dataset.domain) {
+            link.href = `mailto:${link.dataset.user}@${link.dataset.domain}`;
+          }
+        </script>
       </Callout>
 
       <RelatedPages

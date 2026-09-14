@@ -24,6 +24,14 @@ export const SITE = {
   indexNowKey: '7c4e9a2b8f1d6e0a3c5b9d4f8a2e1c70',
 } as const;
 
+/** Public profiles linked in the footer and Organization sameAs. */
+export const SOCIAL_PROFILES = [
+  { label: 'GitHub', href: 'https://github.com/zlatkomarjanovic/heatpumpatlasusa' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/zlajaa2000.bsky.social' },
+  { label: 'Mastodon', href: 'https://mastodon.social/@zlajaa2000' },
+  { label: 'DEV', href: 'https://dev.to/zlatko_marjanovic_a206f1e' },
+] as const;
+
 /**
  * Primary navigation. Kept short on purpose: hub pages only.
  * `children` renders as a dropdown on desktop and an expandable group on mobile.

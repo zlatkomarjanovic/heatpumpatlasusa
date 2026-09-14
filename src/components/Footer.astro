@@ -1,5 +1,5 @@
 ---
-import { FOOTER_NAV, SITE } from '@/data/site';
+import { FOOTER_NAV, SITE, SOCIAL_PROFILES } from '@/data/site';
 import { KEYWORD_GROUPS } from '@/data/keyword-map';
 
 const year = new Date().getFullYear();
@@ -39,7 +39,11 @@ const year = new Date().getFullYear();
           </div>
           <div class="flex gap-2">
             <dt class="font-medium text-ink-300">Contact</dt>
-            <dd><a href={`mailto:${SITE.email}`} class="hover:text-brand-200 underline decoration-ink-700 underline-offset-2">{SITE.email}</a></dd>
+            <dd>
+              <a href="/about/#contact" class="hover:text-brand-200 underline decoration-ink-700 underline-offset-2">
+                Editorial desk
+              </a>
+            </dd>
           </div>
         </dl>
       </div>
@@ -86,6 +90,11 @@ const year = new Date().getFullYear();
         contract.
       </p>
       <ul class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-ink-400">
+        {SOCIAL_PROFILES.map((profile) => (
+          <li>
+            <a href={profile.href} rel="noopener me" class="hover:text-brand-200 transition-colors">{profile.label}</a>
+          </li>
+        ))}
         <li><a href="/methodology/" class="hover:text-brand-200 transition-colors">Methodology</a></li>
         <li><a href="/about/" class="hover:text-brand-200 transition-colors">About</a></li>
         <li><a href="/sitemap-index.xml" class="hover:text-brand-200 transition-colors">Sitemap</a></li>
