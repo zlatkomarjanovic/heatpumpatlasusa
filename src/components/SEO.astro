@@ -10,6 +10,7 @@
  */
 import { SITE, AUTHOR } from '@/data/site';
 import type { Breadcrumb, SchemaType } from '@/types/seo';
+import { keywordFor, relatedKeywords } from '@/data/keyword-map';
 
 interface Props {
   title: string;
@@ -29,9 +30,11 @@ interface Props {
   isHub?: boolean;
   /** Suppress indexing for genuinely thin pages. */
   noindex?: boolean;
-  /** Primary search keyword, used only for internal tracking comments. */
+  /** Primary search keyword. Also used in schema about/keywords. */
   primaryKeyword?: string;
   citations?: { label: string; url: string; publisher?: string; supports?: string }[];
+  howTo?: { name: string; steps: { name: string; text: string }[] };
+  itemList?: { name: string; items: { name: string; url: string }[] };
 }
 
 const {
@@ -50,10 +53,15 @@ const {
   noindex = false,
   primaryKeyword,
   citations = [],
+  howTo,
+  itemList,
 } = Astro.props;
 
 const canonical = new URL(path, SITE.url).href;
 const socialImage = new URL(image, SITE.url).href;
+const resolvedKeyword = primaryKeyword ?? keywordFor(path);
+const related = relatedKeywords(path);
+const keywordList = [resolvedKeyword, ...related.map((r) => r.keyword)].filter(Boolean) as string[];
 
 /**
  * Title assembly.
@@ -66,9 +74,9 @@ const BRAND_SUFFIX = ` | ${SITE.name}`;
 const fullTitle =
   title.includes(SITE.name)
     ? title
-    : title.length + BRAND_SUFFIX.length <= 60
-      ? `${title}${BRAND_SUFFIX}`
-      : title;
+    : title.length + BRAND_SUFFIX.length <= 62
+    ? `${title}${BRAND_SUFFIX}`
+    : title;
 
 const webPageSchema = {
   '@type': isHub || type === 'CollectionPage' ? 'CollectionPage' : type === 'AboutPage' ? 'AboutPage' : 'WebPage',
@@ -86,10 +94,24 @@ const webPageSchema = {
   },
   publisher: { '@id': `${SITE.url}/#organization` },
   author: { '@id': `${SITE.url}/#organization` },
-  about: { '@id': `${SITE.url}/#organization` },
   isAccessibleForFree: true,
   datePublished: published?.toISOString(),
   dateModified: (updated ?? published)?.toISOString(),
+  keywords: keywordList.length ? keywordList.join(', ') : undefined,
+  about: resolvedKeyword
+    ? { '@type': 'Thing', name: resolvedKeyword }
+    : { '@id': `${SITE.url}/#organization` },
+  mentions: related.length
+    ? related.map((r) => ({
+        '@type': 'Thing',
+        name: r.keyword,
+        url: new URL(r.href, SITE.url).href,
+      }))
+    : undefined,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '[data-speakable]'],
+  },
 };
 
 const articleSchema =
@@ -136,6 +158,12 @@ const articleSchema =
         publishingPrinciples: `${SITE.url}/methodology/`,
         isAccessibleForFree: true,
         publisher: { '@id': `${SITE.url}/#organization` },
+        keywords: keywordList.length ? keywordList.join(', ') : undefined,
+        about: resolvedKeyword ? { '@type': 'Thing', name: resolvedKeyword } : undefined,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', '[data-speakable]'],
+        },
       }
     : null;
 
@@ -182,12 +210,44 @@ const breadcrumbSchema =
       }
     : null;
 
+const howToSchema = howTo
+  ? {
+      '@type': 'HowTo',
+      '@id': `${canonical}#howto`,
+      name: howTo.name,
+      description,
+      step: howTo.steps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+      })),
+    }
+  : null;
+
+const itemListSchema = itemList
+  ? {
+      '@type': 'ItemList',
+      '@id': `${canonical}#itemlist`,
+      name: itemList.name,
+      numberOfItems: itemList.items.length,
+      itemListElement: itemList.items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: new URL(item.url, SITE.url).href,
+      })),
+    }
+  : null;
+
 const graph = [
   webPageSchema,
   articleSchema,
   faqSchema,
   softwareSchema,
   breadcrumbSchema,
+  howToSchema,
+  itemListSchema,
 ].filter(Boolean);
 ---
 
@@ -200,7 +260,7 @@ const graph = [
 )}
 <meta name="author" content={author} />
 <meta name="publisher" content={SITE.name} />
-{primaryKeyword && <meta name="keywords" content={primaryKeyword} />}
+{keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 
 <meta property="og:type" content={type === 'Article' ? 'article' : 'website'} />
 <meta property="og:site_name" content={SITE.name} />

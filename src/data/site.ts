@@ -12,7 +12,7 @@ export const SITE = {
   url: 'https://heatpumpatlasusa.com',
   tagline: 'Data-driven heat pump costs, comparisons, rebates and switching economics for US homeowners.',
   description:
-    'Model installed heat pump and mini split costs, compare operating costs against your current fuel, check which rebates are actually open, and see whether switching pays off where you live.',
+    'Heat pump installation cost, mini split prices, operating cost by state, open heat pump rebates, and a free calculator that models whether switching pays off where you live.',
   locale: 'en-US',
   email: 'editor@heatpumpatlasusa.com',
   /** Bump when the underlying dataset is refreshed. Surfaced on methodology and in schema. */
@@ -100,12 +100,12 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
   {
     title: 'Costs',
     links: [
-      { label: 'Heat pump cost', href: '/heat-pump-cost/' },
-      { label: 'Mini split cost', href: '/mini-split-cost/' },
-      { label: 'Operating cost', href: '/heat-pump-operating-cost/' },
+      { label: 'Heat pump installation cost', href: '/heat-pump-cost/' },
+      { label: 'Mini split installation cost', href: '/mini-split-cost/' },
+      { label: 'Heat pump operating cost', href: '/heat-pump-operating-cost/' },
       { label: 'Heat pump water heater cost', href: '/heat-pump-water-heater-cost/' },
       { label: 'Electrical panel upgrade cost', href: '/electrical-panel-upgrade-cost/' },
-      { label: 'Cost calculator', href: '/calculator/' },
+      { label: 'Heat pump cost calculator', href: '/calculator/' },
     ],
   },
   {
@@ -121,12 +121,12 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
   {
     title: 'Rebates',
     links: [
-      { label: 'All programs', href: '/rebates/' },
-      { label: 'Federal tax credit status', href: '/heat-pump-tax-credit/' },
-      { label: 'Mass Save (MA)', href: '/rebates/mass-save/' },
-      { label: 'Efficiency Maine (ME)', href: '/rebates/efficiency-maine/' },
-      { label: 'Xcel Energy (CO)', href: '/rebates/xcel-energy/' },
-      { label: 'Eversource', href: '/rebates/eversource/' },
+      { label: 'Heat pump rebates', href: '/rebates/' },
+      { label: 'Heat pump tax credit', href: '/heat-pump-tax-credit/' },
+      { label: 'Mass Save heat pump rebate', href: '/rebates/mass-save/' },
+      { label: 'Efficiency Maine heat pump rebate', href: '/rebates/efficiency-maine/' },
+      { label: 'Xcel Energy heat pump rebate', href: '/rebates/xcel-energy/' },
+      { label: 'Eversource heat pump rebate', href: '/rebates/eversource/' },
     ],
   },
   {

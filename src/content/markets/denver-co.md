@@ -1,6 +1,6 @@
 ---
-title: 'Heat Pumps in Denver, CO: Costs and the Three-Program Stack'
-description: Denver heat pump costs, Xcel and Colorado HEAR rebates, the state tax credit, and why cheap Colorado gas makes the operating cost case contested.
+title: 'Heat Pump Cost in Denver, CO (2026)'
+description: 'Heat pump cost in Denver, Xcel Energy heat pump rebate stacking, Colorado HEAR, the state tax credit, and why cheap Colorado gas makes the operating cost case contested.'
 primaryKeyword: 'heat pump cost denver'
 stateCode: CO
 city: Denver

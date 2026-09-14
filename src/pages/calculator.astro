@@ -63,6 +63,11 @@ const citations = pickSources([
 
 const faqs = [
   {
+    question: 'What does the heat pump cost calculator include?',
+    answer:
+      'It models heat pump installation cost, heat pump operating cost against your current fuel, only the heat pump rebates we have verified as open, and a 10-year total with simple payback. Enter a ZIP, floor area and fuel to get a local range.',
+  },
+  {
     question: 'How accurate is this calculator?',
     answer:
       'It is accurate about energy economics and approximate about contractor pricing. Electricity prices, climate and fuel comparisons come from published federal data, so those figures are reliable within a few percent. Installed cost is a modelled regional range and can be off by 30 percent in either direction, because two contractors bidding the same job routinely differ by that much. If you enter your actual annual heating spend, the operating cost estimate tightens considerably.',
@@ -94,20 +99,33 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Cost Calculator: Installed Cost, Running Cost and Payback"
-    description="Enter your ZIP, floor area and current fuel to model installed heat pump cost, annual operating cost, open rebates, 10-year totals and payback. Uses EIA and NOAA data."
+    title="Heat Pump Cost Calculator"
+    description="Free heat pump cost calculator: enter ZIP, floor area and current fuel to model heat pump installation cost, operating cost, open rebates, 10-year totals and payback."
     path={path}
     type="SoftwareApplication"
     breadcrumbs={crumbs}
     updated={updated}
     faqs={faqItems}
     primaryKeyword="heat pump cost calculator"
+    howTo={{
+      name: 'How to use the heat pump cost calculator',
+      steps: [
+        { name: 'Enter your ZIP', text: 'ZIP sets your electricity price, climate and which heat pump rebates apply.' },
+        { name: 'Add the house details', text: 'Floor area, current fuel, ducts and panel size set the installed cost and load.' },
+        { name: 'Read the estimate', text: 'The calculator returns heat pump installation cost, operating cost, open rebates and 10-year payback.' },
+      ],
+    }}
   />
 
   <div class="container-atlas pt-6 pb-10 lg:pt-8 lg:pb-14">
     <div class="mx-auto max-w-5xl">
       <div class="mb-5">
         <Breadcrumbs items={crumbs} />
+        <h1 class="mt-4 text-3xl sm:text-4xl">Heat pump cost calculator</h1>
+        <p class="text-ink-600 mt-3 max-w-2xl text-base leading-relaxed" data-speakable>
+          A free heat pump cost calculator for US homes. It models heat pump installation cost, heat pump operating
+          cost, and only the heat pump rebates that are actually open in your state.
+        </p>
       </div>
       <Calculator client:load />
 
@@ -195,9 +213,9 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
         <RelatedPages
           compact
           siblings={[
-            { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Full installed cost breakdown' },
-            { label: 'Mini split cost', href: '/mini-split-cost/', description: 'Per-zone ductless pricing' },
-            { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
+            { label: 'Heat pump installation cost', href: '/heat-pump-cost/', description: 'Full installed cost breakdown' },
+            { label: 'Mini split installation cost', href: '/mini-split-cost/', description: 'Per-zone ductless pricing' },
+            { label: 'Heat pump operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
             { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The comparison model, explained' },
           ]}
         />

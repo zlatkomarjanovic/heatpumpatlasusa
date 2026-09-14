@@ -1,6 +1,6 @@
 ---
-title: 'Ducted vs Ductless Heat Pump: Which One Your House Actually Wants'
-description: Ducted is cheaper if you already have good ducts. Ductless avoids thousands in duct work if you do not. Here is how to tell which fits your house and budget.
+title: 'Ducted vs Ductless Heat Pump'
+description: 'Ducted vs ductless heat pump: ducted is cheaper if you already have good ducts. Ductless avoids thousands in duct work if you do not. Here is how to tell which fits your house and budget.'
 primaryKeyword: 'ducted vs ductless heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

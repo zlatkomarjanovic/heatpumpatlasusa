@@ -1,6 +1,6 @@
 ---
-title: 'Heat Pump vs Pellet Stove: Cost, Comfort and Effort'
-description: A pellet stove is cheap heat if you can source cheap pellets and do the work. A heat pump is hands-off whole-home heating and cooling. Here is how the two really compare.
+title: 'Heat Pump vs Pellet Stove'
+description: 'Heat pump vs pellet stove: a pellet stove is cheap heat if you can source cheap pellets and do the work. A heat pump is hands-off whole-home heating and cooling. Here is how they compare.'
 primaryKeyword: 'heat pump vs pellet stove'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

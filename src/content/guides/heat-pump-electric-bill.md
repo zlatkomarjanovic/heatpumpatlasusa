@@ -1,6 +1,6 @@
 ---
-title: 'Will a Heat Pump Raise My Electric Bill? The Combined-Bill Question'
-description: Yes, your electric bill will rise. The question is whether your total energy bill falls. Here is how to work it out before you commit, and where people get it wrong.
+title: 'Will a Heat Pump Raise My Electric Bill?'
+description: 'Will a heat pump raise my electric bill? Yes. The heat pump electric bill question is whether your total energy bill falls after gas, oil or propane drops. Here is how to work that out.'
 primaryKeyword: 'heat pump electric bill'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -33,6 +33,8 @@ citations:
     publisher: 'US Energy Information Administration'
     supports: 'Heating oil reference prices used in the oil comparison.'
 faqs:
+  - question: 'Will a heat pump raise my electric bill?'
+    answer: 'Yes. A heat pump runs on electricity, so the electric bill rises. The useful question is the combined bill: electricity plus the fuel you no longer burn. Against oil, propane or electric resistance the combined bill usually falls. Against cheap natural gas it can go either way.'
   - question: 'Will my electric bill go up with a heat pump?'
     answer: 'Yes, almost certainly, and it is worth being upfront about that. You are moving space heating onto electricity, which is a large new load. In a cold climate the increase can be substantial. The reason the switch can still save money is that the fuel you stop buying is usually more expensive per unit of heat than the electricity you start buying.'
   - question: 'How much will my electric bill go up?'
@@ -47,7 +49,7 @@ faqs:
     answer: 'Keeping it for the first winter is a reasonable hedge and costs nothing if the equipment is already there. It lets you verify the heat pump handles your coldest weeks before committing fully. Just be clear about whether you are keeping it as an emergency backup or as an operating part of the system, because the second one costs money.'
 ---
 
-This is the question homeowners actually ask, and it is the one most heat pump content answers dishonestly by talking about efficiency instead of bills.
+Will a heat pump raise my electric bill? Yes. That is the question homeowners actually ask, and it is the one most heat pump content answers dishonestly by talking about efficiency instead of bills.
 
 ## Start with the honest answer
 

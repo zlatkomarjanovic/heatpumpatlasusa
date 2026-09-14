@@ -1,5 +1,6 @@
 ---
 import { FOOTER_NAV, SITE } from '@/data/site';
+import { KEYWORD_GROUPS } from '@/data/keyword-map';
 
 const year = new Date().getFullYear();
 ---
@@ -58,6 +59,26 @@ const year = new Date().getFullYear();
         ))}
       </nav>
     </div>
+
+    <nav aria-label="Heat pump keywords" class="border-ink-800 mt-12 border-t pt-8">
+      <p class="text-2xs font-semibold tracking-wider text-white uppercase">Browse by search topic</p>
+      <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        {KEYWORD_GROUPS.map((group) => (
+          <div>
+            <p class="text-xs font-medium text-ink-200">{group.title}</p>
+            <ul class="mt-2 space-y-1.5">
+              {group.items.map((item) => (
+                <li>
+                  <a href={item.href} class="text-ink-400 hover:text-brand-200 text-xs capitalize transition-colors">
+                    {item.keyword}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </nav>
 
     <div class="border-ink-800 mt-12 flex flex-col gap-4 border-t pt-8 sm:flex-row sm:items-center sm:justify-between">
       <p class="text-xs text-ink-500">

@@ -1,6 +1,6 @@
 ---
-title: 'Are Heat Pumps Worth It? The Honest Answer, State by State'
-description: 'Whether a heat pump is worth it comes down to three things: your current fuel, your electricity price, and your climate. Here is how to tell which side you are on.'
+title: 'Are Heat Pumps Worth It in 2026?'
+description: 'Are heat pumps worth it? Yes against oil, propane and electric resistance. Against cheap natural gas it depends on your rates and climate. Here is how to tell which side you are on.'
 primaryKeyword: 'are heat pumps worth it'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -34,6 +34,8 @@ citations:
     publisher: 'ENERGY STAR'
     supports: 'Efficiency ratings that determine how much heat you get per unit of electricity.'
 faqs:
+  - question: 'Are heat pumps worth it?'
+    answer: 'Yes if you heat with oil, propane or electric resistance. Against cheap natural gas it depends on your electricity-to-gas price ratio and how cold your winters are. Comfort, cooling and open rebates can still flip a close running-cost case.'
   - question: 'Are heat pumps actually cheaper to run?'
     answer: 'Against heating oil, propane and electric resistance, almost always yes, because those fuels deliver expensive heat. Against natural gas it depends on the ratio of your electricity price to your gas price and on your climate. In cheap-gas states with mild winters a modern furnace can still be cheaper to run, which is why a calculator that always shows a saving is a sales tool rather than a model.'
   - question: 'How long does it take a heat pump to pay for itself?'
@@ -44,7 +46,7 @@ faqs:
     answer: 'If the furnace is healthy and gas is cheap where you live, replacing it early rarely pays on running cost alone. The strong cases for switching early are expensive fuels (oil and propane), a dying air conditioner you would replace anyway, a large rebate that is open now, or a comfort and air-quality preference for removing combustion.'
 ---
 
-Short answer: a heat pump is almost always worth it if you heat with oil, propane or electric baseboard, and it is a genuine question if you heat with cheap natural gas. The equipment is the same either way. What changes the answer is the fuel you are replacing, the price of electricity where you live, and how cold your winters get.
+Are heat pumps worth it? Short answer: almost always yes if you heat with oil, propane or electric baseboard, and it is a genuine question if you heat with cheap natural gas. The equipment is the same either way. What changes the answer is the fuel you are replacing, the price of electricity where you live, and how cold your winters get.
 
 ## The three things that decide it
 

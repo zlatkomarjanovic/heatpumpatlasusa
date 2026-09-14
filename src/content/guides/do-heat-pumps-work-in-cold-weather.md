@@ -1,6 +1,6 @@
 ---
 title: 'Do Heat Pumps Work in Cold Weather?'
-description: Modern cold-climate heat pumps keep heating well below freezing. Here is how capacity and efficiency change as it gets colder, and how to size and back them up.
+description: 'Do heat pumps work in cold weather? Yes. Modern cold-climate units keep heating well below 0 F. Here is how capacity and efficiency change as it gets colder, and how to size and back them up.'
 primaryKeyword: 'do heat pumps work in cold weather'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -34,6 +34,8 @@ citations:
     publisher: 'NOAA Climate Prediction Center'
     supports: 'Climate data used to estimate how many hours a system spends in cold conditions.'
 faqs:
+  - question: 'Do heat pumps work in cold weather?'
+    answer: 'Yes. A cold-climate air source heat pump is designed to keep heating well below 0 F. Capacity and efficiency fall as it gets colder, which is why sizing and backup heat matter, but the machine does not shut off at freezing the way older units did.'
   - question: 'At what temperature do heat pumps stop working?'
     answer: 'A cold-climate air source heat pump keeps producing useful heat well below zero Fahrenheit. Older or budget units lose capacity faster and may hand off to backup heat around the low twenties. The number that matters is not a hard cutoff but the capacity and efficiency at your coldest typical hours, which is a curve rather than a single point.'
   - question: 'Do heat pumps use a lot of electricity in winter?'
@@ -44,7 +46,7 @@ faqs:
     answer: 'Because units sold a decade or more ago genuinely struggled below freezing, and because a lot of installed systems are undersized or set to switch to backup heat too early. The technology moved on with variable-speed compressors and better refrigerants. A modern cold-climate model sized and commissioned properly is a different machine from the reputation.'
 ---
 
-Yes. Modern cold-climate heat pumps keep heating well below freezing, and the best of them are rated to produce useful heat below zero Fahrenheit. The reputation for failing in the cold comes from older equipment and undersized installs, not from the physics of today's units.
+Do heat pumps work in cold weather? Yes. Modern cold-climate heat pumps keep heating well below freezing, and the best of them are rated to produce useful heat below zero Fahrenheit. The reputation for failing in the cold comes from older equipment and undersized installs, not from the physics of today's units.
 
 The more useful question is not whether they work, but how their capacity and efficiency change as it gets colder, and how to plan for the coldest hours of your year.
 

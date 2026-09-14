@@ -1,6 +1,6 @@
 ---
-title: 'What Size Heat Pump Do I Need? Sizing and Tonnage'
-description: Heat pump sizing is a load calculation, not a rule of thumb. Here is how tonnage works, why oversizing hurts, and what to ask your contractor.
+title: 'What Size Heat Pump Do I Need?'
+description: 'What size heat pump do I need? Sizing is a load calculation, not a square-foot rule of thumb. Here is how tonnage works, why oversizing hurts, and what to ask your contractor.'
 primaryKeyword: 'what size heat pump do i need'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -34,6 +34,8 @@ citations:
     publisher: 'National Renewable Energy Laboratory'
     supports: 'Housing stock and envelope data behind load estimates by vintage.'
 faqs:
+  - question: 'What size heat pump do I need?'
+    answer: 'The honest answer is a Manual J load calculation for your house, not a tons-per-square-foot rule. Climate, insulation, air leakage and the design temperature all move the number. A typical 1,800 to 2,200 square foot home often lands between 2 and 4 tons, but treating that as a spec is how systems get oversized.'
   - question: 'How many tons of heat pump do I need per square foot?'
     answer: 'There is no honest single number, but as a very rough sanity check many homes land near one ton per 500 to 1,000 square feet depending on climate and how tight the envelope is. Use that only to catch a wildly wrong quote. The real answer comes from a Manual J load calculation that accounts for insulation, windows, air leakage and your design temperature.'
   - question: 'What is a Manual J and do I really need one?'
@@ -44,7 +46,7 @@ faqs:
     answer: 'Ductless systems are sized per zone, matching each indoor head to the load of the room or open area it serves, then confirming the outdoor unit can cover the combined load. Oversizing a single head to a small room is a frequent error that leads to short cycling and poor dehumidification. The same load-calculation discipline applies, just room by room.'
 ---
 
-The honest answer is that heat pump size comes from a load calculation, not a square-footage rule of thumb. Sizing is measured in tons (one ton equals 12,000 BTU per hour), and getting it right is the single biggest factor in whether the system feels effortless or struggles. The most common mistake is not undersizing. It is oversizing.
+What size heat pump do I need? The honest answer is a load calculation, not a square-footage rule of thumb. Sizing is measured in tons (one ton equals 12,000 BTU per hour), and getting it right is the single biggest factor in whether the system feels effortless or struggles. The most common mistake is not undersizing. It is oversizing.
 
 ## Why the rule of thumb fails
 

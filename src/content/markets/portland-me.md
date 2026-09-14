@@ -1,6 +1,6 @@
 ---
-title: 'Heat Pumps in Portland, Maine: The Strongest Oil Case'
-description: Portland and greater Maine heat pump costs, Efficiency Maine rebate tiers, and why a 29.59 cent electricity price still beats heating oil by nearly half.
+title: 'Heat Pump Cost in Portland, Maine (2026)'
+description: 'Heat pump cost in Portland, Maine, Efficiency Maine heat pump rebate tiers, and why a 29.59 cent electricity price still beats heating oil by nearly half.'
 primaryKeyword: 'heat pump cost portland maine'
 stateCode: ME
 city: Portland

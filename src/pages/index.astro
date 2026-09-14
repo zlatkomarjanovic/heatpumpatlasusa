@@ -12,7 +12,8 @@ import Calculator from '@/components/Calculator.tsx';
 import { COST_BANDS } from '@/data/costs';
 import { STATES, STATE_BY_CODE, type StateRecord } from '@/data/states';
 import { formatUsd } from '@/lib/calculator';
-import { SITE } from '@/data/site';
+import Faq from '@/components/Faq.astro';
+import KeywordCluster from '@/components/KeywordCluster.astro';
 
 import heroBg from '@/assets/images/outdoor-heat-pump-yard.jpg';
 import condenser from '@/assets/images/heat-pump-outdoor-condenser.jpg';
@@ -121,17 +122,45 @@ const guides = (await getCollection('guides'))
   .slice(0, 6);
 
 const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+const homeFaqs = [
+  {
+    question: 'How much does a heat pump cost in the US?',
+    answer:
+      'A typical ducted air source heat pump costs $9,500 to $22,000 installed in 2026 before incentives. A like-for-like replacement that reuses ducts and line sets often lands between $7,000 and $16,000. Ductless mini split installation cost is $2,800 to $8,500 for one zone.',
+  },
+  {
+    question: 'What is heat pump installation cost versus operating cost?',
+    answer:
+      'Installation cost is the contractor invoice. Operating cost is what you pay each year to run it. The heat pump cost calculator models both, then subtracts only rebates that are actually open, and compares the 10-year total to your current fuel.',
+  },
+  {
+    question: 'Are heat pump rebates still available in 2026?',
+    answer:
+      'The federal 25C heat pump tax credit ended for equipment installed after 2025. State and utility heat pump rebates are still open in several markets, including Mass Save, Efficiency Maine, Xcel Energy and Eversource. We only count a program if we have verified it is accepting applications.',
+  },
+  {
+    question: 'Is a heat pump cheaper than a furnace?',
+    answer:
+      'On running cost, a heat pump beats oil, propane and electric resistance almost everywhere. Against a gas furnace it depends on your electricity-to-gas price ratio. Our heat pump vs furnace model has the heat pump winning in 27 of 51 states.',
+  },
+];
 ---
 
 <BaseLayout heroOverlay>
   <SEO
-    title={`Heat Pump Cost, Rebates and Switching Economics | ${SITE.name}`}
-    description="Free heat pump cost calculator built on EIA prices and NOAA climate data. See installed cost, running cost, open rebates and whether switching pays where you live."
+    title="Heat Pump Cost (2026)"
+    description="Heat pump cost in the US: $9,500 to $22,000 installed for a typical ducted system. Free calculator for installation cost, operating cost, open rebates and payback by ZIP."
     path={path}
     type="WebPage"
     updated={updated}
     primaryKeyword="heat pump cost"
     isHub
+    faqs={homeFaqs}
+    itemList={{
+      name: 'Heat pump cost and rebate guides',
+      items: hubs.map((h) => ({ name: h.title, url: h.href })),
+    }}
   />
 
   <!-- Hero: headline left, the real switching calculator right, over a photo -->
@@ -161,12 +190,12 @@ const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', d
             Independent US heat pump cost data
           </p>
           <h1 class="text-[2.1rem] leading-[1.08] text-white sm:text-[2.9rem] lg:text-[3.35rem]">
-            What <span class="hero-headline-accent">a heat pump really costs</span>, and whether it pays off where you live.
+            <span class="hero-headline-accent">Heat pump cost</span> in the US, and whether switching pays off where you live.
           </h1>
-          <p class="mt-5 text-base leading-relaxed text-white/75 sm:text-lg">
-            Most heat pump cost pages hand you a national average and a lead form. This one models your state, your
-            climate, your current fuel and the rebates that are actually open, then shows the result, including the
-            states where a gas furnace still wins. Run it on the right.
+          <p class="mt-5 text-base leading-relaxed text-white/75 sm:text-lg" data-speakable>
+            Heat pump cost for a typical ducted system is $9,500 to $22,000 installed. This calculator models heat pump
+            installation cost, operating cost, and the heat pump rebates that are actually open in your state, including
+            the cases where a gas furnace still wins. Run it on the right.
           </p>
 
           <div class="mt-9 flex flex-col gap-4">
@@ -226,7 +255,7 @@ const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', d
     <!-- Cost bands + image -->
     <Section
       id="costs"
-      title="Cost to install a heat pump, before incentives"
+      title="Heat pump installation cost, before incentives"
       lede="These bands cover equipment, standard labor and a permit for a typical 1,800 to 2,200 square foot home. They deliberately overlap, because a quote depends on your ducts, your panel and your contractor's week."
       class="reveal-on-scroll"
     >
@@ -523,12 +552,12 @@ const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', d
     >
       <ul class="flex flex-wrap gap-2.5">
         {[
-          { name: 'Mass Save', href: '/rebates/mass-save/' },
-          { name: 'Efficiency Maine', href: '/rebates/efficiency-maine/' },
-          { name: 'Xcel Energy Colorado', href: '/rebates/xcel-energy/' },
-          { name: 'Eversource', href: '/rebates/eversource/' },
-          { name: 'Federal tax credit status', href: '/heat-pump-tax-credit/' },
-          { name: 'All programs', href: '/rebates/' },
+          { name: 'Mass Save heat pump rebate', href: '/rebates/mass-save/' },
+          { name: 'Efficiency Maine heat pump rebate', href: '/rebates/efficiency-maine/' },
+          { name: 'Xcel Energy heat pump rebate', href: '/rebates/xcel-energy/' },
+          { name: 'Eversource heat pump rebate', href: '/rebates/eversource/' },
+          { name: 'Heat pump tax credit', href: '/heat-pump-tax-credit/' },
+          { name: 'Heat pump rebates', href: '/rebates/' },
         ].map((p) => (
           <li>
             <a
@@ -545,6 +574,8 @@ const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', d
       </p>
     </Section>
 
+    <Faq items={homeFaqs} />
+    <KeywordCluster path={path} />
     <QuoteCta />
   </div>
 </BaseLayout>

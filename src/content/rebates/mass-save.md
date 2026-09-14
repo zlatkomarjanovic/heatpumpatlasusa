@@ -1,5 +1,5 @@
 ---
-title: 'Mass Save Heat Pump Rebates: 2026 Amounts and Tiers'
+title: 'Mass Save Heat Pump Rebate (2026)'
 description: What Mass Save pays for air source heat pumps in 2026, how whole-home and partial-home rebates differ, the sizing bonus, and why the reservation order matters.
 primaryKeyword: 'mass save heat pump rebate'
 program: 'Mass Save Air Source Heat Pump Rebate'

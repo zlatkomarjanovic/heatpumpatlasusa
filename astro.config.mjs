@@ -21,19 +21,20 @@ export default defineConfig({
       filter: (page) => !page.includes('/404'),
       serialize(item) {
         const url = item.url;
+        const lastmod = new Date().toISOString();
         if (url === 'https://heatpumpatlasusa.com/') {
-          return { ...item, changefreq: 'daily', priority: 1.0 };
+          return { ...item, lastmod, changefreq: 'daily', priority: 1.0 };
         }
-        if (url.includes('/calculator/')) {
-          return { ...item, changefreq: 'weekly', priority: 0.9 };
+        if (url.includes('/calculator/') || url.includes('/heat-pump-cost/')) {
+          return { ...item, lastmod, changefreq: 'weekly', priority: 0.95 };
         }
-        if (url.includes('/rebates/') || url.includes('/heat-pump-cost/')) {
-          return { ...item, changefreq: 'weekly', priority: 0.85 };
+        if (url.includes('/mini-split-cost/') || url.includes('/heat-pump-vs-furnace/') || url.includes('/rebates/')) {
+          return { ...item, lastmod, changefreq: 'weekly', priority: 0.9 };
         }
         if (url.includes('/guides/') || url.includes('/markets/')) {
-          return { ...item, changefreq: 'monthly', priority: 0.75 };
+          return { ...item, lastmod, changefreq: 'weekly', priority: 0.8 };
         }
-        return { ...item, changefreq: 'weekly', priority: 0.7 };
+        return { ...item, lastmod, changefreq: 'weekly', priority: 0.7 };
       },
     }),
   ],

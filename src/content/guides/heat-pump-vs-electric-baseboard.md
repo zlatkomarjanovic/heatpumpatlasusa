@@ -1,6 +1,6 @@
 ---
-title: 'Heat Pump vs Electric Baseboard: The Savings Explained'
-description: Swapping electric baseboard for a heat pump cuts the heating portion of your bill by roughly two thirds. Here is the math, the cost and the comfort trade-off.
+title: 'Heat Pump vs Electric Baseboard'
+description: 'Heat pump vs electric baseboard: swapping resistance heat for a heat pump cuts the heating portion of your bill by roughly two thirds. Here is the math, the cost and the comfort trade-off.'
 primaryKeyword: 'heat pump vs electric baseboard'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
