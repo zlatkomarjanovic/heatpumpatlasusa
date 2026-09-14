@@ -17,7 +17,7 @@ import Faq from '@/components/Faq.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
 import SourceList from '@/components/SourceList.astro';
 import { getCollection } from 'astro:content';
-import { STATES, STATE_BY_CODE, type StateRecord } from '@/data/states';
+import { STATE_BY_CODE, type StateRecord } from '@/data/states';
 import { pickSources } from '@/data/sources';
 
 const path = '/markets/';
@@ -109,55 +109,32 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHd
   />
 
   <div class="container-atlas py-10 lg:py-14">
-    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+    <div class="grid gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">Power price</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">Nevada at 13.11¢/kWh and California at 34.74¢ are not the same market.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">Current fuel</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">The electricity-to-fuel ratio decides the operating case, and it flips between states.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">Winter length</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">A mild winter and a severe one change both the equipment spec and the annual saving.</p>
+      </div>
+    </div>
+
+    <p class="text-ink-600 mt-8 max-w-3xl text-sm leading-relaxed sm:text-base">
+      A national average can tell you what equipment costs. It cannot tell you whether the job is worth doing.
+      City pages exist only where the housing stock, fuel mix or program actually changes the answer. For everywhere
+      else, use the <a href="/calculator/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">calculator</a>.
+    </p>
+
+    <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
       <div class="min-w-0 space-y-14">
-        <section id="why" class="scroll-mt-24">
-          <h2 class="text-xl sm:text-2xl">Why the map matters more than the average</h2>
-          <div class="prose-atlas mt-4">
-            <p>
-              A national heat pump cost page can tell you what equipment costs. It cannot tell you whether the thing is
-              worth doing, because that depends on three local facts that vary enormously across the country.
-            </p>
-            <ul>
-              <li>
-                <strong>What electricity costs where you are.</strong> Nevada at 13.11 cents per kilowatt hour and
-                California at 34.74 cents are not the same market.
-              </li>
-              <li>
-                <strong>What your current fuel costs.</strong> The ratio between the two is what decides the operating
-                cost comparison, and it flips between states.
-              </li>
-              <li>
-                <strong>How cold it gets and how long.</strong> A mild winter and a severe one change both the equipment
-                specification and the annual saving.
-              </li>
-            </ul>
-            <p>
-              Our [keyword research](/methodology/) also found that city-level search demand is far smaller than the
-              content industry assumes. So this hub covers the states systematically, and publishes city pages only where
-              there is something specific to say.
-            </p>
-          </div>
-        </section>
-
-        <Section
-          id="states"
-          number="1"
-          title="State reference data"
-          lede="The twelve states where the heat pump case is strongest, or where the incentive money is largest. Prices are EIA residential averages."
-        >
-          <DataTable
-            caption="Heat pump market reference data by state"
-            columns={switchingIndexColumns}
-            rows={indexRows}
-            mobileLabelKey="state"
-            note="Electricity is EIA residential June 2026. Gas is EIA residential May 2026 per Mcf. Heating load is NOAA population-weighted heating degree days for July 2025 to June 2026. Oil share is Census ACS table B25040. Program status reflects state IRA home energy rebate launch status."
-          />
-        </Section>
-
         <Section
           id="cities"
-          number="2"
+          number="1"
           title="Cities covered in depth"
           lede="Each of these has a housing stock, a program and a contractor market that make it worth its own page."
         >
@@ -176,21 +153,27 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHd
           </ul>
         </Section>
 
-        <Section id="expansion" number="3" title="What we will add next" lede="Expansion is driven by demand and by whether we can say something useful.">
-          <div class="prose-atlas">
-            <p>
-              The next markets we add will be places where the operating cost case is strong and where we can get real
-              program information: Portland, Oregon; Minneapolis; Hartford; Albany; Buffalo; and possibly Providence.
-              Each one needs verified program details and a specific local angle before it goes live.
-            </p>
-          </div>
+        <Section
+          id="states"
+          number="2"
+          title="State reference data"
+          lede="The twelve states where the heat pump case is strongest, or where the incentive money is largest. Prices are EIA residential averages."
+        >
+          <DataTable
+            caption="Heat pump market reference data by state"
+            columns={switchingIndexColumns}
+            rows={indexRows}
+            mobileLabelKey="state"
+            note="Electricity is EIA residential June 2026. Gas is EIA residential May 2026 per Mcf. Heating load is NOAA population-weighted heating degree days for July 2025 to June 2026. Oil share is Census ACS table B25040. Program status reflects state IRA home energy rebate launch status."
+          />
+        </Section>
 
-          <Callout tone="note" title="On state and city page grids" class="mt-5">
+        <Section id="expansion" number="3" title="What we will add next" lede="Next up if the local story is specific enough: Portland OR, Minneapolis, Hartford, Albany, Buffalo, possibly Providence.">
+          <Callout tone="note" title="No city grid">
             <p>
-              If you are looking for a page for every US city, we are not building that. Our research found that exact
-              match search volume for city-level cost terms is close to zero in most metros, and a grid of near-identical
-              pages would be thin content with a city name dropped in. The [calculator](/calculator/) covers the entire
-              country with real state-level data, which is a better answer than a doorway page.
+              We are not publishing a page for every US city. Exact-match search for most city cost terms is close to
+              zero, and a grid of near-identical pages would be thin content. The calculator already covers the country
+              with state-level EIA and NOAA data.
             </p>
           </Callout>
         </Section>
@@ -201,9 +184,8 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHd
           <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
           <ul class="mt-3 space-y-2 text-sm">
             {[
-              { href: '#why', label: 'Why location matters' },
-              { href: '#states', label: 'State reference data' },
               { href: '#cities', label: 'Cities covered' },
+              { href: '#states', label: 'State reference data' },
               { href: '#expansion', label: 'What is next' },
             ].map((item) => (
               <li>
@@ -215,9 +197,10 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHd
       </aside>
     </div>
 
-    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+    <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:items-start">
       <Faq items={faqItems} />
       <RelatedPages
+        compact
         children={[
           { label: 'Boston, MA', href: '/markets/boston-ma/', description: 'Oil and gas mix, mature rebate program' },
           { label: 'Portland, ME', href: '/markets/portland-me/', description: 'Strongest oil conversion case in the US' },
@@ -230,6 +213,8 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'censusFuel', 'noaaHd
           { label: 'Calculator', href: '/calculator/' },
         ]}
       />
+    </div>
+    <div class="mt-12">
       <SourceList sources={citations} updated={updated} />
     </div>
   </div>

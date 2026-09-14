@@ -9,9 +9,7 @@ import RelatedPages from '@/components/RelatedPages.astro';
 import SourceList from '@/components/SourceList.astro';
 import { EFFICIENCY, ENERGY_UNITS, BASE_KWH_THERMAL_PER_SQFT_PER_HDD, REGION_MULTIPLIERS } from '@/data/costs';
 import { FUEL_REFERENCE } from '@/data/states';
-import { NATIONAL_AVERAGE } from '@/data/states';
 import { SOURCES } from '@/data/sources';
-import type { Citation } from '@/types/content';
 import { SITE } from '@/data/site';
 
 const path = '/methodology/';
@@ -86,37 +84,27 @@ const regionalRows = Object.entries(REGION_MULTIPLIERS).map(([region, factor]) =
   />
 
   <div class="container-atlas py-10 lg:py-14">
-    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
-      <div class="min-w-0 space-y-14">
-        <section id="principles" class="scroll-mt-24">
-          <h2 class="text-xl sm:text-2xl">Four principles</h2>
-          <div class="prose-atlas mt-4">
-            <p>
-              This is a category with a lot of confident wrong numbers in it, including from official sources. We built
-              the site around four rules to avoid adding to the pile.
-            </p>
-            <ol>
-              <li>
-                <strong>Separate verified data from modelled estimates.</strong> Electricity prices are verified. Installed
-                cost is modelled. The site labels them differently and never presents a model output as a measurement.
-              </li>
-              <li>
-                <strong>Publish the losing cases.</strong> In many states and for many fuels, a heat pump is the wrong
-                financial answer. Saying so is more useful than a uniform sales pitch, and it is the only way the tool
-                stays trustworthy.
-              </li>
-              <li>
-                <strong>Assume the data rots.</strong> Energy prices change monthly, rebate programs change weekly, and
-                tax credits expire. Every page carries an update date, and rebate pages carry a separate verification
-                date.
-              </li>
-              <li>
-                <strong>Never manufacture a number.</strong> Where we cannot support a figure, the calculator says so and
-                widens its range rather than filling the gap with an average.
-              </li>
-            </ol>
+    <section id="principles" class="scroll-mt-24">
+      <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">Four rules</p>
+      <h2 class="mt-2 text-xl sm:text-2xl">How we keep the numbers honest</h2>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2">
+        {[
+          { n: '01', title: 'Verified vs modelled', body: 'Electricity prices are verified. Installed cost is modelled. The site never presents a model output as a measurement.' },
+          { n: '02', title: 'Publish the losing cases', body: 'In many states a heat pump is the wrong financial answer. Saying so is the only way the tool stays trustworthy.' },
+          { n: '03', title: 'Assume the data rots', body: 'Prices move monthly. Programs move weekly. Every page has an update date; rebate pages also have a verification date.' },
+          { n: '04', title: 'Never invent a number', body: 'Where we cannot support a figure, the calculator says so and widens the range instead of filling the gap with an average.' },
+        ].map((item) => (
+          <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+            <p class="text-2xs font-semibold tracking-wide text-brand-700">{item.n}</p>
+            <h3 class="mt-1 text-base font-semibold text-ink-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-600">{item.body}</p>
           </div>
-        </section>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
 
         <Section
           id="verified"
@@ -299,10 +287,9 @@ const regionalRows = Object.entries(REGION_MULTIPLIERS).map(([region, factor]) =
               bundled energy data, and sends nothing. There is no analytics call inside the calculator and no account.
             </p>
             <p>
-              If you submit a quote request, that is a separate deliberate action. The request carries your ZIP, your
-              contact details and the scenario summary you can see on the form, and it goes to installers who cover your
-              area. We do not sell your details to lead brokers, and you can ask us to delete a submitted request by
-              emailing us.
+              If you ask us to email the estimate, that is a separate action. The request carries your ZIP, contact
+              details and the scenario you can see on the form. We use it to send you the breakdown and a short list of
+              installers who cover that ZIP. You can ask us to delete a submitted request by emailing us.
             </p>
           </div>
         </Section>
@@ -333,14 +320,17 @@ const regionalRows = Object.entries(REGION_MULTIPLIERS).map(([region, factor]) =
       </aside>
     </div>
 
-    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+    <div class="mt-16 max-w-xl">
       <RelatedPages
+        compact
         siblings={[
           { label: 'About us', href: '/about/', description: 'Who writes this and why' },
           { label: 'Calculator', href: '/calculator/', description: 'The model, running' },
           { label: 'Rebates', href: '/rebates/', description: 'Program status' },
         ]}
       />
+    </div>
+    <div class="mt-12">
       <SourceList sources={allSources} title="Full source list" updated={updated} />
     </div>
   </div>

@@ -7,4 +7,4 @@ export type Breadcrumb = {
   href?: string;
 };
 
-export type SchemaType = 'WebPage' | 'Article' | 'FAQPage' | 'SoftwareApplication' | 'CollectionPage';
+export type SchemaType = 'WebPage' | 'Article' | 'FAQPage' | 'SoftwareApplication' | 'CollectionPage' | 'AboutPage';

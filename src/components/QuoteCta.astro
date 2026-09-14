@@ -22,8 +22,8 @@ interface Props {
 }
 
 const {
-  title = 'Get quotes from installers who price the same scope',
-  body = 'We send your scenario, not just your email address. Installers see your home size, current fuel and the equipment you are considering, which is why the quotes you get back are closer together.',
+  title = 'See what a local installer would actually charge',
+  body = 'Leave an email and we will send your estimate plus contractors nearby who install this work. Same ZIP, same scope. No account.',
   market,
   variant = 'full',
   class: className = '',
@@ -50,7 +50,7 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
         class="border-brand-200 text-brand-800 hover:bg-brand-100 inline-flex items-center gap-1.5 rounded-md border bg-white px-3.5 py-2 text-sm font-semibold transition-colors"
       >
         <Icon name="route" size={15} />
-        Request quotes
+        See installers nearby
       </a>
     </div>
   </aside>
@@ -84,9 +84,9 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
 
           <ul class="mt-5 space-y-2.5 text-sm">
             {[
-              'One request, routed to installers who cover your ZIP code',
-              'Your modelled cost range travels with the request',
-              'No obligation, and we do not sell your details to lead brokers',
+              'Your estimate is emailed to you, so you can take it to any contractor',
+              'We also show installers who already work your ZIP',
+              'No account, and you can ignore the email if you are just looking',
             ].map((line) => (
               <li class="text-ink-700 flex gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="text-save-600 mt-0.5 shrink-0">
@@ -146,6 +146,19 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
                 />
               </div>
               <div>
+                <label for={`${formId}-phone`} class="text-ink-800 mb-1.5 block text-sm font-medium">
+                  Phone <span class="text-ink-400 font-normal">Optional</span>
+                </label>
+                <input
+                  id={`${formId}-phone`}
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="(555) 555-0123"
+                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+                />
+              </div>
+              <div>
                 <label for={`${formId}-notes`} class="text-ink-800 mb-1.5 block text-sm font-medium">
                   Anything else? <span class="text-ink-400 font-normal">Optional</span>
                 </label>
@@ -162,13 +175,11 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
                 class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors"
               >
                 <Icon name="route" size={16} />
-                Request quotes
+                Email me the estimate
               </button>
               <p class="text-ink-500 text-xs leading-relaxed">
-                By submitting you agree to be contacted about your project. Read how we handle data in our
+                We email you the estimate and a short list of installers who cover that ZIP. Read how we handle data in our
                 <a href="/privacy/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">privacy policy</a>.
-                Installers:
-                <a href={`mailto:${'partners@heatpumpatlasusa.com'}`} class="text-brand-700 underline decoration-brand-200 underline-offset-2">buy qualified leads</a>.
               </p>
             </form>
         </div>

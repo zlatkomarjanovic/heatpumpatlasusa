@@ -19,6 +19,22 @@ const orgSchema = {
       description: SITE.description,
       email: SITE.email,
       foundingDate: SITE.founded,
+      areaServed: { '@type': 'Country', name: 'United States' },
+      knowsAbout: [
+        'Heat pump installed cost',
+        'Heat pump operating cost',
+        'US heat pump rebates',
+        'Heating fuel economics',
+      ],
+      publishingPrinciples: `${SITE.url}/methodology/`,
+      about: { '@id': `${SITE.url}/about/` },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: SITE.email,
+        contactType: 'editorial',
+        availableLanguage: 'English',
+      },
+      sameAs: ['https://github.com/zlatkomarjanovic/heatpumpatlasusa'],
       logo: {
         '@type': 'ImageObject',
         url: `${SITE.url}/logo.svg`,

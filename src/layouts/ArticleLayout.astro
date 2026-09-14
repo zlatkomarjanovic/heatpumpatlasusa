@@ -13,7 +13,7 @@ import Faq from '@/components/Faq.astro';
 import SourceList from '@/components/SourceList.astro';
 import QuoteCta from '@/components/QuoteCta.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
-import type { NavItem } from '@/data/site';
+import { AUTHOR, SITE, type NavItem } from '@/data/site';
 import { Image } from 'astro:assets';
 import type { ImageMetadata, MarkdownHeading } from 'astro';
 
@@ -23,6 +23,7 @@ interface Props {
   primaryKeyword: string;
   updated: Date;
   published?: Date;
+  author?: string;
   reviewedBy?: string;
   breadcrumbs: Breadcrumb[];
   path: string;
@@ -47,6 +48,7 @@ const {
   primaryKeyword,
   updated,
   published,
+  author,
   reviewedBy,
   breadcrumbs,
   path,
@@ -81,8 +83,10 @@ const showToc = hasSlotToc || tocItems.length > 0;
     breadcrumbs={breadcrumbs}
     published={published}
     updated={updated}
+    author={author}
     reviewedBy={reviewedBy}
     faqs={faqs}
+    citations={citations}
     primaryKeyword={primaryKeyword}
   />
 
@@ -92,9 +96,11 @@ const showToc = hasSlotToc || tocItems.length > 0;
     standfirst={standfirst}
     breadcrumbs={breadcrumbs}
     updated={updated}
+    author={author}
     reviewedBy={reviewedBy}
     keyStat={keyStat}
     flush={Boolean(coverImage)}
+    spacious
   />
 
   {
@@ -120,6 +126,22 @@ const showToc = hasSlotToc || tocItems.length > 0;
     <div class={`grid gap-12 lg:gap-16 ${showToc ? 'lg:grid-cols-[minmax(0,1fr)_16rem]' : ''}`}>
       <article class="prose-atlas min-w-0">
         <slot />
+
+        <p class="not-prose text-ink-500 mt-10 border-t border-line pt-6 text-sm leading-relaxed">
+          Written by{' '}
+          <a href={AUTHOR.url} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{author ?? AUTHOR.name}</a>
+          {reviewedBy && <>, reviewed by {reviewedBy}</>}
+          {updated && (
+            <>
+              , and updated{' '}
+              <time datetime={updated.toISOString()}>
+                {updated.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+              </time>
+            </>
+          )}
+          . Sources are listed below. If a figure looks wrong, email{' '}
+          <a href={`mailto:${SITE.email}`} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{SITE.email}</a>.
+        </p>
 
         {showQuoteCta && <QuoteCta variant="inline" class="my-10" />}
       </article>
@@ -152,15 +174,20 @@ const showToc = hasSlotToc || tocItems.length > 0;
     </div>
   </div>
 
-  <div class="container-atlas">
-    <div class="mx-auto max-w-3xl space-y-12">
+  <div class="container-atlas pb-16 lg:pb-24">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
       <Faq items={faqs} />
       <RelatedPages
+        compact
         parents={related.parents}
         siblings={related.siblings}
         children={related.children}
       />
-      {citations.length > 0 && <SourceList sources={citations} updated={updated} />}
     </div>
+    {citations.length > 0 && (
+      <div class="mt-12">
+        <SourceList sources={citations} updated={updated} />
+      </div>
+    )}
   </div>
 </BaseLayout>

@@ -8,7 +8,7 @@
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
-import PageHeader from '@/components/PageHeader.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import DataTable from '@/components/DataTable.astro';
 import Callout from '@/components/Callout.astro';
 import SourceList from '@/components/SourceList.astro';
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: 'Does the ZIP code leave my browser?',
     answer:
-      'No. The cost model runs entirely in your browser against a bundled table of state energy and climate data. Nothing is collected or transmitted until you submit a quote request, and that request is a deliberate separate action.',
+      'No. The cost model runs entirely in your browser against a bundled table of state energy and climate data. Nothing is collected or transmitted unless you ask us to email the estimate, and that request is a deliberate separate action.',
   },
   {
     question: 'Are the rebate figures live?',
@@ -104,17 +104,11 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
     primaryKeyword="heat pump cost calculator"
   />
 
-  <PageHeader
-    eyebrow="Switching cost calculator"
-    title="What a heat pump would cost you, and whether it pays"
-    standfirst="Three short steps. You get an installed cost range, a running cost comparison against what you use today, a 10-year total, the rebates that are actually open in your state, and a payback figure."
-    breadcrumbs={crumbs}
-    updated={updated}
-    keyStat={{ value: '3 steps', label: 'No account, nothing transmitted until you ask for quotes' }}
-  />
-
-  <div class="container-atlas py-10 lg:py-14">
+  <div class="container-atlas pt-6 pb-10 lg:pt-8 lg:pb-14">
     <div class="mx-auto max-w-5xl">
+      <div class="mb-5">
+        <Breadcrumbs items={crumbs} />
+      </div>
       <Calculator client:load />
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
@@ -136,7 +130,7 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
   </div>
 
   <div class="container-atlas pb-14">
-    <div class="mx-auto max-w-3xl space-y-12">
+    <div class="mx-auto max-w-5xl space-y-12">
       <section id="bands" class="scroll-mt-24">
         <h2 class="text-xl sm:text-2xl">The cost bands behind the model</h2>
         <p class="text-ink-600 mt-3 leading-relaxed">
@@ -191,20 +185,23 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
         <h2 class="text-xl sm:text-2xl">Privacy</h2>
         <p class="text-ink-600 mt-3 leading-relaxed">
           The calculator has no analytics inside it and sends nothing. It runs against a bundled data table. Nothing is
-          collected unless you separately choose to submit a quote request, and that request only carries the details you
-          can see on the form.
+          collected unless you ask us to email the estimate, and that request only carries the details you can see on
+          the form.
         </p>
       </section>
 
-      <Faq items={faqItems} />
-      <RelatedPages
-        siblings={[
-          { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Full installed cost breakdown' },
-          { label: 'Mini split cost', href: '/mini-split-cost/', description: 'Per-zone ductless pricing' },
-          { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
-          { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The comparison model, explained' },
-        ]}
-      />
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+        <Faq items={faqItems} />
+        <RelatedPages
+          compact
+          siblings={[
+            { label: 'Heat pump cost', href: '/heat-pump-cost/', description: 'Full installed cost breakdown' },
+            { label: 'Mini split cost', href: '/mini-split-cost/', description: 'Per-zone ductless pricing' },
+            { label: 'Operating cost', href: '/heat-pump-operating-cost/', description: 'Annual running cost by state' },
+            { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', description: 'The comparison model, explained' },
+          ]}
+        />
+      </div>
       <SourceList sources={citations} updated={updated} />
       <QuoteCta />
     </div>

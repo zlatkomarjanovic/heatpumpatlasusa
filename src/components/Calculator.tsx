@@ -76,7 +76,7 @@ const fieldLabel = 'block text-sm font-medium text-ink-800 mb-1.5';
 const fieldInput =
   'w-full rounded-md border border-line-strong bg-white px-3.5 py-2.5 text-base outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30';
 const chipBase =
-  'flex flex-col items-start rounded-lg border px-3 py-2.5 text-left transition cursor-pointer';
+  'flex flex-col rounded-lg border px-3 py-2.5 transition cursor-pointer';
 const chipOn = 'border-brand-600 bg-brand-50 ring-1 ring-brand-600';
 const chipOff = 'border-line-strong bg-white hover:border-ink-300';
 
@@ -304,7 +304,7 @@ export default function Calculator() {
                       {FUEL_OPTIONS.map((opt) => (
                         <label
                           key={opt.value}
-                          className={chipBase + ' ' + (input.fuel === opt.value ? chipOn : chipOff)}
+                          className={chipBase + ' items-start text-left ' + (input.fuel === opt.value ? chipOn : chipOff)}
                         >
                           <span className="flex items-center gap-2">
                             <input
@@ -355,7 +355,11 @@ export default function Calculator() {
                       {DISTRIBUTION_OPTIONS.map((opt) => (
                         <label
                           key={opt.value}
-                          className={chipBase + ' ' + (input.distribution === opt.value ? chipOn : chipOff)}
+                          className={
+                            chipBase +
+                            ' items-center text-center ' +
+                            (input.distribution === opt.value ? chipOn : chipOff)
+                          }
                         >
                           <input
                             type="radio"
@@ -481,7 +485,7 @@ export default function Calculator() {
                       <label
                         key={opt.value}
                         className={
-                          'cursor-pointer rounded-md border px-3 py-2.5 text-center text-sm font-medium transition ' +
+                          'flex cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-sm font-medium transition ' +
                           (input.panel === opt.value ? chipOn : chipOff)
                         }
                       >
@@ -546,7 +550,7 @@ export default function Calculator() {
                       <label
                         key={opt.value}
                         className={
-                          'cursor-pointer rounded-md border px-3 py-2.5 text-center text-sm font-medium ' +
+                          'flex cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-sm font-medium ' +
                           (cooling === opt.value ? chipOn : chipOff)
                         }
                       >
@@ -664,7 +668,7 @@ export default function Calculator() {
                 Your scenario
               </p>
               <p className="mt-1 text-xs leading-snug text-ink-500 lg:hidden">
-                Updates as you change answers. Nothing is sent until you request quotes.
+                Updates as you change answers. Nothing is sent unless you ask for the emailed estimate.
               </p>
 
               <dl className="mt-4 divide-y divide-line overflow-hidden rounded-lg bg-white ring-1 ring-line">
@@ -704,35 +708,48 @@ export default function Calculator() {
                 and shoving the whole calculator taller.
               */}
               <div className="mt-4 rounded-lg bg-brand-50/80 p-4 ring-1 ring-brand-100">
-                <p className="text-xs font-semibold text-brand-800">
-                  {resolvedState ? `Local data for ${resolvedState.code}` : 'Local data'}
-                </p>
-                <dl className="mt-3 space-y-2.5">
-                  <ScenarioStat
-                    label="Electricity"
-                    value={resolvedState ? `${resolvedState.electricityCentsPerKwh.toFixed(2)}¢/kWh` : '-'}
-                    hint={resolvedState ? 'EIA, Jun 2026' : 'Add your ZIP'}
-                    muted={!resolvedState}
-                  />
-                  <ScenarioStat
-                    label="Climate"
-                    value={resolvedState ? `${resolvedState.heatingDegreeDays.toLocaleString()} HDD` : '-'}
-                    hint={resolvedState ? 'NOAA, 2025-26' : 'Add your ZIP'}
-                    muted={!resolvedState}
-                  />
-                  <ScenarioStat
-                    label="Natural gas"
-                    value={resolvedState ? `$${resolvedState.gasDollarsPerMcf.toFixed(2)}/Mcf` : '-'}
-                    hint={
-                      !resolvedState
-                        ? 'Add your ZIP'
-                        : GAS_MODELLED_STATES.has(resolvedState.code)
-                          ? 'Regional estimate'
-                          : 'EIA, May 2026'
-                    }
-                    muted={!resolvedState}
-                  />
-                </dl>
+                {result ? (
+                  <>
+                    <p className="text-xs font-semibold text-brand-800">Assumptions</p>
+                    <ul className="mt-3 space-y-2 text-xs leading-relaxed text-brand-900/80">
+                      {result.assumptions.map((a) => (
+                        <li key={a}>{a}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-xs font-semibold text-brand-800">
+                      {resolvedState ? `Local data for ${resolvedState.code}` : 'Local data'}
+                    </p>
+                    <dl className="mt-3 space-y-2.5">
+                      <ScenarioStat
+                        label="Electricity"
+                        value={resolvedState ? `${resolvedState.electricityCentsPerKwh.toFixed(2)}¢/kWh` : '-'}
+                        hint={resolvedState ? 'EIA, Jun 2026' : 'Add your ZIP'}
+                        muted={!resolvedState}
+                      />
+                      <ScenarioStat
+                        label="Climate"
+                        value={resolvedState ? `${resolvedState.heatingDegreeDays.toLocaleString()} HDD` : '-'}
+                        hint={resolvedState ? 'NOAA, 2025-26' : 'Add your ZIP'}
+                        muted={!resolvedState}
+                      />
+                      <ScenarioStat
+                        label="Natural gas"
+                        value={resolvedState ? `$${resolvedState.gasDollarsPerMcf.toFixed(2)}/Mcf` : '-'}
+                        hint={
+                          !resolvedState
+                            ? 'Add your ZIP'
+                            : GAS_MODELLED_STATES.has(resolvedState.code)
+                              ? 'Regional estimate'
+                              : 'EIA, May 2026'
+                        }
+                        muted={!resolvedState}
+                      />
+                    </dl>
+                  </>
+                )}
               </div>
 
               {!result && (
@@ -841,7 +858,7 @@ function ResultPanel({
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-2.5">
         <StatBlock
           label="Installed"
           value={`${formatUsd(result.installedCost.low, { compact: true })} to ${formatUsd(result.installedCost.high, { compact: true })}`}
@@ -862,21 +879,34 @@ function ResultPanel({
         />
       </div>
 
-      <dl className="grid grid-cols-2 gap-x-4 gap-y-1.5 rounded-lg bg-paper-deep px-3.5 py-3 text-sm">
-        <SummaryRow
-          label="Heat now / year"
-          value={
-            result.operating.currentSystemAnnual === null
-              ? 'Not compared'
-              : formatUsd(result.operating.currentSystemAnnual)
-          }
-        />
-        <SummaryRow label="Heat pump / year" value={formatUsd(result.operating.heatPumpAnnual)} />
-        <SummaryRow label="10-year heat pump" value={formatUsd(result.tenYear.heatPump)} />
-        {result.tenYear.current !== null && (
-          <SummaryRow label="10-year staying put" value={formatUsd(result.tenYear.current)} />
-        )}
-      </dl>
+      <table className="w-full overflow-hidden rounded-lg bg-paper-deep text-sm">
+        <caption className="sr-only">Annual and 10-year cost comparison</caption>
+        <tbody>
+          {[
+            {
+              label: 'What you spend now, per year',
+              value:
+                result.operating.currentSystemAnnual === null
+                  ? 'Not compared'
+                  : formatUsd(result.operating.currentSystemAnnual),
+            },
+            { label: 'Heat pump, per year', value: formatUsd(result.operating.heatPumpAnnual) },
+            { label: '10-year heat pump path', value: formatUsd(result.tenYear.heatPump) },
+            result.tenYear.current !== null
+              ? { label: '10-year if you stay put', value: formatUsd(result.tenYear.current) }
+              : null,
+          ]
+            .filter((row): row is { label: string; value: string } => Boolean(row))
+            .map((row) => (
+              <tr key={row.label} className="border-b border-white/60 last:border-0">
+                <th scope="row" className="px-3.5 py-2.5 text-left font-medium text-ink-600">
+                  {row.label}
+                </th>
+                <td className="px-3.5 py-2.5 text-right font-semibold tabular-nums text-ink-950">{row.value}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
 
       {result.warnings[0] && (
         <p className="rounded-md bg-paper-deep px-3 py-2 text-xs leading-relaxed text-ink-600">{result.warnings[0]}</p>
@@ -895,7 +925,7 @@ function ResultPanel({
                   <span className="tabular-nums text-ink-900">
                     {adder.range.low === 0
                       ? `up to ${formatUsd(adder.range.high)}`
-                      : `${formatUsd(adder.range.low)}–${formatUsd(adder.range.high)}`}
+                      : `${formatUsd(adder.range.low)} to ${formatUsd(adder.range.high)}`}
                   </span>
                 </li>
               ))}
@@ -924,7 +954,7 @@ function ResultPanel({
                 <li key={rebate.id} className="flex items-baseline justify-between gap-3 text-xs">
                   <span className="text-ink-700">{rebate.program}</span>
                   <span className="shrink-0 tabular-nums text-ink-900">
-                    {formatUsd(rebate.amountLow)}–{formatUsd(rebate.amountHigh)}
+                    {formatUsd(rebate.amountLow)} to {formatUsd(rebate.amountHigh)}
                   </span>
                 </li>
               ))}
@@ -932,14 +962,6 @@ function ResultPanel({
           )}
         </details>
 
-        <details className="rounded-lg border border-line bg-white px-3.5 py-2.5">
-          <summary className="cursor-pointer text-sm font-semibold text-ink-800">Assumptions</summary>
-          <ul className="mt-2 space-y-1.5 text-xs leading-relaxed text-ink-600">
-            {result.assumptions.map((a) => (
-              <li key={a}>{a}</li>
-            ))}
-          </ul>
-        </details>
       </div>
 
       <LeadCapture result={result} zip={zip} cooling={cooling} />
@@ -983,16 +1005,15 @@ function LeadCapture({
         }
       }}
     >
-      <p className="text-sm font-semibold">Get installer quotes for this scenario</p>
+      <p className="text-sm font-semibold">See installers who cover your ZIP</p>
       <p className="mt-1 text-xs leading-relaxed text-white/70">
-        We send your ZIP, home size and modelled range to installers who cover your area. You get prices. They get a
-        qualified lead. No account.
+        Leave an email and we will send this estimate plus contractors nearby who actually install heat pumps. No account.
       </p>
       <input type="hidden" name="scenario" value={scenario} />
       <input type="hidden" name="source" value="calculator" />
       {status === 'sent' ? (
         <p className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
-          Got it. We will match this ZIP to installers and email you when quotes are ready.
+          Sent. Check your inbox for the estimate and the installers we found for this ZIP.
         </p>
       ) : (
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -1032,7 +1053,7 @@ function LeadCapture({
             type="submit"
             className="bg-brand-500 hover:bg-brand-600 col-span-full rounded-md px-4 py-2.5 text-sm font-semibold text-white"
           >
-            Send my scenario to installers
+            Email me the estimate
           </button>
           {status === 'error' && (
             <p className="col-span-full text-xs text-flag-100">

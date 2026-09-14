@@ -90,31 +90,32 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
   />
 
   <div class="container-atlas py-10 lg:py-14">
-    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
-      <div class="min-w-0 space-y-14">
-        <section id="why" class="scroll-mt-24">
-          <h2 class="text-xl sm:text-2xl">Why this page is short on purpose</h2>
-          <div class="prose-atlas mt-4">
-            <p>
-              You can find a list of thousands of energy incentives on DSIRE, and you should use it. What DSIRE cannot
-              tell you is whether a program is accepting applications this week, whether a reservation is required before
-              work begins, or whether the funding tranche ran out two months ago.
-            </p>
-            <p>
-              Those are the questions that decide whether you actually get paid. So this hub tracks a smaller number of
-              programs, records a status and a verification date for each one, and feeds the{' '}
-              <a href="/calculator/">calculator</a> with only the programs marked open.
-            </p>
-          </div>
+    <div class="grid gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-save-700 uppercase">Open now</p>
+        <p class="mt-1 font-serif text-3xl text-ink-950">{open.length}</p>
+        <p class="mt-1 text-sm text-ink-500">Included in the calculator total</p>
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-flag-700 uppercase">Enrolling</p>
+        <p class="mt-1 font-serif text-3xl text-ink-950">{enrolling.length}</p>
+        <p class="mt-1 text-sm text-ink-500">Funded, portal may still be settling</p>
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-heat-700 uppercase">Paused</p>
+        <p class="mt-1 font-serif text-3xl text-ink-950">{limited.length}</p>
+        <p class="mt-1 text-sm text-ink-500">Reserved, expired, or not accepting</p>
+      </div>
+    </div>
 
-          <Callout tone="caution" title="The 25C problem" class="mt-6">
-            <p>
-              The federal 25C tax credit ended for equipment placed in service after 31 December 2025. Multiple government
-              and nonprofit pages still describe it as available, and a lot of 2026 content was written from those pages.
-              If a rebate total you have been quoted relies on 25C, deduct it and recheck the project.
-            </p>
-          </Callout>
-        </section>
+    <p class="text-ink-600 mt-8 max-w-3xl text-sm leading-relaxed sm:text-base">
+      DSIRE lists thousands of incentives. This page answers a narrower question: is the program taking applications
+      this week? Only programs marked open go into the <a href="/calculator/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">calculator</a>.
+      The federal 25C credit ended after 31 December 2025. If a quote still includes it, subtract it.
+    </p>
+
+    <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
 
         {open.length > 0 && (
           <Section id="open" number="1" title="Open now" lede="These programs are accepting applications. Verify the current amount and any reservation requirement before you sign.">
@@ -212,7 +213,6 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
           <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
           <ul class="mt-3 space-y-2 text-sm">
             {[
-              { href: '#why', label: 'Why this list is short' },
               { href: '#open', label: 'Open now' },
               { href: '#enrolling', label: 'Enrolling' },
               { href: '#limited', label: 'Reserved or expired' },
@@ -227,9 +227,10 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
       </aside>
     </div>
 
-    <div class="mx-auto mt-16 max-w-3xl space-y-12">
+    <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:items-start">
       <Faq items={faqItems} />
       <RelatedPages
+        compact
         children={[
           { label: 'Mass Save (Massachusetts)', href: '/rebates/mass-save/', description: 'The largest whole-home rebate in the US' },
           { label: 'Efficiency Maine', href: '/rebates/efficiency-maine/', description: 'Oil conversion incentives with income tiers' },
@@ -242,6 +243,8 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
           { label: 'Markets', href: '/markets/' },
         ]}
       />
+    </div>
+    <div class="mt-12">
       <SourceList sources={citations} updated={updated} />
     </div>
   </div>

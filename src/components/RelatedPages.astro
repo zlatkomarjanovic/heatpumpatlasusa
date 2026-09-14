@@ -17,6 +17,8 @@ interface Props {
   parents?: NavItem[];
   title?: string;
   class?: string;
+  /** Single column, used when this block sits beside FAQ. */
+  compact?: boolean;
 }
 
 const {
@@ -25,6 +27,7 @@ const {
   parents = [],
   title = 'Related pages',
   class: className = '',
+  compact = false,
 } = Astro.props;
 
 const groups = [
@@ -37,7 +40,7 @@ const groups = [
 {groups.length > 0 && (
   <nav class:list={['not-prose', className]} aria-labelledby="related-heading">
     <h2 id="related-heading" class="text-ink-900 font-serif text-lg">{title}</h2>
-    <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class:list={['mt-4 grid gap-6', compact ? 'grid-cols-1' : 'sm:grid-cols-2 lg:grid-cols-3']}>
       {groups.map((group) => (
         <div>
           <p class="text-ink-500 mb-2.5 text-2xs font-semibold tracking-wider uppercase">{group.label}</p>
