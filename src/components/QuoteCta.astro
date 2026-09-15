@@ -1,13 +1,11 @@
 ---
 /**
- * Quote call to action.
+ * Installer-routing CTA.
  *
- * Deliberately restrained: no fake scarcity, no countdown. It states what
- * happens next and what data is carried into the request. The form is a real
- * HTML form posting to a configurable endpoint so it works without client JS;
- * when no endpoint is configured the component degrades to an email link.
- *
- * The endpoint is read at build time from PUBLIC_QUOTE_ENDPOINT. See README.
+ * The calculator already answers "what does this cost." This block asks for a
+ * different thing: bids that use the same scope as the model, so a homeowner
+ * can reject a padded quote. Phone stays optional. Contact details for the
+ * editorial desk are not collected here.
  */
 import Icon from '@/components/Icon.astro';
 
@@ -16,18 +14,31 @@ interface Props {
   body?: string;
   /** Prefills the market line, e.g. "Boston, MA". */
   market?: string;
-  /** Compact renders a single-line band used mid-article. */
+  /** Compact and inline are teasers. They must sit on a page that also renders `full`. */
   variant?: 'full' | 'compact' | 'inline';
   class?: string;
 }
 
 const {
-  title = 'See what a local installer would actually charge',
-  body = 'Leave an email and we will send your estimate plus contractors nearby who install this work. Same ZIP, same scope. No account.',
   market,
   variant = 'full',
   class: className = '',
 } = Astro.props;
+
+const fullTitle =
+  Astro.props.title ??
+  (market
+    ? `Ask ${market} installers to price this job, not a different one`
+    : 'Ask installers to price this job, not a different one');
+
+const fullBody =
+  Astro.props.body ??
+  'The range is already on this site, and the calculator will give you a ZIP-level number for free. What you do not have is a bid that uses the same scope. We send your ZIP and that range to installers who work the market, and we tell them to quote that job. You get the emails. You decide.';
+
+const teaserTitle = Astro.props.title ?? 'The range is not the bid';
+const teaserBody =
+  Astro.props.body ??
+  'The calculator already gives you the number. Use this if you want installers to quote the same job, so a $24,000 sales package is easy to reject.';
 
 const endpoint = import.meta.env.PUBLIC_QUOTE_ENDPOINT ?? '';
 const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
@@ -35,22 +46,22 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
 
 {variant === 'inline' && (
   <aside class:list={['not-prose border-brand-200 bg-brand-50 rounded-lg border-l-4 p-4 sm:p-5', className]}>
-    <p class="text-brand-800 text-sm font-semibold">{title}</p>
-    <p class="text-brand-800/85 mt-1.5 text-sm leading-relaxed">{body}</p>
+    <p class="text-brand-800 text-sm font-semibold">{teaserTitle}</p>
+    <p class="text-brand-800/85 mt-1.5 text-sm leading-relaxed">{teaserBody}</p>
     <div class="mt-3 flex flex-wrap gap-3">
       <a
-        href="/calculator/"
+        href="#quote"
         class="bg-brand-700 hover:bg-brand-800 inline-flex items-center gap-1.5 rounded-md px-3.5 py-2 text-sm font-semibold text-white transition-colors"
       >
-        <Icon name="calculator" size={15} />
-        See your real cost
+        <Icon name="route" size={15} />
+        Send this job to installers
       </a>
       <a
-        href="#quote"
+        href="/calculator/"
         class="border-brand-200 text-brand-800 hover:bg-brand-100 inline-flex items-center gap-1.5 rounded-md border bg-white px-3.5 py-2 text-sm font-semibold transition-colors"
       >
-        <Icon name="route" size={15} />
-        See installers nearby
+        <Icon name="calculator" size={15} />
+        I still need the number
       </a>
     </div>
   </aside>
@@ -60,15 +71,15 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
   <aside class:list={['not-prose bg-ink-950 rounded-lg p-5 sm:p-6', className]}>
     <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       <div>
-        <p class="text-base font-semibold text-white">{title}</p>
-        <p class="mt-1 max-w-xl text-sm leading-relaxed text-ink-400">{body}</p>
+        <p class="text-base font-semibold text-white">{teaserTitle}</p>
+        <p class="mt-1 max-w-xl text-sm leading-relaxed text-ink-400">{teaserBody}</p>
       </div>
       <a
-        href="/calculator/"
+        href="#quote"
         class="bg-brand-500 hover:bg-brand-600 inline-flex shrink-0 items-center justify-center gap-1.5 rounded-md px-4 py-2.5 text-sm font-semibold text-white transition-colors"
       >
-        <Icon name="calculator" size={15} />
-        See your real cost
+        <Icon name="route" size={15} />
+        Send this job to installers
       </a>
     </div>
   </aside>
@@ -79,14 +90,14 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
     <div class="border-line shadow-card overflow-hidden rounded-lg border bg-white">
       <div class="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
         <div class="p-6 sm:p-8">
-          <h2 id={`${formId}-heading`} class="text-xl sm:text-2xl">{title}</h2>
-          <p class="text-ink-600 mt-3 text-sm leading-relaxed sm:text-base">{body}</p>
+          <h2 id={`${formId}-heading`} class="text-xl sm:text-2xl">{fullTitle}</h2>
+          <p class="text-ink-600 mt-3 text-sm leading-relaxed sm:text-base">{fullBody}</p>
 
           <ul class="mt-5 space-y-2.5 text-sm">
             {[
-              'Your estimate is emailed to you, so you can take it to any contractor',
-              'We also show installers who already work your ZIP',
-              'No account, and you can ignore the email if you are just looking',
+              'We attach the modeled range so the bid has to price that job, not a sales package',
+              'You also get a one-page brief you can hand to any contractor you found yourself',
+              'Phone is optional. No account. If nobody covers your ZIP yet, you still get the brief',
             ].map((line) => (
               <li class="text-ink-700 flex gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="text-save-600 mt-0.5 shrink-0">
@@ -100,88 +111,90 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
 
         <div class="border-line bg-paper-deep border-t p-6 sm:p-8 lg:border-t-0 lg:border-l">
           <form
-              method="post"
-              action={endpoint || '/api/leads'}
-              class="space-y-4"
-              aria-labelledby={`${formId}-heading`}
+            method="post"
+            action={endpoint || '/api/leads'}
+            class="space-y-4"
+            aria-labelledby={`${formId}-heading`}
+          >
+            <input type="hidden" name="market" value={market ?? ''} />
+            <input type="hidden" name="source" value={Astro.url.pathname} />
+            <div>
+              <label for={`${formId}-name`} class="text-ink-800 mb-1.5 block text-sm font-medium">Name</label>
+              <input
+                id={`${formId}-name`}
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+              />
+            </div>
+            <div>
+              <label for={`${formId}-zip`} class="text-ink-800 mb-1.5 block text-sm font-medium">ZIP code</label>
+              <input
+                id={`${formId}-zip`}
+                name="zip"
+                type="text"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                pattern="\d{5}"
+                maxlength="5"
+                required
+                placeholder="02134"
+                class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+              />
+            </div>
+            <div>
+              <label for={`${formId}-email`} class="text-ink-800 mb-1.5 block text-sm font-medium">Email</label>
+              <input
+                id={`${formId}-email`}
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+                class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+              />
+            </div>
+            <div>
+              <label for={`${formId}-phone`} class="text-ink-800 mb-1.5 block text-sm font-medium">
+                Phone <span class="text-ink-400 font-normal">Optional</span>
+              </label>
+              <input
+                id={`${formId}-phone`}
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="Only if you want a call"
+                class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+              />
+            </div>
+            <div>
+              <label for={`${formId}-notes`} class="text-ink-800 mb-1.5 block text-sm font-medium">
+                What should they price? <span class="text-ink-400 font-normal">Optional</span>
+              </label>
+              <textarea
+                id={`${formId}-notes`}
+                name="notes"
+                rows="3"
+                placeholder="I have a $24,000 quote. Oil heat, ducts in the attic, 100 amp panel."
+                class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full resize-y rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors"
             >
-              <input type="hidden" name="market" value={market ?? ''} />
-              <input type="hidden" name="source" value={Astro.url.pathname} />
-              <div>
-                <label for={`${formId}-name`} class="text-ink-800 mb-1.5 block text-sm font-medium">Name</label>
-                <input
-                  id={`${formId}-name`}
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                  required
-                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
-                />
-              </div>
-              <div>
-                <label for={`${formId}-zip`} class="text-ink-800 mb-1.5 block text-sm font-medium">ZIP code</label>
-                <input
-                  id={`${formId}-zip`}
-                  name="zip"
-                  type="text"
-                  inputmode="numeric"
-                  autocomplete="postal-code"
-                  pattern="\d{5}"
-                  maxlength="5"
-                  required
-                  placeholder="02134"
-                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
-                />
-              </div>
-              <div>
-                <label for={`${formId}-email`} class="text-ink-800 mb-1.5 block text-sm font-medium">Email</label>
-                <input
-                  id={`${formId}-email`}
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  placeholder="you@example.com"
-                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
-                />
-              </div>
-              <div>
-                <label for={`${formId}-phone`} class="text-ink-800 mb-1.5 block text-sm font-medium">
-                  Phone <span class="text-ink-400 font-normal">Optional</span>
-                </label>
-                <input
-                  id={`${formId}-phone`}
-                  name="phone"
-                  type="tel"
-                  autocomplete="tel"
-                  placeholder="(555) 555-0123"
-                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
-                />
-              </div>
-              <div>
-                <label for={`${formId}-notes`} class="text-ink-800 mb-1.5 block text-sm font-medium">
-                  Anything else? <span class="text-ink-400 font-normal">Optional</span>
-                </label>
-                <textarea
-                  id={`${formId}-notes`}
-                  name="notes"
-                  rows="3"
-                  placeholder="Steam heat, no existing ducts, 1920s house."
-                  class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full resize-y rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors"
-              >
-                <Icon name="route" size={16} />
-                Email me the estimate
-              </button>
-              <p class="text-ink-500 text-xs leading-relaxed">
-                We email you the estimate and a short list of installers who cover that ZIP. Read how we handle data in our
-                <a href="/privacy/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">privacy policy</a>.
-              </p>
-            </form>
+              <Icon name="route" size={16} />
+              Send this job to installers
+            </button>
+            <p class="text-ink-500 text-xs leading-relaxed">
+              Installers pay for the introduction in markets we cover. That is how the site is funded. Read the
+              <a href="/privacy/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">privacy policy</a>
+              and the
+              <a href="/about/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">money model</a>.
+            </p>
+          </form>
         </div>
       </div>
     </div>

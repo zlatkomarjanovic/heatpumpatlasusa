@@ -32,6 +32,7 @@ export const KEYWORD_TARGETS: KeywordTarget[] = [
   { href: '/rebates/focus-on-energy/', keyword: 'focus on energy heat pump rebate', group: 'rebate' },
   { href: '/rebates/xcel-energy/', keyword: 'xcel energy heat pump rebate', group: 'rebate' },
   { href: '/rebates/eversource/', keyword: 'eversource heat pump rebate', group: 'rebate' },
+  { href: '/guides/', keyword: 'heat pump guides', group: 'guide' },
   { href: '/guides/are-heat-pumps-worth-it/', keyword: 'are heat pumps worth it', group: 'guide' },
   { href: '/guides/do-heat-pumps-work-in-cold-weather/', keyword: 'do heat pumps work in cold weather', group: 'guide' },
   { href: '/guides/what-size-heat-pump-do-i-need/', keyword: 'what size heat pump do i need', group: 'guide' },
@@ -133,6 +134,14 @@ const RELATED_HREFS: Record<string, string[]> = {
   '/rebates/focus-on-energy/': ['/heat-pump-vs-furnace/', '/guides/do-heat-pumps-work-in-cold-weather/', '/calculator/', '/rebates/'],
   '/rebates/xcel-energy/': ['/markets/denver-co/', '/heat-pump-vs-furnace/', '/calculator/', '/rebates/'],
   '/rebates/eversource/': ['/rebates/mass-save/', '/rebates/energize-ct/', '/calculator/', '/rebates/'],
+  '/guides/': [
+    '/guides/are-heat-pumps-worth-it/',
+    '/guides/do-heat-pumps-work-in-cold-weather/',
+    '/guides/what-size-heat-pump-do-i-need/',
+    '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/',
+    '/guides/heat-pump-electric-bill/',
+    '/calculator/',
+  ],
   '/guides/are-heat-pumps-worth-it/': [
     '/heat-pump-vs-furnace/',
     '/heat-pump-operating-cost/',

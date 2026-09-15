@@ -1,10 +1,10 @@
 ---
 /**
- * Header with accessible desktop dropdowns and a mobile disclosure menu.
+ * Header with accessible desktop dropdowns and a JS-driven mobile sheet.
  *
- * Interactivity is CSS-first: desktop submenus open on hover and focus, and the
- * mobile menu is a checkbox-free details element so there is no client JS and no
- * hidden content for crawlers.
+ * The mobile menu is a button + sliding panel (not a details element). Native
+ * details plus Lenis plus a transparent hero header was closing the menu on
+ * scroll and leaving it unable to reopen.
  */
 import { PRIMARY_NAV, SITE } from '@/data/site';
 
@@ -111,83 +111,192 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
           See your real cost
         </a>
 
-        <!-- Mobile menu -->
-        <details class="group lg:hidden [&_summary::-webkit-details-marker]:hidden">
-          <summary
-            class="hdr-menu-btn border-line text-ink-700 hover:text-ink-950 hover:bg-paper-deep flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md border transition-colors"
-            aria-label="Open main menu"
-          >
-            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" class="group-open:hidden">
-              <path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-            </svg>
-            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" class="hidden group-open:block">
-              <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-            </svg>
-          </summary>
-          <div class="border-line fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t bg-white lg:hidden">
-            <nav aria-label="Mobile" class="container-atlas py-5">
-              <ul class="space-y-1">
-                {PRIMARY_NAV.map((item) => (
-                  <li>
-                    {item.children ? (
-                      <details class="border-line border-b py-1">
-                        <summary class="text-ink-900 flex cursor-pointer list-none items-center justify-between py-3 text-base font-semibold">
-                          {item.label}
-                          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="text-ink-400">
-                            <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" />
-                          </svg>
-                        </summary>
-                        <ul class="pb-2">
-                          {item.children.map((child) => (
-                            <li>
-                              <a href={child.href} class="text-ink-700 hover:text-brand-700 block py-2.5 pl-3 text-sm">
-                                {child.label}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </details>
-                    ) : (
-                      <a
-                        href={item.href}
-                        class="text-ink-900 border-line hover:text-brand-700 block border-b py-3 text-base font-semibold"
-                      >
-                        {item.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="/calculator/"
-                class="bg-brand-700 mt-5 flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white"
-              >
-                See your real cost
-              </a>
-            </nav>
-          </div>
-        </details>
+        <button
+          type="button"
+          id="mobile-nav-toggle"
+          class="hdr-menu-btn border-line text-ink-700 hover:text-ink-950 hover:bg-paper-deep flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border transition-colors lg:hidden"
+          aria-label="Open main menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" class="icon-open">
+            <path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" class="icon-close">
+            <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
+
+  <div id="mobile-nav" class="mobile-nav border-line border-t lg:hidden" aria-hidden="true" inert>
+    <nav aria-label="Mobile" class="container-atlas py-5">
+      <ul class="space-y-1">
+        {PRIMARY_NAV.map((item) => (
+          <li>
+            {item.children ? (
+              <details class="border-line border-b py-1">
+                <summary class="text-ink-900 flex cursor-pointer list-none items-center justify-between py-3 text-base font-semibold [&::-webkit-details-marker]:hidden">
+                  {item.label}
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="text-ink-400">
+                    <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <ul class="pb-2">
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href} class="text-ink-700 hover:text-brand-700 block py-2.5 pl-3 text-sm">
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ) : (
+              <a
+                href={item.href}
+                class="text-ink-900 border-line hover:text-brand-700 block border-b py-3 text-base font-semibold"
+              >
+                {item.label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+      <a
+        href="/calculator/"
+        class="bg-brand-700 mt-5 flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white"
+      >
+        See your real cost
+      </a>
+    </nav>
   </div>
 </header>
 
 <script is:inline>
-  // Adaptive header: transparent over a hero at the top, solid once scrolled.
   (function () {
-    var header = document.querySelector('.site-header.is-over-hero');
+    var header = document.querySelector('.site-header');
     if (!header) return;
+
+    var btn = document.getElementById('mobile-nav-toggle');
+    var panel = document.getElementById('mobile-nav');
+    var open = false;
+    var scrollLocked = false;
+    var lockedY = 0;
+
+    function getLenis() {
+      return window.__atlasLenis || null;
+    }
+
+    function lockScroll() {
+      if (scrollLocked) return;
+      lockedY = window.scrollY || document.documentElement.scrollTop || 0;
+      document.documentElement.classList.add('is-nav-open');
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + lockedY + 'px';
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
+      scrollLocked = true;
+      var lenis = getLenis();
+      if (lenis && typeof lenis.stop === 'function') lenis.stop();
+    }
+
+    function unlockScroll() {
+      if (!scrollLocked) return;
+      document.documentElement.classList.remove('is-nav-open');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      scrollLocked = false;
+      var lenis = getLenis();
+      if (lenis && typeof lenis.start === 'function') lenis.start();
+      window.scrollTo(0, lockedY);
+    }
+
+    function setOpen(next) {
+      next = !!next;
+      if (next === open) return;
+      open = next;
+      header.classList.toggle('is-menu-open', open);
+      if (panel) {
+        panel.classList.toggle('is-open', open);
+        panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (open) panel.removeAttribute('inert');
+        else panel.setAttribute('inert', '');
+      }
+      if (btn) {
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close main menu' : 'Open main menu');
+      }
+      if (open) lockScroll();
+      else unlockScroll();
+    }
+
+    if (btn && panel) {
+      btn.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        setOpen(!open);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if ((event.key === 'Escape' || event.key === 'Esc') && open) {
+          setOpen(false);
+          btn.focus();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (open && window.matchMedia('(min-width: 1024px)').matches) {
+          setOpen(false);
+        }
+      });
+
+      document.addEventListener(
+        'wheel',
+        function (event) {
+          if (!open) return;
+          if (panel.contains(event.target)) return;
+          event.preventDefault();
+        },
+        { passive: false },
+      );
+
+      document.addEventListener(
+        'touchmove',
+        function (event) {
+          if (!open) return;
+          if (panel.contains(event.target)) return;
+          event.preventDefault();
+        },
+        { passive: false },
+      );
+
+      window.addEventListener('pageshow', function () {
+        if (open) setOpen(false);
+        else if (scrollLocked) unlockScroll();
+      });
+    }
+
+    var heroHeader = document.querySelector('.site-header.is-over-hero');
+    if (!heroHeader) return;
+
     var solid = null;
-    function update() {
+    function updateHero() {
+      if (document.documentElement.classList.contains('is-nav-open')) return;
       var y = window.scrollY || document.documentElement.scrollTop || 0;
       var next = y > 24;
       if (next !== solid) {
         solid = next;
-        header.classList.toggle('is-solid', next);
+        heroHeader.classList.toggle('is-solid', next);
       }
     }
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update, { passive: true });
+    updateHero();
+    window.addEventListener('scroll', updateHero, { passive: true });
+    window.addEventListener('resize', updateHero, { passive: true });
   })();
 </script>

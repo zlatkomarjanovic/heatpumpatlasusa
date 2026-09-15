@@ -1011,15 +1011,16 @@ function LeadCapture({
         }
       }}
     >
-      <p className="text-sm font-semibold">See installers who cover your ZIP</p>
+      <p className="text-sm font-semibold">Ask installers to price this job</p>
       <p className="mt-1 text-xs leading-relaxed text-white/70">
-        Leave an email and we will send this estimate plus contractors nearby who actually install heat pumps. No account.
+        You already have the range. We send this ZIP and these numbers to installers who work it, and we tell them to
+        quote this scope, not a different system. You get the emails.
       </p>
       <input type="hidden" name="scenario" value={scenario} />
       <input type="hidden" name="source" value="calculator" />
       {status === 'sent' ? (
         <p className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
-          Sent. Check your inbox for the estimate and the installers we found for this ZIP.
+          Sent. Check your inbox for the job brief and any installers we can route in this ZIP.
         </p>
       ) : (
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -1059,7 +1060,7 @@ function LeadCapture({
             type="submit"
             className="bg-brand-500 hover:bg-brand-600 col-span-full rounded-md px-4 py-2.5 text-sm font-semibold text-white"
           >
-            Email me the estimate
+            Send this job to installers
           </button>
           {status === 'error' && (
             <p className="col-span-full text-xs text-flag-100">

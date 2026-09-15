@@ -380,6 +380,11 @@ html.lenis body {
     backdrop-filter 0.3s ease;
 }
 
+.site-header > .container-atlas {
+  position: relative;
+  z-index: 2;
+}
+
 .site-header.is-over-hero:not(.is-solid) {
   background-color: transparent;
   border-color: transparent;
@@ -426,6 +431,99 @@ html.lenis body {
 .site-header.is-over-hero:not(.is-solid) .hdr-menu-btn {
   color: #fff;
   border-color: rgb(255 255 255 / 0.35);
+}
+
+/*
+ * Mobile menu. The bar and the sheet stay fully opaque. The sheet slides
+ * down from under the header. .is-menu-open beats the transparent hero state.
+ */
+.site-header.is-menu-open,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) {
+  background-color: var(--color-paper);
+  border-color: var(--color-line);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.site-header.is-menu-open .hdr-brand,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) .hdr-brand {
+  color: var(--color-ink-950);
+}
+
+.site-header.is-menu-open .hdr-brand-accent,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) .hdr-brand-accent {
+  color: var(--color-brand-600);
+}
+
+.site-header.is-menu-open .hdr-sub,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) .hdr-sub {
+  color: var(--color-ink-500);
+}
+
+.site-header.is-menu-open .hdr-menu-btn,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) .hdr-menu-btn {
+  color: var(--color-ink-900);
+  border-color: var(--color-line);
+  background-color: var(--color-surface);
+}
+
+.site-header.is-menu-open .hdr-logo,
+.site-header.is-over-hero.is-menu-open:not(.is-solid) .hdr-logo {
+  color: var(--color-brand-700);
+}
+
+.hdr-menu-btn .icon-close {
+  display: none;
+}
+
+.site-header.is-menu-open .hdr-menu-btn .icon-open {
+  display: none;
+}
+
+.site-header.is-menu-open .hdr-menu-btn .icon-close {
+  display: block;
+}
+
+.mobile-nav {
+  position: fixed;
+  inset: 4rem 0 0 0;
+  z-index: 40;
+  background-color: var(--color-paper);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease,
+    visibility 0.34s;
+}
+
+.mobile-nav.is-open {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+html.is-nav-open,
+html.is-nav-open body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+html.is-nav-open .mobile-nav {
+  touch-action: pan-y;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav {
+    transition: none;
+  }
 }
 
 /* Homepage hero: glass stats, headline accent, trust band */

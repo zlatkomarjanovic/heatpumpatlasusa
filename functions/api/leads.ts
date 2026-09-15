@@ -17,6 +17,8 @@ export async function onRequestPost(context: {
     email: String(form.get('email') ?? '').slice(0, 200),
     phone: String(form.get('phone') ?? '').slice(0, 40),
     zip: String(form.get('zip') ?? '').slice(0, 10),
+    market: String(form.get('market') ?? '').slice(0, 80),
+    notes: String(form.get('notes') ?? '').slice(0, 2000),
     source: String(form.get('source') ?? 'site'),
     scenario: String(form.get('scenario') ?? '').slice(0, 8000),
   };

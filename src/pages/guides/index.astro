@@ -2,17 +2,25 @@
 /**
  * Guides hub.
  *
- * Lists every editorial guide in the collection. Kept as a real index so the
- * guides are reachable by crawlers and not orphaned.
+ * Full-width library (same container as rebates and markets) with a three-column
+ * card grid, client-side search and topic filters. Every card stays in the HTML
+ * so crawlers see the full library even if JavaScript never runs.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
 import PageHeader from '@/components/PageHeader.astro';
 import Section from '@/components/Section.astro';
+import Callout from '@/components/Callout.astro';
+import Faq from '@/components/Faq.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
+import SourceList from '@/components/SourceList.astro';
+import KeywordCluster from '@/components/KeywordCluster.astro';
+import QuoteCta from '@/components/QuoteCta.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { guideCover } from '@/data/guide-images';
+import { pickSources } from '@/data/sources';
+import { AUTHOR } from '@/data/site';
 
 const path = '/guides/';
 const updated = new Date('2026-09-14');
@@ -22,100 +30,485 @@ const crumbs = [
   { label: 'Guides', href: path },
 ];
 
-const guides = (await getCollection('guides')).filter((g) => !g.data.draft);
+const TOPIC_LABELS: Record<string, string> = {
+  basics: 'Basics',
+  comparison: 'Comparisons',
+  sizing: 'Sizing',
+  electrical: 'Electrical',
+  'operating-cost': 'Operating cost',
+  systems: 'Systems',
+};
 
-const byTag = guides.reduce<Record<string, typeof guides>>((acc, guide) => {
-  const tag = guide.data.tags[0] ?? 'general';
-  acc[tag] = acc[tag] ?? [];
-  acc[tag].push(guide);
-  return acc;
-}, {});
+const TOPIC_SEARCH: Record<string, string> = {
+  basics: 'worth it payback winter cold weather',
+  comparison: 'vs furnace oil baseboard ducted ductless geothermal dual fuel pellet',
+  sizing: 'manual j tonnage tons square foot oversize undersize load calculation',
+  electrical: 'panel upgrade 100 amp 200 amp service breaker fuse box',
+  'operating-cost': 'electric bill running cost kwh gas oil propane',
+  systems: 'dual fuel backup furnace hybrid',
+};
+
+const guides = (await getCollection('guides'))
+  .filter((g) => !g.data.draft)
+  .sort((a, b) => b.data.updated.getTime() - a.data.updated.getTime());
+
+const topicKeys = [...new Set(guides.flatMap((g) => g.data.tags))].sort((a, b) =>
+  (TOPIC_LABELS[a] ?? a).localeCompare(TOPIC_LABELS[b] ?? b),
+);
+
+const cards = guides.map((guide) => {
+  const tags = guide.data.tags.length ? guide.data.tags : ['basics'];
+  const search = [
+    guide.data.title,
+    guide.data.excerpt ?? '',
+    guide.data.description,
+    guide.data.primaryKeyword,
+    ...tags,
+    ...tags.map((tag) => TOPIC_LABELS[tag] ?? tag),
+    ...tags.flatMap((tag) => (TOPIC_SEARCH[tag] ?? '').split(' ')),
+  ]
+    .join(' ')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  return {
+    id: guide.id,
+    href: `/guides/${guide.id}/`,
+    title: guide.data.title,
+    excerpt: guide.data.excerpt ?? guide.data.description,
+    keyword: guide.data.primaryKeyword,
+    tags,
+    topicLabel: TOPIC_LABELS[tags[0]] ?? tags[0],
+    published: guide.data.published ?? guide.data.updated,
+    updated: guide.data.updated,
+    reviewedBy: guide.data.reviewedBy ?? AUTHOR.name,
+    cover: guideCover(guide.id),
+    search,
+  };
+});
+
+const faqItems = [
+  {
+    question: 'What heat pump guides do you publish?',
+    answer:
+      'Plain-English heat pump guides on whether they are worth it, cold weather performance, sizing, the electric bill, panel upgrades, ducted vs ductless, air source vs geothermal, dual fuel, and comparisons against electric baseboard and pellet stoves. Each guide is sourced, dated, and written by HeatPumpAtlasUSA Editorial.',
+  },
+  {
+    question: 'Are heat pumps worth it in 2026?',
+    answer:
+      'Usually when you heat with oil, propane or electric resistance. Against cheap natural gas a furnace can still win on the monthly bill. The honest answer is your fuel, your electricity price and how cold your winters are, not a national average. Start with the worth-it guide, then run the calculator with your ZIP.',
+  },
+  {
+    question: 'Do heat pumps work in cold weather?',
+    answer:
+      'Yes. A modern cold-climate heat pump keeps producing useful heat well below zero Fahrenheit. Capacity and efficiency fall as it gets colder, which is why sizing and backup heat matter. The machine does not shut off at freezing the way older units did.',
+  },
+  {
+    question: 'What size heat pump do I need?',
+    answer:
+      'A Manual J load calculation for your house, not a tons-per-square-foot rule. Climate, insulation, air leakage and the design temperature all move the number. A typical 1,800 to 2,200 square foot home often lands between 2 and 4 tons, but treating that as a spec is how systems get oversized.',
+  },
+  {
+    question: 'Do I need a panel upgrade for a heat pump?',
+    answer:
+      'Not always. A load calculation against your service and appliances decides it. A single-zone mini split on a 200 amp panel with spare capacity usually fits. A whole-home ducted system with electric backup on a 100 amp service that already feeds an electric range and dryer often does not.',
+  },
+  {
+    question: 'Will a heat pump raise my electric bill?',
+    answer:
+      'Yes. A heat pump runs on electricity, so the electric bill rises. The useful question is the combined bill: electricity plus the fuel you no longer burn. Against oil, propane or electric resistance the combined bill usually falls. Against cheap natural gas it can go either way.',
+  },
+  {
+    question: 'How are these heat pump guides researched?',
+    answer:
+      'Every guide is written against the same published sources the calculator uses: EIA electricity and fuel prices, NOAA heating degree days, Census heating-fuel mix, ENERGY STAR product criteria, and program administrator pages for rebates. We are not an HVAC contractor and we do not sell equipment. If the model says a heat pump loses, the guide says so.',
+  },
+  {
+    question: 'How often are the guides updated?',
+    answer:
+      'When the underlying data or the program rules change, not on a calendar for its own sake. Every guide shows a written-by line, a last updated date, and a sources list. Rebate figures that appear in a guide are treated as planning inputs and should be confirmed with the program before you sign.',
+  },
+];
+
+const citations = pickSources([
+  'eiaElectricity',
+  'eiaGas',
+  'eiaHeatingOil',
+  'noaaHdd',
+  'censusFuel',
+  'nrelResStock',
+  'doeHomeUpgrades',
+  'energyStarCalculator',
+  'rewiringAmericaCosts',
+  'rewiringAmericaPanel',
+]);
+
+const shortDate = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Guides (2026)"
-    description="Heat pump guides on whether they are worth it, cold weather performance, sizing, electric bills, ducted vs ductless, and the other questions that decide a switch."
+    title="Heat Pump Guides: Worth It, Sizing, Bills"
+    description="Heat pump guides on whether they are worth it, cold weather, sizing, electric bills and panel upgrades. Sourced, dated, and written to publish the losing cases."
     path={path}
     type="CollectionPage"
     breadcrumbs={crumbs}
     updated={updated}
+    faqs={faqItems}
     primaryKeyword="heat pump guides"
     isHub
+    itemList={{
+      name: 'Heat pump guides',
+      items: cards.map((card) => ({ name: card.title, url: card.href })),
+    }}
   />
 
   <PageHeader
     eyebrow="Guides"
-    title="Heat pump guides: cost, sizing and cold weather"
-    standfirst="Long-form heat pump guides on cost, whether they are worth it, cold weather, sizing and your electric bill. Each one is sourced and dated."
+    title="Heat pump guides: worth it, sizing and cold weather"
+    standfirst="Long-form heat pump guides on cost, whether they are worth it, cold weather, sizing, your electric bill and whether you need a panel upgrade. Each one is sourced, dated, and written by HeatPumpAtlasUSA Editorial."
     breadcrumbs={crumbs}
     updated={updated}
-    spacious
+    reviewedBy={AUTHOR.name}
+    keyStat={{
+      value: `${cards.length} sourced guides`,
+      label: 'Written against EIA, NOAA, Census and ENERGY STAR data. We publish the cases where a heat pump loses.',
+      source: 'HeatPumpAtlasUSA Editorial',
+    }}
   />
 
   <div class="container-atlas py-10 lg:py-14">
-    <div class="mx-auto max-w-4xl">
-      {guides.length === 0 ? (
-        <p class="text-ink-600">
-          Guides are published as they are researched and reviewed. In the meantime, the main hubs cover the core
-          questions: <a href="/heat-pump-cost/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">heat pump cost</a>,{' '}
-          <a href="/mini-split-cost/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">mini split cost</a>,{' '}
-          <a href="/heat-pump-vs-furnace/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">heat pump vs furnace</a>, and the{' '}
-          <a href="/calculator/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">calculator</a>.
+    <div class="grid gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">Who writes this</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">
+          <a href={AUTHOR.url} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{AUTHOR.name}</a>
+          . Not a contractor, not a manufacturer, not a lead mill.
         </p>
-      ) : (
-        <div class="space-y-12">
-          {Object.entries(byTag).map(([tag, items]) => (
-            <Section id={tag} title={tag.charAt(0).toUpperCase() + tag.slice(1)}>
-              <ul class="grid gap-5 sm:grid-cols-2">
-                {items.map((guide) => {
-                  const cover = guideCover(guide.id);
-                  return (
-                  <li>
-                    <a
-                      href={`/guides/${guide.id}/`}
-                      class="border-line shadow-card hover:shadow-lift flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-shadow"
-                    >
-                      <Image
-                        src={cover.image}
-                        alt={cover.alt}
-                        widths={[400, 640]}
-                        sizes="(min-width: 640px) 40vw, 100vw"
-                        format="webp"
-                        quality={68}
-                        loading="lazy"
-                        class="aspect-[16/9] w-full object-cover"
-                      />
-                      <span class="flex flex-1 flex-col p-5">
-                        <span class="text-ink-950 text-base font-semibold">{guide.data.title}</span>
-                        <span class="text-ink-600 mt-2 flex-1 text-[0.95rem] leading-relaxed">{guide.data.excerpt ?? guide.data.description}</span>
-                        <span class="text-ink-500 mt-4 text-2xs">
-                          Posted{' '}
-                          {(guide.data.published ?? guide.data.updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                          {' · '}
-                          Updated{' '}
-                          {guide.data.updated.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                  );
-                })}
-              </ul>
-            </Section>
-          ))}
-        </div>
-      )}
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">What every guide shows</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">A written-by line, a last updated date, a sources list, and a link to the methodology.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-line">
+        <p class="text-2xs font-semibold tracking-wide text-ink-500 uppercase">What we will say</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-800">If a furnace, a 100 amp panel, or staying on oil is the cheaper answer, the guide says so.</p>
+      </div>
+    </div>
 
+    <p class="text-ink-600 mt-8 max-w-3xl text-sm leading-relaxed sm:text-base" data-speakable>
+      These heat pump guides exist so you can answer the question you actually typed before you talk to a contractor.
+      Use search or a topic filter to jump to sizing, cold weather, bills or electrical work. For a ZIP-level number,
+      go to the{' '}
+      <a href="/calculator/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">heat pump cost calculator</a>.
+    </p>
+
+    <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+      <div class="min-w-0 space-y-14">
+        <Section
+          id="library"
+          number="1"
+          title="The guide library"
+          lede="Ten long-form answers. Search titles, questions and topics, or filter by basics, comparisons, sizing, electrical and operating cost."
+        >
+          <div id="guide-controls" class="rounded-2xl bg-white p-4 shadow-card ring-1 ring-line sm:p-5">
+            <form id="guide-search-form" role="search" class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <label class="sr-only" for="guide-search">Search heat pump guides</label>
+              <div class="relative min-w-0 flex-1">
+                <input
+                  id="guide-search"
+                  type="search"
+                  name="q"
+                  autocomplete="off"
+                  placeholder="Search sizing, cold weather, panel upgrade, electric bill..."
+                  class="w-full rounded-xl border border-line bg-paper px-4 py-2.5 text-sm text-ink-900 placeholder:text-ink-400 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-100"
+                />
+              </div>
+              <button
+                type="reset"
+                id="guide-search-clear"
+                class="rounded-xl px-3 py-2 text-sm font-medium text-ink-600 ring-1 ring-line transition hover:bg-paper hover:text-ink-900"
+              >
+                Clear
+              </button>
+            </form>
+            <div class="mt-4">
+              <p id="guide-filter-label" class="text-2xs font-semibold tracking-wider text-ink-500 uppercase">Filter by topic</p>
+              <div class="mt-2 flex flex-wrap gap-2" role="group" aria-labelledby="guide-filter-label">
+                <button
+                  type="button"
+                  class="guide-topic is-active rounded-full px-3.5 py-1.5 text-xs font-medium ring-1 transition"
+                  data-topic="all"
+                  aria-pressed="true"
+                >
+                  All guides
+                </button>
+                {topicKeys.map((key) => (
+                  <button
+                    type="button"
+                    class="guide-topic rounded-full px-3.5 py-1.5 text-xs font-medium ring-1 transition"
+                    data-topic={key}
+                    aria-pressed="false"
+                  >
+                    {TOPIC_LABELS[key] ?? key}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <p id="guide-count" class="mt-4 text-xs text-ink-500" aria-live="polite">
+              Showing {cards.length} of {cards.length} guides
+            </p>
+          </div>
+
+          <ul id="guide-grid" class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {cards.map((card) => (
+              <li
+                class="guide-card min-w-0"
+                data-topics={card.tags.join(' ')}
+                data-search={card.search}
+              >
+                <a
+                  href={card.href}
+                  class="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-line transition-shadow hover:shadow-lift"
+                >
+                  <Image
+                    src={card.cover.image}
+                    alt={card.cover.alt}
+                    widths={[400, 640]}
+                    sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 100vw"
+                    format="webp"
+                    quality={68}
+                    loading="lazy"
+                    class="aspect-[16/9] w-full object-cover"
+                  />
+                  <span class="flex flex-1 flex-col p-5">
+                    <span class="text-2xs font-semibold tracking-wide text-brand-700 uppercase">{card.topicLabel}</span>
+                    <span class="mt-2 text-base font-semibold text-ink-950 group-hover:text-brand-700">{card.title}</span>
+                    <span class="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{card.excerpt}</span>
+                    <span class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-2xs text-ink-400">
+                      <span>Posted {shortDate(card.published)}</span>
+                      <span aria-hidden="true" class="text-ink-300">&middot;</span>
+                      <span>Updated {shortDate(card.updated)}</span>
+                    </span>
+                    <span class="mt-2 text-2xs text-ink-400">Reviewed by {card.reviewedBy}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <p id="guide-empty" class="mt-8 hidden text-sm leading-relaxed text-ink-600" hidden>
+            No guides match that search. Try <button type="button" class="guide-reset text-brand-700 underline decoration-brand-200 underline-offset-2">clearing the filters</button>
+            or start with
+            <a href="/guides/are-heat-pumps-worth-it/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">are heat pumps worth it</a>,
+            <a href="/guides/what-size-heat-pump-do-i-need/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">what size heat pump do I need</a>,
+            or
+            <a href="/guides/do-heat-pumps-work-in-cold-weather/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">do heat pumps work in cold weather</a>.
+          </p>
+        </Section>
+
+        <Section
+          id="standards"
+          number="2"
+          title="How these guides are written"
+          lede="A heat pump guide on this site has to survive the same test as the calculator: if the honest answer is no, we publish no."
+        >
+          <div class="prose-atlas">
+            <p>
+              Pages are written by {AUTHOR.name} and reviewed against the published sources listed below. We do not invent a
+              named HVAC expert, and we do not hide the commercial model. Installer referrals pay for the site in a few
+              markets. That only works if homeowners are not talked into bad projects.
+            </p>
+            <ul>
+              <li>Every guide carries a written-by line, a last updated date, and a sources list with outbound links.</li>
+              <li>Primary government, program and utility sources are marked separately from secondary benchmarks.</li>
+              <li>Rebate amounts that appear in a guide are planning inputs. Confirm them with the program before you sign.</li>
+              <li>We do not quote the expired federal 25C tax credit as if it were current for a 2026 install.</li>
+            </ul>
+            <p>
+              The full method, including what the model cannot know, is on the
+              <a href="/methodology/">methodology page</a>. Corrections go to the
+              <a href="/about/#contact">editorial desk</a>.
+            </p>
+          </div>
+          <Callout tone="verified" title="Same data as the calculator" class="mt-5">
+            <p>
+              Guides that talk about running cost, climate or rebates use the same EIA prices, NOAA heating degree days
+              and hand-verified program table as the calculator. If a number here disagrees with the model, the model
+              wins until we fix the prose.
+            </p>
+          </Callout>
+        </Section>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <nav aria-label="On this page" class="border-line border-l pl-5">
+          <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            {[
+              { href: '#library', label: 'Guide library' },
+              { href: '#standards', label: 'Editorial standards' },
+              { href: '#faq', label: 'FAQs' },
+              { href: '#sources', label: 'Sources' },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-ink-600 transition-colors hover:text-brand-700">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="mt-16 space-y-12">
+      <Faq items={faqItems} />
+      <KeywordCluster path={path} />
       <RelatedPages
-        class="mt-14"
+        children={[
+          { label: 'Are heat pumps worth it?', href: '/guides/are-heat-pumps-worth-it/', description: 'The honest answer, by fuel' },
+          { label: 'Do they work in cold weather?', href: '/guides/do-heat-pumps-work-in-cold-weather/', description: 'Capacity below 0 F' },
+          { label: 'What size do I need?', href: '/guides/what-size-heat-pump-do-i-need/', description: 'Manual J, not a rule of thumb' },
+          { label: 'Do I need a panel upgrade?', href: '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/', description: 'When 100 amp is enough' },
+        ]}
         siblings={[
-          { label: 'Heat pump cost', href: '/heat-pump-cost/' },
-          { label: 'Mini split cost', href: '/mini-split-cost/' },
-          { label: 'Operating cost', href: '/heat-pump-operating-cost/' },
-          { label: 'Rebates', href: '/rebates/' },
+          { label: 'Heat pump cost calculator', href: '/calculator/', description: 'ZIP-level cost, rebates and payback' },
+          { label: 'Heat pump installation cost', href: '/heat-pump-cost/' },
+          { label: 'Heat pump rebates', href: '/rebates/' },
+          { label: 'Methodology', href: '/methodology/', description: 'How every number is produced' },
         ]}
       />
+      <SourceList sources={citations} updated={updated} />
+      <QuoteCta />
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .guide-topic {
+    background: white;
+    color: var(--color-ink-700);
+    border-color: var(--color-line);
+  }
+  .guide-topic:hover {
+    background: var(--color-brand-50);
+    color: var(--color-brand-800);
+  }
+  .guide-topic.is-active {
+    background: var(--color-brand-700);
+    color: white;
+    border-color: transparent;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('guide-search-form') as HTMLFormElement | null;
+  const input = document.getElementById('guide-search') as HTMLInputElement | null;
+  const clearBtn = document.getElementById('guide-search-clear');
+  const countEl = document.getElementById('guide-count');
+  const emptyEl = document.getElementById('guide-empty');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.guide-card'));
+  const topicButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.guide-topic'));
+  const total = cards.length;
+  let activeTopic = 'all';
+
+  const normalize = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const apply = () => {
+    const query = normalize(input?.value ?? '');
+    const tokens = query.split(' ').filter(Boolean);
+    let visible = 0;
+
+    for (const card of cards) {
+      const topics = (card.dataset.topics ?? '').split(/\s+/);
+      const hay = card.dataset.search ?? '';
+      const topicOk = activeTopic === 'all' || topics.includes(activeTopic);
+      const searchOk = tokens.every((token) => hay.includes(token));
+      const show = topicOk && searchOk;
+      card.hidden = !show;
+      card.classList.toggle('hidden', !show);
+      if (show) visible += 1;
+    }
+
+    if (countEl) {
+      const topicLabel =
+        activeTopic === 'all'
+          ? 'guides'
+          : `${topicButtons.find((b) => b.dataset.topic === activeTopic)?.textContent?.trim() ?? activeTopic} guides`;
+      countEl.textContent =
+        query.length > 0
+          ? `Showing ${visible} of ${total} guides for “${input?.value.trim()}”`
+          : `Showing ${visible} of ${total} ${topicLabel}`;
+    }
+
+    if (emptyEl) {
+      const hideEmpty = visible > 0;
+      emptyEl.hidden = hideEmpty;
+      emptyEl.classList.toggle('hidden', hideEmpty);
+    }
+
+    const params = new URLSearchParams();
+    if (query) params.set('q', input?.value.trim() ?? '');
+    if (activeTopic !== 'all') params.set('topic', activeTopic);
+    const next = params.toString();
+    const url = next ? `${window.location.pathname}?${next}` : window.location.pathname;
+    window.history.replaceState({}, '', url);
+  };
+
+  const setTopic = (topic: string) => {
+    activeTopic = topic;
+    for (const button of topicButtons) {
+      const on = button.dataset.topic === topic;
+      button.classList.toggle('is-active', on);
+      button.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    apply();
+  };
+
+  const reset = () => {
+    if (input) input.value = '';
+    setTopic('all');
+  };
+
+  if (form && input) {
+    const params = new URLSearchParams(window.location.search);
+    const startQuery = params.get('q') ?? '';
+    const startTopic = params.get('topic') ?? 'all';
+    if (startQuery) input.value = startQuery;
+    if (topicButtons.some((button) => button.dataset.topic === startTopic)) {
+      activeTopic = startTopic;
+      for (const button of topicButtons) {
+        const on = button.dataset.topic === startTopic;
+        button.classList.toggle('is-active', on);
+        button.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      apply();
+    });
+    input.addEventListener('input', apply);
+    clearBtn?.addEventListener('click', (event) => {
+      event.preventDefault();
+      reset();
+    });
+    form.addEventListener('reset', (event) => {
+      event.preventDefault();
+      reset();
+    });
+    for (const button of topicButtons) {
+      button.addEventListener('click', () => setTopic(button.dataset.topic ?? 'all'));
+    }
+    document.querySelectorAll('.guide-reset').forEach((el) => {
+      el.addEventListener('click', reset);
+    });
+    apply();
+  }
+</script>

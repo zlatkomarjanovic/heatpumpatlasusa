@@ -162,7 +162,6 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
   {
     title: 'About',
     links: [
-      { label: 'Methodology', href: '/methodology/' },
       { label: 'About us', href: '/about/' },
       { label: 'Data sources', href: '/methodology/#sources' },
       { label: 'Privacy policy', href: '/privacy/' },

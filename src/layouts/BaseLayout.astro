@@ -73,6 +73,10 @@ const { bodyClass = '', heroOverlay = false } = Astro.props;
           easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           smoothWheel: true,
         });
+        (window as Window & { __atlasLenis?: typeof lenis }).__atlasLenis = lenis;
+        if (document.documentElement.classList.contains('is-nav-open')) {
+          lenis.stop();
+        }
 
         const raf = (time: number) => {
           lenis.raf(time);

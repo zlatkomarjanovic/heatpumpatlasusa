@@ -177,6 +177,11 @@ const showToc = hasSlotToc || tocItems.length > 0;
   </div>
 
   <div class="container-atlas pb-16 lg:pb-24">
+    {showQuoteCta && (
+      <div class="mb-12">
+        <QuoteCta />
+      </div>
+    )}
     <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
       <Faq items={faqs} />
       <RelatedPages
