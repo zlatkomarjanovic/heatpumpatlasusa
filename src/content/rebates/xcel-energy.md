@@ -1,6 +1,6 @@
 ---
 title: 'Xcel Energy Heat Pump Rebate (2026)'
-description: Xcel Energy Colorado pays heat pump rebates that stack with a state tax credit and the Colorado HEAR program. See the tiers, the stacking rules and the cold-climate angle.
+description: 'Xcel Energy Colorado pays heat pump rebates that stack with a state tax credit and Colorado HEAR. See the tiers, the stacking rules and the cold-climate angle.'
 primaryKeyword: 'xcel energy heat pump rebate'
 program: 'Xcel Energy Colorado Heat Pump Rebate'
 administrator: 'Xcel Energy'

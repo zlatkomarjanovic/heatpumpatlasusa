@@ -1,6 +1,6 @@
 ---
 title: 'Heat Pump vs Electric Baseboard'
-description: 'Heat pump vs electric baseboard: swapping resistance heat for a heat pump cuts the heating portion of your bill by roughly two thirds. Here is the math, the cost and the comfort trade-off.'
+description: 'Heat pump vs electric baseboard: swapping resistance heat for a heat pump cuts the heating portion of your bill by roughly two thirds.'
 primaryKeyword: 'heat pump vs electric baseboard'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -26,9 +26,17 @@ citations:
     publisher: 'US Energy Information Administration'
     supports: 'Residential electricity prices used in the running-cost comparison.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Seasonal efficiency ratings behind the three-to-four-times figure.'
+  - label: 'Air source heat pump basics'
+    url: 'https://www.eia.gov/energyexplained/index.php?page=heat_pumps'
+    publisher: 'US Energy Information Administration'
+    supports: 'Federal explainer on how heat pumps deliver heat.'
+  - label: 'Residential energy consumption survey'
+    url: 'https://www.eia.gov/consumption/residential/'
+    publisher: 'US Energy Information Administration'
+    supports: 'Baseboard and resistance heating share of US homes.'
 faqs:
   - question: 'How much can I save switching from baseboard to a heat pump?'
     answer: 'Because a heat pump delivers roughly three to four units of heat per unit of electricity and baseboard delivers one, the heating portion of your electricity use falls by about two thirds for the same warmth. On a large electric-heating bill, that is often the single biggest running-cost cut available from any heating change, and it is the same electricity meter, just far less of it.'

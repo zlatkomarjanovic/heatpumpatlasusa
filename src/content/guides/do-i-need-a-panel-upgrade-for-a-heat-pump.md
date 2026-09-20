@@ -1,6 +1,6 @@
 ---
 title: 'Do I Need a Panel Upgrade for a Heat Pump?'
-description: 'Do I need a panel upgrade for a heat pump? Not always. A load calculation decides it. Here is when a 100 amp service is enough, when a 200 amp panel is required, and how to avoid a surprise.'
+description: 'Do I need a panel upgrade for a heat pump? Not always. A load calculation decides it. Here is when 100 amps is enough and when a 200 amp panel is required.'
 primaryKeyword: 'do i need a panel upgrade for a heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -26,13 +26,17 @@ citations:
     publisher: 'Rewiring America'
     supports: 'When a panel or service upgrade is typically required for electrification projects.'
   - label: 'Residential heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Heat pump electrical characteristics referenced in sizing conversations.'
   - label: 'American Housing Survey vintage and equipment'
     url: 'https://www.census.gov/programs-surveys/ahs.html'
     publisher: 'US Census Bureau'
     supports: 'Share of older housing stock still on 100 amp or fuse services.'
+  - label: 'Heating and cooling load calculation standard'
+    url: 'https://www.acca.org/standards/manual-j'
+    publisher: 'Air Conditioning Contractors of America'
+    supports: 'Industry-standard Manual J method referenced in sizing notes.'
 faqs:
   - question: 'Do I need a panel upgrade for a heat pump?'
     answer: 'Not always. A licensed electrician runs a load calculation against your actual service and appliances. A single-zone mini split on a 200 amp panel with spare capacity usually fits. A whole-home ducted heat pump with electric backup on a 100 amp service that already feeds an electric range and dryer often does not.'

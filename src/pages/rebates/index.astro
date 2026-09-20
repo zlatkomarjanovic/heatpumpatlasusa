@@ -70,7 +70,7 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
 <BaseLayout>
   <SEO
     title="Heat Pump Rebates (2026)"
-    description="Heat pump rebates still open in 2026: Mass Save, Efficiency Maine, NYSERDA, Efficiency Vermont, Energize CT, Xcel and Eversource. Paused money is excluded from the calculator."
+    description="Heat pump rebates still open in 2026: Mass Save, Efficiency Maine, NYSERDA, Efficiency Vermont, Energize CT, Xcel and Eversource. Paused money is excluded."
     path={path}
     type="CollectionPage"
     breadcrumbs={crumbs}
@@ -213,11 +213,11 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
           <p class="text-ink-500 text-2xs font-semibold tracking-wider uppercase">On this page</p>
           <ul class="mt-3 space-y-2 text-sm">
             {[
-              { href: '#open', label: 'Open now' },
-              { href: '#enrolling', label: 'Enrolling' },
-              { href: '#limited', label: 'Reserved or expired' },
+              open.length > 0 && { href: '#open', label: 'Open now' },
+              enrolling.length > 0 && { href: '#enrolling', label: 'Enrolling' },
+              limited.length > 0 && { href: '#limited', label: 'Reserved or expired' },
               { href: '#states', label: 'Coverage gaps' },
-            ].map((item) => (
+            ].filter((item): item is { href: string; label: string } => Boolean(item)).map((item) => (
               <li>
                 <a href={item.href} class="text-ink-600 hover:text-brand-700 transition-colors">{item.label}</a>
               </li>

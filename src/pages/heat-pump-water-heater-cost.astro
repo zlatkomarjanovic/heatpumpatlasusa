@@ -9,8 +9,6 @@ import QuoteCta from '@/components/QuoteCta.astro';
 import Faq from '@/components/Faq.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
 import SourceList from '@/components/SourceList.astro';
-import { EFFICIENCY } from '@/data/costs';
-import { NATIONAL_AVERAGE } from '@/data/states';
 import { pickSources } from '@/data/sources';
 import { formatUsd } from '@/lib/calculator';
 
@@ -88,7 +86,7 @@ const citations = pickSources(['doeHomeUpgrades', 'energyStarTaxCredits', 'eiaEl
 <BaseLayout>
   <SEO
     title="Heat Pump Water Heater Cost (2026)"
-    description="Heat pump water heater cost is $1,800 to $5,200 installed. See pricing by tank size, which situations pay back fast, and when a hybrid water heater does not pay back."
+    description="Heat pump water heater cost is $1,800 to $5,200 installed. Pricing by tank size, which situations pay back fast, and when a hybrid water heater does not."
     path={path}
     type="Article"
     breadcrumbs={crumbs}

@@ -262,7 +262,6 @@ const graph = [
 )}
 <meta name="author" content={author} />
 <meta name="publisher" content={SITE.name} />
-{keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 
 <meta property="og:type" content={type === 'Article' ? 'article' : 'website'} />
 <meta property="og:site_name" content={SITE.name} />
@@ -286,7 +285,5 @@ const graph = [
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={socialImage} />
 <meta name="twitter:image:alt" content={`${SITE.name}: ${title}`} />
-
-<meta name="theme-color" content="#10475a" />
 
 <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />

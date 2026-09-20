@@ -1,6 +1,6 @@
 ---
 title: 'Heat Pump vs Pellet Stove'
-description: 'Heat pump vs pellet stove: a pellet stove is cheap heat if you can source cheap pellets and do the work. A heat pump is hands-off whole-home heating and cooling. Here is how they compare.'
+description: 'Heat pump vs pellet stove: a pellet stove is cheap zone heat if you can source cheap pellets and do the work. A heat pump is hands-off whole-home comfort.'
 primaryKeyword: 'heat pump vs pellet stove'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -26,9 +26,17 @@ citations:
     publisher: 'US Energy Information Administration'
     supports: 'Residential electricity prices used in the running-cost comparison.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Seasonal efficiency ratings behind the heat pump running-cost figures.'
+  - label: 'Heating with wood and pellets'
+    url: 'https://www.eia.gov/energyexplained/index.php?page=wood'
+    publisher: 'US Energy Information Administration'
+    supports: 'Wood and pellet fuel price and use data.'
+  - label: 'House heating fuel, ACS table B25040'
+    url: 'https://data.census.gov/table?q=B25040'
+    publisher: 'US Census Bureau'
+    supports: 'How many US homes heat with wood as the primary fuel.'
 faqs:
   - question: 'Is a pellet stove cheaper to run than a heat pump?'
     answer: 'Sometimes, and it depends entirely on your local pellet price and your electricity rate. Where pellets are cheap and electricity is expensive, a pellet stove can deliver heat at a lower cost per unit. Where electricity is moderate and pellets are trucked in at a premium, a cold-climate heat pump usually wins, and it does so without you carrying and loading bags of fuel every few days.'

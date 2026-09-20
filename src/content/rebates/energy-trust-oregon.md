@@ -1,6 +1,6 @@
 ---
 title: 'Energy Trust of Oregon Heat Pump Rebate (2026)'
-description: Energy Trust of Oregon heat pump rebate amounts, what changes if you still have gas, and how the incentive sits next to a mild Pacific Northwest heating load.
+description: 'Energy Trust of Oregon heat pump rebate amounts, what changes if you still have gas, and how the incentive fits a mild Pacific Northwest heating load.'
 primaryKeyword: 'energy trust of oregon heat pump rebate'
 program: 'Energy Trust of Oregon Heat Pump Incentive'
 administrator: 'Energy Trust of Oregon'

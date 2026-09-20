@@ -1,6 +1,6 @@
 ---
 title: 'What Size Heat Pump Do I Need?'
-description: 'What size heat pump do I need? Sizing is a load calculation, not a square-foot rule of thumb. Here is how tonnage works, why oversizing hurts, and what to ask your contractor.'
+description: 'What size heat pump do I need? Sizing is a load calculation, not a square-foot rule. How tonnage works, why oversizing hurts, and what to ask your contractor.'
 primaryKeyword: 'what size heat pump do i need'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -26,13 +26,17 @@ citations:
     publisher: 'Air Conditioning Contractors of America'
     supports: 'The industry-standard method for calculating a home heating and cooling load.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Capacity and efficiency ratings referenced in sizing.'
   - label: 'ResStock housing characteristics'
     url: 'https://resstock.nrel.gov/'
     publisher: 'National Renewable Energy Laboratory'
     supports: 'Housing stock and envelope data behind load estimates by vintage.'
+  - label: 'Population-weighted heating degree day data'
+    url: 'https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/'
+    publisher: 'NOAA Climate Prediction Center'
+    supports: 'Climate data that sets the design load for a given location.'
 faqs:
   - question: 'What size heat pump do I need?'
     answer: 'The honest answer is a Manual J load calculation for your house, not a tons-per-square-foot rule. Climate, insulation, air leakage and the design temperature all move the number. A typical 1,800 to 2,200 square foot home often lands between 2 and 4 tons, but treating that as a spec is how systems get oversized.'

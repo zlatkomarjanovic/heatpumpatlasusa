@@ -1,4 +1,3 @@
 # Workers static assets only allow relative destinations.
 # HTTP and www redirects live in functions/_middleware.ts.
 /sitemap.xml /sitemap-index.xml 301
-/favicon.png /favicon-48x48.png 301

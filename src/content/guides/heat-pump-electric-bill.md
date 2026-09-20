@@ -1,6 +1,6 @@
 ---
 title: 'Will a Heat Pump Raise My Electric Bill?'
-description: 'Will a heat pump raise my electric bill? Yes. The heat pump electric bill question is whether your total energy bill falls after gas, oil or propane drops. Here is how to work that out.'
+description: 'Will a heat pump raise my electric bill? Yes. The heat pump electric bill question is whether your total energy bill falls after gas, oil or propane drops.'
 primaryKeyword: 'heat pump electric bill'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -32,6 +32,10 @@ citations:
     url: 'https://www.eia.gov/petroleum/heatingoilpropane/'
     publisher: 'US Energy Information Administration'
     supports: 'Heating oil reference prices used in the oil comparison.'
+  - label: 'Heat pumps explained'
+    url: 'https://www.eia.gov/energyexplained/index.php?page=heat_pumps'
+    publisher: 'US Energy Information Administration'
+    supports: 'How heat pump efficiency changes the electric line of the bill.'
 faqs:
   - question: 'Will a heat pump raise my electric bill?'
     answer: 'Yes. A heat pump runs on electricity, so the electric bill rises. The useful question is the combined bill: electricity plus the fuel you no longer burn. Against oil, propane or electric resistance the combined bill usually falls. Against cheap natural gas it can go either way.'

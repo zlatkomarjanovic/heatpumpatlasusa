@@ -1,6 +1,6 @@
 ---
 title: 'Heat Pump Cost in Seattle, WA (2026)'
-description: 'Heat pump cost in Seattle, Washington HEAR rebates, and why 14.91 cent hydro power makes the Pacific Northwest the best operating cost market outside oil country.'
+description: 'Heat pump cost in Seattle, Washington HEAR rebates, and why 14.91 cent hydro power makes the Pacific Northwest the best operating market outside oil country.'
 primaryKeyword: 'heat pump cost seattle'
 stateCode: WA
 city: Seattle

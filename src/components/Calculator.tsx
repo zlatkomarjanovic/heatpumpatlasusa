@@ -571,7 +571,7 @@ export default function Calculator() {
 
             {step === 2 && (
               <div className="flex min-h-[18rem] flex-col justify-center py-4" aria-live="polite">
-                <p className="text-lg font-semibold text-ink-950">Working your numbers</p>
+                <h2 className="text-lg font-semibold text-ink-950">Working your numbers</h2>
                 <p className="mt-1 text-sm text-ink-500">
                   {resolvedState ? resolvedState.name : 'Your ZIP'} · {input.sqft.toLocaleString()} sq ft ·{' '}
                   {FUEL_OPTIONS.find((f) => f.value === input.fuel)?.label}
@@ -661,12 +661,12 @@ export default function Calculator() {
             aria-labelledby={`${uid}-scenario-heading`}
           >
             <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-6 xl:p-7">
-              <p
+              <h2
                 id={`${uid}-scenario-heading`}
                 className="text-xs font-semibold text-brand-700"
               >
                 Your scenario
-              </p>
+              </h2>
               <p className="mt-1 text-xs leading-snug text-ink-500 lg:hidden">
                 Updates as you change answers. Nothing is sent unless you ask for the emailed estimate.
               </p>
@@ -710,7 +710,7 @@ export default function Calculator() {
               <div className="mt-4 rounded-lg bg-brand-50/80 p-4 ring-1 ring-brand-100">
                 {result ? (
                   <>
-                    <p className="text-xs font-semibold text-brand-800">Assumptions</p>
+                    <h3 className="text-xs font-semibold text-brand-800">Assumptions</h3>
                     <ul className="mt-3 space-y-2 text-xs leading-relaxed text-brand-900/80">
                       {result.assumptions.map((a) => (
                         <li key={a}>{a}</li>
@@ -719,9 +719,9 @@ export default function Calculator() {
                   </>
                 ) : (
                   <>
-                    <p className="text-xs font-semibold text-brand-800">
+                    <h3 className="text-xs font-semibold text-brand-800">
                       {resolvedState ? `Local data for ${resolvedState.code}` : 'Local data'}
-                    </p>
+                    </h3>
                     <dl className="mt-3 space-y-2.5">
                       <ScenarioStat
                         label="Electricity"
@@ -820,18 +820,6 @@ function ScenarioStat({
   );
 }
 
-function SummaryRow({ label, value, hint }: { label: string; value: string; hint?: string }) {
-  return (
-    <div className="flex items-baseline justify-between gap-4">
-      <dt className="shrink-0 text-ink-500">{label}</dt>
-      <dd className="text-right font-medium text-ink-900">
-        {value}
-        {hint && <span className="mt-0.5 block text-2xs font-normal text-ink-400">{hint}</span>}
-      </dd>
-    </div>
-  );
-}
-
 function ResultPanel({
   result,
   zip,
@@ -849,16 +837,16 @@ function ResultPanel({
   const otherRebates = result.rebates.filter((r) => r.status !== 'open');
 
   return (
-    <div className="space-y-4">
+    <section aria-labelledby="calc-result-heading" className="space-y-4">
       <div>
-        <h2 className="text-lg">Your modelled estimate</h2>
+        <h2 id="calc-result-heading" className="text-lg">Your modelled estimate</h2>
         <p className="mt-1 text-sm text-ink-600">
           Ranges from published pricing and state energy data, not quotes. Two contractors in the same ZIP can differ by
           40%.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2.5">
+      <dl className="grid grid-cols-2 gap-2.5">
         <StatBlock
           label="Installed"
           value={`${formatUsd(result.installedCost.low, { compact: true })} to ${formatUsd(result.installedCost.high, { compact: true })}`}
@@ -877,7 +865,7 @@ function ResultPanel({
           label="Payback"
           value={result.paybackYears === null ? 'None' : `${result.paybackYears} yr`}
         />
-      </div>
+      </dl>
 
       <table className="w-full overflow-hidden rounded-lg bg-paper-deep text-sm">
         <caption className="sr-only">Annual and 10-year cost comparison</caption>
@@ -971,7 +959,7 @@ function ResultPanel({
       </div>
 
       <LeadCapture result={result} zip={zip} cooling={cooling} />
-    </div>
+    </section>
   );
 }
 
@@ -986,7 +974,6 @@ function LeadCapture({
 }) {
   const [status, setStatus] = useState<'idle' | 'sent' | 'error'>('idle');
   const scenario = JSON.stringify({
-    zip,
     cooling,
     ...result.inputsEcho,
     installed: result.installedCost,
@@ -1011,7 +998,7 @@ function LeadCapture({
         }
       }}
     >
-      <p className="text-sm font-semibold">Ask installers to price this job</p>
+      <h3 className="text-sm font-semibold">Ask installers to price this job</h3>
       <p className="mt-1 text-xs leading-relaxed text-white/70">
         You already have the range. We send this ZIP and these numbers to installers who work it, and we tell them to
         quote this scope, not a different system. You get the emails.
@@ -1073,37 +1060,6 @@ function LeadCapture({
   );
 }
 
-function ResultCard({
-  label,
-  value,
-  tone,
-  confidence,
-}: {
-  label: string;
-  value: string;
-  tone: 'neutral' | 'brand';
-  confidence: string;
-}) {
-  return (
-    <div
-      className={
-        'rounded-lg border p-4 ' + (tone === 'brand' ? 'border-brand-200 bg-brand-50' : 'border-line bg-white')
-      }
-    >
-      <p className={'text-xs font-medium ' + (tone === 'brand' ? 'text-brand-700' : 'text-ink-500')}>{label}</p>
-      <p
-        className={
-          'mt-1.5 font-serif text-xl leading-tight font-medium tabular-nums ' +
-          (tone === 'brand' ? 'text-brand-900' : 'text-ink-950')
-        }
-      >
-        {value}
-      </p>
-      <p className={'mt-1 text-2xs ' + (tone === 'brand' ? 'text-brand-700/70' : 'text-ink-400')}>{confidence}</p>
-    </div>
-  );
-}
-
 function StatBlock({
   label,
   value,
@@ -1115,26 +1071,16 @@ function StatBlock({
 }) {
   return (
     <div className="rounded-lg border border-line bg-white p-3.5">
-      <p className="text-2xs text-ink-500">{label}</p>
-      <p
+      <dt className="text-2xs text-ink-500">{label}</dt>
+      <dd
         className={
           'mt-1 text-base font-semibold tabular-nums ' +
           (emphasis === 'save' ? 'text-save-700' : emphasis === 'cost' ? 'text-heat-700' : 'text-ink-950')
         }
       >
         {value}
-      </p>
+      </dd>
     </div>
   );
 }
 
-function StatusPill({ status }: { status: string }) {
-  const map: Record<string, string> = {
-    open: 'text-save-700',
-    enrolling: 'text-flag-700',
-    reserved: 'text-heat-700',
-    expired: 'text-ink-500',
-    unknown: 'text-ink-500',
-  };
-  return <strong className={map[status] ?? 'text-ink-500'}>{status.charAt(0).toUpperCase() + status.slice(1)}.</strong>;
-}

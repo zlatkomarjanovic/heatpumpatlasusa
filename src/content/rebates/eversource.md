@@ -1,6 +1,6 @@
 ---
 title: 'Eversource Heat Pump Rebate (2026)'
-description: Eversource runs heat pump programs across three states with different rules in each. See what applies in MA, CT and NH, and how the seasonal heat pump rate changes the math.
+description: 'Eversource runs heat pump programs across three states with different rules in each. What applies in MA, CT and NH, and how the seasonal rate changes the math.'
 primaryKeyword: 'eversource heat pump rebate'
 program: 'Eversource Heat Pump Rebates and Rates'
 administrator: 'Eversource Energy'

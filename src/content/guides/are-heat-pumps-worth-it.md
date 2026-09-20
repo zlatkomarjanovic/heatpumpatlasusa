@@ -1,6 +1,6 @@
 ---
 title: 'Are Heat Pumps Worth It in 2026?'
-description: 'Are heat pumps worth it? Yes against oil, propane and electric resistance. Against cheap natural gas it depends on your rates and climate. Here is how to tell which side you are on.'
+description: 'Are heat pumps worth it? Yes against oil, propane and electric resistance. Against cheap natural gas it depends on your rates and climate.'
 primaryKeyword: 'are heat pumps worth it'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -30,9 +30,17 @@ citations:
     publisher: 'US Energy Information Administration'
     supports: 'Delivered-fuel prices used to compare oil and propane against a heat pump.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Efficiency ratings that determine how much heat you get per unit of electricity.'
+  - label: 'Home heating systems overview'
+    url: 'https://www.eia.gov/energyexplained/index.php?page=heating_overview'
+    publisher: 'US Energy Information Administration'
+    supports: 'Federal overview of heating technology costs and efficiency.'
+  - label: 'House heating fuel, ACS table B25040'
+    url: 'https://data.census.gov/table?q=B25040'
+    publisher: 'US Census Bureau'
+    supports: 'The fuel-mix data behind the by-fuel verdicts.'
 faqs:
   - question: 'Are heat pumps worth it?'
     answer: 'Yes if you heat with oil, propane or electric resistance. Against cheap natural gas it depends on your electricity-to-gas price ratio and how cold your winters are. Comfort, cooling and open rebates can still flip a close running-cost case.'

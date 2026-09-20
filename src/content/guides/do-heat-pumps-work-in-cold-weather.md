@@ -1,6 +1,6 @@
 ---
 title: 'Do Heat Pumps Work in Cold Weather?'
-description: 'Do heat pumps work in cold weather? Yes. Modern cold-climate units keep heating well below 0 F. Here is how capacity and efficiency change as it gets colder, and how to size and back them up.'
+description: 'Do heat pumps work in cold weather? Yes. Modern cold-climate units keep heating well below 0 F. How capacity, efficiency and backup heat change in winter.'
 primaryKeyword: 'do heat pumps work in cold weather'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -26,13 +26,17 @@ citations:
     publisher: 'US Department of Energy'
     supports: 'Performance targets for heat pumps operating at low outdoor temperatures.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Cold-climate designation and low-temperature efficiency ratings.'
   - label: 'Population-weighted heating degree day data'
     url: 'https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/'
     publisher: 'NOAA Climate Prediction Center'
     supports: 'Climate data used to estimate how many hours a system spends in cold conditions.'
+  - label: 'Cold-climate air source heat pump specification'
+    url: 'https://neep.org/'
+    publisher: 'Northeast Energy Efficiency Partnerships'
+    supports: 'Cold-climate heat pump specification and performance listing programs.'
 faqs:
   - question: 'Do heat pumps work in cold weather?'
     answer: 'Yes. A cold-climate air source heat pump is designed to keep heating well below 0 F. Capacity and efficiency fall as it gets colder, which is why sizing and backup heat matter, but the machine does not shut off at freezing the way older units did.'

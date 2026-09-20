@@ -47,11 +47,7 @@ const orgSchema = {
         contactType: 'editorial',
         availableLanguage: 'English',
       },
-      sameAs: [
-        ...SOCIAL_PROFILES.map((p) => p.href),
-        'https://zlatkomarjanovic.wordpress.com',
-        'https://www.tumblr.com/blog/view/zlajaa2000',
-      ],
+      sameAs: SOCIAL_PROFILES.map((p) => p.href),
       image: {
         '@type': 'ImageObject',
         url: `${SITE.url}/og-default.png`,

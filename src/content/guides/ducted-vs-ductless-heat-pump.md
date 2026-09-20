@@ -1,6 +1,6 @@
 ---
 title: 'Ducted vs Ductless Heat Pump'
-description: 'Ducted vs ductless heat pump: ducted is cheaper if you already have good ducts. Ductless avoids thousands in duct work if you do not. Here is how to tell which fits your house and budget.'
+description: 'Ducted vs ductless heat pump: ducted is cheaper if you already have good ducts. Ductless avoids thousands in duct work if you do not.'
 primaryKeyword: 'ducted vs ductless heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -22,13 +22,21 @@ keyStat:
   label: 'If you have good existing ducts, ducted usually wins on cost and looks. If you do not, ductless avoids thousands in duct work'
 citations:
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Efficiency ratings for ducted and ductless systems.'
   - label: 'ResStock housing characteristics'
     url: 'https://resstock.nrel.gov/'
     publisher: 'National Renewable Energy Laboratory'
     supports: 'Housing stock data on duct presence and home vintage.'
+  - label: 'House heating fuel, ACS table B25040'
+    url: 'https://data.census.gov/table?q=B25040'
+    publisher: 'US Census Bureau'
+    supports: 'Share of US homes with existing ducted systems versus none.'
+  - label: 'Duct sealing guidance'
+    url: 'https://www.energy.gov/save/home-upgrades'
+    publisher: 'US Department of Energy'
+    supports: 'Federal guidance on duct losses and sealing upgrades.'
 faqs:
   - question: 'Is ducted or ductless cheaper?'
     answer: 'If you already have ducts in good condition, a ducted heat pump is usually cheaper because it reuses the distribution you have. If you have no ducts, ductless is usually cheaper because adding ductwork to an existing house can cost several thousand dollars on its own. The presence and condition of ducts is the biggest single cost driver.'

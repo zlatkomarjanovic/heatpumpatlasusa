@@ -1,6 +1,6 @@
 ---
 title: 'Air Source vs Geothermal Heat Pump'
-description: 'Air source vs geothermal heat pump: geothermal is more efficient but costs two to four times as much to install. Here is when the ground loop earns its premium, and when air source is the smarter buy.'
+description: 'Air source vs geothermal: geothermal is more efficient but costs two to four times as much. When the ground loop earns its premium, and when it does not.'
 primaryKeyword: 'air source vs geothermal heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -21,18 +21,22 @@ keyStat:
   value: '2x to 4x the cost'
   label: 'Geothermal installs cost several times what air source costs, and pays it back only under the right runtime and rate conditions'
 citations:
-  - label: 'Geothermal heat pumps overview'
-    url: 'https://www.energy.gov/energysaver/geothermal-heat-pumps'
-    publisher: 'US Department of Energy'
+  - label: 'Geothermal heat pumps explained'
+    url: 'https://www.eia.gov/energyexplained/index.php?page=geothermal_heat_pumps'
+    publisher: 'US Energy Information Administration'
     supports: 'Efficiency and installation characteristics of ground-source systems.'
   - label: 'Air source heat pump product criteria'
-    url: 'https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
     publisher: 'ENERGY STAR'
     supports: 'Air source efficiency ratings used in the comparison.'
   - label: 'Electric Power Monthly, Table 5.6.A'
     url: 'https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a'
     publisher: 'US Energy Information Administration'
     supports: 'Electricity prices that determine the value of geothermal efficiency gains.'
+  - label: 'Residential clean energy credit for geothermal'
+    url: 'https://www.irs.gov/credits-deductions/residential-clean-energy-credit'
+    publisher: 'Internal Revenue Service'
+    supports: 'The 30 percent geothermal credit that runs through 2032.'
 faqs:
   - question: 'Is geothermal really more efficient than air source?'
     answer: 'Yes. A geothermal system exchanges heat with the ground, which stays at a stable temperature year round, so it never faces the deep-cold air that reduces an air source unit capacity. That gives it higher and steadier efficiency, especially in cold climates. The question is never whether it is more efficient, but whether the efficiency gain is worth several times the install cost.'

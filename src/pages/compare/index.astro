@@ -13,10 +13,13 @@ import Section from '@/components/Section.astro';
 import ComparisonTable from '@/components/ComparisonTable.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
 import QuoteCta from '@/components/QuoteCta.astro';
+import SourceList from '@/components/SourceList.astro';
+import { pickSources } from '@/data/sources';
 import type { CompareRow } from '@/types/content';
 
 const path = '/compare/';
 const updated = new Date('2026-09-14');
+const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noaaHdd', 'censusFuel']);
 
 const crumbs = [
   { label: 'Home', href: '/' },
@@ -118,7 +121,7 @@ const featuredRows: CompareRow[] = [
 <BaseLayout>
   <SEO
     title="Heat Pump vs Furnace, Oil and More"
-    description="Heat pump comparison hub: heat pump vs furnace, heat pump vs oil, vs electric baseboard, ducted vs ductless and air source vs geothermal, each modelled on real energy prices."
+    description="Heat pump comparison hub: vs furnace, vs oil, vs electric baseboard, ducted vs ductless and air source vs geothermal, each modelled on real energy prices."
     path={path}
     type="CollectionPage"
     breadcrumbs={crumbs}
@@ -199,5 +202,6 @@ const featuredRows: CompareRow[] = [
     />
 
     <QuoteCta />
+    <SourceList sources={citations} updated={updated} />
   </div>
 </BaseLayout>

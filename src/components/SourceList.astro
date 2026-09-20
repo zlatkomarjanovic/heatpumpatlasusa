@@ -46,7 +46,7 @@ const { sources, title = 'Sources and data', updated, class: className = '' } = 
           <p class="text-sm leading-snug">
             <a
               href={source.url}
-              rel="nofollow noopener"
+              rel={source.primary ? 'noopener' : 'nofollow noopener'}
               target="_blank"
               class="text-brand-700 hover:text-brand-800 font-medium underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600"
             >

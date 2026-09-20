@@ -41,7 +41,7 @@ const teaserBody =
   'The calculator already gives you the number. Use this if you want installers to quote the same job, so a $24,000 sales package is easy to reject.';
 
 const endpoint = import.meta.env.PUBLIC_QUOTE_ENDPOINT ?? '';
-const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
+const formId = 'quote';
 ---
 
 {variant === 'inline' && (
@@ -86,7 +86,7 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
 )}
 
 {variant === 'full' && (
-  <section id="quote" class:list={['not-prose scroll-mt-24', className]} aria-labelledby={`${formId}-heading`}>
+  <section id="quote" class:list={['not-prose scroll-mt-24', className]} aria-label={fullTitle}>
     <div class="border-line shadow-card overflow-hidden rounded-lg border bg-white">
       <div class="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
         <div class="p-6 sm:p-8">
@@ -114,7 +114,7 @@ const formId = `quote-${Math.random().toString(36).slice(2, 8)}`;
             method="post"
             action={endpoint || '/api/leads'}
             class="space-y-4"
-            aria-labelledby={`${formId}-heading`}
+            aria-label="Send this job to installers"
           >
             <input type="hidden" name="market" value={market ?? ''} />
             <input type="hidden" name="source" value={Astro.url.pathname} />

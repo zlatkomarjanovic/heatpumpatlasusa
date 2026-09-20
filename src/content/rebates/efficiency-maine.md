@@ -1,6 +1,6 @@
 ---
 title: 'Efficiency Maine Heat Pump Rebate (2026)'
-description: Efficiency Maine pays up to $9,000 for qualifying households. See the income tiers, the per-unit caps, which programs are reserved, and how to sequence a Maine project.
+description: 'Efficiency Maine pays up to $9,000 for qualifying households. See the income tiers, per-unit caps, which programs are reserved, and how to sequence a project.'
 primaryKeyword: 'efficiency maine heat pump rebate'
 program: 'Efficiency Maine Heat Pump Rebates'
 administrator: 'Efficiency Maine Trust'

@@ -1,6 +1,6 @@
 ---
 title: 'Dual Fuel Heat Pump: When to Keep the Furnace'
-description: 'A dual fuel heat pump runs in mild weather and hands off to a furnace in the cold. In some states it beats both systems alone, and the switchover point is where the money is.'
+description: 'A dual fuel heat pump runs in mild weather and hands off to a furnace in the cold. In some states it beats either system alone. The switchover is the money.'
 primaryKeyword: 'dual fuel heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
@@ -33,6 +33,10 @@ citations:
     url: 'https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/'
     publisher: 'NOAA Climate Prediction Center'
     supports: 'Climate data that determines how often the system runs below the balance point.'
+  - label: 'Air source heat pump product criteria'
+    url: 'https://www.energystar.gov/products/air_source_heat_pumps'
+    publisher: 'ENERGY STAR'
+    supports: 'Cold-climate rating requirements referenced in the equipment split.'
 faqs:
   - question: 'What is a dual fuel heat pump system?'
     answer: 'It pairs an electric heat pump with a combustion furnace, usually gas but sometimes propane or oil, and switches between them based on outdoor temperature. Above a set temperature the heat pump runs because it is efficient and cheap to operate. Below it the furnace runs, because the heat pump has lost both capacity and efficiency. The system needs a compatible thermostat or a control board that can stage the two heat sources.'

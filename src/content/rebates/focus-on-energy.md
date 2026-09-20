@@ -1,6 +1,6 @@
 ---
 title: 'Focus on Energy Heat Pump Rebate (2026)'
-description: Focus on Energy heat pump rebate amounts for Wisconsin homes, what the utility program actually pays, and when a Midwest gas furnace still wins on running cost.
+description: 'Focus on Energy heat pump rebate amounts for Wisconsin homes, what the utility program pays, and when a Midwest gas furnace still wins on running cost.'
 primaryKeyword: 'focus on energy heat pump rebate'
 program: 'Focus on Energy Heat Pump Incentive'
 administrator: 'Focus on Energy (Wisconsin utilities)'
