@@ -22,6 +22,11 @@ export const SITE = {
   founded: '2026',
   /** Public IndexNow key. The matching file lives at /{key}.txt. */
   indexNowKey: '7c4e9a2b8f1d6e0a3c5b9d4f8a2e1c70',
+  /**
+   * Public Turnstile site key. The matching secret is a Worker secret named
+   * TURNSTILE_SECRET, never committed.
+   */
+  turnstileSiteKey: '0x4AAAAAAE-DGCT7nhXohwHn',
 } as const;
 
 /**

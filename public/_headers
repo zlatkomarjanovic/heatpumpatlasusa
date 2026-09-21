@@ -33,3 +33,11 @@
 /rss.xml
   Cache-Control: public, max-age=3600
   X-Robots-Tag: noindex
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600

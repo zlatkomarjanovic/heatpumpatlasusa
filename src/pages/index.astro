@@ -221,24 +221,31 @@ const homeFaqs = [
             <span class="hero-headline-accent">Heat pump cost</span> in the US, and whether switching pays off where you live.
           </h1>
           <p class="mt-5 text-base leading-relaxed text-white/75 sm:text-lg" data-speakable>
-            Heat pump cost for a typical ducted system is $9,500 to $22,000 installed. This calculator models heat pump
-            installation cost, operating cost, and the heat pump rebates that are actually open in your state, including
-            the cases where a gas furnace still wins. Run it on the right.
+            Heat pump cost for a typical ducted system is $9,500 to $22,000 installed. Enter your ZIP in the calculator
+            to see installation cost, operating cost, and the rebates that are actually open where you live, including
+            the cases where a gas furnace still wins.
           </p>
 
-          <div class="mt-9 flex flex-col gap-4">
-            <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <a
+            href="#calculator"
+            class="bg-brand-500 hover:bg-brand-400 mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-3 text-sm font-semibold text-white sm:w-auto lg:hidden"
+          >
+            Get my ZIP estimate
+          </a>
+
+          <div class="mt-6 flex flex-col gap-3 sm:mt-9 sm:gap-4">
+            <dl class="grid grid-cols-3 gap-2 sm:gap-4">
               <div class="hero-glass-stat">
                 <dt class="text-2xs font-medium tracking-wide text-white/60 uppercase">Ducted system</dt>
-                <dd class="mt-1.5 font-serif text-lg font-medium text-white sm:text-xl">{formatUsd(9500, { compact: true })}&ndash;{formatUsd(22000, { compact: true })}</dd>
+                <dd class="mt-1 font-serif text-sm font-medium text-white sm:mt-1.5 sm:text-xl">{formatUsd(9500, { compact: true })}&ndash;{formatUsd(22000, { compact: true })}</dd>
               </div>
               <div class="hero-glass-stat">
                 <dt class="text-2xs font-medium tracking-wide text-white/60 uppercase">Mini split, 1 zone</dt>
-                <dd class="mt-1.5 font-serif text-lg font-medium text-white sm:text-xl">{formatUsd(2800, { compact: true })}&ndash;{formatUsd(8500, { compact: true })}</dd>
+                <dd class="mt-1 font-serif text-sm font-medium text-white sm:mt-1.5 sm:text-xl">{formatUsd(2800, { compact: true })}&ndash;{formatUsd(8500, { compact: true })}</dd>
               </div>
               <div class="hero-glass-stat">
                 <dt class="text-2xs font-medium tracking-wide text-white/60 uppercase">US power price</dt>
-                <dd class="mt-1.5 font-serif text-lg font-medium text-white sm:text-xl">18.34&cent;/kWh</dd>
+                <dd class="mt-1 font-serif text-sm font-medium text-white sm:mt-1.5 sm:text-xl">18.34&cent;/kWh</dd>
               </div>
             </dl>
 
@@ -258,7 +265,7 @@ const homeFaqs = [
           </div>
         </div>
 
-        <div class="min-w-0 w-full lg:justify-self-stretch">
+        <div id="calculator" class="min-w-0 w-full scroll-mt-24 lg:justify-self-stretch">
           <Calculator client:load />
         </div>
       </div>
@@ -354,7 +361,7 @@ const homeFaqs = [
             class="aspect-[4/3] w-full object-cover"
           />
           <figcaption class="px-4 py-3 text-xs text-ink-500">
-            A typical outdoor unit for a ducted air source heat pump. Photo: Wikimedia Commons.
+            A typical outdoor unit for a ducted air source heat pump, the equipment priced in the table.
           </figcaption>
         </figure>
       </div>

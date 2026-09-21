@@ -5,7 +5,7 @@
  * the static page around it, so if JavaScript fails the user still gets the
  * national cost bands and the comparison content.
  */
-import { useCallback, useEffect, useId, useMemo, useState } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import {
   runCalculator,
   formatUsd,
@@ -18,9 +18,23 @@ import {
 import { resolveZip, isValidZip } from '@/lib/zip';
 import { GAS_MODELLED_STATES, STATES, type StateRecord } from '@/data/states';
 import type { HomeAgeKey, InsulationKey } from '@/data/costs';
+import { SITE } from '@/data/site';
 
 type Step = 0 | 1 | 2 | 3;
 type CoolingNeed = 'yes' | 'have' | 'no';
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        el: HTMLElement,
+        options: { sitekey: string; appearance?: string; theme?: string },
+      ) => string;
+      reset: (id?: string) => void;
+      remove: (id: string) => void;
+    };
+  }
+}
 
 // Ordered by US prevalence. Census ACS B25040: utility gas ~47% of homes,
 // electricity ~40%, propane ~5%, fuel oil/kerosene ~4%, wood ~2%.
@@ -973,6 +987,8 @@ function LeadCapture({
   cooling: CoolingNeed;
 }) {
   const [status, setStatus] = useState<'idle' | 'sent' | 'error'>('idle');
+  const widgetId = useRef<string | undefined>(undefined);
+  const boxRef = useRef<HTMLDivElement>(null);
   const scenario = JSON.stringify({
     cooling,
     ...result.inputsEcho,
@@ -981,6 +997,32 @@ function LeadCapture({
     annualSave: result.operating.difference,
     payback: result.paybackYears,
   });
+
+  useEffect(() => {
+    let cancelled = false;
+    const mount = () => {
+      if (cancelled || !boxRef.current || !window.turnstile || widgetId.current) return;
+      widgetId.current = window.turnstile.render(boxRef.current, {
+        sitekey: SITE.turnstileSiteKey,
+        appearance: 'interaction-only',
+        theme: 'dark',
+      });
+    };
+    mount();
+    const timer = window.setInterval(() => {
+      if (!window.turnstile) return;
+      window.clearInterval(timer);
+      mount();
+    }, 250);
+    const stop = window.setTimeout(() => window.clearInterval(timer), 10000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+      window.clearTimeout(stop);
+      if (widgetId.current && window.turnstile) window.turnstile.remove(widgetId.current);
+      widgetId.current = undefined;
+    };
+  }, []);
 
   return (
     <form
@@ -991,8 +1033,17 @@ function LeadCapture({
         event.preventDefault();
         const form = event.currentTarget;
         try {
-          const res = await fetch('/api/leads', { method: 'POST', body: new FormData(form) });
-          setStatus(res.ok ? 'sent' : 'error');
+          const res = await fetch('/api/leads', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          });
+          if (res.ok) {
+            setStatus('sent');
+            return;
+          }
+          setStatus('error');
+          if (widgetId.current && window.turnstile) window.turnstile.reset(widgetId.current);
         } catch {
           setStatus('error');
         }
@@ -1049,6 +1100,7 @@ function LeadCapture({
           >
             Send this job to installers
           </button>
+          <div ref={boxRef} className="cf-turnstile col-span-full" />
           {status === 'error' && (
             <p className="col-span-full text-xs text-flag-100">
               Could not send just now. Try again in a minute, or use the editorial contact on the About page.

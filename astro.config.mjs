@@ -18,7 +18,7 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !page.includes('/quote-sent'),
       serialize(item) {
         const url = item.url;
         const lastmod = new Date().toISOString();

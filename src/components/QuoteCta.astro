@@ -8,6 +8,7 @@
  * editorial desk are not collected here.
  */
 import Icon from '@/components/Icon.astro';
+import { SITE } from '@/data/site';
 
 interface Props {
   title?: string;
@@ -111,6 +112,7 @@ const formId = 'quote';
 
         <div class="border-line bg-paper-deep border-t p-6 sm:p-8 lg:border-t-0 lg:border-l">
           <form
+            id={`${formId}-form`}
             method="post"
             action={endpoint || '/api/leads'}
             class="space-y-4"
@@ -181,13 +183,26 @@ const formId = 'quote';
                 class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full resize-y rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
               ></textarea>
             </div>
+            <div
+              class="cf-turnstile"
+              data-sitekey={SITE.turnstileSiteKey}
+              data-appearance="interaction-only"
+              data-theme="light"
+            ></div>
+            <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
             <button
               type="submit"
-              class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors"
+              class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors disabled:opacity-60"
             >
               <Icon name="route" size={16} />
               Send this job to installers
             </button>
+            <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status">
+              Sent. Check your inbox for the job brief and any installers we can route in this ZIP.
+            </p>
+            <p id={`${formId}-error`} class="hidden text-xs text-heat-700" role="alert">
+              Could not send just now. Try again in a minute, or email editorial from the About page.
+            </p>
             <p class="text-ink-500 text-xs leading-relaxed">
               Installers pay for the introduction in markets we cover. That is how the site is funded. Read the
               <a href="/privacy/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">privacy policy</a>
@@ -195,6 +210,51 @@ const formId = 'quote';
               <a href="/about/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">money model</a>.
             </p>
           </form>
+          <script is:inline>
+            (function () {
+              var form = document.getElementById('quote-form');
+              if (!form || !window.fetch) return;
+              var success = document.getElementById('quote-success');
+              var error = document.getElementById('quote-error');
+              var button = form.querySelector('button[type="submit"]');
+              form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                if (error) error.classList.add('hidden');
+                if (button) button.disabled = true;
+                fetch(form.getAttribute('action') || '/api/leads', {
+                  method: 'POST',
+                  body: new FormData(form),
+                  headers: { Accept: 'application/json' },
+                })
+                  .then(function (res) {
+                    return res.json().then(function (body) {
+                      return { ok: res.ok && body && body.ok, body: body };
+                    });
+                  })
+                  .then(function (result) {
+                    if (result.ok) {
+                      form.reset();
+                      var fields = form.querySelectorAll('input:not([type="hidden"]), textarea, button[type="submit"], .cf-turnstile');
+                      for (var i = 0; i < fields.length; i++) {
+                        var node = fields[i];
+                        if (node && node.style) node.style.display = 'none';
+                        var wrap = node.closest ? node.closest('div') : null;
+                        if (wrap && wrap !== form) wrap.style.display = 'none';
+                      }
+                      if (success) success.classList.remove('hidden');
+                      return;
+                    }
+                    if (error) error.classList.remove('hidden');
+                    if (button) button.disabled = false;
+                    if (window.turnstile && window.turnstile.reset) window.turnstile.reset();
+                  })
+                  .catch(function () {
+                    if (error) error.classList.remove('hidden');
+                    if (button) button.disabled = false;
+                  });
+              });
+            })();
+          </script>
         </div>
       </div>
     </div>

@@ -40,8 +40,14 @@ const year = new Date().getFullYear();
           <div class="flex gap-2">
             <dt class="font-medium text-ink-300">Contact</dt>
             <dd>
-              <a href="/about/#contact" class="hover:text-brand-200 underline decoration-ink-700 underline-offset-2">
-                Editorial desk
+              <a
+                href="/about/#contact"
+                data-footer-contact
+                data-user="editor"
+                data-domain={SITE.domain}
+                class="hover:text-brand-200 underline decoration-ink-700 underline-offset-2"
+              >
+                Email editorial
               </a>
             </dd>
           </div>
@@ -97,3 +103,10 @@ const year = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<script>
+  const link = document.querySelector<HTMLAnchorElement>('a[data-footer-contact]');
+  if (link?.dataset.user && link.dataset.domain) {
+    link.href = `mailto:${link.dataset.user}@${link.dataset.domain}`;
+  }
+</script>

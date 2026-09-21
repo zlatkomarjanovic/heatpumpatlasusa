@@ -102,13 +102,14 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
       <div class="flex items-center gap-2">
         <a
           href="/calculator/"
-          class="hdr-cta bg-brand-700 hover:bg-brand-800 hidden items-center gap-1.5 rounded-md px-3.5 py-2 text-sm font-semibold text-white transition-colors sm:inline-flex"
+          class="hdr-cta bg-brand-700 hover:bg-brand-800 inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white transition-colors sm:px-3.5"
         >
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <rect x="2.5" y="1.5" width="11" height="13" rx="2" stroke="currentColor" stroke-width="1.4" />
             <path d="M5.5 5h5M5.5 8h5M5.5 11h2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
           </svg>
-          See your real cost
+          <span class="sm:hidden">Estimate</span>
+          <span class="hidden sm:inline">See your real cost</span>
         </a>
 
         <button

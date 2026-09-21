@@ -128,7 +128,9 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
           cost, and only the heat pump rebates that are actually open in your state.
         </p>
       </div>
-      <Calculator client:load />
+      <div id="calculator" class="scroll-mt-24">
+        <Calculator client:load />
+      </div>
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
         <Callout tone="modelled" title="What this is">
