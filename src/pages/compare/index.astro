@@ -120,8 +120,12 @@ const featuredRows: CompareRow[] = [
 
 <BaseLayout>
   <SEO
-    title="Heat Pump vs Furnace, Oil and More"
-    description="Heat pump comparison hub: vs furnace, vs oil, vs electric baseboard, ducted vs ductless and air source vs geothermal, each modelled on real energy prices."
+    title="Heat Pump Comparison: Furnace, Oil, Ductless"
+    description="Heat pump comparison hub for 2026: vs gas furnace, vs oil, vs electric baseboard, ducted vs ductless and air source vs geothermal on real EIA prices."
+    itemList={{
+      name: 'Heat pump head-to-head comparisons',
+      items: comparisons.map((c) => ({ name: c.title, url: c.href })),
+    }}
     path={path}
     type="CollectionPage"
     breadcrumbs={crumbs}

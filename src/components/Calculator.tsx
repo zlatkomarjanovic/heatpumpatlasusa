@@ -1098,7 +1098,7 @@ function LeadCapture({
             type="submit"
             className="bg-brand-500 hover:bg-brand-600 col-span-full rounded-md px-4 py-2.5 text-sm font-semibold text-white"
           >
-            Send this job to installers
+            Get installer quotes
           </button>
           <div ref={boxRef} className="cf-turnstile col-span-full" />
           {status === 'error' && (

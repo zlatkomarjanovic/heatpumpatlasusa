@@ -8,7 +8,7 @@
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
-import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import PageHeader from '@/components/PageHeader.astro';
 import DataTable from '@/components/DataTable.astro';
 import Callout from '@/components/Callout.astro';
 import SourceList from '@/components/SourceList.astro';
@@ -100,8 +100,8 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Cost Calculator"
-    description="Free heat pump cost calculator: enter ZIP, floor area and current fuel to model installation cost, operating cost, open rebates, 10-year totals and payback."
+    title="Free Heat Pump Cost Calculator (2026)"
+    description="Free heat pump cost calculator by ZIP: installation cost, annual operating cost, open rebates, 10-year total and payback vs your current fuel."
     path={path}
     type="SoftwareApplication"
     breadcrumbs={crumbs}
@@ -118,16 +118,17 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
     }}
   />
 
-  <div class="container-atlas pt-6 pb-10 lg:pt-8 lg:pb-14">
+  <PageHeader
+    eyebrow="Calculator"
+    title="Heat pump cost calculator"
+    standfirst="A free heat pump cost calculator for US homes. It models heat pump installation cost, heat pump operating cost, and only the heat pump rebates that are actually open in your state."
+    breadcrumbs={crumbs}
+    updated={updated}
+    primaryCta={false}
+  />
+
+  <div class="container-atlas pb-10 lg:pb-14">
     <div class="mx-auto max-w-5xl">
-      <div class="mb-5">
-        <Breadcrumbs items={crumbs} />
-        <h1 class="mt-4 text-3xl sm:text-4xl">Heat pump cost calculator</h1>
-        <p class="text-ink-600 mt-3 max-w-2xl text-base leading-relaxed" data-speakable>
-          A free heat pump cost calculator for US homes. It models heat pump installation cost, heat pump operating
-          cost, and only the heat pump rebates that are actually open in your state.
-        </p>
-      </div>
       <div id="calculator" class="scroll-mt-24">
         <Calculator client:load />
       </div>

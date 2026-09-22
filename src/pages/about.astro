@@ -2,7 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
 import PageHeader from '@/components/PageHeader.astro';
-import Section from '@/components/Section.astro';
 import Callout from '@/components/Callout.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
 import { SITE } from '@/data/site';
@@ -33,6 +32,7 @@ const crumbs = [
     standfirst="Most heat pump content in the US is written to produce a lead. That produces a predictable bias, and the bias is the reason homeowners distrust the category."
     breadcrumbs={crumbs}
     updated={updated}
+    quoteCta={false}
   />
 
   <div class="container-atlas py-10 lg:py-14">

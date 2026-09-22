@@ -19,8 +19,12 @@ interface Props {
   keyStat?: { value: string; label: string; source?: string };
   /** Drop the bottom divider, e.g. when a full-bleed cover image follows. */
   flush?: boolean;
-  /** 7rem above Home and 7rem below the updated line. Used on guides. */
+  /** Extra top and bottom padding. Used sparingly on long guides. */
   spacious?: boolean;
+  /** Calculator button. On for interior pages by default. */
+  primaryCta?: boolean;
+  /** Installer-quote button. Hide on pages that do not render the quote form. */
+  quoteCta?: boolean;
 }
 
 const {
@@ -34,6 +38,8 @@ const {
   keyStat,
   flush = false,
   spacious = false,
+  primaryCta = true,
+  quoteCta = true,
 } = Astro.props;
 ---
 
@@ -74,6 +80,16 @@ const {
             How we calculate this
           </a>
         </div>
+        {(primaryCta || quoteCta) && (
+          <div class="mt-6 flex flex-wrap gap-3">
+            {primaryCta && (
+              <a href="/calculator/" class="btn-primary">Get my estimate</a>
+            )}
+            {quoteCta && (
+              <a href="#quote" class="btn-secondary">Get installer quotes</a>
+            )}
+          </div>
+        )}
       </div>
 
       {keyStat && (

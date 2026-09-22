@@ -27,14 +27,18 @@ export default defineConfig({
         }
         const easyWins = [
           '/calculator/',
+          '/heat-pump-water-heater-cost/',
           '/rebates/mass-save/',
           '/rebates/efficiency-maine/',
+          '/rebates/efficiency-vermont/',
           '/electrical-panel-upgrade-cost/',
           '/guides/what-size-heat-pump-do-i-need/',
           '/guides/do-heat-pumps-work-in-cold-weather/',
           '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/',
+          '/guides/ducted-vs-ductless-heat-pump/',
+          '/guides/heat-pump-vs-electric-baseboard/',
+          '/guides/air-source-vs-geothermal-heat-pump/',
           '/rebates/nys-clean-heat/',
-          '/rebates/efficiency-vermont/',
         ];
         if (easyWins.some((path) => url.endsWith(path) || url.includes(path))) {
           return { ...item, lastmod, changefreq: 'weekly', priority: 0.96 };

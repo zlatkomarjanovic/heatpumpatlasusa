@@ -22,7 +22,7 @@ import coldClimate from '@/assets/images/cold-climate-heat-pump-snow.jpg';
 import { guideCover } from '@/data/guide-images';
 
 const path = '/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-09-22');
 
 /** Headline cost table straight from the shared cost bands. */
 const costColumns = [
@@ -97,6 +97,8 @@ const easyWins = [
   { href: '/guides/what-size-heat-pump-do-i-need/', title: 'What size heat pump do I need?', body: 'Manual J, not a square-foot rule. Oversizing is the more common and more expensive mistake.', meta: 'Sizing guide', icon: 'scale' },
   { href: '/guides/do-heat-pumps-work-in-cold-weather/', title: 'Do heat pumps work in cold weather?', body: 'Yes. Cold-climate units keep heating below 0 F. The real question is running cost on the worst nights.', meta: 'Cold climate', icon: 'snowflake' },
   { href: '/rebates/nys-clean-heat/', title: 'NYSERDA heat pump rebate', body: 'NYS Clean Heat plus New York HEAR. Amounts vary by utility territory and contractor.', meta: 'New York program', icon: 'gift' },
+  { href: '/rebates/efficiency-vermont/', title: 'Efficiency Vermont heat pump rebate', body: 'Up to $4,500 on qualifying Vermont projects, tiered by income and system type. Vermont HEAR is waitlisted.', meta: 'Vermont program', icon: 'gift' },
+  { href: '/heat-pump-water-heater-cost/', title: 'Heat pump water heater cost', body: '$1,800 to $5,200 installed for a hybrid tank. One of the fastest paybacks when you replace electric resistance.', meta: 'Water heating', icon: 'droplet' },
   { href: '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/', title: 'Do I need a panel upgrade for a heat pump?', body: 'A load calculation decides it. A 100 amp service is enough more often than sales calls admit.', meta: 'Yes or no', icon: 'bolt' },
 ];
 
@@ -107,7 +109,9 @@ const hubs = [
   { href: '/heat-pump-vs-furnace/', title: 'Heat pump vs furnace', body: 'Heat pump vs gas furnace modelled ZIP by ZIP, including the states where the furnace actually wins on running cost.', meta: '8,200 combined searches', icon: 'flame' },
   { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'Northeast oil-to-heat-pump conversion economics, where the operating cost case is strongest in the country.', meta: 'Highest switching pressure', icon: 'droplet' },
   { href: '/heat-pump-operating-cost/', title: 'Heat pump operating cost', body: 'Heat pump operating cost per year by state electricity price, climate and the fuel you burn today.', meta: 'Rates from EIA', icon: 'bolt' },
+  { href: '/heat-pump-water-heater-cost/', title: 'Heat pump water heater cost', body: 'Hybrid water heater install pricing by tank size, and when the payback beats a gas or electric tank.', meta: 'Often under $5,200', icon: 'droplet' },
   { href: '/rebates/', title: 'Heat pump rebates', body: 'Which heat pump rebates are actually open right now, and which ones have quietly run out of money.', meta: 'Verified program by program', icon: 'gift' },
+  { href: '/compare/', title: 'Heat pump comparisons', body: 'Furnace, oil, baseboard, ducted vs ductless, geothermal and dual fuel, each on real state energy prices.', meta: 'Seven head-to-heads', icon: 'scale' },
 ];
 
 const steps = [
@@ -177,8 +181,8 @@ const homeFaqs = [
 
 <BaseLayout heroOverlay>
   <SEO
-    title="Heat Pump Cost 2026: Prices, Rebates"
-    description="Heat pump cost in the US is $9,500 to $22,000 installed. Free calculator for installation cost, rebates, and payback by ZIP."
+    title="Heat Pump Cost 2026: $9,500-$22,000 Installed"
+    description="Heat pump cost is $9,500 to $22,000 installed in 2026. Free calculator, Mass Save and Efficiency Maine rebates, and payback by ZIP."
     path={path}
     type="WebPage"
     updated={updated}
@@ -187,7 +191,7 @@ const homeFaqs = [
     faqs={homeFaqs}
     itemList={{
       name: 'Heat pump cost, rebate and calculator pages',
-      items: [...easyWins.slice(0, 6), ...hubs].map((h) => ({ name: h.title, url: h.href })),
+      items: [...easyWins, ...hubs, ...comparisons].map((h) => ({ name: h.title, url: h.href })),
     }}
   />
 
@@ -230,7 +234,7 @@ const homeFaqs = [
             href="#calculator"
             class="bg-brand-500 hover:bg-brand-400 mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-3 text-sm font-semibold text-white sm:w-auto lg:hidden"
           >
-            Get my ZIP estimate
+            Get my estimate
           </a>
 
           <div class="mt-6 flex flex-col gap-3 sm:mt-9 sm:gap-4">
@@ -346,6 +350,12 @@ const homeFaqs = [
             </a>
             <a href="/electrical-panel-upgrade-cost/" class="text-brand-700 text-sm font-semibold underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600">
               Panel upgrade cost
+            </a>
+            <a href="/heat-pump-water-heater-cost/" class="text-brand-700 text-sm font-semibold underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600">
+              Heat pump water heater cost
+            </a>
+            <a href="/compare/" class="text-brand-700 text-sm font-semibold underline decoration-brand-200 underline-offset-2 hover:decoration-brand-600">
+              Compare heat pump options
             </a>
           </div>
         </div>

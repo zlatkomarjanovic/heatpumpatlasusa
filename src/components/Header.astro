@@ -6,7 +6,7 @@
  * details plus Lenis plus a transparent hero header was closing the menu on
  * scroll and leaving it unable to reopen.
  */
-import { PRIMARY_NAV, SITE } from '@/data/site';
+import { PRIMARY_NAV, SITE, isNavItemActive } from '@/data/site';
 
 interface Props {
   /** When true the header floats transparently over a dark hero until scrolled. */
@@ -59,8 +59,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
               <a
                 href={item.href}
                 class:list={[
-                  'hdr-nav-link flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                  isActive(item.href)
+                  isNavItemActive(item, current) || isActive(item.href)
                     ? 'text-brand-700 bg-brand-50'
                     : 'text-ink-700 hover:text-brand-700 hover:bg-brand-50',
                 ]}
@@ -99,16 +98,13 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
         </ul>
       </nav>
 
-      <div class="flex items-center gap-2">
-        <a
-          href="/calculator/"
-          class="hdr-cta bg-brand-700 hover:bg-brand-800 inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white transition-colors sm:px-3.5"
-        >
+        <a href="/calculator/" class="hdr-cta btn-primary !px-3 !py-2 sm:!px-3.5">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <rect x="2.5" y="1.5" width="11" height="13" rx="2" stroke="currentColor" stroke-width="1.4" />
             <path d="M5.5 5h5M5.5 8h5M5.5 11h2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
           </svg>
           <span class="sm:hidden">Estimate</span>
+          <span class="hidden sm:inline">Get my estimate</span>
           <span class="hidden sm:inline">See your real cost</span>
         </a>
 
@@ -164,12 +160,13 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
             )}
           </li>
         ))}
-      </ul>
-      <a
-        href="/calculator/"
-        class="bg-brand-700 mt-5 flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white"
-      >
-        See your real cost
+      <div class="mt-5 grid gap-2">
+        <a href="/calculator/" class="btn-primary w-full py-3">Get my estimate</a>
+        <a href="/#quote" class="btn-secondary w-full py-3">Get installer quotes</a>
+        <a href="/methodology/" class="text-ink-600 hover:text-brand-700 pt-1 text-center text-sm">
+          How we calculate the numbers
+        </a>
+      </div>
       </a>
     </nav>
   </div>

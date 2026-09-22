@@ -101,7 +101,6 @@ const showToc = hasSlotToc || tocItems.length > 0;
     reviewedBy={reviewedBy}
     keyStat={keyStat}
     flush={Boolean(coverImage)}
-    spacious
   />
 
   {
@@ -116,14 +115,14 @@ const showToc = hasSlotToc || tocItems.length > 0;
           quality={72}
           loading="eager"
           fetchpriority="high"
-          class="h-[80vh] min-h-[22rem] w-full object-cover"
+          class="h-52 w-full object-cover sm:h-72 lg:h-80"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-950/35 via-transparent to-transparent"></div>
       </div>
     )
   }
 
-  <div class="container-atlas py-14 lg:py-28">
+  <div class="container-atlas py-10 lg:py-14">
     <div class={`grid gap-12 lg:gap-16 ${showToc ? 'lg:grid-cols-[minmax(0,1fr)_16rem]' : ''}`}>
       <article class="prose-atlas min-w-0">
         <slot />

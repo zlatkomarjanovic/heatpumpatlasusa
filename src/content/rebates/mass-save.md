@@ -1,7 +1,7 @@
 ---
-title: 'Mass Save Heat Pump Rebate (2026)'
-description: What Mass Save pays for air source heat pumps in 2026, how whole-home and partial-home rebates differ, the sizing bonus, and why the reservation order matters.
-primaryKeyword: 'mass save heat pump rebate'
+title: 'Mass Save Heat Pump Rebate Massachusetts (2026)'
+description: 'Mass Save heat pump rebate Massachusetts pays up to $10,000 for whole-home projects in 2026. Partial-home tiers, the sizing bonus, income rules, and why you reserve before install.'
+primaryKeyword: 'mass save heat pump rebate massachusetts'
 program: 'Mass Save Air Source Heat Pump Rebate'
 administrator: 'Mass Save (Massachusetts utilities and efficiency sponsors)'
 stateCodes: ['MA']
@@ -9,7 +9,7 @@ programStatus: open
 lastVerified: 2026-09-14
 officialUrl: 'https://www.masssave.com/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-source-heat-pumps'
 incomeGated: true
-updated: 2026-09-14
+updated: 2026-09-22
 published: 2026-09-14
 reviewedBy: 'HeatPumpAtlasUSA Editorial'
 tags: ['rebate', 'massachusetts', 'open']

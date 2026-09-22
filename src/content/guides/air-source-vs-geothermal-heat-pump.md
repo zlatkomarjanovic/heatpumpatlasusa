@@ -5,7 +5,7 @@ primaryKeyword: 'air source vs geothermal heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-22
 tags: ['comparison']
 related:
   - '/heat-pump-cost/'

@@ -15,7 +15,7 @@ import { pickSources } from '@/data/sources';
 import { formatUsd } from '@/lib/calculator';
 
 const path = '/heat-pump-cost/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-09-22');
 
 const crumbs = [
   { label: 'Home', href: '/' },
@@ -146,20 +146,20 @@ const citations = pickSources([
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Installation Cost (2026)"
-    description="Heat pump installation cost is $9,500 to $22,000 for a typical ducted system in 2026. Bands by system type, what moves the price, and how your state changes it."
+    title="Heat Pump Cost: $9,500-$22,000 Installed (2026)"
+    description="Heat pump cost and heat pump installation cost for a typical US home: $9,500 to $22,000 installed in 2026. Price bands by system type, state, and what pushes quotes higher."
+    primaryKeyword="heat pump cost"
     path={path}
     type="Article"
     breadcrumbs={crumbs}
     updated={updated}
     faqs={faqItems}
-    primaryKeyword="heat pump installation cost"
   />
 
   <PageHeader
     eyebrow="Cost guide"
-    title="Heat pump installation cost in 2026"
-    standfirst="Heat pump installation cost for a typical ducted system is $9,500 to $22,000 before incentives. The useful question is which end of that range you are on, and why."
+    title="Heat pump cost in 2026"
+    standfirst="Heat pump cost for a typical ducted install is $9,500 to $22,000 before incentives. Heat pump installation cost moves with ducts, panel capacity, and how cold your climate gets."
     breadcrumbs={crumbs}
     updated={updated}
     keyStat={{ value: '$9.5k to $22k', label: 'Installed ducted heat pump, typical US home, before incentives', source: 'Modelled from published 2026 contractor pricing' }}
