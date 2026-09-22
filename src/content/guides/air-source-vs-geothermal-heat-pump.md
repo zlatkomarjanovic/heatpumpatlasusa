@@ -1,6 +1,6 @@
 ---
-title: 'Air Source vs Geothermal Heat Pump'
-description: 'Air source vs geothermal: geothermal is more efficient but costs two to four times as much. When the ground loop earns its premium, and when it does not.'
+title: 'Air Source vs Geothermal Heat Pump (2026)'
+description: 'Air source vs geothermal heat pump: geothermal costs two to four times more to install. When the ground loop earns that premium, and when a cold-climate air source unit wins.'
 primaryKeyword: 'air source vs geothermal heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

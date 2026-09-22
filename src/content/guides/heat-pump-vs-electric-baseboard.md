@@ -1,6 +1,6 @@
 ---
-title: 'Heat Pump vs Electric Baseboard'
-description: 'Heat pump vs electric baseboard: swapping resistance heat for a heat pump cuts the heating portion of your bill by roughly two thirds.'
+title: 'Heat Pump vs Electric Baseboard (2026)'
+description: 'Heat pump vs electric baseboard: one unit of electricity becomes three to four units of heat. Why this swap often cuts the heating bill by about two thirds.'
 primaryKeyword: 'heat pump vs electric baseboard'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

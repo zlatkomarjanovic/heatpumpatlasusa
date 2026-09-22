@@ -10,7 +10,7 @@ import SourceList from '@/components/SourceList.astro';
 import { pickSources } from '@/data/sources';
 
 const path = '/heat-pump-tax-credit/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-09-22');
 
 const crumbs = [
   { label: 'Home', href: '/' },
@@ -48,6 +48,16 @@ const faqItems = [
     answer:
       'Three things, in this order. Whether your state has a launched HEAR program and whether it is still accepting applications. Whether your utility runs its own rebate on top of that. And whether the program requires a reservation or pre-approval before installation, because applying afterward can disqualify the project entirely.',
   },
+  {
+    question: 'Is there a Massachusetts heat pump tax credit in 2025 or 2026?',
+    answer:
+      'The query is usually the old federal 25C credit, not a separate Massachusetts income-tax credit. 25C paid up to $2,000 and ended for equipment installed after 31 December 2025. In 2026 Massachusetts homeowners should look at the Mass Save heat pump rebate, which can reach $10,000 on a whole-home project, not a federal tax form.',
+  },
+  {
+    question: 'Is the $2,000 tax credit for a heat pump still available?',
+    answer:
+      'No, not for a 2026 install. The $2,000 figure was the 25C cap. Pages that still advertise a $2,000 tax credit for a heat pump are describing 2025 rules. Geothermal is the exception: the 30 percent residential clean energy credit still applies through 2032.',
+  },
 ];
 
 const citations = pickSources(['irs25c', 'energyStarTaxCredits', 'doeHomeUpgrades', 'dsire', 'coloradoTaxCredit', 'techCleanCalifornia']);
@@ -55,8 +65,8 @@ const citations = pickSources(['irs25c', 'energyStarTaxCredits', 'doeHomeUpgrade
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Tax Credit (2026)"
-    description="The federal heat pump tax credit (25C) ended for equipment installed after 2025. What actually applies in 2026, what current pages get wrong, and what remains."
+    title="Heat Pump Tax Credit: 25C Ended in 2026"
+    description="The $2,000 federal heat pump tax credit (25C) ended for 2026 installs. What Massachusetts, Colorado and other states still pay, and which pages are outdated."
     path={path}
     type="Article"
     breadcrumbs={crumbs}
@@ -137,6 +147,18 @@ const citations = pickSources(['irs25c', 'energyStarTaxCredits', 'doeHomeUpgrade
               The practical implication is that state research now matters more than it did when a federal credit existed.
               A household in Massachusetts and a household in Texas have genuinely different economics in 2026, and the
               difference is larger than it used to be.
+            </p>
+            <h3>Massachusetts heat pump tax credit searches</h3>
+            <p>
+              If you searched for a Massachusetts heat pump tax credit in 2025, you were almost certainly looking at
+              25C, not a separate state credit. That federal line is closed for 2026 installs. The live Massachusetts
+              offer is the <a href="/rebates/mass-save/">Mass Save heat pump rebate</a>, up to about $10,000 on a
+              qualifying whole-home project, with a reservation before install. Treat any quote that still subtracts
+              $2,000 of federal tax credit as a 2025 leftover.
+            </p>
+            <p>
+              Colorado is different. It still has a state heat pump tax credit, and it stacks with the
+              <a href="/rebates/xcel-energy/">Xcel Energy heat pump rebate</a> in much of the Denver metro.
             </p>
           </div>
           <div class="mt-5 flex flex-wrap gap-3">

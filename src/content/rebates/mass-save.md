@@ -72,6 +72,12 @@ faqs:
     answer: 'The rebate amount does not change, but the seasonal heat pump rate that Massachusetts utilities offer materially improves the operating cost of running the system. That rate is worth asking about at the same time as the rebate, because it can be worth more over ten years than a one-time incentive.'
   - question: 'Is the Mass Save rebate still funded?'
     answer: 'As of our last verification, yes. Massachusetts has one of the larger and better-funded programs in the country, and it survived the 2025 program changes that ended the federal 25C tax credit. Funding levels and queue times can still shift, so verify current status before scheduling work.'
+  - question: 'How does Mass Save heat pump installation work in Massachusetts?'
+    answer: 'You pick a participating contractor, they size the system, they reserve the Mass Save heat pump rebate before work starts, then they install. Whole-home Massachusetts projects can reach about $10,000. Partial-home work is usually $500 to $2,500 plus a possible $500 sizing bonus. Do not treat the install as done until the commitment letter is in writing.'
+  - question: 'Is there a Massachusetts heat pump tax credit in 2025 or 2026?'
+    answer: 'The federal 25C heat pump tax credit that people still search as a Massachusetts heat pump tax credit ended for equipment installed after 31 December 2025. In 2026 the money that actually moves a Massachusetts project is the Mass Save heat pump rebate, plus any income-qualified HEAR funds that are still open. Read the tax credit page if you were quoted $2,000 of federal credit.'
+  - question: 'What are the best HVAC rebates in Massachusetts for homeowners right now?'
+    answer: 'For air source heat pumps, Mass Save is the main program. Whole-home rebates can reach $10,000, and Eversource customers in Massachusetts use the same Mass Save stack. Income-qualified households can also see enhanced tiers. There is no separate statewide HVAC tax credit that replaced 25C. Confirm the current reservation queue before you sign.'
 related:
   - '/calculator/'
   - '/heat-pump-cost/'
@@ -109,5 +115,19 @@ Federal HEAR funding is also allocated to Massachusetts, and income-qualified ho
 Massachusetts sits in a difficult spot on operating economics: electricity is expensive at 29.61 cents per kilowatt hour, and natural gas is also expensive at $31.39 per Mcf. That combination means the heat pump case in Massachusetts depends heavily on what you are replacing.
 
 Against **oil**, which heats roughly a quarter of Massachusetts homes, the case is strong. Against gas, it is closer, and the seasonal heat pump rate is often what tips it. Run the [calculator](/calculator/) with your actual usage before deciding, and check the [oil comparison](/heat-pump-vs-oil/) for the fuel-specific math.
+
+## Mass Save heat pump installation in Massachusetts
+
+The search that keeps showing up is Mass Save heat pump installation in Massachusetts. The install itself is a normal air source job. The paperwork is the part that is different.
+
+A participating contractor files the reservation, documents whole-home or partial-home sizing, and holds the commitment letter while the equipment goes in. If that letter is missing, the Mass Save heat pump rebate can disappear even when the machine is already on the wall. Ask for the reservation number before a deposit.
+
+Typical Massachusetts installed cost still sits on the [heat pump cost](/heat-pump-cost/) bands. The rebate comes off that invoice, not instead of it.
+
+## Massachusetts heat pump tax credit versus Mass Save
+
+People still search for a Massachusetts heat pump tax credit from 2025. That query is almost always the old federal 25C credit, not a separate state income-tax line. 25C is closed for 2026 installs. The live Massachusetts offer is the Mass Save rebate, with HEAR only for households that still qualify.
+
+If a quote still subtracts $2,000 of federal tax credit, send the contractor the [heat pump tax credit](/heat-pump-tax-credit/) page and re-run the number.
 
 If you are in the Boston area, the [Boston market page](/markets/boston-ma/) has the local contractor and housing-stock context.

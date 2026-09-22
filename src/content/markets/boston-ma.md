@@ -1,6 +1,6 @@
 ---
 title: 'Heat Pump Cost in Boston, MA (2026)'
-description: 'Heat pump cost in Boston, Mass Save rebate amounts, the seasonal heat pump rate, and how the metro oil and gas split changes which conversion pays.'
+description: 'Heat pump cost in Boston and the cost of a heat pump in Massachusetts. Mass Save rebate amounts, the seasonal rate, and when oil or gas still changes the math.'
 primaryKeyword: 'heat pump cost boston'
 stateCode: MA
 city: Boston

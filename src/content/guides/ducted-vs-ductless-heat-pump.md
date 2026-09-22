@@ -1,6 +1,6 @@
 ---
-title: 'Ducted vs Ductless Heat Pump'
-description: 'Ducted vs ductless heat pump: ducted is cheaper if you already have good ducts. Ductless avoids thousands in duct work if you do not.'
+title: 'Ducted vs Ductless Heat Pump (2026)'
+description: 'Ducted vs ductless heat pump in 2026: ducted is cheaper if your ducts are good. Ductless mini splits avoid thousands in new ductwork if they are not.'
 primaryKeyword: 'ducted vs ductless heat pump'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

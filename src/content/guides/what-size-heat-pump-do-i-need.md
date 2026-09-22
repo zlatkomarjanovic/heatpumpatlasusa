@@ -1,6 +1,6 @@
 ---
-title: 'What Size Heat Pump Do I Need?'
-description: 'What size heat pump do I need? Sizing is a load calculation, not a square-foot rule. How tonnage works, why oversizing hurts, and what to ask your contractor.'
+title: 'What Size Heat Pump Do I Need? (2026)'
+description: 'What size heat pump do I need? Sizing is a Manual J load calculation, not a square-foot rule. Tonnage, oversizing damage, and what to ask before you sign.'
 primaryKeyword: 'what size heat pump do i need'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

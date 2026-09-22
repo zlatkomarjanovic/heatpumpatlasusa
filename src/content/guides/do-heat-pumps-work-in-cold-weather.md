@@ -1,6 +1,6 @@
 ---
-title: 'Do Heat Pumps Work in Cold Weather?'
-description: 'Do heat pumps work in cold weather? Yes. Modern cold-climate units keep heating well below 0 F. How capacity, efficiency and backup heat change in winter.'
+title: 'Do Heat Pumps Work in Cold Weather? (2026)'
+description: 'Do heat pumps work in cold weather? Yes. A modern cold-climate heat pump keeps heating well below 0 F. Capacity, efficiency, and when backup heat actually runs.'
 primaryKeyword: 'do heat pumps work in cold weather'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial

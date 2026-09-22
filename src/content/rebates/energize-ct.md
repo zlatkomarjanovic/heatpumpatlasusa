@@ -1,6 +1,6 @@
 ---
 title: 'Energize CT Heat Pump Rebate (2026)'
-description: Energize CT heat pump rebate amounts, income tiers, and how the Connecticut offer sits next to Eversource rates and the closed federal 25C credit.
+description: 'CT heat pump rebate through Energize CT: amounts, income tiers, and how the Connecticut offer sits next to Eversource rates after the federal 25C credit closed.'
 primaryKeyword: 'energize ct heat pump rebate'
 program: 'Energize CT Heat Pump Rebate'
 administrator: 'Energize CT (Connecticut utilities and the Connecticut Energy Efficiency Fund)'

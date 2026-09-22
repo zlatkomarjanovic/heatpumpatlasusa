@@ -29,7 +29,7 @@ HeatPumpAtlasUSA models whether a heat pump pays in a given US home using EIA el
 
 - [Heat pump rebates](https://heatpumpatlasusa.com/rebates/)
 - [Heat pump tax credit](https://heatpumpatlasusa.com/heat-pump-tax-credit/): 25C ended for 2026 installs
-- [Mass Save heat pump rebate](https://heatpumpatlasusa.com/rebates/mass-save/)
+- [Mass Save heat pump rebate Massachusetts](https://heatpumpatlasusa.com/rebates/mass-save/)
 - [Efficiency Maine heat pump rebate](https://heatpumpatlasusa.com/rebates/efficiency-maine/)
 - [NYSERDA heat pump rebate](https://heatpumpatlasusa.com/rebates/nys-clean-heat/)
 - [Efficiency Vermont heat pump rebate](https://heatpumpatlasusa.com/rebates/efficiency-vermont/)

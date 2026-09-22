@@ -84,6 +84,7 @@ export const PRIMARY_NAV: NavItem[] = [
       { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', description: 'The Northeast oil conversion case' },
       { label: 'Ducted vs ductless', href: '/guides/ducted-vs-ductless-heat-pump/', description: 'Which layout fits your house and budget' },
       { label: 'Air source vs geothermal', href: '/guides/air-source-vs-geothermal-heat-pump/', description: 'When the ground loop is worth the premium' },
+      { label: 'Heat pump vs electric baseboard', href: '/guides/heat-pump-vs-electric-baseboard/', description: 'The cleanest running-cost swap in the category' },
     ],
   },
   {
@@ -131,6 +132,9 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
       { label: 'All comparisons', href: '/compare/' },
       { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/' },
       { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/' },
+      { label: 'Ducted vs ductless', href: '/guides/ducted-vs-ductless-heat-pump/' },
+      { label: 'Air source vs geothermal', href: '/guides/air-source-vs-geothermal-heat-pump/' },
+      { label: 'Heat pump vs electric baseboard', href: '/guides/heat-pump-vs-electric-baseboard/' },
       { label: 'Are heat pumps worth it?', href: '/guides/are-heat-pumps-worth-it/' },
       { label: 'Guide library', href: '/guides/' },
     ],
