@@ -1,5 +1,9 @@
 import { analyticsOptOut, analyticsPage, countAnalytics, type AnalyticsDatabase } from '../lib/analytics';
 
+interface QuoteEmail {
+  send(message: { from: string; to: string; subject: string; text: string }): Promise<unknown>;
+}
+
 /**
  * Lead intake for installer routing.
  *
@@ -13,12 +17,15 @@ export async function onRequestPost(context: {
     LEADS?: { put(key: string, value: string): Promise<void> };
     TURNSTILE_SECRET?: string;
     ANALYTICS?: AnalyticsDatabase;
+    QUOTE_EMAIL?: QuoteEmail;
+    QUOTE_NOTIFICATION_TO?: string;
   };
   waitUntil(promise: Promise<unknown>): void;
 }) {
   const wantsJson = (context.request.headers.get('accept') ?? '').includes('application/json');
   const host = new URL(context.request.url).hostname;
-  if ((host === 'heatpumpatlasusa.com' || host === 'www.heatpumpatlasusa.com') && !context.env.TURNSTILE_SECRET) {
+  const isProduction = host === 'heatpumpatlasusa.com' || host === 'www.heatpumpatlasusa.com';
+  if (isProduction && !context.env.TURNSTILE_SECRET) {
     return leadResponse(wantsJson, { ok: false, error: 'Quote verification is temporarily unavailable.' }, 503);
   }
 
@@ -52,7 +59,30 @@ export async function onRequestPost(context: {
     return leadResponse(wantsJson, { ok: false, error: 'Quote storage is unavailable. Try again later.' }, 503);
   }
 
-  await context.env.LEADS.put(`lead:${lead.id}`, JSON.stringify(lead));
+  const quoteKey = `lead:${lead.id}`;
+  await context.env.LEADS.put(quoteKey, JSON.stringify(lead));
+
+  const { QUOTE_EMAIL, QUOTE_NOTIFICATION_TO } = context.env;
+  if (QUOTE_EMAIL && QUOTE_NOTIFICATION_TO) {
+    context.waitUntil(Promise.resolve().then(() => QUOTE_EMAIL.send({
+      from: 'quote-alerts@heatpumpatlasusa.com',
+      to: QUOTE_NOTIFICATION_TO,
+      subject: `New Heat Pump Atlas USA quote: ${lead.id}`,
+      text: [
+        'A new installer quote request was saved at heatpumpatlasusa.com.',
+        '',
+        `Received: ${lead.createdAt} (UTC)`,
+        `Reference: ${quoteKey}`,
+        '',
+        'Open Cloudflare Workers KV and choose heatpumpatlas-quote-leads to view the request.',
+      ].join('\n'),
+    })).catch((error: unknown) => {
+      const code = typeof error === 'object' && error !== null && 'code' in error ? error.code : undefined;
+      console.warn('Quote notification failed', lead.id, typeof code === 'string' ? code : 'email_send_failed');
+    }));
+  } else if (isProduction) {
+    console.warn('Quote notification is not configured', lead.id);
+  }
 
   const referrer = context.request.headers.get('Referer');
   if (context.env.ANALYTICS && !analyticsOptOut(context.request) && referrer && URL.canParse(referrer)) {

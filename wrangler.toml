@@ -2,6 +2,10 @@ name = "heatpumpatlasusa"
 account_id = "f31a4cf45b22e72341e3c81ab4572726"
 compatibility_date = "2026-09-14"
 main = "./dist/_worker.js"
+routes = [
+  { pattern = "heatpumpatlasusa.com", custom_domain = true },
+  { pattern = "www.heatpumpatlasusa.com", custom_domain = true }
+]
 
 # Static Astro output. Cloudflare Git builds run `npm run build` then
 # `npx wrangler deploy`. This file has to describe a Worker with assets,
@@ -23,3 +27,7 @@ database_id = "eee00534-de25-4872-be51-2fd7ac49bc1c"
 [[kv_namespaces]]
 binding = "LEADS"
 id = "7217ac4f406c4f3884b55ff016ef6d91"
+
+[[send_email]]
+name = "QUOTE_EMAIL"
+allowed_sender_addresses = ["quote-alerts@heatpumpatlasusa.com"]
