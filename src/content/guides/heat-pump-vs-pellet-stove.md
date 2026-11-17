@@ -2,7 +2,7 @@
 title: 'Heat Pump vs Pellet Stove'
 description: 'Compare heat pump and pellet stove running costs with a worked annual example, a break-even electricity rate, and a ZIP-based calculator.'
 primaryKeyword: 'heat pump vs pellet stove'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-11-17
@@ -48,7 +48,9 @@ faqs:
     answer: 'Plenty of people do. The heat pump carries the whole house efficiently for most of the season, and the pellet stove adds cheap, cosy zone heat in the main living space on the coldest evenings. It is a reasonable pairing as long as you are honest that the stove is comfort and backup, not a substitute for a system that heats every room.'
 ---
 
-A pellet stove and a heat pump both heat a home, but they are really answers to different questions. A pellet stove is cheap, cosy, hands-on heat for the room it sits in, as long as you can buy pellets at a good price and do not mind the work. A heat pump is quiet, even, whole-home heating and cooling that you mostly forget about. Picking between them is less about a single cost number and more about how you want to live with the system.
+If you spend $1,299 a year on pellets, what would it cost to heat those same rooms with a heat pump? Under the example below, the heat pump costs about $798 per year. Check the price per ton on your delivery invoice and the electricity rate on your bill to see how your comparison changes.
+
+[Calculate your heating costs](/calculator/) or see [how to compare a pellet stove and heat pump room by room](/guides/pellet-stove-heat-pump-together/).
 
 ## Running cost: it hinges on two local prices
 
@@ -77,6 +79,8 @@ To model your own home, open the [heat pump cost calculator](/calculator/), ente
 This is the difference people underestimate. A single pellet stove heats the space it stands in and leaks some warmth next door. It does not evenly heat a whole house. Real whole-home pellet heating means a pellet boiler or furnace, which is a far larger and pricier install with a bulk fuel store.
 
 A heat pump is built to condition the entire home from one system, room by room, and it runs in reverse to cool in summer. If you want even temperatures everywhere and air conditioning, that is a heat pump job, not a stove job.
+
+If you want to keep the stove and add a heat pump, compare [how ducted and ductless systems cover rooms](/guides/ducted-vs-ductless-heat-pump/) before choosing how much of the house to convert.
 
 ## Effort: hands-on versus hands-off
 

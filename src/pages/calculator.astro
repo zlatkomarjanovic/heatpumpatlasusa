@@ -121,7 +121,7 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
   <PageHeader
     eyebrow="Calculator"
     title="Heat pump cost calculator"
-    standfirst="A free heat pump cost calculator for US homes. It models heat pump installation cost, heat pump operating cost, and only the heat pump rebates that are actually open in your state."
+    standfirst="Find out what a heat pump could cost to install and run at your ZIP code. Compare it with your current heating bill and see which rebates could lower the upfront price."
     breadcrumbs={crumbs}
     updated={updated}
     primaryCta={false}
@@ -129,7 +129,7 @@ const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
 
   <div class="container-atlas pb-10 lg:pb-14">
     <div class="mx-auto max-w-5xl">
-      <div id="calculator" class="scroll-mt-24">
+      <div id="calculator" class="scroll-mt-24" tabindex="-1">
         <Calculator client:load />
       </div>
 

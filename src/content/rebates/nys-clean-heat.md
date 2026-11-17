@@ -1,6 +1,6 @@
 ---
-title: 'NYSERDA Heat Pump Rebate (2026)'
-description: NYSERDA heat pump rebate amounts through NYS Clean Heat, plus New York HEAR. See what each utility pays, what stacks, and what still needs a reservation.
+title: 'NYSERDA Heat Pump Rebates: Find Your Utility Program'
+description: 'Find your NYS Clean Heat utility program, check New York HEAR separately, and confirm which incentives can go on your quote.'
 primaryKeyword: 'nyserda heat pump rebate'
 program: 'NYS Clean Heat / NYSERDA Heat Pump Rebate'
 administrator: 'NYSERDA and participating New York utilities'

@@ -1,5 +1,11 @@
 # Image credits
 
+The current files named `phone-*.webp` are AI-generated equipment illustrations
+with everyday smartphone-style framing. They depict generic equipment rather
+than a recorded installation or a specific manufacturer.
+
+## Previous reference photography
+
 Placeholder photography sourced from Wikimedia Commons. These are temporary and
 are scheduled to be replaced with original branded imagery. All files are used
 under their respective free licenses, with attribution below.

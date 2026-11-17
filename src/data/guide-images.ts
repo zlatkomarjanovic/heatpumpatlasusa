@@ -1,17 +1,16 @@
 /**
  * Cover images for guides.
  *
- * Maps a guide slug to a self-hosted, build-optimised image. These are stock
- * heat pump photos for now and are intended to be replaced with commissioned
- * artwork later. A default keeps every guide covered even before it is mapped.
+ * Maps guide slugs to self-hosted, phone-style illustrations.
  */
 import type { ImageMetadata } from 'astro';
 
-import airSource from '@/assets/images/outdoor-heat-pump-yard.jpg';
-import condenser from '@/assets/images/heat-pump-outdoor-condenser.jpg';
-import miniSplit from '@/assets/images/mini-split-living-room.jpg';
-import coldClimate from '@/assets/images/cold-climate-heat-pump-snow.jpg';
-import panel from '@/assets/images/electrical-panel.jpg';
+import airSource from '@/assets/images/phone-yard.webp';
+import condenser from '@/assets/images/phone-condenser.webp';
+import miniSplit from '@/assets/images/phone-mini-split.webp';
+import coldClimate from '@/assets/images/phone-winter-heat-pump.webp';
+import panel from '@/assets/images/phone-breaker-panel.webp';
+import pellet from '@/assets/images/phone-pellet-stove.webp';
 
 export interface GuideCover {
   image: ImageMetadata;
@@ -24,6 +23,14 @@ const DEFAULT_COVER: GuideCover = {
 };
 
 const COVERS: Record<string, GuideCover> = {
+  'pellet-stove-heat-pump-together': {
+    image: pellet,
+    alt: 'Pellet stove in a living room used for supplemental heat',
+  },
+  'find-electricity-rate-on-bill': {
+    image: condenser,
+    alt: 'Outdoor heat pump beside a house',
+  },
   'are-heat-pumps-worth-it': {
     image: airSource,
     alt: 'Air source heat pump outdoor unit, the equipment behind the payback question',
@@ -57,8 +64,8 @@ const COVERS: Record<string, GuideCover> = {
     alt: 'Heat pump condenser unit, the appliance that shifts heating onto the electric bill',
   },
   'heat-pump-vs-pellet-stove': {
-    image: coldClimate,
-    alt: 'Heat pump outdoor unit in winter, an alternative to burning wood pellets',
+    image: pellet,
+    alt: 'Pellet stove on a tiled hearth beside a bag of wood pellets',
   },
   'do-i-need-a-panel-upgrade-for-a-heat-pump': {
     image: panel,

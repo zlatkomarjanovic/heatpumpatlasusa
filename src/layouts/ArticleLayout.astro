@@ -9,11 +9,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
 import type { Breadcrumb } from '@/types/seo';
 import PageHeader from '@/components/PageHeader.astro';
+import CalculatorEmbed from '@/components/CalculatorEmbed.astro';
 import Faq from '@/components/Faq.astro';
 import SourceList from '@/components/SourceList.astro';
 import QuoteCta from '@/components/QuoteCta.astro';
 import RelatedPages from '@/components/RelatedPages.astro';
-import { AUTHOR, type NavItem } from '@/data/site';
+import { AUTHOR, OWNER_AUTHOR, type NavItem } from '@/data/site';
 import KeywordCluster from '@/components/KeywordCluster.astro';
 import { Image } from 'astro:assets';
 import type { ImageMetadata, MarkdownHeading } from 'astro';
@@ -75,7 +76,7 @@ const hasSlotToc = Astro.slots.has('toc');
 const showToc = hasSlotToc || tocItems.length > 0;
 ---
 
-<BaseLayout>
+<BaseLayout calculatorInContent>
   <SEO
     title={title}
     description={description}
@@ -105,7 +106,7 @@ const showToc = hasSlotToc || tocItems.length > 0;
 
   {
     coverImage && (
-      <div class="relative w-full overflow-hidden bg-ink-900">
+      <div class="relative isolate min-h-[80vh] overflow-hidden bg-ink-900">
         <Image
           src={coverImage}
           alt={coverAlt}
@@ -115,7 +116,7 @@ const showToc = hasSlotToc || tocItems.length > 0;
           quality={72}
           loading="eager"
           fetchpriority="high"
-          class="h-52 w-full object-cover sm:h-72 lg:h-80"
+          class="absolute inset-0 h-full w-full object-cover"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-ink-950/35 via-transparent to-transparent"></div>
       </div>
@@ -123,13 +124,14 @@ const showToc = hasSlotToc || tocItems.length > 0;
   }
 
   <div class="container-atlas py-10 lg:py-14">
+    <div class="mx-auto mb-12 max-w-5xl"><CalculatorEmbed /></div>
     <div class={`grid gap-12 lg:gap-16 ${showToc ? 'lg:grid-cols-[minmax(0,1fr)_16rem]' : ''}`}>
       <article class="prose-atlas min-w-0">
         <slot />
 
         <p class="not-prose text-ink-500 mt-10 border-t border-line pt-6 text-sm leading-relaxed">
           Written by{' '}
-          <a href={AUTHOR.url} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{author ?? AUTHOR.name}</a>
+          <a href={author === OWNER_AUTHOR.name ? OWNER_AUTHOR.url : AUTHOR.url} class="text-brand-700 underline decoration-brand-200 underline-offset-2">{author ?? AUTHOR.name}</a>
           {reviewedBy && <>, reviewed by {reviewedBy}</>}
           {updated && (
             <>

@@ -175,6 +175,11 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
   },
 ];
 
+export const OWNER_AUTHOR = {
+  name: 'Zlatko Marjanović',
+  url: '/about/#zlatko-marjanovic',
+} as const;
+
 export const AUTHOR = {
   name: 'HeatPumpAtlasUSA Editorial',
   role: 'Research and data team',

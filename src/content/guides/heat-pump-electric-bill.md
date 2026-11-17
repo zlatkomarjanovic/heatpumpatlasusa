@@ -1,24 +1,23 @@
 ---
-title: 'Will a Heat Pump Raise My Electric Bill?'
-description: 'Will a heat pump raise my electric bill? Yes. The heat pump electric bill question is whether your total energy bill falls after gas, oil or propane drops.'
+title: 'How Much Will a Heat Pump Add to Your Electric Bill?'
+description: 'Estimate the extra electricity a heat pump uses and compare the cost with the oil, gas, or propane it could replace.'
 primaryKeyword: 'heat pump electric bill'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-11-17
 tags: ['comparison', 'operating-cost']
+
 related:
   - '/heat-pump-operating-cost/'
   - '/heat-pump-vs-furnace/'
   - '/heat-pump-vs-oil/'
   - '/calculator/'
 excerpt: >-
-  Your electric bill will rise. That is not the question. The question is
-  whether the gas, oil or propane line falls by more than the electric line
-  rises. This guide shows how to read both bills together before you commit.
+  Compare the electricity a heat pump adds with the oil, gas, or propane you would stop buying. If electric baseboards heat your home today, compare the electricity needed to heat the same rooms.
 keyStat:
   value: 'Look at both lines'
-  label: 'The electric bill always rises when you switch to a heat pump. Whether the total energy bill falls is the only question that matters.'
+  label: 'Compare the electricity a heat pump uses with the fuel or electric heating it replaces.'
 citations:
   - label: 'Electric Power Monthly, Table 5.6.A'
     url: 'https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a'
@@ -38,13 +37,13 @@ citations:
     supports: 'How heat pump efficiency changes the electric line of the bill.'
 faqs:
   - question: 'Will a heat pump raise my electric bill?'
-    answer: 'Yes. A heat pump runs on electricity, so the electric bill rises. The useful question is the combined bill: electricity plus the fuel you no longer burn. Against oil, propane or electric resistance the combined bill usually falls. Against cheap natural gas it can go either way.'
+    answer: 'It usually rises if you switch from oil, propane or gas. Compare the added electricity with the fuel you stop buying. If you replace electric resistance heat, you may use less electricity to heat the same rooms.'
   - question: 'Will my electric bill go up with a heat pump?'
-    answer: 'Yes, almost certainly, and it is worth being upfront about that. You are moving space heating onto electricity, which is a large new load. In a cold climate the increase can be substantial. The reason the switch can still save money is that the fuel you stop buying is usually more expensive per unit of heat than the electricity you start buying.'
+    answer: 'If you replace a system that burns fuel, expect more electricity use in winter. The change in total heating cost depends on the fuel you replace, your electric rate, and the heat pump efficiency.'
   - question: 'How much will my electric bill go up?'
     answer: 'For a typical 1,800 square foot home in a 5,000 degree day climate, a cold-climate heat pump adds roughly 7,000 to 9,000 kilowatt hours per year of space heating, which at a national average rate of about 18 cents per kWh is roughly $1,300 to $1,600. That is a real number and worth planning for, and it is offset by the fuel bill you no longer pay.'
   - question: 'What if my total bill goes up?'
-    answer: 'Then the heat pump was the wrong financial decision for you, and this happens. In states where gas is cheap and electricity is expensive, a modern gas furnace can be cheaper to run than a heat pump. The honest move is to find that out before you sign rather than after the first winter.'
+    answer: 'If the estimate shows higher running costs, decide how much cooling, comfort or avoiding a replacement furnace is worth to you. Compare the full quotes and your expected annual bills before signing.'
   - question: 'Do heat pump rates help?'
     answer: 'Yes, and they are worth asking about. Several utilities offer a seasonal heat pump rate that is lower than the standard residential tariff during the heating season. In Massachusetts, for example, the seasonal heat pump rate can be worth more over ten years than the one-time rebate. Ask your utility directly rather than assuming you will be enrolled automatically.'
   - question: 'Will my electric bill go up more than the model predicts?'
@@ -53,11 +52,11 @@ faqs:
     answer: 'Keeping it for the first winter is a reasonable hedge and costs nothing if the equipment is already there. It lets you verify the heat pump handles your coldest weeks before committing fully. Just be clear about whether you are keeping it as an emergency backup or as an operating part of the system, because the second one costs money.'
 ---
 
-Will a heat pump raise my electric bill? Yes. That is the question homeowners actually ask, and it is the one most heat pump content answers dishonestly by talking about efficiency instead of bills.
+If you switch from oil, propane, or gas, a heat pump will usually add to your winter electric bill. The next number to check is what you stop paying for your old fuel. If you already heat with electric baseboards, a heat pump may lower the electricity you use for space heating.
 
 ## Start with the honest answer
 
-Your electric bill will rise. You are moving a large load, space heating, onto electricity, and in a cold climate that load is substantial. Anyone who tells you otherwise is either confused or selling something.
+Start with two bills. Write down the portion of your old fuel bill that paid for heat, then calculate how much added electricity the heat pump will use. Include backup heat and charges that stay on your account.
 
 The reason the switch can still save money is simple: the fuel you stop buying is usually more expensive per unit of heat than the electricity you start buying. A heat pump moves two to three units of heat per unit of electricity, so even at a high power price it can beat oil, propane or electric resistance. Against cheap natural gas, it often cannot.
 
@@ -70,6 +69,8 @@ That is the number to prepare for. What offsets it is the fuel bill you no longe
 If you were spending $900 a year on natural gas, the same arithmetic goes the other way, and the heat pump may cost you money.
 
 A heat pump using **500 kWh in a winter month at $0.22 per kWh** adds **$110** to the electric bill. If it replaces **$140** of heating oil that month, total heating costs fall by **$30** even though the electric bill rises. This example assumes the same heating load and excludes fixed charges, which can remain even when fuel use drops.
+
+If 900 kWh in a cold month lands at an incremental rate of $0.30/kWh, it adds $270. If you avoid $230 in fuel that month, your combined heating cost goes up $40. Compare the same rooms and weather in both cases. [Find the rate to use on your electric bill](/guides/find-electricity-rate-on-bill/).
 
 See [heat pump operating costs by state](/heat-pump-operating-cost/) for regional comparisons, then [estimate electricity use and heating costs for your ZIP](/calculator/) using your current fuel and annual heating spend.
 
@@ -84,6 +85,8 @@ Three reasons, and all three are worth understanding before the first winter.
 **A leakier house than assumed.** The model uses your square footage, vintage and an insulation estimate. If the house is draftier than that, the load is larger and the bill is larger with it.
 
 All three point at the same conclusion: the quality of the installation matters more than the brand on the box.
+
+If you already heat with resistance baseboards, [compare the electricity use for the same rooms](/guides/heat-pump-vs-electric-baseboard/). A heat pump can reduce that heating load on your electric bill.
 
 ## The rate question
 

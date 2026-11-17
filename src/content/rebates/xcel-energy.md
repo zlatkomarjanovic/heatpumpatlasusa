@@ -1,6 +1,6 @@
 ---
-title: 'Xcel Energy Colorado Heat Pump Rebate (2026)'
-description: 'Colorado heat pump rebate from Xcel Energy, stacked with the state tax credit and Colorado HEAR. Tiers, cold-climate bonuses, and what still needs a reservation.'
+title: 'Xcel Energy Heat Pump Rebates in Colorado: Check Your Quote'
+description: 'Compare the Colorado Xcel program with state incentives. Ask your installer which amounts apply to your equipment and address.'
 primaryKeyword: 'xcel energy heat pump rebate'
 program: 'Xcel Energy Colorado Heat Pump Rebate'
 administrator: 'Xcel Energy'

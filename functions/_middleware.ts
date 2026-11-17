@@ -27,5 +27,12 @@ export const onRequest = async (context: { request: Request; next: () => Promise
     headers.set('Cache-Control', 'no-store');
     return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   }
+  if (/\.md$/.test(url.pathname) && (response.ok || response.status === 304)) {
+    const canonical = url.pathname === '/index.md' ? '/' : url.pathname.slice(0, -3) + '/';
+    const headers = new Headers(response.headers);
+    headers.set('Content-Type', 'text/markdown; charset=utf-8');
+    headers.append('Link', '<https://heatpumpatlasusa.com' + canonical + '>; rel="canonical"');
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  }
   return response;
 };

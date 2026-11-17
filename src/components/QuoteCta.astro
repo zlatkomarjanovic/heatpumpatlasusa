@@ -8,7 +8,7 @@
  * editorial desk are not collected here.
  */
 import Icon from '@/components/Icon.astro';
-import { SITE } from '@/data/site';
+import { estimateHref } from '@/components/estimate-navigation';
 
 interface Props {
   title?: string;
@@ -29,40 +29,40 @@ const {
 const fullTitle =
   Astro.props.title ??
   (market
-    ? `Ask ${market} installers to price this job, not a different one`
-    : 'Ask installers to price this job, not a different one');
+    ? `Request a heat pump quote in ${market}`
+    : 'Request a heat pump quote');
 
 const fullBody =
   Astro.props.body ??
-  'Share your ZIP and the details of the job you want quoted. Use the calculator to estimate your costs before submitting a request.';
+  'Tell us what you need and how to reach you. Have an estimate already? Use it to compare bids for the same job.';
 
-const teaserTitle = Astro.props.title ?? 'The range is not the bid';
+const teaserTitle = Astro.props.title ?? 'Ready to get a quote?';
 const teaserBody =
   Astro.props.body ??
-  'The calculator already gives you the number. Use this if you want installers to quote the same job, so a $24,000 sales package is easy to reject.';
+  'Estimate your costs first, or tell us what you want an installer to price.';
 
-const endpoint = import.meta.env.PUBLIC_QUOTE_ENDPOINT ?? '';
+const calculatorLink = estimateHref(Astro.url.pathname);
 const formId = 'quote';
 ---
 
 {variant === 'inline' && (
-  <aside class:list={['not-prose border-brand-200 bg-brand-50 rounded-lg border-l-4 p-4 sm:p-5', className]}>
-    <p class="text-brand-800 text-sm font-semibold">{teaserTitle}</p>
-    <p class="text-brand-800/85 mt-1.5 text-sm leading-relaxed">{teaserBody}</p>
+  <aside class:list={['not-prose border-brand-300 bg-brand-50 rounded-lg border-l-4 p-5 sm:p-6', className]}>
+    <p class="text-ink-950 text-lg font-semibold">{teaserTitle}</p>
+    <p class="text-ink-800 mt-2 text-base leading-relaxed">{teaserBody}</p>
     <div class="mt-3 flex flex-wrap gap-3">
       <a
         href="#quote"
-        class="btn-primary"
+        class="not-prose btn-primary min-h-12 px-5 py-3 text-base text-white underline decoration-white underline-offset-4"
       >
         <Icon name="route" size={15} />
         Get installer quotes
       </a>
       <a
-        href="/calculator/"
-        class="btn-secondary"
+        href={calculatorLink}
+        class="not-prose btn-secondary min-h-12 px-5 py-3 text-base underline underline-offset-4"
       >
         <Icon name="calculator" size={15} />
-        Get my estimate
+        Find my price and savings
       </a>
     </div>
   </aside>
@@ -114,14 +114,14 @@ const formId = 'quote';
           <form
             id={`${formId}-form`}
             method="post"
-            action={endpoint || '/api/leads'}
+            action="/api/leads"
             class="space-y-4"
             aria-label="Get installer quotes"
           >
             <input type="hidden" name="market" value={market ?? ''} />
             <input type="hidden" name="source" value={Astro.url.pathname} />
             <div>
-              <label for={`${formId}-name`} class="text-ink-800 mb-1.5 block text-sm font-medium">Name</label>
+              <label for={`${formId}-name`} class="text-ink-800 mb-1.5 block text-base font-semibold">Name</label>
               <input
                 id={`${formId}-name`}
                 name="name"
@@ -132,7 +132,7 @@ const formId = 'quote';
               />
             </div>
             <div>
-              <label for={`${formId}-zip`} class="text-ink-800 mb-1.5 block text-sm font-medium">ZIP code</label>
+              <label for={`${formId}-zip`} class="text-ink-800 mb-1.5 block text-base font-semibold">ZIP code</label>
               <input
                 id={`${formId}-zip`}
                 name="zip"
@@ -147,7 +147,7 @@ const formId = 'quote';
               />
             </div>
             <div>
-              <label for={`${formId}-email`} class="text-ink-800 mb-1.5 block text-sm font-medium">Email</label>
+              <label for={`${formId}-email`} class="text-ink-800 mb-1.5 block text-base font-semibold">Email</label>
               <input
                 id={`${formId}-email`}
                 name="email"
@@ -159,7 +159,7 @@ const formId = 'quote';
               />
             </div>
             <div>
-              <label for={`${formId}-phone`} class="text-ink-800 mb-1.5 block text-sm font-medium">
+              <label for={`${formId}-phone`} class="text-ink-800 mb-1.5 block text-base font-semibold">
                 Phone <span class="text-ink-400 font-normal">Optional</span>
               </label>
               <input
@@ -172,7 +172,7 @@ const formId = 'quote';
               />
             </div>
             <div>
-              <label for={`${formId}-notes`} class="text-ink-800 mb-1.5 block text-sm font-medium">
+              <label for={`${formId}-notes`} class="text-ink-800 mb-1.5 block text-base font-semibold">
                 What should they price? <span class="text-ink-400 font-normal">Optional</span>
               </label>
               <textarea
@@ -183,21 +183,19 @@ const formId = 'quote';
                 class="border-line-strong focus:border-brand-500 focus:ring-brand-500/30 w-full resize-y rounded-md border bg-white px-3.5 py-2.5 text-base outline-none focus:ring-2"
               ></textarea>
             </div>
-            <div
-              class="cf-turnstile"
-              data-sitekey={SITE.turnstileSiteKey}
-              data-appearance="interaction-only"
-              data-theme="light"
-            ></div>
-            <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+            <div id="quote-verification"></div>
+            <p id="quote-verification-status" class="text-sm text-ink-700" role="status"></p>
+            <button id="quote-retry-check" type="button" class="btn-secondary" hidden>Retry security check</button>
+            <noscript><p class="text-base text-ink-800">Turn on JavaScript to complete the security check and send a quote request.</p></noscript>
             <button
               type="submit"
-              class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-sm font-semibold text-white transition-colors disabled:opacity-60"
+              disabled
+              class="bg-brand-700 hover:bg-brand-800 inline-flex w-full items-center justify-center gap-1.5 rounded-md px-4 py-3 text-base font-semibold text-white transition-colors disabled:opacity-60"
             >
               <Icon name="route" size={16} />
               Get installer quotes
             </button>
-            <p id={`${formId}-error`} class="hidden text-xs text-heat-700" role="alert">
+            <p id={`${formId}-error`} class="hidden text-sm text-heat-700" role="alert">
               Could not send just now. Try again in a minute, or email editorial from the About page.
             </p>
             <p class="text-ink-500 text-xs leading-relaxed">
@@ -210,47 +208,74 @@ const formId = 'quote';
           <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status" tabindex="-1">
             Your request was saved.
           </p>
-          <script is:inline>
-            (function () {
-              var form = document.getElementById('quote-form');
-              if (!form || !window.fetch) return;
-              var success = document.getElementById('quote-success');
-              var error = document.getElementById('quote-error');
-              var button = form.querySelector('button[type="submit"]');
-              form.addEventListener('submit', function (event) {
-                event.preventDefault();
-                if (error) error.classList.add('hidden');
-                if (button) button.disabled = true;
-                fetch(form.getAttribute('action') || '/api/leads', {
-                  method: 'POST',
-                  body: new FormData(form),
-                  headers: { Accept: 'application/json' },
-                })
-                  .then(async function (res) {
-                    const body = await res.json();
-                    return res.ok && body && body.ok;
-                  })
-                  .then(function (saved) {
-                    if (saved) {
-                      form.reset();
-                      form.classList.add('hidden');
-                      if (success) {
-                        success.classList.remove('hidden');
-                        success.focus({ preventScroll: true });
-                        success.scrollIntoView({ block: 'center' });
-                      }
-                      return;
+          <script>
+            import { mountQuoteVerification } from '@/components/turnstile';
+
+            const form = document.querySelector<HTMLFormElement>('#quote-form');
+            const box = document.querySelector<HTMLElement>('#quote-verification');
+            const button = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+            const retry = document.querySelector<HTMLButtonElement>('#quote-retry-check');
+            const verificationStatus = document.querySelector('#quote-verification-status');
+            const success = document.querySelector<HTMLElement>('#quote-success');
+            const error = document.querySelector('#quote-error');
+
+            if (form && box && button && retry && verificationStatus) {
+              let ready = false;
+              let sending = false;
+              const startVerification = () => {
+                const verification = mountQuoteVerification(box, (status) => {
+                  ready = status === 'ready';
+                  button.disabled = sending || !ready;
+                  retry.hidden = status !== 'error';
+                  verificationStatus.textContent = status === 'error'
+                    ? 'Could not complete the security check. Try it again.'
+                    : status === 'checking' ? 'Checking that you are human…' : '';
+                });
+
+                retry.addEventListener('click', () => verification.reset());
+                form.addEventListener('submit', async (event) => {
+                  event.preventDefault();
+                  if (sending || !ready) return;
+                  sending = true;
+                  button.disabled = true;
+                  error?.classList.add('hidden');
+
+                  try {
+                    const response = await fetch('/api/leads', {
+                      method: 'POST',
+                      body: new FormData(form),
+                      headers: { Accept: 'application/json' },
+                    });
+                    const result = await response.json();
+                    if (!response.ok || !result.ok) {
+                      if (error && result.error) error.textContent = result.error;
+                      throw new Error('The quote request was not saved.');
                     }
-                    if (error) error.classList.remove('hidden');
-                    if (button) button.disabled = false;
-                    if (window.turnstile && window.turnstile.reset) window.turnstile.reset();
-                  })
-                  .catch(function () {
-                    if (error) error.classList.remove('hidden');
-                    if (button) button.disabled = false;
-                  });
-              });
-            })();
+                    verification.remove();
+                    form.hidden = true;
+                    if (success) {
+                      success.classList.remove('hidden');
+                      success.focus();
+                    }
+                  } catch {
+                    error?.classList.remove('hidden');
+                    sending = false;
+                    verification.reset();
+                  }
+                });
+              };
+
+              if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                  if (!entries.some((entry) => entry.isIntersecting)) return;
+                  observer.disconnect();
+                  startVerification();
+                }, { rootMargin: '200px' });
+                observer.observe(form);
+              } else {
+                startVerification();
+              }
+            }
           </script>
         </div>
       </div>

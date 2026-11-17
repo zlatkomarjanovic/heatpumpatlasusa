@@ -12,6 +12,8 @@ import '@/styles/global.css';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import SiteSchema from '@/components/SiteSchema.astro';
+import CalculatorEmbed from '@/components/CalculatorEmbed.astro';
+import { embedsEstimate } from '@/components/estimate-navigation';
 import { SITE } from '@/data/site';
 
 interface Props {
@@ -22,9 +24,11 @@ interface Props {
    * page owns the top spacing. Otherwise the fixed header is offset with padding.
    */
   heroOverlay?: boolean;
+  calculatorInContent?: boolean;
 }
 
-const { bodyClass = '', heroOverlay = false } = Astro.props;
+const { bodyClass = '', heroOverlay = false, calculatorInContent = false } = Astro.props;
+const showEstimate = !calculatorInContent && embedsEstimate(Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -55,6 +59,11 @@ const { bodyClass = '', heroOverlay = false } = Astro.props;
     <Header overHero={heroOverlay} />
     <main id="main" class:list={['flex-1', !heroOverlay && 'pt-16 lg:pt-[4.5rem]']}>
       <slot />
+      {showEstimate && (
+        <div class="container-atlas pb-14">
+          <div class="mx-auto max-w-5xl"><CalculatorEmbed /></div>
+        </div>
+      )}
     </main>
     <Footer />
 
@@ -92,7 +101,7 @@ const { bodyClass = '', heroOverlay = false } = Astro.props;
           const link = target?.closest<HTMLAnchorElement>('a[href^="#"]');
           if (!link) return;
           const hash = link.getAttribute('href');
-          if (!hash || hash.length < 2) return;
+          if (!hash || hash.length < 2 || hash === '#calculator' || hash === '#main') return;
           const el = document.querySelector(hash);
           if (!el) return;
           event.preventDefault();

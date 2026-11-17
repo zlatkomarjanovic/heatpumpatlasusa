@@ -1,6 +1,6 @@
 ---
-title: 'Efficiency Vermont Heat Pump Rebate (2026)'
-description: 'Efficiency Vermont heat pump rebate pays $500 to $4,500 on qualifying projects in 2026. Income tiers, cold-climate systems, and why Vermont HEAR is waitlisted.'
+title: 'Efficiency Vermont Heat Pump Rebates: Check Your Options'
+description: 'Compare Efficiency Vermont heat pump incentives by equipment and household eligibility, and check the status before counting a rebate.'
 primaryKeyword: 'efficiency vermont heat pump rebate'
 program: 'Efficiency Vermont Heat Pump Rebate'
 administrator: 'Efficiency Vermont'

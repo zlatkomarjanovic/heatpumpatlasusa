@@ -1,12 +1,12 @@
 ---
-title: 'Heat Pump Cost in Seattle, WA (2026)'
-description: 'Heat pump cost in Seattle and heat pump installation cost around Puget Sound. Why 14.91 cent hydro power beats most US markets, and which Washington rebates still pay.'
+title: 'Heat Pump Installation Cost in Seattle (2026)'
+description: 'See modeled prices for ducted replacements and mini splits in Seattle. Compare your heating costs and find which rebates to check.'
 primaryKeyword: 'heat pump cost seattle'
 stateCode: WA
 city: Seattle
 metro: Puget Sound
 routingLive: false
-updated: 2026-09-14
+updated: 2026-11-17
 published: 2026-09-14
 reviewedBy: 'HeatPumpAtlasUSA Editorial'
 tags: ['market', 'washington', 'seattle']
@@ -33,7 +33,7 @@ citations:
     supports: 'Washington seasonal heating degree days.'
 faqs:
   - question: 'How much does a heat pump cost in Seattle?'
-    answer: 'A ducted heat pump in a typical Puget Sound home generally runs $9,500 to $22,000 installed before incentives, with the regional labor factor at 1.20 making it the most expensive labor market in the country alongside California. Ductless systems are lower. Seattle has a moderate 5,051 degree day heating load, so a standard heat pump is often adequate rather than the cold-climate tier required in Maine.'
+    answer: 'Our Seattle planning model puts a like-for-like ducted replacement at $9,400 to $21,500 or a one-zone mini split at $3,800 to $11,400 before incentives. These ranges apply Washington and Western regional factors to national bands. They are not local contractor quotes.'
   - question: 'Is a heat pump cheaper to run than gas in Seattle?'
     answer: 'Often yes, because Washington electricity is cheap at 14.91 cents per kilowatt hour from hydro generation while gas is comparatively expensive at $20.41 per Mcf. That combination favors the heat pump more than in almost any other gas market. The Pacific Northwest and parts of the Midwest are the regions where the heat pump wins the gas comparison most clearly.'
   - question: 'What rebates are available in Washington?'
@@ -48,34 +48,25 @@ related:
   - '/calculator/'
   - '/mini-split-cost/'
 ---
-Seattle is the best pure operating economics market outside oil country. It is also the most expensive labor market, which creates an unusual profile.
 
-## Why the economics work
+A Seattle heat pump can make sense if you are replacing both a furnace and an air conditioner. If you already have working ducts, price a ducted replacement first. If you only want to heat and cool one room, price a single-zone mini split.
 
-Washington electricity is 14.91 cents per kilowatt hour, among the cheapest residential rates in the continental US, largely because of hydro generation. Washington natural gas is comparatively expensive at $20.41 per Mcf.
+## What you might pay to install
 
-That is the opposite of the Texas pattern, where cheap gas meets expensive power. In Seattle, the [furnace comparison](/heat-pump-vs-furnace/) comes out clearly in favour of the heat pump, because the ratio of electricity to gas price is favourable.
+| Project | Modeled installed price before incentives | Scope |
+| --- | ---: | --- |
+| Reuse ducts for a like-for-like replacement | $9,400 to $21,500 | Existing ducts and a straightforward equipment swap |
+| Add a single-zone mini split | $3,800 to $11,400 | One indoor head for one room or zone |
+| Install a multi-zone ductless system | $8,700 to $26,900 | Several indoor heads and no new duct network |
 
-The heating load is also moderate. At 5,051 degree days, Seattle is closer to Denver than to Portland, Maine. That means a standard heat pump is often adequate, so you are not paying the cold-climate equipment premium that Maine households must budget for.
+This uses the national equipment bands with the site model’s West factor of 1.20 and Washington factor of 1.12. In Puget Sound, compare the same head count and electrical scope across quotes. An extra head, a long line run, or a new panel can change the price substantially. These are planning ranges, not a survey of local bids. They exclude major duct repairs or new ductwork and panel or service upgrades. See the [national installation cost guide](/heat-pump-cost/) for scope assumptions.
 
-## The cost side
+## What the heat could cost each year
 
-The regional labor factor for the West is 1.20, which is the highest in our model, and Washington is additionally flagged as a high-cost state. A ducted heat pump in a typical Puget Sound home lands in the $9,500 to $22,000 range before incentives, which is the upper end of the national bands.
+The June 2026 EIA Washington residential reference in our model is 14.91¢/kWh. It is a statewide average. Put your actual electricity and gas rates side by side before you count on savings, especially if your utility has tiered rates. Read [heat pump vs gas furnace](/heat-pump-vs-furnace/) if gas is what you would replace.
 
-The mitigating factor is that the operating cost saving is real and recurring, unlike in markets where the running cost case is contested. A project that is more expensive up front but produces a genuine annual saving can still be a better decision than a cheaper one that does not.
+## Check rebates before you sign
 
-## The rebate situation
+Check eligibility and current availability with the [Washington State Department of Commerce](https://www.commerce.wa.gov/energy/clean-buildings/energy-incentives/ira-home-energy-rebates/) before counting any money. Use [mini split installation costs](/mini-split-cost/) to compare a quote with different indoor-head counts.
 
-Washington administers a HEAR program through the Department of Commerce, focused on income-qualified households, with amounts typically reaching $8,000 for qualifying electrification measures. Unlike Massachusetts or Maine, Washington does not have a large universal rebate available to every household regardless of income.
-
-That makes this market more income-sensitive than the Northeast. If your household qualifies, the project economics improve substantially. If it does not, the case rests on operating cost and cooling, which in Seattle's mild climate is a smaller factor than in Denver.
-
-Program year funding can close mid-year, so confirm current status before planning around it.
-
-## Ductless fits well here
-
-Puget Sound has a significant stock of older homes without ductwork, combined with a mild winter where a multi-zone ductless system can carry the full heating load without backup heat. That combination makes [ductless](/mini-split-cost/) unusually attractive here relative to colder markets, where ductless systems often need a backup heat source to get through January.
-
-## What to do
-
-Run the [calculator](/calculator/). In Seattle the operating cost result is usually favourable, which means the decision turns on up-front cost, incentive eligibility and how long you plan to stay in the house. Because the labor market is expensive, getting three quotes inside the band matters more here than in most markets.
+[Find your Seattle installation price and running costs](/calculator/). Enter your ZIP and choose the fuel you use now. Add your annual heating spend if you have it handy.

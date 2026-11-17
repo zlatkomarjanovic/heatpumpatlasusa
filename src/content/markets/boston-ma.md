@@ -1,12 +1,12 @@
 ---
-title: 'Heat Pump Cost in Boston, MA (2026)'
-description: 'Heat pump cost in Boston and the cost of a heat pump in Massachusetts. Mass Save rebate amounts, the seasonal rate, and when oil or gas still changes the math.'
+title: 'Boston Heat Pump Cost: Prices and Mass Save Rebates'
+description: 'Estimate heat pump installation costs in Boston. Compare ducted and ductless plans, then check your Mass Save rebate and winter rate.'
 primaryKeyword: 'heat pump cost boston'
 stateCode: MA
 city: Boston
 metro: Greater Boston
 routingLive: true
-updated: 2026-09-14
+updated: 2026-11-17
 published: 2026-09-14
 reviewedBy: 'HeatPumpAtlasUSA Editorial'
 tags: ['market', 'massachusetts', 'boston']
@@ -37,7 +37,7 @@ citations:
     supports: 'Massachusetts seasonal heating degree days.'
 faqs:
   - question: 'How much does a heat pump cost in Boston?'
-    answer: 'Greater Boston is one of the more expensive US markets for this work, with labor running above the national average. A ducted heat pump in a typical Boston-area home generally lands in the $11,000 to $25,000 range before incentives, with ductless systems lower and cold-climate equipment adding a premium. The wide range reflects the housing stock, which includes a lot of pre-1940 homes with no ducts and tight electrical services.'
+    answer: 'Our Boston planning model puts a new standard ducted installation using existing ducts at $12,200 to $28,300, before rebates. A system using multiple ductless heads is modeled at $8,400 to $25,800. Ask for electrical work and any new ductwork as separate items.'
   - question: 'How much can I get from Mass Save in Boston?'
     answer: 'Standard whole-home air-source projects installed in 2026 can qualify for $2,650 per ton up to $8,500. Partial-home projects have a lower per-ton amount of $1,125 and the same cap. Income-qualified offers have separate terms. Confirm which documents and approvals your project needs before work starts.'
   - question: 'Is a heat pump worth it in Boston on running cost?'
@@ -52,36 +52,25 @@ related:
   - '/heat-pump-cost/'
   - '/heat-pump-vs-oil/'
 ---
-Greater Boston is a strong heat pump market with an awkward housing stock, and understanding that tension is most of the local analysis.
 
-## The economics
+If your Boston home has radiators or steam heat and no ducts, get a ductless quote before paying someone to design a duct system. If your ducts can be reused, price that job separately so you can compare like for like.
 
-Massachusetts residential electricity is 29.61 cents per kilowatt hour as of June 2026, among the highest in the continental US. Massachusetts natural gas is also expensive at $31.39 per Mcf, which is unusual. Usually a state has expensive electricity or expensive gas, not both.
+## What you might pay to install
 
-That combination means the heat pump case in Boston depends almost entirely on your current fuel.
+| Project | Modeled installed price before incentives | Scope |
+| --- | ---: | --- |
+| Use existing ducts for a standard installation | $12,200 to $28,300 | An air handler, controls and typical installation labor |
+| Reuse ducts for a like-for-like replacement | $9,000 to $20,600 | Existing ducts and a straightforward equipment swap |
+| Install a multi-zone mini split | $8,400 to $25,800 | Several indoor heads without new ductwork |
 
-Against **oil**, which heats about 24 percent of Massachusetts homes, the case is strong. At $3.62 a gallon and 82 percent efficiency, oil delivers heat at roughly $40 per million BTU. A cold-climate heat pump on Massachusetts electricity costs roughly $26 per million BTU after duct losses. That is a 35 percent reduction on the largest energy line in the house.
+The ranges use the model’s Northeast factor of 1.15 and Massachusetts factor of 1.12. In a triple-decker or condo, ask early about outdoor unit placement, approval requirements, and which electrical service supplies the unit. These are planning ranges, not a survey of local bids. They exclude major duct repairs or new ductwork and panel or service upgrades. See the [national installation cost guide](/heat-pump-cost/) for scope assumptions.
 
-Against **gas**, the picture is closer. Massachusetts gas at $31.39 per Mcf through a 90 percent furnace lands around $34 per million BTU, so the heat pump still wins, but by a narrower margin and with more sensitivity to your actual tariff. This is where the seasonal heat pump rate matters disproportionately, because it shifts a 20 percent advantage into a much larger one.
+## What the heat could cost each year
 
-The [oil comparison](/heat-pump-vs-oil/) and the [furnace comparison](/heat-pump-vs-furnace/) show the underlying math state by state.
+Our June 2026 Massachusetts residential reference is 29.61¢/kWh. That statewide figure is a starting point for comparing your current fuel. If your account qualifies for a winter heat pump rate, use that rate to compare the heating portion of your bill.
 
-## The rebate stack
+## Check rebates before you sign
 
-[Mass Save](/rebates/mass-save/) lists a standard whole-home air-source rebate of $2,650 per ton up to $8,500 for eligible 2026 installations. Partial-home projects have a lower per-ton amount and the same cap.
+For eligible 2026 Massachusetts installations, [Mass Save](/rebates/mass-save/) lists a standard whole-home rate of $2,650 per ton, capped at $8,500. The partial-home rate differs. Check the correct tier, forms and installation-year rules before paying a deposit. If your utility is Eversource, see [whether you qualify for its winter rate](/rebates/eversource/).
 
-The critical operational detail is the reservation requirement. Mass Save generally requires a rebate commitment letter secured before installation, and the letter is time-limited. Confirm this in writing before signing a contract.
-
-## The housing stock problem
-
-Boston's heat pump costs run above the national average, and the housing stock is why.
-
-A large share of the metro's housing predates 1940. Many of those homes use steam or hydronic heat with no ductwork at all. For these houses, a ducted heat pump means building a duct system, which can add $3,000 to $12,000 and destroy finished space. Ductless systems avoid that, which is why [mini splits](/mini-split-cost/) are often the more practical path here.
-
-Compact lots and tight mechanical spaces complicate outdoor unit placement, and older electrical services frequently need evaluation before a heat pump is added. Boston's large triple-decker stock adds another wrinkle, since each unit may have its own service and the panel situation has to be assessed individually.
-
-## What to do
-
-Get the electrical question answered first, because a panel upgrade discovered late is the most expensive surprise in this market. Then confirm your Mass Save reservation. Then compare ductless and ducted options, because in Boston's housing stock the choice is often made for you by the building.
-
-Run the [calculator](/calculator/) with your actual fuel usage. In a market where electricity is this expensive, the difference between a good and bad decision is entirely in your specific numbers.
+[Find your Boston heat pump price and compare running costs](/calculator/). Enter your ZIP and choose the fuel you use now. Add your annual heating spend if you have it handy.

@@ -1,12 +1,12 @@
 ---
-title: 'Heat Pump Cost in Portland, Maine (2026)'
-description: 'Heat pump cost in Portland, Maine, Efficiency Maine heat pump rebate tiers, and why a 29.59 cent electricity price still beats heating oil by nearly half.'
+title: 'Heat Pump Cost in Portland, Maine: Price Your Switch'
+description: 'See Portland heat pump installation ranges, compare annual costs with heating oil, and check Efficiency Maine rebates before getting a quote.'
 primaryKeyword: 'heat pump cost portland maine'
 stateCode: ME
 city: Portland
 metro: Greater Portland, Maine
 routingLive: true
-updated: 2026-09-14
+updated: 2026-11-17
 published: 2026-09-14
 reviewedBy: 'HeatPumpAtlasUSA Editorial'
 tags: ['market', 'maine', 'portland']
@@ -33,9 +33,9 @@ citations:
     supports: 'Maine seasonal heating degree days, 7,826 in the July 2025 to June 2026 season.'
 faqs:
   - question: 'How much does a heat pump cost in Portland, Maine?'
-    answer: 'A cold-climate ducted heat pump in a typical greater Portland home generally runs $12,000 to $26,000 installed before incentives. Cold-climate equipment is effectively mandatory here given a 7,826 degree day heating load, so the standard-tier equipment that works in milder states is not the right specification. Ductless multi-zone systems are often cheaper for the older housing stock.'
+    answer: 'Our Portland, Maine planning model puts a cold-climate ducted installation using existing ducts at $13,800 to $32,200, before incentives. A multi-zone ductless system is modeled at $7,500 to $23,000. New ducts or electrical work can move your price.'
   - question: 'Is a heat pump actually cheaper to run than oil in Maine?'
-    answer: 'Yes, and by a wide margin. Oil at about $3.62 per gallon and 82 percent efficiency costs roughly $40 per million BTU of delivered heat. A cold-climate heat pump on Maine electricity at 29.59 cents per kilowatt hour costs roughly $22 per million BTU after duct losses. That is a saving of around 45 percent on the largest energy expense in the household.'
+    answer: 'It depends on the oil price, electric rate, and heat pump setup. In our 750-gallon example, oil is $2,715 and the ducted heat pump is about $2,997. The same heat from a ductless system with higher modeled efficiency is about $2,463. Compare your own bills.'
   - question: 'How much can I get from Efficiency Maine?'
     answer: 'Standard rebates run about $500 to $1,000 per eligible outdoor unit. Moderate-income households can receive $1,000 to $2,000 per unit, and low-income households up to $3,000 per unit within a lifetime cap of $9,000 per housing unit. Maine''s federal HEAR allocation is fully reserved and no longer accepting new applications, so do not plan around that money.'
   - question: 'Should I keep my oil system as backup in Maine?'
@@ -48,36 +48,25 @@ related:
   - '/calculator/'
   - '/heat-pump-cost/'
 ---
-Maine is where the American heat pump argument is most clear-cut. It is also where a lot of out-of-state content gets the reasoning backwards.
 
-## The counterintuitive economics
+Start with last year’s oil deliveries if you heat your Portland home with oil. Then compare a cold-climate ducted system against ductless heads, especially if your home has a boiler and no ducts.
 
-Maine's residential electricity price is 29.59 cents per kilowatt hour, second only to Massachusetts in the continental US. On that fact alone, a lot of national commentary concludes that heat pumps are a poor fit for Maine.
+## What you might pay to install
 
-That conclusion is wrong, and the reason is that electricity is not expensive relative to heating oil.
+| Project | Modeled installed price before incentives | Scope |
+| --- | ---: | --- |
+| Install a cold-climate ducted heat pump | $13,800 to $32,200 | Cold-climate equipment using existing ducts |
+| Reuse ducts for a like-for-like replacement | $8,100 to $18,400 | Existing ducts and a straightforward equipment swap |
+| Install a multi-zone mini split | $7,500 to $23,000 | Several indoor heads and no new duct network |
 
-Heating oil at $3.62 a gallon delivering 138,527 BTU per gallon through an 82 percent efficient furnace produces heat at roughly $40 per million BTU. A cold-climate heat pump at a seasonal coefficient of performance of 2.47 including duct losses, on Maine electricity, produces the same delivered heat at roughly $22 per million BTU.
+These planning ranges apply the model’s Northeast factor of 1.15 to the national bands. In a home with radiators, price ductless coverage room by room before comparing it with a whole-home alternative. Ask each installer whether backup heat, new wiring, and additional heads appear in the total. These are planning ranges, not a survey of local bids. They exclude major duct repairs or new ductwork and panel or service upgrades. See the [national installation cost guide](/heat-pump-cost/) for scope assumptions.
 
-That is a saving of about 45 percent on the largest energy line in the household budget. Maine has 7,826 heating degree days, which is a genuinely severe heating load, so "the largest energy line" is a big number. This is why Maine leads the country in per-capita heat pump adoption despite having expensive power, and why the [oil comparison](/heat-pump-vs-oil/) is the most useful page on this site for a Maine household.
+## What the heat could cost each year
 
-## What to specify
+At the model’s $3.62 per gallon, 750 gallons of oil cost $2,715. At 29.59¢/kWh and the same delivered heat, an illustrative ducted heat pump with a net seasonal COP of about 2.47 costs about $2,997 to run. An illustrative ductless system operating at a net seasonal COP of 3.0 costs about $2,463. Either result can change with real rates, system efficiency, and room coverage. See the [oil-to-heat-pump comparison](/heat-pump-vs-oil/) for the calculation.
 
-Cold-climate equipment is not optional here. A standard heat pump in a 7,826 degree day climate will lean on backup resistance heat through January, which destroys the operating cost advantage that justified the project. The equipment tier that works in Virginia does not work in Portland.
+## Check rebates before you sign
 
-The good news is that Efficiency Maine's [rebate structure](/rebates/efficiency-maine/) rewards the correct specification, and the state's context has pushed contractors toward cold-climate expertise more than almost anywhere else in the country.
+Check [Efficiency Maine heat pump rebates](/rebates/efficiency-maine/) for the current rules before building a rebate into your budget. If you keep an oil system for backup, include its expected fuel and service costs when comparing your options.
 
-## The rebate layers
-
-Efficiency Maine pays about $500 to $1,000 per eligible outdoor unit at the standard tier, $1,000 to $2,000 for moderate-income households, and up to $3,000 per unit for low-income households, within a lifetime cap of $9,000 per housing unit.
-
-The per-unit structure with a per-housing-unit cap matters. A whole-home conversion with multiple outdoor units can reach the cap, while a single-head installation will not. If you plan to convert in stages, the lifetime cap means the sequence is worth planning.
-
-Maine's federal HEAR allocation reached its reservation ceiling within weeks of opening and new applications are waitlisted. This is worth stating clearly because a lot of content still advertises combined Maine incentive totals that include HEAR money, and that money is not available for new applications as of our last verification.
-
-## Housing stock
-
-Greater Portland's housing skews older, and much of it was built around hydronic baseboard or steam heat rather than ductwork. That makes [ductless systems](/mini-split-cost/) genuinely competitive here rather than a fallback, and a multi-zone ductless installation is a common and sensible approach for a 1920s Portland house.
-
-The electrical situation also deserves early attention. A 7,826 degree day climate means the system will run hard, and if the service cannot support it without a panel upgrade, that is a $1,400 to $5,500 line item that needs to be in the budget from the start.
-
-Run the [calculator](/calculator/) with your actual annual oil usage from a delivery slip. In Maine, that one input is the difference between a rough estimate and a genuinely reliable projection.
+[Estimate your Portland heat pump price and compare it with oil](/calculator/). Enter your ZIP and choose the fuel you use now. Add your annual heating spend if you have it handy.

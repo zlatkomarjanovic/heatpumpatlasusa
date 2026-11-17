@@ -1,8 +1,8 @@
 ---
-title: 'What Size Heat Pump Do I Need? (2026)'
-description: 'What size heat pump do I need? Sizing is a Manual J load calculation, not a square-foot rule. Tonnage, oversizing damage, and what to ask before you sign.'
+title: 'What Size Heat Pump Do You Need? Check Your Quote'
+description: 'Learn what an installer should measure, what tonnage means, and how to spot a quote based only on square footage.'
 primaryKeyword: 'what size heat pump do i need'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-14
@@ -93,6 +93,8 @@ Use this only to spot a quote that is wildly off, not to specify your system. Ac
 If a contractor's number sits far outside the range for your size and climate, ask to see the load calculation.
 
 ## Sizing ductless systems
+
+If you are choosing how to deliver heat to each room, see [what changes when you keep your ducts or choose ductless heads](/guides/ducted-vs-ductless-heat-pump/) before comparing equipment sizes.
 
 A [ductless mini split](/guides/ducted-vs-ductless-heat-pump/) is sized per zone. Each indoor head is matched to the load of the room or open area it serves, and then the outdoor unit is confirmed to cover the combined load. The classic ductless sizing mistake is putting an oversized head in a small bedroom, which short cycles and dehumidifies poorly. The same load discipline applies, just at room scale.
 

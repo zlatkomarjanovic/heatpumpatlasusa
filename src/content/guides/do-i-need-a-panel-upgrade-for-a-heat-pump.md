@@ -1,8 +1,8 @@
 ---
-title: 'Do I Need a Panel Upgrade for a Heat Pump?'
-description: 'Do I need a panel upgrade for a heat pump? Not always. A load calculation decides it. Here is when 100 amps is enough and when a 200 amp panel is required.'
+title: 'Do You Need a Panel Upgrade for a Heat Pump?'
+description: 'Check what affects panel capacity and what to ask an electrician before adding an electrical upgrade to your heat pump quote.'
 primaryKeyword: 'do i need a panel upgrade for a heat pump'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-14

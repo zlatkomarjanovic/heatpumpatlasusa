@@ -25,9 +25,16 @@ export async function onRequestPost(context: {
   const wantsJson = (context.request.headers.get('accept') ?? '').includes('application/json');
   const host = new URL(context.request.url).hostname;
   const isProduction = host === 'heatpumpatlasusa.com' || host === 'www.heatpumpatlasusa.com';
-  if (isProduction && !context.env.TURNSTILE_SECRET) {
+  if (!context.env.TURNSTILE_SECRET) {
     return leadResponse(wantsJson, { ok: false, error: 'Quote verification is temporarily unavailable.' }, 503);
   }
+
+  const respond = (error: string, status: number) => leadResponse(wantsJson, { ok: false, error }, status);
+  const contentLength = Number(context.request.headers.get('content-length'));
+  if (contentLength > 32768) return respond('This quote request is too large.', 413);
+
+  const origin = context.request.headers.get('Origin');
+  if (origin && origin !== new URL(context.request.url).origin) return respond('Open the quote form on the site and try again.', 403);
 
   const form = await context.request.formData().catch(() => null);
   if (!form) {
@@ -41,18 +48,18 @@ export async function onRequestPost(context: {
   const lead = {
     id: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
-    name: String(form.get('name') ?? '').slice(0, 120),
+    name: String(form.get('name') ?? '').trim().slice(0, 120),
     email: String(form.get('email') ?? '').trim().slice(0, 200),
     phone: String(form.get('phone') ?? '').slice(0, 40),
     zip: String(form.get('zip') ?? '').trim(),
     market: String(form.get('market') ?? '').slice(0, 80),
     notes: String(form.get('notes') ?? '').slice(0, 2000),
-    source: String(form.get('source') ?? 'site'),
+    source: String(form.get('source') ?? 'site').slice(0, 200),
     scenario: String(form.get('scenario') ?? '').slice(0, 8000),
   };
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email) || !/^[0-9]{5}$/.test(lead.zip)) {
-    return leadResponse(wantsJson, { ok: false, error: 'Enter a valid email and five-digit ZIP code.' }, 400);
+  if (!lead.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email) || !/^[0-9]{5}$/.test(lead.zip)) {
+    return respond('Enter your name, a valid email and a five-digit ZIP code.', 400);
   }
 
   if (!context.env.LEADS) {
@@ -105,11 +112,9 @@ function leadResponse(wantsJson: boolean, body: { ok: boolean; error?: string; i
   return new Response(null, { status: 303, headers: { Location: location } });
 }
 
-async function verifyTurnstile(request: Request, form: FormData, secret: string | undefined) {
-  if (!secret) return null;
-
+async function verifyTurnstile(request: Request, form: FormData, secret: string) {
   const token = String(form.get('cf-turnstile-response') ?? '');
-  if (!token) return 'Could not verify this submission. Reload the page and try again.';
+  if (!token || token.length > 2048) return 'Complete the security check and try again.';
 
   const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
     method: 'POST',
@@ -123,7 +128,11 @@ async function verifyTurnstile(request: Request, form: FormData, secret: string 
 
   if (!response.ok) return 'Could not verify this submission. Try again in a minute.';
 
-  const result = (await response.json()) as { success?: boolean };
-  if (!result.success) return 'Could not verify this submission. Reload the page and try again.';
+  const result = (await response.json()) as { success?: boolean; hostname?: string; action?: string };
+  const hostname = new URL(request.url).hostname;
+  const loopback = hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '[::1]';
+  if (!result.success || (!loopback && (result.hostname !== hostname || result.action !== 'quote_request'))) {
+    return 'Could not verify this submission. Complete the security check again.';
+  }
   return null;
 }

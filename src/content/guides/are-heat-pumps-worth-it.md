@@ -1,8 +1,8 @@
 ---
-title: 'Are Heat Pumps Worth It in 2026?'
-description: 'Are heat pumps worth it? Yes against oil, propane and electric resistance. Against cheap natural gas it depends on your rates and climate.'
+title: 'Are Heat Pumps Worth It for Your Home?'
+description: 'Compare installation, fuel costs, and payback for your home. See where a heat pump saves money and where keeping your current system can cost less.'
 primaryKeyword: 'are heat pumps worth it'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-14
@@ -89,6 +89,8 @@ The catch is that these programs fund out during the year and get paused. We onl
 If you are replacing oil or propane, the annual saving is large and payback is usually short once rebates are applied. If you are replacing a working gas furnace to save money, be honest with yourself: payback can be long, and in the cheapest-gas states it may not arrive at all on running cost alone.
 
 The cleanest financial case is rarely a like-for-like heating swap. It is the household that needed cooling anyway, or was facing a fuel delivery it hates, or has a rebate on the table this year.
+
+If your installer proposes a ground loop, compare [air-source and geothermal costs](/guides/air-source-vs-geothermal-heat-pump/) using the difference between the quotes and what you expect to save on heat each year.
 
 ## Bottom line
 

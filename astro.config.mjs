@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { markdownMirrors } from './scripts/markdown-mirrors.mjs';
 
 /**
  * HeatPumpAtlasUSA build config.
@@ -18,43 +19,9 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !page.includes('/404') && !page.includes('/quote-sent'),
-      serialize(item) {
-        const url = item.url;
-        const lastmod = new Date().toISOString();
-        if (url === 'https://heatpumpatlasusa.com/') {
-          return { ...item, lastmod, changefreq: 'daily', priority: 1.0 };
-        }
-        const easyWins = [
-          '/calculator/',
-          '/heat-pump-water-heater-cost/',
-          '/rebates/mass-save/',
-          '/rebates/efficiency-maine/',
-          '/rebates/efficiency-vermont/',
-          '/electrical-panel-upgrade-cost/',
-          '/guides/what-size-heat-pump-do-i-need/',
-          '/guides/do-heat-pumps-work-in-cold-weather/',
-          '/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/',
-          '/guides/ducted-vs-ductless-heat-pump/',
-          '/guides/heat-pump-vs-electric-baseboard/',
-          '/guides/air-source-vs-geothermal-heat-pump/',
-          '/rebates/nys-clean-heat/',
-        ];
-        if (easyWins.some((path) => url.endsWith(path) || url.includes(path))) {
-          return { ...item, lastmod, changefreq: 'weekly', priority: 0.96 };
-        }
-        if (url.includes('/heat-pump-cost/')) {
-          return { ...item, lastmod, changefreq: 'weekly', priority: 0.95 };
-        }
-        if (url.includes('/mini-split-cost/') || url.includes('/heat-pump-vs-furnace/') || url.includes('/rebates/')) {
-          return { ...item, lastmod, changefreq: 'weekly', priority: 0.9 };
-        }
-        if (url.includes('/guides/') || url.includes('/markets/')) {
-          return { ...item, lastmod, changefreq: 'weekly', priority: 0.8 };
-        }
-        return { ...item, lastmod, changefreq: 'weekly', priority: 0.7 };
-      },
+      filter: (page) => !['/404', '/404/', '/quote-sent/'].includes(new URL(page).pathname),
     }),
+    markdownMirrors(),
   ],
   vite: {
     plugins: [tailwindcss()],

@@ -1,64 +1,12 @@
 # HeatPumpAtlasUSA
 
-> US heat pump cost, heat pump installation cost, mini split installation cost, heat pump rebates, and a free heat pump cost calculator.
+> U.S. heat pump installation prices, operating costs, rebate requirements and ZIP-based estimates.
 
-HeatPumpAtlasUSA models whether a heat pump pays in a given US home using EIA electricity and gas prices, NOAA heating degree days, Census fuel mix, and a short list of rebate programs verified by hand. The calculator publishes losing cases. It does not assume a heat pump always saves money.
+HeatPumpAtlasUSA compares the cost of heating your home with a heat pump and your current fuel. Read the methods and sources behind the numbers, or use the calculator on the website.
 
-## Cost pages
+- [Calculator and savings estimates](https://heatpumpatlasusa.com/calculator/)
+- [Methodology and sources](https://heatpumpatlasusa.com/methodology/)
+- [HTML page sitemap](https://heatpumpatlasusa.com/sitemap-index.xml)
+- [Corrections and contact information](https://heatpumpatlasusa.com/about/#contact)
 
-- [Heat pump cost](https://heatpumpatlasusa.com/): National heat pump cost ranges and the switching calculator
-- [Heat pump installation cost](https://heatpumpatlasusa.com/heat-pump-cost/): Installed cost by system type, $9,500 to $22,000 for a typical ducted system
-- [Mini split installation cost](https://heatpumpatlasusa.com/mini-split-cost/): Per-zone ductless pricing
-- [Heat pump operating cost](https://heatpumpatlasusa.com/heat-pump-operating-cost/): Annual running cost vs gas, oil and propane by state
-- [Heat pump water heater cost](https://heatpumpatlasusa.com/heat-pump-water-heater-cost/): Hybrid water heater pricing and payback
-- [Electrical panel upgrade cost](https://heatpumpatlasusa.com/electrical-panel-upgrade-cost/): When a heat pump forces a 200 amp upgrade
-- [Heat pump cost calculator](https://heatpumpatlasusa.com/calculator/): ZIP-level installed cost, operating cost, open rebates and payback
-
-## Comparisons
-
-- [Heat pump vs furnace](https://heatpumpatlasusa.com/heat-pump-vs-furnace/)
-- [Heat pump vs oil](https://heatpumpatlasusa.com/heat-pump-vs-oil/)
-- [Heat pump vs electric baseboard](https://heatpumpatlasusa.com/guides/heat-pump-vs-electric-baseboard/)
-- [Ducted vs ductless heat pump](https://heatpumpatlasusa.com/guides/ducted-vs-ductless-heat-pump/)
-- [Air source vs geothermal heat pump](https://heatpumpatlasusa.com/guides/air-source-vs-geothermal-heat-pump/)
-- [Dual fuel heat pump](https://heatpumpatlasusa.com/guides/dual-fuel-heat-pumps/)
-- [Heat pump vs pellet stove](https://heatpumpatlasusa.com/guides/heat-pump-vs-pellet-stove/)
-- [All comparisons](https://heatpumpatlasusa.com/compare/)
-
-## Rebates
-
-- [Heat pump rebates](https://heatpumpatlasusa.com/rebates/)
-- [Heat pump tax credit](https://heatpumpatlasusa.com/heat-pump-tax-credit/): 25C ended for 2026 installs
-- [Mass Save heat pump rebate Massachusetts](https://heatpumpatlasusa.com/rebates/mass-save/)
-- [Efficiency Maine heat pump rebate](https://heatpumpatlasusa.com/rebates/efficiency-maine/)
-- [NYSERDA heat pump rebate](https://heatpumpatlasusa.com/rebates/nys-clean-heat/)
-- [Efficiency Vermont heat pump rebate](https://heatpumpatlasusa.com/rebates/efficiency-vermont/)
-- [Energize CT heat pump rebate](https://heatpumpatlasusa.com/rebates/energize-ct/)
-- [Energy Trust of Oregon heat pump rebate](https://heatpumpatlasusa.com/rebates/energy-trust-oregon/)
-- [Focus on Energy heat pump rebate](https://heatpumpatlasusa.com/rebates/focus-on-energy/)
-- [Xcel Energy heat pump rebate](https://heatpumpatlasusa.com/rebates/xcel-energy/)
-- [Eversource heat pump rebate](https://heatpumpatlasusa.com/rebates/eversource/)
-
-## Guides
-
-- [Are heat pumps worth it](https://heatpumpatlasusa.com/guides/are-heat-pumps-worth-it/)
-- [Do heat pumps work in cold weather](https://heatpumpatlasusa.com/guides/do-heat-pumps-work-in-cold-weather/)
-- [What size heat pump do I need](https://heatpumpatlasusa.com/guides/what-size-heat-pump-do-i-need/)
-- [Do I need a panel upgrade for a heat pump](https://heatpumpatlasusa.com/guides/do-i-need-a-panel-upgrade-for-a-heat-pump/)
-- [Heat pump electric bill](https://heatpumpatlasusa.com/guides/heat-pump-electric-bill/)
-
-## Markets
-
-- [Heat pump cost by state](https://heatpumpatlasusa.com/markets/)
-- [Heat pump cost Boston](https://heatpumpatlasusa.com/markets/boston-ma/)
-- [Heat pump cost Denver](https://heatpumpatlasusa.com/markets/denver-co/)
-- [Heat pump cost Portland Maine](https://heatpumpatlasusa.com/markets/portland-me/)
-- [Heat pump cost Seattle](https://heatpumpatlasusa.com/markets/seattle-wa/)
-
-## About
-
-- [Methodology](https://heatpumpatlasusa.com/methodology/)
-- [About](https://heatpumpatlasusa.com/about/)
-- [Sitemap](https://heatpumpatlasusa.com/sitemap-index.xml)
-- [RSS](https://heatpumpatlasusa.com/rss.xml)
-- Corrections: https://heatpumpatlasusa.com/about/#contact
+Each Markdown copy below is generated directly from the page's published HTML content. Front matter links to the canonical page. Use the website for interactive estimates and forms.

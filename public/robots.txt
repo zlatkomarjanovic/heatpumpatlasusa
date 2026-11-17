@@ -1,37 +1,5 @@
+# Allow crawlers to fetch public pages, Markdown copies and rendering assets.
 User-agent: *
 Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-# Every public page is meant to be indexed. The calculator is static HTML
-# with an optional JS island, so it is crawlable without rendering.
-# Disallow nothing except the build artifact folder.
-
-Disallow: /_astro/
 
 Sitemap: https://heatpumpatlasusa.com/sitemap-index.xml

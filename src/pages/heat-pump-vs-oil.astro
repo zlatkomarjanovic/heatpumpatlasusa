@@ -33,6 +33,8 @@ const OIL_COST_PER_MMBTU =
   FUEL_REFERENCE.heatingOilDollarsPerGallon /
   ((ENERGY_UNITS.kwhPerGallonOil * 3412 / 1_000_000) * EFFICIENCY.oilFurnace);
 
+const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
 const OIL_STATES = ['ME', 'VT', 'NH', 'MA', 'CT', 'RI', 'NY', 'PA', 'NJ', 'MD', 'DE', 'VA', 'WI', 'MN', 'MI', 'AK'];
 
 const columns = [
@@ -41,7 +43,7 @@ const columns = [
   { key: 'hp', label: 'Heat pump', numeric: true, emphasis: true },
   { key: 'oil', label: 'Oil system', numeric: true },
   { key: 'save', label: 'Saving per MMBtu', emphasis: true },
-  { key: 'pct', label: 'Cheaper', numeric: true },
+  { key: 'pct', label: 'Heat pump savings (%)', numeric: true },
 ];
 
 const stateRows = OIL_STATES.map((code) => STATE_BY_CODE[code])
@@ -54,7 +56,7 @@ const stateRows = OIL_STATES.map((code) => STATE_BY_CODE[code])
       oilShare: `${Math.round(s.fuelOilShare * 100)}%`,
       hp: `$${hp.toFixed(1)}`,
       oil: `$${OIL_COST_PER_MMBTU.toFixed(1)}`,
-      save: `$${save.toFixed(1)}`,
+      save: `${save < 0 ? '-' : ''}${Math.abs(save).toFixed(1)}`,
       pct: `${Math.round((save / OIL_COST_PER_MMBTU) * 100)}%`,
     };
   });
@@ -90,7 +92,7 @@ const annualRows = [
     gallons: `${row.gallons.toLocaleString()} gal`,
     oilAnnual: `$${Math.round(oil).toLocaleString('en-US')}`,
     hpAnnual: `$${Math.round(hp).toLocaleString('en-US')}`,
-    save: `$${Math.round(oil - hp).toLocaleString('en-US')}`,
+    save: money.format(oil - hp),
   };
 });
 
@@ -98,7 +100,7 @@ const faqItems = [
   {
     question: 'Is a heat pump cheaper to run than oil heat?',
     answer:
-      'Almost always, and usually by a wide margin. Heating oil delivered at around $3.60 a gallon and burned at 82 percent efficiency costs roughly $32 per million BTU of delivered heat. A cold-climate heat pump on Maine electricity at 29.6 cents per kilowatt hour costs roughly $14 per million BTU after duct losses. That is less than half. Even on the most expensive electricity in the country, oil loses.',
+      'It depends on your costs and equipment. At $3.62 per gallon and 82% efficiency, oil costs about $32 per million BTU of delivered heat. At 29.59 cents per kWh and a net seasonal COP of 2.47, a ducted heat pump costs about $35 for the same heat. Lower electricity prices, higher oil prices, or a more efficient setup can reverse that.',
   },
   {
     question: 'Why is the oil conversion case stronger than the gas conversion case?',
@@ -108,7 +110,7 @@ const faqItems = [
   {
     question: 'How much can I save per year switching from oil?',
     answer:
-      'For a typical 1,500 to 1,800 square foot Maine home burning around 750 gallons a year, the annual saving in our model is roughly $6,000 across the oil versus heat pump difference at current prices. That is a large number because oil is an expensive fuel and the heat pump is roughly three times more efficient. The saving shrinks for smaller homes and grows for leakier ones. The calculator produces a specific figure using your own spend.',
+      'In this Maine example, 750 gallons at $3.62 cost $2,715. The ducted heat pump costs about $2,997 for the same heat. The break-even electricity rate is about 26.8 cents per kWh at the modeled efficiency. Use a year of fuel deliveries and the rate on your own bill for your comparison.',
   },
   {
     question: 'Do I need to keep my oil system as backup?',
@@ -118,7 +120,7 @@ const faqItems = [
   {
     question: 'What breaks the oil case?',
     answer:
-      'Three things. First, extremely cheap electricity, which exists in some Northwest markets but not in the Northeast. Second, an unusually efficient modern condensing oil boiler, which narrows but does not close the gap. Third, oversized equipment or a house with severe distribution problems, where the heat pump cannot deliver the heat where it is needed. In all three cases the case weakens, but in normal Northeast conditions oil rarely wins.',
+      'High electricity prices, an efficient existing oil boiler, or heavy reliance on backup resistance heat can reduce or eliminate the savings. Compare the same rooms and season, and include any oil you plan to keep using for backup.',
   },
   {
     question: 'What incentives apply to an oil conversion?',
@@ -132,8 +134,8 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
 
 <BaseLayout>
   <SEO
-    title="Heat Pump vs Oil Heat: Cost in 2026"
-    description="Heat pump vs oil: heating oil runs about $32 per million BTU, a cold-climate heat pump about half that. Northeast bill math, payback, and which rebates still apply."
+    title="Heat Pump vs Oil Heat: Compare Your Annual Cost"
+    description="Use your annual oil deliveries to compare running costs. See a 750-gallon Maine example and the electricity rate at which the two systems break even."
     path={path}
     type="Article"
     breadcrumbs={crumbs}
@@ -144,11 +146,11 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
 
   <PageHeader
     eyebrow="Comparison"
-    title="Heat pump vs oil: the strongest conversion case"
-    standfirst="Heat pump vs oil is the strongest conversion case in the country. Oil is the most expensive common way to heat a US home, so the Northeast is where a heat pump wins on operating cost almost regardless of the electric rate."
+    title="Will a heat pump cost less than your oil heat?"
+    standfirst="Pull up last year’s oil deliveries. We’ll show you how to compare the cost of that same heat with a heat pump and which numbers to check on your quote."
     breadcrumbs={crumbs}
     updated={updated}
-    keyStat={{ value: 'About 50%', label: 'Running cost reduction switching from oil to a cold-climate heat pump in Maine', source: 'Modelled from EIA and NOAA data' }}
+    keyStat={{ value: '750 gallons', label: 'Oil used in the sample Maine heating season', source: 'Illustrative scenario' }}
   />
 
   <div class="container-atlas py-10 lg:py-14">
@@ -158,7 +160,7 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
           <h2 class="text-xl sm:text-2xl">The short answer</h2>
           <div class="prose-atlas mt-4">
             <p>
-              Yes, and by a wide margin. Heating oil at around ${FUEL_REFERENCE.heatingOilDollarsPerGallon.toFixed(2)} a
+              Start with what you pay per gallon. Heating oil at around ${FUEL_REFERENCE.heatingOilDollarsPerGallon.toFixed(2)} a
               gallon burned at 82 percent efficiency costs roughly <strong>${OIL_COST_PER_MMBTU.toFixed(0)} per million
               BTU</strong> of delivered heat. A cold-climate heat pump running on Maine electricity at{' '}
               {ME.electricityCentsPerKwh.toFixed(1)} cents per kilowatt hour, after duct losses, costs roughly{' '}
@@ -166,9 +168,8 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
               BTU</strong>.
             </p>
             <p>
-              That is less than half, in the most electricity-expensive state in the continental US. The comparison is
-              not close in the way the gas comparison is close. It is the reason Maine has the highest per-capita heat
-              pump adoption in the country despite having expensive power.
+              At these inputs, the ducted heat pump costs a little more to run than oil. A more efficient setup, a lower
+              electricity rate, or a higher oil price can change the result.
             </p>
           </div>
 
@@ -186,7 +187,7 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
           id="table"
           number="1"
           title="Cost per million BTU, oil states"
-          lede="Electricity price varies by state, but oil loses everywhere in this table because oil is expensive per unit of heat."
+          lede="See how electricity prices change the comparison. A negative saving means the modeled heat pump costs more to run."
         >
           <DataTable
             caption="Heat pump versus oil heat, cost per MMBtu delivered"
@@ -201,7 +202,7 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
           id="annual"
           number="2"
           title="What that looks like on an annual bill"
-          lede="Modelled for a Maine-grade climate, using Maine's electricity price. Other Northeast states will be within 10 to 15 percent of these figures."
+          lede="Illustrative Maine examples using the same delivered heat for each system. Your fuel price, electricity rate and equipment will change the result."
         >
           <DataTable
             caption="Annual heating cost, oil versus heat pump, Maine climate"
@@ -210,7 +211,8 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
             mobileLabelKey="home"
             note="Oil consumption is a starting assumption per home size, not a measured figure. Use your own gallon usage or annual spend in the calculator for a specific number. Cooling is excluded, as is the value of the air conditioning the heat pump also provides."
           />
-          <Callout tone="modelled" title="This is the number to verify against your own usage" class="mt-5">
+          <Callout tone="modelled" title="Give the estimate your own numbers" class="mt-5">
+            <p>At $3.62 per gallon, 750 gallons cost $2,715. Delivering the same heat takes about 10,130 kWh in the ducted example. At 29.59¢/kWh that is about $2,997. Divide your oil spend by the estimated kWh to find the break-even electricity rate.</p>
             <p>
               Add up a year of heating oil invoices. In the <a href="/calculator/">oil-to-heat-pump cost calculator</a>,
               enter your ZIP, select Heating oil, and enter that dollar total as annual heating spend. If you only have
@@ -223,20 +225,14 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
           id="payback"
           number="3"
           title="The payback question"
-          lede="This is where the oil case becomes genuinely compelling rather than merely favourable."
+          lede="Compare the extra upfront cost with your expected yearly fuel savings."
         >
           <div class="prose-atlas">
             <p>
-              A whole-home heat pump conversion in Maine costs roughly $12,000 to $26,000 installed. A replacement oil
-              boiler costs $6,000 to $12,000, so switching carries a real up-front premium. The difference is that the
-              heat pump produces a running cost saving large enough to matter.
+              Get a written quote for both options. If the oil boiler is at the end of its life, subtract the cost of a replacement oil system from the heat pump quote after confirmed incentives. If your current boiler is still working, compare the whole net installation price with keeping it.
             </p>
             <p>
-              At a modelled saving in the range of $1,500 to $3,500 per year for a typical home, and with Maine rebates
-              that can reach $9,000 for income-qualified households, payback frequently lands inside the equipment's
-              service life. That is a different conclusion from the gas states, where we often show no payback at all.
-              Run your own numbers, because the difference between a good decision and a bad one here is entirely in your
-              oil usage and your rebate tier.
+              If that difference is $4,000 and you expect to save $400 a year, the simple payback is 10 years. If the new system costs more to run, fuel savings cannot pay back the installation. See <a href="/markets/portland-me/">Portland, Maine installation prices</a> and <a href="/calculator/">calculate your own costs</a>.
             </p>
           </div>
         </Section>
@@ -249,8 +245,8 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
         >
           <ul class="space-y-4">
             {[
-              { title: 'A modern condensing oil boiler', body: 'A newer, well-maintained boiler at 90 percent efficiency narrows the gap by about 10 percent. It does not close it, because the heat pump still delivers roughly three units of heat per unit of electricity.' },
-              { title: 'Distribution problems', body: 'If you heat with hydronic baseboard, a heat pump needs either ductwork or a high-temperature air-to-water system. That is a more expensive project than a forced-air conversion and the economics shift.' },
+              { title: 'A modern condensing oil boiler', body: 'A newer, well-maintained boiler at 90 percent efficiency narrows the gap by about 10 percent. At higher electric rates, it can make the oil system cheaper to run.' },
+              { title: 'Distribution problems', body: 'If you heat with hydronic baseboard, ask for a ductless quote as well as any ducted or compatible air-to-water option. Price the work needed to deliver heat to the same rooms.' },
               { title: 'Oversized equipment or a poor install', body: 'A badly sized heat pump will run on backup heat through the coldest weeks, which destroys the operating cost advantage. The install matters more than the price here.' },
             ].map((item) => (
               <li class="border-line bg-white rounded-lg border p-5">

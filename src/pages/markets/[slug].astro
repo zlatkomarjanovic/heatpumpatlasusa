@@ -99,6 +99,7 @@ const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }))
     breadcrumbs={crumbs}
     published={d.published}
     updated={d.updated}
+    author={d.author}
     reviewedBy={d.reviewedBy}
     faqs={faqItems}
     primaryKeyword={d.primaryKeyword}
@@ -110,6 +111,7 @@ const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }))
     standfirst={d.description}
     breadcrumbs={crumbs}
     updated={d.updated}
+    author={d.author}
     reviewedBy={d.reviewedBy}
     keyStat={d.keyStat}
   />
@@ -117,6 +119,9 @@ const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }))
   <div class="container-atlas py-10 lg:py-14">
     <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
       <div class="min-w-0 space-y-12">
+        <div class="prose-atlas">
+          <Content />
+        </div>
         <Section id="local-data" number="1" title={`${state.name} reference data`} lede="The four numbers that decide whether a heat pump makes sense here.">
           <DataTable
             caption={`${state.name} energy and housing reference data`}
@@ -140,10 +145,6 @@ const faqItems = d.faqs.map((f) => ({ question: f.question, answer: f.answer }))
             note="Modelled from state prices and standard efficiency assumptions. Your actual delivered cost depends on your tariff, your equipment and your duct condition."
           />
         </Section>
-
-        <div class="prose-atlas">
-          <Content />
-        </div>
 
         {programs.length > 0 && (
           <Section id="programs" number="3" title={`Programs in ${state.name}`} lede="Status verified program by program. Paused money is labelled.">

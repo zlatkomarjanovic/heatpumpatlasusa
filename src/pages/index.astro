@@ -14,10 +14,10 @@ import { STATES, STATE_BY_CODE, type StateRecord } from '@/data/states';
 import { formatUsd } from '@/lib/calculator';
 import Faq from '@/components/Faq.astro';
 
-import heroBg from '@/assets/images/outdoor-heat-pump-yard.jpg';
-import condenser from '@/assets/images/heat-pump-outdoor-condenser.jpg';
-import miniSplit from '@/assets/images/mini-split-living-room.jpg';
-import coldClimate from '@/assets/images/cold-climate-heat-pump-snow.jpg';
+import heroBg from '@/assets/images/phone-yard.webp';
+import condenser from '@/assets/images/phone-condenser.webp';
+import miniSplit from '@/assets/images/phone-mini-split.webp';
+import coldClimate from '@/assets/images/phone-winter-heat-pump.webp';
 import { guideCover } from '@/data/guide-images';
 
 const path = '/';
@@ -106,7 +106,7 @@ const hubs = [
   { href: '/heat-pump-cost/', title: 'Heat pump cost', body: 'Installed cost to install a heat pump for ducted, cold-climate, ductless and geothermal systems, with what pushes each project above the band.', meta: '22,200 monthly US searches', icon: 'dollar' },
   { href: '/mini-split-cost/', title: 'Mini split installation cost', body: 'Ductless mini split cost per zone, and why two quotes for the same three rooms can differ by $6,000.', meta: '12,100 monthly US searches', icon: 'split' },
   { href: '/heat-pump-vs-furnace/', title: 'Heat pump vs furnace', body: 'Heat pump vs gas furnace modelled ZIP by ZIP, including the states where the furnace actually wins on running cost.', meta: '8,200 combined searches', icon: 'flame' },
-  { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'Northeast oil-to-heat-pump conversion economics, where the operating cost case is strongest in the country.', meta: 'Highest switching pressure', icon: 'droplet' },
+  { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'See what happens to your annual bill when you compare heating oil with a ducted or ductless heat pump.', meta: 'Highest switching pressure', icon: 'droplet' },
   { href: '/heat-pump-operating-cost/', title: 'Heat pump operating cost', body: 'Heat pump operating cost per year by state electricity price, climate and the fuel you burn today.', meta: 'Rates from EIA', icon: 'bolt' },
   { href: '/heat-pump-water-heater-cost/', title: 'Heat pump water heater cost', body: 'Hybrid water heater install pricing by tank size, and when the payback beats a gas or electric tank.', meta: 'Often under $5,200', icon: 'droplet' },
   { href: '/rebates/', title: 'Heat pump rebates', body: 'Which heat pump rebates are actually open right now, and which ones have quietly run out of money.', meta: 'Verified program by program', icon: 'gift' },
@@ -122,7 +122,7 @@ const steps = [
 /** Head-to-head comparisons surfaced on the homepage and the /compare/ hub. */
 const comparisons = [
   { href: '/heat-pump-vs-furnace/', title: 'Heat pump vs gas furnace', body: 'Where cheap gas still wins, and where the heat pump pulls ahead.' },
-  { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'The strongest running-cost case in the country, in the oil-heated Northeast.' },
+  { href: '/heat-pump-vs-oil/', title: 'Heat pump vs oil', body: 'Check how your oil price, electric rate, and heat pump efficiency affect your bill.' },
   { href: '/guides/heat-pump-vs-electric-baseboard/', title: 'Heat pump vs electric baseboard', body: 'Cutting a resistance-heating bill by two thirds, roughly.' },
   { href: '/guides/ducted-vs-ductless-heat-pump/', title: 'Ducted vs ductless', body: 'Which layout your house wants, and what each one costs.' },
   { href: '/guides/air-source-vs-geothermal-heat-pump/', title: 'Air source vs geothermal', body: 'When the ground loop earns its large upfront premium.' },
@@ -180,8 +180,8 @@ const homeFaqs = [
 
 <BaseLayout heroOverlay>
   <SEO
-    title="Heat Pump Cost 2026: $9,500-$22,000 Installed"
-    description="Heat pump cost is $9,500 to $22,000 installed in 2026. Free calculator, Mass Save and Efficiency Maine rebates, and payback by ZIP."
+    title="Heat Pump Price by ZIP: Find Your Cost and Savings"
+    description="Find your heat pump price by ZIP. Compare installation and running costs, check rebates, and see whether switching could lower your heating bill."
     path={path}
     type="WebPage"
     updated={updated}
@@ -221,19 +221,17 @@ const homeFaqs = [
             Independent US heat pump cost data
           </p>
           <h1 class="text-[2.1rem] leading-[1.08] text-white sm:text-[2.9rem] lg:text-[3.35rem]">
-            <span class="hero-headline-accent">Heat pump cost</span> in the US, and whether switching pays off where you live.
+            <span class="hero-headline-accent">Find your heat pump price</span> and see if it could lower your bills.
           </h1>
           <p class="mt-5 text-base leading-relaxed text-white/75 sm:text-lg" data-speakable>
-            Heat pump cost for a typical ducted system is $9,500 to $22,000 installed. Enter your ZIP in the calculator
-            to see installation cost, operating cost, and the rebates that are actually open where you live, including
-            the cases where a gas furnace still wins.
+            A typical ducted heat pump costs $9,500 to $22,000 installed. Enter your ZIP and tell us what heats your home today. See an installation estimate, local rebates, and what you could pay each year to run it.
           </p>
 
           <a
             href="#calculator"
             class="bg-brand-500 hover:bg-brand-400 mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-3 text-sm font-semibold text-white sm:w-auto lg:hidden"
           >
-            Get my estimate
+            Find my heat pump price
           </a>
 
           <div class="mt-6 flex flex-col gap-3 sm:mt-9 sm:gap-4">
@@ -262,7 +260,7 @@ const homeFaqs = [
             </span>
             <span class="hero-trust-divider" aria-hidden="true"></span>
             <span class="text-white/80 leading-snug">
-              Your inputs stay in the browser. Email is only asked if you want the estimate sent to you.
+              Your ZIP and home details stay in your browser while you calculate. A quote request is a separate step.
             </span>
             </div>
           </div>
@@ -437,7 +435,7 @@ const homeFaqs = [
     <Section
       id="guides"
       title="Heat pump cost, rebates and comparisons"
-      lede="Each hub is built around a search demand we measured, from heat pump cost to mini split cost to heat pump vs furnace, and each one links back to the calculator so a national range becomes a local number."
+      lede="Start with the price question you have today. Then use your ZIP and current fuel to compare costs for your own home."
       class="reveal-on-scroll"
     >
       <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

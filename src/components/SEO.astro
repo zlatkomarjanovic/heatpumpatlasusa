@@ -8,7 +8,7 @@
  * Schema is opt-in per type so we never emit markup that does not describe the
  * page, which is the usual cause of structured data warnings.
  */
-import { SITE, AUTHOR } from '@/data/site';
+import { SITE, AUTHOR, OWNER_AUTHOR } from '@/data/site';
 import type { Breadcrumb, SchemaType } from '@/types/seo';
 import { keywordFor, relatedKeywords } from '@/data/keyword-map';
 
@@ -133,12 +133,19 @@ const articleSchema =
         ],
         datePublished: (published ?? updated)?.toISOString(),
         dateModified: (updated ?? published)?.toISOString(),
-        author: {
-          '@type': 'Organization',
-          '@id': `${SITE.url}/#organization`,
-          name: author,
-          url: new URL(AUTHOR.url, SITE.url).href,
-        },
+        author: author === OWNER_AUTHOR.name
+          ? {
+              '@type': 'Person',
+              '@id': new URL(OWNER_AUTHOR.url, SITE.url).href,
+              name: OWNER_AUTHOR.name,
+              url: new URL(OWNER_AUTHOR.url, SITE.url).href,
+            }
+          : {
+              '@type': 'Organization',
+              '@id': `${SITE.url}/#organization`,
+              name: author,
+              url: new URL(AUTHOR.url, SITE.url).href,
+            },
         reviewedBy: reviewedBy
           ? {
               '@type': 'Organization',

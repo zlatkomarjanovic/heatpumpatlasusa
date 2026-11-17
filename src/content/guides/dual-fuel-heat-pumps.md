@@ -1,8 +1,8 @@
 ---
-title: 'Dual Fuel Heat Pump: When to Keep the Furnace'
-description: 'A dual fuel heat pump runs in mild weather and hands off to a furnace in the cold. In some states it beats either system alone. The switchover is the money.'
+title: 'Dual Fuel Heat Pumps: Should You Keep Your Furnace?'
+description: 'Find out when a heat pump and furnace can share the work, where switchover temperature matters, and how to compare operating costs.'
 primaryKeyword: 'dual fuel heat pump'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-14

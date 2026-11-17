@@ -69,7 +69,7 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Rebates 2026: Open Programs"
+    title="Heat Pump Rebates by State: Find Open Programs (2026)"
     description="Compare open 2026 heat pump rebates by state, including Mass Save, Efficiency Maine, NYSERDA, Energize CT and Eversource."
     path={path}
     type="CollectionPage"
@@ -83,8 +83,8 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
   <PageHeader
     quoteCta={false}
     eyebrow="Rebates and incentives"
-    title="Heat pump rebates still open in 2026"
-    standfirst="Heat pump rebates only count if the program is accepting applications. A $10,000 program that has stopped taking reservations is worth zero, and several of the largest US programs have done exactly that."
+    title="Find a heat pump rebate in your state"
+    standfirst="Check which programs are open, what your project might qualify for, and whether you need to apply before installation."
     breadcrumbs={crumbs}
     updated={updated}
     keyStat={{ value: `${open.length} open`, label: `of ${programs.length} programs we track, as of our last verification`, source: 'Verified program by program' }}
@@ -186,6 +186,11 @@ const citations = pickSources(['dsire', 'doeHomeUpgrades', 'irs25c', 'energyStar
             </ul>
           </Section>
         )}
+
+        <p class="prose-atlas">
+          Heating a home in Vermont? Check the <a href="/rebates/efficiency-vermont/">Efficiency Vermont eligibility and application steps</a>
+          before you include a rebate in your budget.
+        </p>
 
         <Section id="states" number="4" title="Programs we have not yet covered" lede="We add programs as we can verify them, not as we find them.">
           <div class="prose-atlas">

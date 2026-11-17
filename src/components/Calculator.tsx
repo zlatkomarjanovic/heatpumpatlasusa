@@ -5,7 +5,7 @@
  * the static page around it, so if JavaScript fails the user still gets the
  * national cost bands and the comparison content.
  */
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import {
   runCalculator,
   formatUsd,
@@ -19,23 +19,10 @@ import { resolveZip, isValidZip } from '@/lib/zip';
 import { trackAnalytics } from '@/lib/analytics-client';
 import { GAS_MODELLED_STATES, STATES, type StateRecord } from '@/data/states';
 import type { HomeAgeKey, InsulationKey } from '@/data/costs';
-import { SITE } from '@/data/site';
+import { mountQuoteVerification } from '@/components/turnstile';
 
-type Step = 0 | 1 | 2 | 3;
+type Step = 0 | 1 | 2;
 type CoolingNeed = 'yes' | 'have' | 'no';
-
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        el: HTMLElement,
-        options: { sitekey: string; appearance?: string; theme?: string },
-      ) => string;
-      reset: (id?: string) => void;
-      remove: (id: string) => void;
-    };
-  }
-}
 
 // Ordered by US prevalence. Census ACS B25040: utility gas ~47% of homes,
 // electricity ~40%, propane ~5%, fuel oil/kerosene ~4%, wood ~2%.
@@ -87,20 +74,13 @@ const DEFAULT_INPUT: Omit<CalculatorInput, 'state'> = {
 };
 
 /** Controls shared styling. */
-const fieldLabel = 'block text-sm font-medium text-ink-800 mb-1.5';
+const fieldLabel = 'block text-base font-semibold text-ink-900 mb-1.5';
 const fieldInput =
-  'w-full rounded-md border border-line-strong bg-white px-3.5 py-2.5 text-base outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30';
+  'min-h-12 w-full rounded-md border border-line-strong bg-white px-3.5 py-3 text-base outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30';
 const chipBase =
-  'flex flex-col rounded-lg border px-3 py-2.5 transition cursor-pointer';
+  'flex min-h-12 flex-col rounded-lg border px-3 py-3 transition cursor-pointer focus-within:ring-2 focus-within:ring-brand-700 focus-within:ring-offset-2';
 const chipOn = 'border-brand-600 bg-brand-50 ring-1 ring-brand-600';
 const chipOff = 'border-line-strong bg-white hover:border-ink-300';
-
-const CALC_TICKS = [
-  { label: 'Reading your state electricity price', source: 'EIA' },
-  { label: 'Loading heating degree days for your climate', source: 'NOAA' },
-  { label: 'Comparing your current fuel to a heat pump', source: 'Model' },
-  { label: 'Checking rebates that are actually open', source: 'Programs' },
-];
 
 function defaultDistribution(fuel: HeatingFuel): Distribution {
   return fuel === 'electric-resistance' || fuel === 'wood' ? 'ductless' : 'ducted';
@@ -130,7 +110,8 @@ export default function Calculator() {
   const [result, setResult] = useState<CalculatorResult | null>(null);
   const [showAllRebates, setShowAllRebates] = useState(false);
   const [cooling, setCooling] = useState<CoolingNeed>('yes');
-  const [calcTick, setCalcTick] = useState(0);
+  const stepContent = useRef<HTMLDivElement>(null);
+  const previousStep = useRef<Step>(0);
   const uid = useId();
   const trackedSteps = useRef({ started: false, completed: false });
 
@@ -142,65 +123,39 @@ export default function Calculator() {
 
   const zipValid = isValidZip(input.zip);
 
-  const calculate = useCallback(() => {
-    setCalcTick(0);
+  const calculate = () => {
+    setResult(runCalculator({ ...input, state: resolvedState }));
     setStep(2);
-  }, []);
+  };
 
   useEffect(() => {
-    if (step !== 2) return;
-    const reduced =
-      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) {
-      setResult(runCalculator({ ...input, state: resolvedState }));
-      setStep(3);
-      return;
-    }
-    const id = window.setInterval(() => {
-      setCalcTick((tick) => {
-        if (tick >= CALC_TICKS.length - 1) {
-          window.clearInterval(id);
-          setResult(runCalculator({ ...input, state: resolvedState }));
-          setStep(3);
-          return tick;
-        }
-        return tick + 1;
-      });
-    }, 700);
-    return () => window.clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (previousStep.current === step) return;
+    previousStep.current = step;
+    stepContent.current?.querySelector<HTMLElement>('[data-step-heading]')?.focus();
   }, [step]);
-
-  useEffect(() => {
-    if (step === 3) {
-      setResult(runCalculator({ ...input, state: resolvedState }));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [input, resolvedState]);
 
   useEffect(() => {
     if (step === 1 && !trackedSteps.current.started) {
       trackedSteps.current.started = true;
       trackAnalytics('calculator_started');
     }
-    if (step === 3 && result && !trackedSteps.current.completed) {
+    if (step === 2 && result && !trackedSteps.current.completed) {
       trackedSteps.current.completed = true;
       trackAnalytics('estimate_completed');
     }
   }, [step, result]);
 
-  const canContinue = step === 0 ? zipValid : true;
+  const canContinue = zipValid && Boolean(resolvedState) && input.sqft >= 300 && input.sqft <= 12000;
 
   return (
     <div className="not-prose">
       <div className="overflow-hidden rounded-lg border border-line bg-white shadow-card">
         {/* Progress */}
         <div className="border-b border-line bg-paper-deep px-5 py-3.5 sm:px-6">
-          <ol className="flex items-center gap-2 text-xs sm:gap-4">
-            {['Your home', 'Systems', 'Your estimate'].map((label, index) => {
-              const visualStep = step === 2 ? 1 : step === 3 ? 2 : step;
-              const active = index === visualStep;
-              const done = index < visualStep;
+          <ol aria-label="Estimate progress" className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm sm:gap-x-4">
+            {['Your home', 'Heating details', 'Your estimate'].map((label, index) => {
+              const active = index === step;
+              const done = index < step;
               return (
                 <li key={label} className="flex min-w-0 items-center gap-2">
                   <span
@@ -218,7 +173,7 @@ export default function Calculator() {
                   </span>
                   <span
                     className={
-                      'truncate font-medium ' + (active ? 'text-ink-900' : done ? 'text-ink-600' : 'text-ink-400')
+                      'font-medium ' + (active ? 'text-ink-950' : 'text-ink-700')
                     }
                     aria-current={active ? 'step' : undefined}
                   >
@@ -233,14 +188,13 @@ export default function Calculator() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-stretch">
           {/* Form */}
-          <div className="min-w-0 p-5 sm:p-6 lg:p-7 xl:p-8">
+          <div ref={stepContent} className="min-w-0 p-5 sm:p-6 lg:p-7 xl:p-8">
             {step === 0 && (
               <div className="space-y-5">
                 <div>
-                  <h2 className="text-lg">Where is the home?</h2>
+                  <h2 data-step-heading tabIndex={-1} className="scroll-mt-24 text-xl">Where do you live?</h2>
                   <p className="mt-1 text-sm text-ink-600">
-                    ZIP code sets your electricity price, climate and which local programs apply. It never leaves your
-                    browser in this step.
+                    Your ZIP code helps us estimate local energy prices and rebates. It stays in your browser unless you ask for a quote.
                   </p>
                 </div>
 
@@ -265,8 +219,8 @@ export default function Calculator() {
                       aria-describedby={`${uid}-zip-help`}
                       className={fieldInput}
                     />
-                    <p id={`${uid}-zip-help`} className="mt-1.5 text-xs text-ink-500">
-                      {input.zip.length === 0 && 'Enter a five digit ZIP to continue.'}
+                    <p id={`${uid}-zip-help`} className="mt-1.5 text-sm text-ink-700">
+                      {input.zip.length === 0 && 'Enter your five-digit ZIP code.'}
                       {input.zip.length > 0 && !zipValid && 'A US ZIP code has five digits.'}
                       {zipValid && resolvedState && (
                         <span className="text-save-700 font-medium">
@@ -319,7 +273,7 @@ export default function Calculator() {
                     }
                     className={fieldInput}
                   />
-                  <p className="mt-1.5 text-xs text-ink-500">
+                  <p className="mt-1.5 text-sm text-ink-700">
                     Conditioned space only. Do not count a basement you do not heat.
                   </p>
                 </div>
@@ -348,7 +302,7 @@ export default function Calculator() {
                               }
                               className="sr-only"
                             />
-                            <span className="text-sm font-medium text-ink-900">{opt.label}</span>
+                            <span className="text-base font-semibold text-ink-900">{opt.label}</span>
                           </span>
                           <span className="mt-0.5 text-xs text-ink-500">{opt.hint}</span>
                         </label>
@@ -368,10 +322,9 @@ export default function Calculator() {
             {step === 1 && (
               <div className="space-y-5">
                 <div>
-                  <h2 className="text-lg">A few details about the house</h2>
+                  <h2 data-step-heading tabIndex={-1} className="scroll-mt-24 text-xl">Tell us about your heating</h2>
                   <p className="mt-1 text-sm text-ink-600">
-                    Only the questions that change the estimate for{' '}
-                    {FUEL_OPTIONS.find((f) => f.value === input.fuel)?.label.toLowerCase() ?? 'your heat'}.
+                    Fill in what you know. Your annual heating cost helps us give you a closer estimate.
                   </p>
                 </div>
 
@@ -402,7 +355,7 @@ export default function Calculator() {
                             }
                             className="sr-only"
                           />
-                          <span className="text-sm font-medium text-ink-900">{opt.label}</span>
+                          <span className="text-base font-semibold text-ink-900">{opt.label}</span>
                           <span className="mt-0.5 text-xs text-ink-500">{opt.hint}</span>
                         </label>
                       ))}
@@ -468,69 +421,74 @@ export default function Calculator() {
                   </div>
                 )}
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor={`${uid}-age`} className={fieldLabel}>
-                      When was the home built?
-                    </label>
-                    <select
-                      id={`${uid}-age`}
-                      value={input.homeAge}
-                      onChange={(e) => setInput((v) => ({ ...v, homeAge: e.target.value as HomeAgeKey }))}
-                      className={fieldInput}
-                    >
-                      {AGE_OPTIONS.map((o) => (
-                        <option key={o.value} value={o.value}>
-                          {o.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor={`${uid}-insulation`} className={fieldLabel}>
-                      Insulation and air sealing
-                    </label>
-                    <select
-                      id={`${uid}-insulation`}
-                      value={input.insulation}
-                      onChange={(e) => setInput((v) => ({ ...v, insulation: e.target.value as InsulationKey }))}
-                      className={fieldInput}
-                    >
-                      {INSULATION_OPTIONS.map((o) => (
-                        <option key={o.value} value={o.value}>
-                          {o.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+                <details className="rounded-lg border border-line p-4">
+                  <summary className="min-h-11 cursor-pointer py-2 text-base font-semibold">More home details (optional)</summary>
+                  <div className="space-y-5 pt-3">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div>
+                        <label htmlFor={`${uid}-age`} className={fieldLabel}>
+                          When was the home built?
+                        </label>
+                        <select
+                          id={`${uid}-age`}
+                          value={input.homeAge}
+                          onChange={(e) => setInput((v) => ({ ...v, homeAge: e.target.value as HomeAgeKey }))}
+                          className={fieldInput}
+                        >
+                          {AGE_OPTIONS.map((o) => (
+                            <option key={o.value} value={o.value}>
+                              {o.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label htmlFor={`${uid}-insulation`} className={fieldLabel}>
+                          Insulation and air sealing
+                        </label>
+                        <select
+                          id={`${uid}-insulation`}
+                          value={input.insulation}
+                          onChange={(e) => setInput((v) => ({ ...v, insulation: e.target.value as InsulationKey }))}
+                          className={fieldInput}
+                        >
+                          {INSULATION_OPTIONS.map((o) => (
+                            <option key={o.value} value={o.value}>
+                              {o.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
 
-                <fieldset>
-                  <legend className={fieldLabel}>Electrical panel</legend>
-                  <div className="grid grid-cols-3 gap-2">
-                    {PANEL_OPTIONS.map((opt) => (
-                      <label
-                        key={opt.value}
-                        className={
-                          'flex cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-sm font-medium transition ' +
-                          (input.panel === opt.value ? chipOn : chipOff)
-                        }
-                      >
-                        <input
-                          type="radio"
-                          name={`${uid}-panel`}
-                          className="sr-only"
-                          checked={input.panel === opt.value}
-                          onChange={() => setInput((v) => ({ ...v, panel: opt.value }))}
-                        />
-                        {opt.label}
-                      </label>
-                    ))}
+                    <fieldset>
+                      <legend className={fieldLabel}>Electrical panel</legend>
+                      <div className="grid grid-cols-3 gap-2">
+                        {PANEL_OPTIONS.map((opt) => (
+                          <label
+                            key={opt.value}
+                            className={
+                              'flex min-h-12 cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-base font-medium focus-within:ring-2 focus-within:ring-brand-700 focus-within:ring-offset-2 transition ' +
+                              (input.panel === opt.value ? chipOn : chipOff)
+                            }
+                          >
+                            <input
+                              type="radio"
+                              name={`${uid}-panel`}
+                              className="sr-only"
+                              checked={input.panel === opt.value}
+                              onChange={() => setInput((v) => ({ ...v, panel: opt.value }))}
+                            />
+                            {opt.label}
+                          </label>
+                        ))}
+                      </div>
+                      <p className="mt-1.5 text-sm text-ink-700">
+                        A 100 amp panel often needs an upgrade before a heat pump can land.
+                      </p>
+                    </fieldset>
                   </div>
-                  <p className="mt-1.5 text-xs text-ink-500">
-                    A 100 amp panel often needs an upgrade before a heat pump can land.
-                  </p>
-                </fieldset>
+                </details>
 
                 <div>
                   <label htmlFor={`${uid}-spend`} className={fieldLabel}>
@@ -559,8 +517,8 @@ export default function Calculator() {
                       className={fieldInput + ' pl-7'}
                     />
                   </div>
-                  <p className="mt-1.5 text-xs text-ink-500">
-                    Your best guess for a year. This is the single biggest accuracy upgrade you can make.
+                  <p className="mt-1.5 text-sm text-ink-700">
+                    Add up a year of heating bills if you have them. An estimate is fine.
                   </p>
                 </div>
 
@@ -577,7 +535,7 @@ export default function Calculator() {
                       <label
                         key={opt.value}
                         className={
-                          'flex cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-sm font-medium ' +
+                          'flex min-h-12 cursor-pointer items-center justify-center rounded-md border px-3 py-2.5 text-center text-base font-medium focus-within:ring-2 focus-within:ring-brand-700 focus-within:ring-offset-2 ' +
                           (cooling === opt.value ? chipOn : chipOff)
                         }
                       >
@@ -596,47 +554,10 @@ export default function Calculator() {
               </div>
             )}
 
-            {step === 2 && (
-              <div className="flex min-h-[18rem] flex-col justify-center py-4" aria-live="polite">
-                <h2 className="text-lg font-semibold text-ink-950">Working your numbers</h2>
-                <p className="mt-1 text-sm text-ink-500">
-                  {resolvedState ? resolvedState.name : 'Your ZIP'} · {input.sqft.toLocaleString()} sq ft ·{' '}
-                  {FUEL_OPTIONS.find((f) => f.value === input.fuel)?.label}
-                </p>
-                <ol className="mt-6 space-y-3">
-                  {CALC_TICKS.map((tick, index) => {
-                    const done = index < calcTick;
-                    const active = index === calcTick;
-                    return (
-                      <li key={tick.label} className="flex items-start gap-3">
-                        <span
-                          className={
-                            'mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[0.65rem] font-bold ' +
-                            (done
-                              ? 'bg-save-600 text-white'
-                              : active
-                                ? 'bg-brand-700 text-white'
-                                : 'bg-line text-ink-400')
-                          }
-                        >
-                          {done ? '✓' : index + 1}
-                        </span>
-                        <span>
-                          <span className={'block text-sm font-medium ' + (active || done ? 'text-ink-900' : 'text-ink-400')}>
-                            {tick.label}
-                          </span>
-                          <span className="text-2xs text-ink-400">{tick.source}</span>
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </div>
-            )}
-
-            {step === 3 && result && (
+            {step === 2 && result && (
               <ResultPanel
                 result={result}
+                headingId={`${uid}-result-heading`}
                 zip={input.zip}
                 cooling={cooling}
                 showAllRebates={showAllRebates}
@@ -644,42 +565,26 @@ export default function Calculator() {
               />
             )}
 
-            {/* Controls */}
-            {step !== 2 && (
             <div className="mt-7 flex flex-wrap items-center gap-3 border-t border-line pt-5">
               {step > 0 && (
-                <button
-                  type="button"
-                  onClick={() => setStep((s) => (s === 3 ? 1 : 0) as Step)}
-                  className="rounded-md border border-line-strong bg-white px-4 py-2.5 text-sm font-semibold text-ink-700 transition hover:bg-paper-deep"
-                >
-                  Back
+                <button type="button" onClick={() => setStep(step === 2 ? 1 : 0)} className="btn-secondary min-h-12 text-base">
+                  {step === 2 ? 'Change my answers' : 'Back'}
                 </button>
               )}
               {step < 2 && (
-                <button
-                  type="button"
-                  onClick={() => (step === 0 ? setStep(1) : calculate())}
-                  disabled={!canContinue}
-                  className="bg-brand-700 hover:bg-brand-800 rounded-md px-5 py-2.5 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:bg-ink-300"
-                >
-                  {step === 0 ? 'Continue' : 'Calculate my estimate'}
+                <button type="button" onClick={() => (step === 0 ? setStep(1) : calculate())} disabled={!canContinue}
+                  className="bg-brand-700 hover:bg-brand-800 min-h-12 rounded-md px-5 py-3 text-base font-semibold text-white disabled:cursor-not-allowed disabled:bg-ink-500">
+                  {step === 0 ? 'Continue' : 'Calculate my costs and savings'}
                 </button>
               )}
-              {step === 3 && (
-                <button
-                  type="button"
-                  onClick={calculate}
-                  className="rounded-md border border-line-strong bg-white px-4 py-2.5 text-sm font-semibold text-ink-700 transition hover:bg-paper-deep"
-                >
-                  Recalculate
-                </button>
-              )}
-              {step === 0 && !zipValid && (
-                <p className="text-xs text-ink-500">Enter a valid ZIP code to continue.</p>
+              {step === 0 && !canContinue && (
+                <p className="text-sm text-ink-700">
+                  {!zipValid ? 'Enter a five-digit ZIP code to continue.'
+                    : !resolvedState ? 'Select your state to continue.'
+                      : 'Enter heated square footage between 300 and 12,000.'}
+                </p>
               )}
             </div>
-            )}
           </div>
 
           {/* Live summary rail (40% width). Stacked rows, never a 2-up card grid. */}
@@ -849,12 +754,14 @@ function ScenarioStat({
 
 function ResultPanel({
   result,
+  headingId,
   zip,
   cooling,
   showAllRebates,
   onToggleRebates,
 }: {
   result: CalculatorResult;
+  headingId: string;
   zip: string;
   cooling: CoolingNeed;
   showAllRebates: boolean;
@@ -864,12 +771,11 @@ function ResultPanel({
   const otherRebates = result.rebates.filter((r) => r.status !== 'open');
 
   return (
-    <section aria-labelledby="calc-result-heading" className="space-y-4">
+    <section aria-labelledby={headingId} className="space-y-4">
       <div>
-        <h2 id="calc-result-heading" className="text-lg">Your modelled estimate</h2>
+        <h2 id={headingId} data-step-heading tabIndex={-1} className="scroll-mt-24 text-xl">Your heat pump estimate</h2>
         <p className="mt-1 text-sm text-ink-600">
-          Ranges from published pricing and state energy data, not quotes. Two contractors in the same ZIP can differ by
-          40%.
+          These ranges use published pricing and state energy data. Your installer can confirm the price for your home.
         </p>
       </div>
 
@@ -999,9 +905,14 @@ function LeadCapture({
   zip: string;
   cooling: CoolingNeed;
 }) {
-  const [status, setStatus] = useState<'idle' | 'sent' | 'error'>('idle');
-  const widgetId = useRef<string | undefined>(undefined);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [check, setCheck] = useState<'checking' | 'ready' | 'error'>('checking');
+  const [message, setMessage] = useState('');
   const boxRef = useRef<HTMLDivElement>(null);
+  const receiptRef = useRef<HTMLParagraphElement>(null);
+  const verification = useRef<ReturnType<typeof mountQuoteVerification>>(undefined);
+  const formUid = useId();
+  const sent = status === 'sent';
   const scenario = JSON.stringify({
     cooling,
     ...result.inputsEcho,
@@ -1012,112 +923,92 @@ function LeadCapture({
   });
 
   useEffect(() => {
-    let cancelled = false;
-    const mount = () => {
-      if (cancelled || !boxRef.current || !window.turnstile || widgetId.current) return;
-      widgetId.current = window.turnstile.render(boxRef.current, {
-        sitekey: SITE.turnstileSiteKey,
-        appearance: 'interaction-only',
-        theme: 'dark',
-      });
-    };
-    mount();
-    const timer = window.setInterval(() => {
-      if (!window.turnstile) return;
-      window.clearInterval(timer);
-      mount();
-    }, 250);
-    const stop = window.setTimeout(() => window.clearInterval(timer), 10000);
-    return () => {
-      cancelled = true;
-      window.clearInterval(timer);
-      window.clearTimeout(stop);
-      if (widgetId.current && window.turnstile) window.turnstile.remove(widgetId.current);
-      widgetId.current = undefined;
-    };
-  }, []);
+    if (sent) {
+      receiptRef.current?.focus();
+      return;
+    }
+    if (!boxRef.current) return;
+    const widget = mountQuoteVerification(boxRef.current, setCheck, 'dark');
+    verification.current = widget;
+    return () => widget.remove();
+  }, [sent]);
 
   return (
     <form
-      className="rounded-xl bg-ink-950 p-4 text-white"
+      className="rounded-xl bg-ink-950 p-5 text-white"
       action="/api/leads"
       method="post"
+      aria-labelledby={`${formUid}-heading`}
       onSubmit={async (event) => {
         event.preventDefault();
+        if (check !== 'ready' || status === 'sending' || sent) return;
+        setStatus('sending');
         const form = event.currentTarget;
         try {
-          const res = await fetch('/api/leads', {
+          const response = await fetch('/api/leads', {
             method: 'POST',
             body: new FormData(form),
             headers: { Accept: 'application/json' },
           });
-          if (res.ok) {
+          const outcome = await response.json();
+          if (response.ok && outcome.ok) {
             setStatus('sent');
             return;
           }
-          setStatus('error');
-          if (widgetId.current && window.turnstile) window.turnstile.reset(widgetId.current);
+          setMessage(outcome.error || 'We could not save your request. Try again in a minute.');
         } catch {
-          setStatus('error');
+          setMessage('We could not save your request. Check your connection and try again.');
         }
+        setStatus('error');
+        verification.current?.reset();
       }}
     >
-      <h3 className="text-sm font-semibold">Ask installers to price this job</h3>
-      <p className="mt-1 text-xs leading-relaxed text-white/70">
-        Submit your estimate and contact details with the quote request. You can use the same estimate to compare bids.
+      <h3 id={`${formUid}-heading`} className="text-lg font-semibold">Request a heat pump quote</h3>
+      <p className="mt-2 text-base leading-relaxed text-white/85">
+        Send your estimate with your contact details so we can see which job you want priced.
       </p>
       <input type="hidden" name="scenario" value={scenario} />
       <input type="hidden" name="source" value="calculator" />
-      {status === 'sent' ? (
-        <p role="status" className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
+      {sent ? (
+        <p ref={receiptRef} role="status" tabIndex={-1} className="mt-3 rounded-md bg-white/10 px-3 py-2 text-base">
           Your request was saved.
         </p>
       ) : (
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-          <input
-            name="name"
-            required
-            placeholder="Name"
-            autoComplete="name"
-            className="rounded-md border-0 bg-white px-3 py-2 text-sm text-ink-900 outline-none"
-          />
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Email"
-            autoComplete="email"
-            className="rounded-md border-0 bg-white px-3 py-2 text-sm text-ink-900 outline-none"
-          />
-          <input
-            name="phone"
-            type="tel"
-            placeholder="Phone"
-            autoComplete="tel"
-            className="rounded-md border-0 bg-white px-3 py-2 text-sm text-ink-900 outline-none"
-          />
-          <input
-            name="zip"
-            defaultValue={zip}
-            required
-            inputMode="numeric"
-            maxLength={5}
-            placeholder="ZIP"
-            autoComplete="postal-code"
-            className="rounded-md border-0 bg-white px-3 py-2 text-sm text-ink-900 outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-brand-500 hover:bg-brand-600 col-span-full rounded-md px-4 py-2.5 text-sm font-semibold text-white"
-          >
-            Get installer quotes
-          </button>
-          <div ref={boxRef} className="cf-turnstile col-span-full" />
-          {status === 'error' && (
-            <p className="col-span-full text-xs text-flag-100">
-              Could not send just now. Try again in a minute, or use the editorial contact on the About page.
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <label className="grid gap-1.5 text-base font-medium">
+            Name
+            <input name="name" required autoComplete="name" className={fieldInput + ' text-ink-950'} />
+          </label>
+          <label className="grid gap-1.5 text-base font-medium">
+            Email
+            <input name="email" type="email" required autoComplete="email" className={fieldInput + ' text-ink-950'} />
+          </label>
+          <label className="grid gap-1.5 text-base font-medium">
+            Phone (optional)
+            <input name="phone" type="tel" autoComplete="tel" className={fieldInput + ' text-ink-950'} />
+          </label>
+          <label className="grid gap-1.5 text-base font-medium">
+            ZIP code
+            <input name="zip" defaultValue={zip} required inputMode="numeric" pattern="[0-9]{5}"
+              maxLength={5} autoComplete="postal-code" className={fieldInput + ' text-ink-950'} />
+          </label>
+          <div className="col-span-full">
+            <div ref={boxRef} />
+            <p className="text-sm text-white/85" role="status">
+              {check === 'checking' && 'Checking that you are human…'}
+              {check === 'error' && 'Could not complete the security check.'}
             </p>
-          )}
+            {check === 'error' && (
+              <button type="button" className="mt-2 min-h-11 underline underline-offset-4" onClick={() => verification.current?.reset()}>
+                Retry security check
+              </button>
+            )}
+          </div>
+          <button type="submit" disabled={check !== 'ready' || status === 'sending'}
+            className="bg-brand-600 hover:bg-brand-500 col-span-full min-h-12 rounded-md px-4 py-3 text-base font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60">
+            {status === 'sending' ? 'Sending your request…' : 'Request an installer quote'}
+          </button>
+          {status === 'error' && <p role="alert" className="col-span-full text-base text-flag-100">{message}</p>}
         </div>
       )}
     </form>

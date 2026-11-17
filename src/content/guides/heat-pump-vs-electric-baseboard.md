@@ -1,8 +1,8 @@
 ---
-title: 'Heat Pump vs Electric Baseboard (2026)'
-description: 'Heat pump vs electric baseboard: one unit of electricity becomes three to four units of heat. Why this swap often cuts the heating bill by about two thirds.'
+title: 'Heat Pump vs Electric Baseboard: Compare Your Bills'
+description: 'See why a heat pump can cut space-heating electricity use and how to estimate savings from the baseboards you use now.'
 primaryKeyword: 'heat pump vs electric baseboard'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-22

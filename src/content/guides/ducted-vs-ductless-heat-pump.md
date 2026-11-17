@@ -1,8 +1,8 @@
 ---
-title: 'Ducted vs Ductless Heat Pump (2026)'
-description: 'Ducted vs ductless heat pump in 2026: ducted is cheaper if your ducts are good. Ductless mini splits avoid thousands in new ductwork if they are not.'
+title: 'Ducted vs Ductless Heat Pumps: Which Fits Your Home?'
+description: 'Compare upfront cost, room coverage, and duct repairs before deciding whether to keep your ducts or install mini splits.'
 primaryKeyword: 'ducted vs ductless heat pump'
-author: HeatPumpAtlasUSA Editorial
+author: Zlatko Marjanović
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
 updated: 2026-09-22

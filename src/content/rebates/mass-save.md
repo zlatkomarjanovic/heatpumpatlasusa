@@ -1,6 +1,6 @@
 ---
-title: 'Mass Save Heat Pump Rebate Massachusetts (2026)'
-description: 'Compare 2026 Mass Save heat pump rebate amounts, whole-home and partial-home eligibility, and application steps in Massachusetts.'
+title: 'Mass Save Heat Pump Rebates: See What You Qualify For'
+description: 'Check Massachusetts heat pump installation requirements, compare Mass Save rebate tiers, and find the forms to use before you hire.'
 primaryKeyword: 'mass save heat pump rebate'
 program: 'Mass Save Air Source Heat Pump Rebate'
 administrator: 'Mass Save (Massachusetts utilities and efficiency sponsors)'
@@ -73,7 +73,7 @@ For eligible 2026 air-source heat pump installations, **Mass Save pays $2,650 pe
 - **Partial-home.** The heat pump covers part of the load. Confirm what the program requires if your existing heat remains, including controls where applicable. Ask whether the sizing or weatherization bonuses apply.
 - **Basic.** Mass Save lists $250 per ton up to $2,500 for qualifying basic installations. Review the eligible project types on the official page.
 
-## How to apply
+## Plan your Massachusetts heat pump installation
 
 Check whether your service address is covered, use the program's contractor and equipment requirements, and agree with your installer on the correct tier. Before paying a deposit, confirm any assessment, verification, or documentation needed. Use the [Mass Save rebate forms and requirements](https://www.masssave.com/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-source-heat-pumps) for the installation year.
 

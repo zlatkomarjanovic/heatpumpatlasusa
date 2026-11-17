@@ -71,10 +71,7 @@ function operatingCosts(state: StateRecord) {
   };
 }
 
-/**
- * The fuels a state actually uses, so the verdict compares against something real.
- * A state where 56 percent of homes burn oil should not be judged against gas.
- */
+/** States shown in the side-by-side comparison. */
 const ELECTRIC_FOCUS = ['ME', 'MA', 'VT', 'NY', 'CT', 'RI', 'NH', 'NJ', 'PA', 'CO', 'MN', 'WI', 'MI', 'WA', 'OR', 'CA'];
 
 const stateRows = ELECTRIC_FOCUS.map((code) => STATES.find((s) => s.code === code))
@@ -82,16 +79,12 @@ const stateRows = ELECTRIC_FOCUS.map((code) => STATES.find((s) => s.code === cod
   .map((s) => {
     const c = operatingCosts(s);
 
-    // Build the incumbent comparison from the state's real fuel mix.
-    const incumbents: { label: string; cost: number }[] = [];
-    if (s.fuelOilShare >= 0.08) incumbents.push({ label: 'oil', cost: c.oil });
-    if (s.fuelOilShare < 0.08 || s.utilityGasShare >= 0.4) {
-      incumbents.push({ label: 'gas', cost: c.gas });
-    }
-    if (s.utilityGasShare < 0.2) incumbents.push({ label: 'propane', cost: c.propane });
-
-    const primary = incumbents.sort((a, b) => a.cost - b.cost)[0] ?? { label: 'gas', cost: c.gas };
-    const heatPumpWins = c.heatPumpDucted < primary.cost;
+    const cheapest = [
+      { label: 'Heat pump', cost: c.heatPumpDucted },
+      { label: 'Natural gas', cost: c.gas },
+      { label: 'Heating oil', cost: c.oil },
+      { label: 'Propane', cost: c.propane },
+    ].reduce((lowest, option) => option.cost < lowest.cost ? option : lowest);
 
     return {
       state: s.name,
@@ -100,7 +93,7 @@ const stateRows = ELECTRIC_FOCUS.map((code) => STATES.find((s) => s.code === cod
       gas: `$${c.gas.toFixed(1)}`,
       oil: `$${c.oil.toFixed(1)}`,
       propane: `$${c.propane.toFixed(1)}`,
-      verdict: heatPumpWins ? 'Heat pump wins' : `${primary.label[0].toUpperCase()}${primary.label.slice(1)} wins`,
+      verdict: cheapest.label,
     };
   });
 
@@ -111,7 +104,7 @@ const columns = [
   { key: 'gas', label: 'Natural gas', numeric: true },
   { key: 'oil', label: 'Heating oil', numeric: true },
   { key: 'propane', label: 'Propane', numeric: true },
-  { key: 'verdict', label: 'Cheapest to run', emphasis: true },
+  { key: 'verdict', label: 'Lowest modeled cost', emphasis: true },
 ];
 
 const faqItems = [
@@ -128,7 +121,7 @@ const faqItems = [
   {
     question: 'Is a heat pump cheaper to run than oil?',
     answer:
-      'Usually, and often by a wide margin. Heating oil is an expensive way to buy heat, and heat pumps in the Northeast are two to three times more efficient than an oil boiler or furnace. This is why the oil conversion case in Maine, Vermont, New Hampshire and parts of Massachusetts and New York is the strongest in the country. The advantage shrinks if you are comparing against a modern condensing oil boiler and your electricity is expensive.',
+      'It can be. Compare the oil price and your boiler efficiency with the rate you pay for electricity and the heat pump efficiency after distribution losses. In our Maine example, the ducted option costs more than oil at the reference rates, but a more efficient ductless option can cost less.',
   },
   {
     question: 'Is a heat pump cheaper than electric resistance?',
@@ -138,7 +131,7 @@ const faqItems = [
   {
     question: 'Will a heat pump raise my electricity bill?',
     answer:
-      'Your electricity bill will rise, because you are now heating with electricity. The question is whether the total of your electricity and fuel bills falls. It usually does for oil, propane and resistance heat, and it often does not for natural gas in states with expensive power. Look at the combined bill, not the electric line alone, and be suspicious of any estimate that shows a big saving without explaining your local rate.',
+      'If you switch from a fuel-burning appliance, you will generally use more electricity. Compare that extra cost with the fuel you stop buying. If you already use electric resistance heat, an efficient heat pump can reduce electricity use for the same rooms.',
   },
   {
     question: 'Do heat pumps lose efficiency in cold weather?',
@@ -152,8 +145,8 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noa
 
 <BaseLayout>
   <SEO
-    title="Heat Pump Operating Cost by State (2026)"
-    description="Heat pump operating cost per year vs gas, oil and propane in 2026. Delivered heat cost by state, where a heat pump wins, and where cheap gas still beats it."
+    title="Heat Pump Running Costs: What Could You Save?"
+    description="Compare heat pump operating costs by state. See how gas, oil, pellets, and electricity change the numbers, then estimate your annual costs."
     path={path}
     type="Article"
     breadcrumbs={crumbs}
@@ -164,8 +157,8 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noa
 
   <PageHeader
     eyebrow="Operating cost"
-    title="Heat pump operating cost by state"
-    standfirst="Heat pump operating cost is the number that decides whether you were right. It comes down to one ratio: what you pay for electricity against what you pay for your current fuel."
+    title="What will a heat pump cost you to run?"
+    standfirst="See what it costs to deliver the same heat with electricity, gas, oil, or propane. Then use your ZIP and current heating spend to estimate the difference."
     breadcrumbs={crumbs}
     updated={updated}
     keyStat={{ value: '$900 to $1,900', label: 'Annual space heating, typical US home in a 5,000 degree day climate', source: 'Modelled from EIA rates' }}
@@ -184,9 +177,7 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noa
             </p>
             <p>
               That number accounts for the price of the fuel, the efficiency of the equipment, and the duct losses that
-              steal part of what you paid for. Once you calculate it for your state, the picture is usually clear, and it
-              is not the same picture everywhere. In Maine, a heat pump crushes oil. In Texas, a heat pump is often a
-              worse financial decision than a cheap gas furnace.
+              steal part of what you paid for. Use it to compare the same amount of heat in your state. The winner can change with your rates, the system you choose, and duct losses.
             </p>
           </div>
 
@@ -277,12 +268,15 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noa
           </Callout>
         </Section>
 
-        <Section id="versus" number="4" title="Head-to-head comparisons">
+        <Section id="versus" number="4" title="Compare the fuel you use today">
           <ul class="grid gap-4 sm:grid-cols-2">
             {[
               { label: 'Heat pump vs furnace', href: '/heat-pump-vs-furnace/', body: 'The state-by-state model, including where the furnace wins.' },
-              { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', body: 'The Northeast conversion case, where the math is strongest.' },
-              { label: 'Will it raise my electric bill?', href: '/guides/heat-pump-electric-bill/', body: 'Why the electric line rises and how to judge the total.' },
+              { label: 'Heat pump vs oil', href: '/heat-pump-vs-oil/', body: 'Use last winter’s gallons to compare oil and electric heat.' },
+              { label: 'Heat pump vs pellet stove', href: '/guides/heat-pump-vs-pellet-stove/', body: 'Compare a $1,299 pellet budget with the electricity needed for the same heat.' },
+              { label: 'Find your electricity rate on your bill', href: '/guides/find-electricity-rate-on-bill/', body: 'Work out the cost per added kilowatt-hour before estimating savings.' },
+              { label: 'Will it raise my electric bill?', href: '/guides/heat-pump-electric-bill/', body: 'Compare your winter electric bill with what you spend now.' },
+              { label: 'Heat pump vs electric baseboard', href: '/guides/heat-pump-vs-electric-baseboard/', body: 'Estimate electricity use for the same rooms before and after a switch.' },
               { label: 'Dual fuel systems', href: '/guides/dual-fuel-heat-pumps/', body: 'Running a heat pump and a furnace together, and where it wins.' },
             ].map((item) => (
               <li>

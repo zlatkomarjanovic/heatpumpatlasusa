@@ -1,6 +1,6 @@
 ---
-title: 'Eversource Heat Pump Rebate (2026): MA, CT and NH'
-description: 'Find your Eversource heat pump rebate in MA, CT or NH, see which program to apply through, and check eligibility for the Massachusetts winter rate.'
+title: 'Eversource Heat Pump Rebates: Find Your State Program'
+description: 'Find the right Eversource heat pump rebate for Massachusetts, Connecticut, or New Hampshire, and check the Massachusetts winter electricity rate.'
 primaryKeyword: 'eversource heat pump rebate'
 program: 'Eversource Heat Pump Rebates and Rates'
 administrator: 'Eversource Energy and state program partners'
@@ -67,3 +67,5 @@ For 2026 air-source systems, Mass Save lists **$2,650 per ton up to $8,500** for
 For eligible Massachusetts residential electric accounts, Eversource reduces the distribution and transmission rate from **November 1 through April 30**. Eversource says it automatically enrolls customers who received a Mass Save rebate through their Eversource electric account for a heat pump installed after January 1, 2019. Otherwise, use the [Eversource heat pump rate application](https://www.eversource.com/residential/account-billing/manage-bill/about-your-bill/rates-tariffs/heat-pump-rate) to check qualifications and the documents you need.
 
 Run the [heat pump cost calculator](/calculator/) with your ZIP code and current heating fuel for a baseline, then compare its operating-cost estimate against your own electric bill and the applicable winter tariff.
+
+If you need the installation rebate for a Massachusetts address, [check your Mass Save tier and application steps](/rebates/mass-save/). If you are comparing heating bills, [estimate your annual running costs](/calculator/) before you count the winter rate.
