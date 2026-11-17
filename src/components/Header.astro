@@ -282,7 +282,8 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
         { passive: false },
       );
 
-      window.addEventListener('pageshow', function () {
+      window.addEventListener('pageshow', function (event) {
+        if (!event.persisted) return;
         if (open) setOpen(false);
         else if (scrollLocked) unlockScroll();
       });
