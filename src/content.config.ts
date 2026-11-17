@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 /**
@@ -11,7 +12,7 @@ import { glob } from 'astro/loaders';
 
 const sourceSchema = z.object({
   label: z.string(),
-  url: z.string().url(),
+  url: z.url(),
   publisher: z.string().optional(),
   /** What this source is used for on the page. */
   supports: z.string().optional(),
@@ -55,16 +56,6 @@ const guides = defineCollection({
   schema: z.object(editorialBase),
 });
 
-const comparisons = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/comparisons' }),
-  schema: z.object({
-    ...editorialBase,
-    /** The two systems being compared, for structured rendering. */
-    leftLabel: z.string(),
-    rightLabel: z.string(),
-  }),
-});
-
 const markets = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/markets' }),
   schema: z.object({
@@ -99,14 +90,13 @@ const rebates = defineCollection({
       .default([]),
     programStatus: z.enum(['open', 'enrolling', 'reserved', 'expired', 'unknown']),
     lastVerified: z.coerce.date(),
-    officialUrl: z.string().url(),
+    officialUrl: z.url(),
     incomeGated: z.boolean().default(false),
   }),
 });
 
 export const collections = {
   guides,
-  comparisons,
   markets,
   rebates,
 };

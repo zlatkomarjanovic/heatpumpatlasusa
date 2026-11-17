@@ -13,7 +13,6 @@ import { COST_BANDS } from '@/data/costs';
 import { STATES, STATE_BY_CODE, type StateRecord } from '@/data/states';
 import { formatUsd } from '@/lib/calculator';
 import Faq from '@/components/Faq.astro';
-import KeywordCluster from '@/components/KeywordCluster.astro';
 
 import heroBg from '@/assets/images/outdoor-heat-pump-yard.jpg';
 import condenser from '@/assets/images/heat-pump-outdoor-condenser.jpg';
@@ -90,7 +89,7 @@ const marketCards = [
 
 /** Easy branded and question queries a new domain can actually compete for. */
 const easyWins = [
-  { href: '/rebates/mass-save/', title: 'Mass Save heat pump rebate', body: 'Up to $10,000 for a whole-home Massachusetts project. Reserve the rebate before anyone starts work.', meta: 'Massachusetts program', icon: 'gift' },
+  { href: '/rebates/mass-save/', title: 'Mass Save heat pump rebate', body: 'Standard whole-home rebates up to $8,500 for eligible 2026 Massachusetts projects.', meta: 'Massachusetts program', icon: 'gift' },
   { href: '/rebates/efficiency-maine/', title: 'Efficiency Maine heat pump rebate', body: 'Up to $9,000 lifetime for qualifying Maine homes. Oil-to-heat-pump is the strongest case in the country.', meta: 'Maine program', icon: 'gift' },
   { href: '/calculator/', title: 'Heat pump cost calculator', body: 'ZIP-level install cost, operating cost, only open rebates, and the cases where a furnace still wins.', meta: 'Free, no account', icon: 'calculator' },
   { href: '/electrical-panel-upgrade-cost/', title: 'Electrical panel upgrade cost', body: '$1,400 to $5,500 for a typical 200 amp panel. A heat pump does not always need one.', meta: 'Often avoidable', icon: 'bolt' },
@@ -164,7 +163,7 @@ const homeFaqs = [
   {
     question: 'How much is the Mass Save heat pump rebate?',
     answer:
-      'Whole-home Massachusetts projects can receive up to about $10,000. Partial-home projects are lower, generally $500 to $2,500, with a $500 sizing bonus in some cases. You usually need a reservation before installation. Read the Mass Save heat pump rebate page before you sign.',
+      'For eligible installations in 2026, Mass Save lists $2,650 per ton for whole-home systems and $1,125 per ton for partial-home systems. Both standard tiers cap at $8,500. Confirm the applicable requirements with Mass Save before you sign.',
   },
   {
     question: 'Do I need a panel upgrade for a heat pump?',
@@ -657,7 +656,6 @@ const homeFaqs = [
     </Section>
 
     <Faq items={homeFaqs} />
-    <KeywordCluster path={path} />
     <QuoteCta />
   </div>
 </BaseLayout>

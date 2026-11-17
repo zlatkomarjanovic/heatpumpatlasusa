@@ -1,3 +1,5 @@
+import { analyticsOptOut, analyticsPage, countAnalytics, type AnalyticsDatabase } from '../lib/analytics';
+
 /**
  * Lead intake for installer routing.
  *
@@ -10,11 +12,22 @@ export async function onRequestPost(context: {
   env: {
     LEADS?: { put(key: string, value: string): Promise<void> };
     TURNSTILE_SECRET?: string;
+    ANALYTICS?: AnalyticsDatabase;
   };
+  waitUntil(promise: Promise<unknown>): void;
 }) {
-  const form = await context.request.formData();
   const wantsJson = (context.request.headers.get('accept') ?? '').includes('application/json');
-  const turnstileError = await verifyTurnstile(context.request, form, context.env.TURNSTILE_SECRET);
+  const host = new URL(context.request.url).hostname;
+  if ((host === 'heatpumpatlasusa.com' || host === 'www.heatpumpatlasusa.com') && !context.env.TURNSTILE_SECRET) {
+    return leadResponse(wantsJson, { ok: false, error: 'Quote verification is temporarily unavailable.' }, 503);
+  }
+
+  const form = await context.request.formData().catch(() => null);
+  if (!form) {
+    return leadResponse(wantsJson, { ok: false, error: 'Invalid quote request.' }, 400);
+  }
+  const turnstileError = await verifyTurnstile(context.request, form, context.env.TURNSTILE_SECRET)
+    .catch(() => 'Could not verify this submission. Try again in a minute.');
   if (turnstileError) {
     return leadResponse(wantsJson, { ok: false, error: turnstileError }, 400);
   }
@@ -22,21 +35,33 @@ export async function onRequestPost(context: {
     id: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
     name: String(form.get('name') ?? '').slice(0, 120),
-    email: String(form.get('email') ?? '').slice(0, 200),
+    email: String(form.get('email') ?? '').trim().slice(0, 200),
     phone: String(form.get('phone') ?? '').slice(0, 40),
-    zip: String(form.get('zip') ?? '').slice(0, 10),
+    zip: String(form.get('zip') ?? '').trim(),
     market: String(form.get('market') ?? '').slice(0, 80),
     notes: String(form.get('notes') ?? '').slice(0, 2000),
     source: String(form.get('source') ?? 'site'),
     scenario: String(form.get('scenario') ?? '').slice(0, 8000),
   };
 
-  if (!lead.email || !lead.zip) {
-    return leadResponse(wantsJson, { ok: false, error: 'Email and ZIP are required.' }, 400);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email) || !/^[0-9]{5}$/.test(lead.zip)) {
+    return leadResponse(wantsJson, { ok: false, error: 'Enter a valid email and five-digit ZIP code.' }, 400);
   }
 
-  if (context.env.LEADS) {
-    await context.env.LEADS.put(`lead:${lead.id}`, JSON.stringify(lead));
+  if (!context.env.LEADS) {
+    return leadResponse(wantsJson, { ok: false, error: 'Quote storage is unavailable. Try again later.' }, 503);
+  }
+
+  await context.env.LEADS.put(`lead:${lead.id}`, JSON.stringify(lead));
+
+  const referrer = context.request.headers.get('Referer');
+  if (context.env.ANALYTICS && !analyticsOptOut(context.request) && referrer && URL.canParse(referrer)) {
+    const page = new URL(referrer);
+    if (page.origin === new URL(context.request.url).origin && analyticsPage(page.pathname)) {
+      context.waitUntil(countAnalytics(context.env.ANALYTICS, 'quote_saved', page.pathname).catch(() => {
+        console.warn('Could not count a saved quote in analytics.');
+      }));
+    }
   }
 
   return leadResponse(wantsJson, { ok: true, id: lead.id }, 200);

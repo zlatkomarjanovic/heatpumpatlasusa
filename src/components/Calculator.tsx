@@ -16,6 +16,7 @@ import {
   type PanelStatus,
 } from '@/lib/calculator';
 import { resolveZip, isValidZip } from '@/lib/zip';
+import { trackAnalytics } from '@/lib/analytics-client';
 import { GAS_MODELLED_STATES, STATES, type StateRecord } from '@/data/states';
 import type { HomeAgeKey, InsulationKey } from '@/data/costs';
 import { SITE } from '@/data/site';
@@ -131,6 +132,7 @@ export default function Calculator() {
   const [cooling, setCooling] = useState<CoolingNeed>('yes');
   const [calcTick, setCalcTick] = useState(0);
   const uid = useId();
+  const trackedSteps = useRef({ started: false, completed: false });
 
   const resolution = useMemo(() => resolveZip(input.zip), [input.zip]);
   const resolvedState: StateRecord | null = useMemo(() => {
@@ -175,6 +177,17 @@ export default function Calculator() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [input, resolvedState]);
+
+  useEffect(() => {
+    if (step === 1 && !trackedSteps.current.started) {
+      trackedSteps.current.started = true;
+      trackAnalytics('calculator_started');
+    }
+    if (step === 3 && result && !trackedSteps.current.completed) {
+      trackedSteps.current.completed = true;
+      trackAnalytics('estimate_completed');
+    }
+  }, [step, result]);
 
   const canContinue = step === 0 ? zipValid : true;
 
@@ -768,7 +781,7 @@ export default function Calculator() {
 
               {!result && (
                 <p className="mt-auto hidden pt-5 text-xs leading-relaxed text-ink-500 lg:block">
-                  Runs in your browser on published EIA and NOAA data. Nothing leaves this page while you model.
+                  Runs in your browser on published EIA and NOAA data. Your calculator inputs stay on this page.
                 </p>
               )}
             </div>
@@ -1058,7 +1071,7 @@ function LeadCapture({
       <input type="hidden" name="source" value="calculator" />
       {status === 'sent' ? (
         <p className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
-          Sent. Check your inbox for the job brief and any installers we can route in this ZIP.
+          Your request was saved.
         </p>
       ) : (
         <div className="mt-3 grid gap-2 sm:grid-cols-2">

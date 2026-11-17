@@ -453,7 +453,8 @@ html.lenis body {
   background-color: transparent;
 }
 
-.site-header.is-over-hero:not(.is-solid) .hdr-nav-link:hover {
+.site-header.is-over-hero:not(.is-solid) .hdr-nav-link:hover,
+.site-header.is-over-hero:not(.is-solid) .hdr-nav-link:focus-visible {
   color: #fff;
   background-color: rgb(255 255 255 / 0.12);
 }
@@ -671,6 +672,7 @@ html.js .faq-panel {
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition:
     grid-template-rows 0.28s cubic-bezier(0.22, 1, 0.36, 1),
@@ -686,6 +688,7 @@ html.js .faq-panel {
 .group:focus-within > .nav-dropdown {
   grid-template-rows: 1fr;
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 

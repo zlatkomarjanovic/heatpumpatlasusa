@@ -1,8 +1,6 @@
 ---
 /**
- * Privacy policy. Written to match how the site actually behaves: the
- * calculator runs client-side and transmits nothing, and a quote request is a
- * deliberate, separate action.
+ * Privacy policy for calculator inputs, aggregate analytics and quote requests.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SEO from '@/components/SEO.astro';
@@ -10,7 +8,7 @@ import PageHeader from '@/components/PageHeader.astro';
 import { SITE } from '@/data/site';
 
 const path = '/privacy/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-11-17');
 const crumbs = [
   { label: 'Home', href: '/' },
   { label: 'Privacy policy', href: path },
@@ -20,7 +18,7 @@ const crumbs = [
 <BaseLayout>
   <SEO
     title="Privacy Policy"
-    description="How HeatPumpAtlasUSA handles data. The calculator runs entirely in your browser and transmits nothing. A quote request is a separate, deliberate action."
+    description="How HeatPumpAtlasUSA handles calculator inputs, aggregate analytics and the information you submit when requesting a quote."
     path={path}
     type="WebPage"
     breadcrumbs={crumbs}
@@ -31,7 +29,7 @@ const crumbs = [
   <PageHeader
     eyebrow="Legal"
     title="Privacy policy"
-    standfirst="The short version: the calculator runs in your browser and sends nothing. We only receive information you deliberately submit, such as a quote request."
+    standfirst="Calculator inputs stay in your browser. We count site activity in aggregate and receive your details when you submit a quote request."
     breadcrumbs={crumbs}
     updated={updated}
     primaryCta={false}
@@ -44,7 +42,7 @@ const crumbs = [
       <p>
         {SITE.name} is a data and reference site. The cost calculator runs entirely in your browser against a bundled
         table of energy and climate data. Your ZIP code, home details and any figures you enter are not sent to us and
-        are not stored on a server. Nothing leaves your device unless you choose to submit a quote request.
+        are not stored on our server unless you choose to send them with a quote request.
       </p>
 
       <h2>Information we receive</h2>
@@ -68,11 +66,10 @@ const crumbs = [
 
       <h2>Analytics and cookies</h2>
       <p>
-        We aim to keep tracking minimal. If we use privacy-respecting, aggregate analytics to understand which pages are
-        useful, that data is not tied to your identity. The calculator itself contains no analytics. Any cookies we set
-        are limited to what is needed to operate the site, and you can block cookies in your browser without losing
-        access to the content or the calculator. Quote forms use Cloudflare Turnstile to reject automated
-        submissions. That check runs only when you send a form, and it can set a cookie.
+        Our first-party analytics count page views, broad traffic sources, clicks on internal links, calculator
+        starts and completions, and quote activity. We store daily totals without analytics cookies, visitor IDs,
+        IP addresses, URL query strings, calculator inputs or form values. We honor Global Privacy Control and
+        Do Not Track. Quote forms separately use Cloudflare Turnstile to reject automated submissions.
       </p>
 
       <h2>Advertising and affiliate links</h2>

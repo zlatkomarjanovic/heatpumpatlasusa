@@ -15,7 +15,7 @@ import { FUEL_REFERENCE } from '@/data/states';
 import { pickSources } from '@/data/sources';
 
 const path = '/heat-pump-vs-oil/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-11-17');
 
 const crumbs = [
   { label: 'Home', href: '/' },
@@ -212,9 +212,9 @@ const citations = pickSources(['eiaElectricity', 'eiaHeatingOil', 'censusFuel', 
           />
           <Callout tone="modelled" title="This is the number to verify against your own usage" class="mt-5">
             <p>
-              If your oil company shows your annual gallons on the delivery slip, and most do, that is a far better input
-              than any table. Enter it in the calculator as annual spend and the model will calibrate to your actual
-              house.
+              Add up a year of heating oil invoices. In the <a href="/calculator/">oil-to-heat-pump cost calculator</a>,
+              enter your ZIP, select Heating oil, and enter that dollar total as annual heating spend. If you only have
+              gallons, multiply them by your average price per gallon to estimate the spend.
             </p>
           </Callout>
         </Section>

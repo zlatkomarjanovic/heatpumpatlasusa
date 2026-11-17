@@ -26,15 +26,15 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
   ]}
 >
   <div class="container-atlas">
-    <div class="flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
-      <a href="/" class="group flex shrink-0 items-center gap-2.5" aria-label={`${SITE.name} home`}>
+    <div class="flex h-16 items-center justify-between gap-2 lg:h-[4.5rem] lg:gap-4">
+      <a href="/" class="group flex shrink-0 items-center gap-1.5 sm:gap-2.5" aria-label={`${SITE.name} home`}>
         <svg
           width="30"
           height="30"
           viewBox="0 0 32 32"
           fill="none"
           aria-hidden="true"
-          class="hdr-logo text-brand-700 transition-transform group-hover:-rotate-3"
+          class="hdr-logo size-6 text-brand-700 transition-transform group-hover:-rotate-3 sm:size-[30px]"
         >
           <rect width="32" height="32" rx="7" fill="currentColor" />
           <path d="M9 21.5c0-4 2.6-6.2 5.5-8.2C16.8 11.8 18 10 18 7.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" />
@@ -42,7 +42,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
           <path d="M10 24.5h12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity="0.6" />
         </svg>
         <span class="flex flex-col leading-none">
-          <span class="hdr-brand text-ink-950 text-[0.95rem] font-semibold tracking-tight sm:text-base"
+          <span class="hdr-brand text-ink-950 text-[0.875rem] font-semibold tracking-tight sm:text-base"
             >HeatPumpAtlas<span class="hdr-brand-accent text-brand-600">USA</span></span
           >
           <span class="hdr-sub text-ink-500 mt-0.5 hidden text-2xs font-medium tracking-wide uppercase sm:block"
@@ -59,11 +59,12 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
               <a
                 href={item.href}
                 class:list={[
+                  'hdr-nav-link inline-flex min-h-10 items-center gap-1.5 rounded-md px-3 text-sm font-semibold transition-colors',
                   isNavItemActive(item, current) || isActive(item.href)
                     ? 'text-brand-700 bg-brand-50'
                     : 'text-ink-700 hover:text-brand-700 hover:bg-brand-50',
                 ]}
-                aria-haspopup={item.children ? 'true' : undefined}
+                aria-current={current === item.href ? 'page' : undefined}
               >
                 {item.label}
                 {item.children && (
@@ -80,6 +81,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
                         <li>
                           <a
                             href={child.href}
+                            aria-current={current === child.href ? 'page' : undefined}
                             class="hover:bg-brand-50 block rounded-lg px-3.5 py-2.5 transition-colors"
                           >
                             <span class="text-ink-900 block text-sm font-semibold">{child.label}</span>
@@ -98,14 +100,14 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
         </ul>
       </nav>
 
-        <a href="/calculator/" class="hdr-cta btn-primary !px-3 !py-2 sm:!px-3.5">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <div class="flex shrink-0 items-center gap-2">
+        <a href="/calculator/" class="hdr-cta btn-primary !px-2.5 !py-2 sm:!px-3.5">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="hidden sm:block">
             <rect x="2.5" y="1.5" width="11" height="13" rx="2" stroke="currentColor" stroke-width="1.4" />
             <path d="M5.5 5h5M5.5 8h5M5.5 11h2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
           </svg>
           <span class="sm:hidden">Estimate</span>
           <span class="hidden sm:inline">Get my estimate</span>
-          <span class="hidden sm:inline">See your real cost</span>
         </a>
 
         <button
@@ -160,6 +162,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
             )}
           </li>
         ))}
+      </ul>
       <div class="mt-5 grid gap-2">
         <a href="/calculator/" class="btn-primary w-full py-3">Get my estimate</a>
         <a href="/#quote" class="btn-secondary w-full py-3">Get installer quotes</a>
@@ -167,7 +170,6 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
           How we calculate the numbers
         </a>
       </div>
-      </a>
     </nav>
   </div>
 </header>
@@ -239,6 +241,12 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
         event.preventDefault();
         event.stopPropagation();
         setOpen(!open);
+      });
+
+      panel.addEventListener('click', function (event) {
+        if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.target instanceof Element && event.target.closest('a[href]')) {
+          setOpen(false);
+        }
       });
 
       document.addEventListener('keydown', function (event) {

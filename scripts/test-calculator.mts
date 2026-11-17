@@ -104,6 +104,13 @@ console.log('\nMassachusetts: whole-home rebate is reflected after rebates');
   check('after-rebate low is below installed low', r.effectiveUpfrontCost.low < r.installedCost.low);
 }
 
+console.log('\nMass Save uses a single standard rebate cap');
+{
+  const r = runCalculator({ ...base, fuel: 'oil', state: STATE_BY_CODE.MA });
+  const eligible = r.rebates.filter((line) => line.status === 'open');
+  check('whole-home and partial-home alternatives do not stack', eligible.length === 1 && eligible[0].amountHigh === 8500);
+}
+
 console.log('\nReserved programs are excluded from totals and flagged');
 {
   const r = runCalculator({ ...base, fuel: 'oil', annualHeatingSpend: 2600, state: STATE_BY_CODE.ME });

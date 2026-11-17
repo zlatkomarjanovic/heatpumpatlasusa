@@ -5,7 +5,7 @@ primaryKeyword: 'heat pump electric bill'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
-updated: 2026-09-14
+updated: 2026-11-17
 tags: ['comparison', 'operating-cost']
 related:
   - '/heat-pump-operating-cost/'
@@ -69,7 +69,9 @@ That is the number to prepare for. What offsets it is the fuel bill you no longe
 
 If you were spending $900 a year on natural gas, the same arithmetic goes the other way, and the heat pump may cost you money.
 
-The [operating cost page](/heat-pump-operating-cost/) shows which states fall into which category, and the [calculator](/calculator/) produces the specific figure for your ZIP and your fuel.
+A heat pump using **500 kWh in a winter month at $0.22 per kWh** adds **$110** to the electric bill. If it replaces **$140** of heating oil that month, total heating costs fall by **$30** even though the electric bill rises. This example assumes the same heating load and excludes fixed charges, which can remain even when fuel use drops.
+
+See [heat pump operating costs by state](/heat-pump-operating-cost/) for regional comparisons, then [estimate electricity use and heating costs for your ZIP](/calculator/) using your current fuel and annual heating spend.
 
 ## Why the electric line rises more than people expect
 

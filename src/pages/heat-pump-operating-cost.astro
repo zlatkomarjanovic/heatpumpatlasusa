@@ -15,7 +15,7 @@ import { FUEL_REFERENCE } from '@/data/states';
 import { pickSources } from '@/data/sources';
 
 const path = '/heat-pump-operating-cost/';
-const updated = new Date('2026-09-14');
+const updated = new Date('2026-11-17');
 
 const crumbs = [
   { label: 'Home', href: '/' },
@@ -189,6 +189,11 @@ const citations = pickSources(['eiaElectricity', 'eiaGas', 'eiaHeatingOil', 'noa
               worse financial decision than a cheap gas furnace.
             </p>
           </div>
+
+          <p class="prose-atlas mt-4">
+            <a href="/calculator/">Estimate your annual heat pump operating cost</a> using your ZIP code and current
+            heating fuel. Enter your annual heating spend if you have it to compare against your own costs.
+          </p>
 
           <Callout tone="modelled" title="What the table below is" class="mt-6">
             <p>

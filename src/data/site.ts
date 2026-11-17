@@ -26,7 +26,7 @@ export const SITE = {
    * Public Turnstile site key. The matching secret is a Worker secret named
    * TURNSTILE_SECRET, never committed.
    */
-  turnstileSiteKey: '0x4AAAAAAE-DGCT7nhXohwHn',
+  turnstileSiteKey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAE-DGCT7nhXohwHn',
 } as const;
 
 /**
@@ -67,7 +67,7 @@ export const PRIMARY_NAV: NavItem[] = [
     description: 'Which programs are open right now',
     children: [
       { label: 'All heat pump rebates', href: '/rebates/', description: 'Only programs still accepting applications' },
-      { label: 'Mass Save', href: '/rebates/mass-save/', description: 'Massachusetts, up to $10,000' },
+      { label: 'Mass Save', href: '/rebates/mass-save/', description: 'Massachusetts, standard rebates up to $8,500' },
       { label: 'Efficiency Maine', href: '/rebates/efficiency-maine/', description: 'Income tiers and reserved HEAR money' },
       { label: 'NYSERDA', href: '/rebates/nys-clean-heat/', description: 'NYS Clean Heat plus New York HEAR' },
       { label: 'Efficiency Vermont', href: '/rebates/efficiency-vermont/', description: 'Open rebate, waitlisted HEAR' },

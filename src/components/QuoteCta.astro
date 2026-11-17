@@ -34,7 +34,7 @@ const fullTitle =
 
 const fullBody =
   Astro.props.body ??
-  'The range is already on this site, and the calculator will give you a ZIP-level number for free. What you do not have is a bid that uses the same scope. We send your ZIP and that range to installers who work the market, and we tell them to quote that job. You get the emails. You decide.';
+  'Share your ZIP and the details of the job you want quoted. Use the calculator to estimate your costs before submitting a request.';
 
 const teaserTitle = Astro.props.title ?? 'The range is not the bid';
 const teaserBody =
@@ -97,8 +97,8 @@ const formId = 'quote';
           <ul class="mt-5 space-y-2.5 text-sm">
             {[
               'We attach the modeled range so the bid has to price that job, not a sales package',
-              'You also get a one-page brief you can hand to any contractor you found yourself',
-              'Phone is optional. No account. If nobody covers your ZIP yet, you still get the brief',
+              'Include details like existing ducts, current fuel and any quotes you already received',
+              'Phone is optional. No account required',
             ].map((line) => (
               <li class="text-ink-700 flex gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="text-save-600 mt-0.5 shrink-0">
@@ -139,7 +139,7 @@ const formId = 'quote';
                 type="text"
                 inputmode="numeric"
                 autocomplete="postal-code"
-                pattern="\d{5}"
+                pattern="[0-9]{5}"
                 maxlength="5"
                 required
                 placeholder="02134"
@@ -197,9 +197,6 @@ const formId = 'quote';
               <Icon name="route" size={16} />
               Get installer quotes
             </button>
-            <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status">
-              Sent. Check your inbox for the job brief and any installers we can route in this ZIP.
-            </p>
             <p id={`${formId}-error`} class="hidden text-xs text-heat-700" role="alert">
               Could not send just now. Try again in a minute, or email editorial from the About page.
             </p>
@@ -210,6 +207,9 @@ const formId = 'quote';
               <a href="/about/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">money model</a>.
             </p>
           </form>
+            <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status">
+              Your request was saved.
+            </p>
           <script is:inline>
             (function () {
               var form = document.getElementById('quote-form');
@@ -226,21 +226,14 @@ const formId = 'quote';
                   body: new FormData(form),
                   headers: { Accept: 'application/json' },
                 })
-                  .then(function (res) {
-                    return res.json().then(function (body) {
-                      return { ok: res.ok && body && body.ok, body: body };
-                    });
+                  .then(async function (res) {
+                    const body = await res.json();
+                    return res.ok && body && body.ok;
                   })
-                  .then(function (result) {
-                    if (result.ok) {
+                  .then(function (saved) {
+                    if (saved) {
                       form.reset();
-                      var fields = form.querySelectorAll('input:not([type="hidden"]), textarea, button[type="submit"], .cf-turnstile');
-                      for (var i = 0; i < fields.length; i++) {
-                        var node = fields[i];
-                        if (node && node.style) node.style.display = 'none';
-                        var wrap = node.closest ? node.closest('div') : null;
-                        if (wrap && wrap !== form) wrap.style.display = 'none';
-                      }
+                      form.classList.add('hidden');
                       if (success) success.classList.remove('hidden');
                       return;
                     }

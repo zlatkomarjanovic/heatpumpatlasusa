@@ -292,8 +292,7 @@ function regionalMultiplier(state: StateRecord | null): number {
  */
 export const STATE_REBATES: Record<string, RebateLine[]> = {
   MA: [
-    { id: 'ma-mass-save-whole-home', program: 'Mass Save whole-home air source heat pump', amountLow: 1250, amountHigh: 10000, status: 'open', note: 'Rebate scales with tons installed and whether the heat pump covers the whole home. Income-qualified tiers can exceed the standard cap.', href: '/rebates/mass-save/' },
-    { id: 'ma-mass-save-partial', program: 'Mass Save partial-home air source heat pump', amountLow: 500, amountHigh: 2500, status: 'open', note: 'Partial-home projects are eligible for a lower rebate, plus a sizing bonus in some cases.', href: '/rebates/mass-save/' },
+    { id: 'ma-mass-save', program: 'Mass Save standard air-source heat pump rebate', amountLow: 0, amountHigh: 8500, status: 'open', note: '2026 whole-home and partial-home rates are alternatives. Eligibility and installed capacity determine the amount.', href: '/rebates/mass-save/' },
     { id: 'ma-hear', program: 'Massachusetts HEAR (federal home energy rebate)', amountLow: 0, amountHigh: 8000, status: 'enrolling', note: 'Federal HEAR funds are allocated to Massachusetts; consumer portal timing and income gates have moved. Confirm status before promising a figure.' },
   ],
   ME: [
@@ -463,11 +462,6 @@ export function runCalculator(input: CalculatorInput): CalculatorResult {
   }
 
   const rebateConfidence: Confidence = rebates.length === 0 ? 'low' : 'medium';
-
-  const effectiveUpfrontCost: CostRange = {
-    low: Math.max(0, installedCost.low - rebateHigh),
-    high: Math.max(0, installedCost.high - rebateLow),
-  };
 
   // Totals.
   const adderLow = electricalAdders.reduce((sum, a) => sum + a.range.low, 0);

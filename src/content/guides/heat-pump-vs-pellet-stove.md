@@ -1,11 +1,11 @@
 ---
 title: 'Heat Pump vs Pellet Stove'
-description: 'Heat pump vs pellet stove: a pellet stove is cheap zone heat if you can source cheap pellets and do the work. A heat pump is hands-off whole-home comfort.'
+description: 'Compare heat pump and pellet stove running costs with a worked annual example, a break-even electricity rate, and a ZIP-based calculator.'
 primaryKeyword: 'heat pump vs pellet stove'
 author: HeatPumpAtlasUSA Editorial
 reviewedBy: HeatPumpAtlasUSA Editorial
 published: 2026-09-14
-updated: 2026-09-14
+updated: 2026-11-17
 tags: ['comparison']
 related:
   - '/heat-pump-operating-cost/'
@@ -57,7 +57,20 @@ The comparison swings on your pellet price and your electricity rate, and both a
 - Where bagged pellets are cheap and electricity is expensive, a pellet stove can deliver heat at a lower cost per unit than almost anything else.
 - Where pellets are trucked in at a premium and electricity is moderate, a cold-climate heat pump usually delivers cheaper heat overall.
 
-Because a heat pump moves three to four units of heat per unit of electricity, it competes well even against inexpensive fuels. The [operating cost page](/heat-pump-operating-cost/) puts real state electricity prices behind the heat pump side, and the [heat pump vs oil](/heat-pump-vs-oil/) comparison shows how the same efficiency logic plays out against a delivered fuel.
+A heat pump with a seasonal coefficient of performance of 3 delivers three units of heat for each unit of electricity. Actual seasonal performance depends on the equipment and climate. The [operating cost page](/heat-pump-operating-cost/) puts real state electricity prices behind the heat pump side, and the [heat pump vs oil](/heat-pump-vs-oil/) comparison shows how the same efficiency logic plays out against a delivered fuel.
+
+## Annual cost example for the same amount of heat
+
+Suppose you burn **3 tons of pellets per year at $433 per ton**. At an assumed **16.5 million BTU per ton** and **75% stove efficiency**, that supplies about **37.1 million BTU of useful heat**. A heat pump averaging a seasonal coefficient of performance (COP) of **3.0** would need about **3,627 kWh** to deliver that same heat.
+
+| Heating source | Annual energy used | Assumed price | Annual fuel or electricity cost |
+| --- | ---: | ---: | ---: |
+| Pellet stove | 3 tons | $433 per ton | $1,299 |
+| Heat pump | 3,627 kWh | $0.22 per kWh | About $798 |
+
+In this example, the heat pump costs **about $501 less per year** to run. The two options cost about the same at **$0.358 per kWh** if pellet price and efficiency stay fixed. These figures exclude installation, maintenance, stove electricity and backup heat. Use the same heated space when comparing costs, since a stove that serves one room may deliver much less heat than a whole-home system.
+
+To model your own home, open the [heat pump cost calculator](/calculator/), enter your ZIP, select **Wood or pellet stove**, and add your annual pellet spend if you know it. The calculator models your home using its own efficiency assumptions. See [heat pump operating costs by state](/heat-pump-operating-cost/) and [how a heat pump compares with heating oil](/heat-pump-vs-oil/) for other fuel comparisons.
 
 ## Coverage: one room versus the whole house
 

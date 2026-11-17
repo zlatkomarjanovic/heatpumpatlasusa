@@ -39,7 +39,7 @@ faqs:
   - question: 'How much does a heat pump cost in Boston?'
     answer: 'Greater Boston is one of the more expensive US markets for this work, with labor running above the national average. A ducted heat pump in a typical Boston-area home generally lands in the $11,000 to $25,000 range before incentives, with ductless systems lower and cold-climate equipment adding a premium. The wide range reflects the housing stock, which includes a lot of pre-1940 homes with no ducts and tight electrical services.'
   - question: 'How much can I get from Mass Save in Boston?'
-    answer: 'Whole-home air source heat pump projects can reach around $10,000 depending on installed capacity and whether the heat pump becomes the primary heating system. Partial-home projects receive a lower tier. Income-qualified households can access enhanced tiers above the standard caps. The program requires a rebate commitment letter before work begins.'
+    answer: 'Standard whole-home air-source projects installed in 2026 can qualify for $2,650 per ton up to $8,500. Partial-home projects have a lower per-ton amount of $1,125 and the same cap. Income-qualified offers have separate terms. Confirm which documents and approvals your project needs before work starts.'
   - question: 'Is a heat pump worth it in Boston on running cost?'
     answer: 'It depends heavily on what you are replacing. Against oil, which heats roughly a quarter of Massachusetts homes, the case is strong even at 29.61 cent electricity. Against natural gas, which heats about half the state, the case is much closer and depends on whether you can access the seasonal heat pump rate. Run your own numbers before deciding.'
   - question: 'What is unusual about Boston housing stock for heat pump installation?'
@@ -68,7 +68,7 @@ The [oil comparison](/heat-pump-vs-oil/) and the [furnace comparison](/heat-pump
 
 ## The rebate stack
 
-Massachusetts has the most mature incentive program in the country. [Mass Save](/rebates/mass-save/) pays up to about $10,000 for whole-home air source heat pump projects, with lower tiers for partial-home installations and a sizing bonus for partial projects designed to cover the full heating load.
+[Mass Save](/rebates/mass-save/) lists a standard whole-home air-source rebate of $2,650 per ton up to $8,500 for eligible 2026 installations. Partial-home projects have a lower per-ton amount and the same cap.
 
 The critical operational detail is the reservation requirement. Mass Save generally requires a rebate commitment letter secured before installation, and the letter is time-limited. Confirm this in writing before signing a contract.
 

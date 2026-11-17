@@ -286,4 +286,4 @@ const graph = [
 <meta name="twitter:image" content={socialImage} />
 <meta name="twitter:image:alt" content={`${SITE.name}: ${title}`} />
 
-<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
