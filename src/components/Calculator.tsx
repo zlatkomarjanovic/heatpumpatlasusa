@@ -1064,13 +1064,12 @@ function LeadCapture({
     >
       <h3 className="text-sm font-semibold">Ask installers to price this job</h3>
       <p className="mt-1 text-xs leading-relaxed text-white/70">
-        You already have the range. We send this ZIP and these numbers to installers who work it, and we tell them to
-        quote this scope, not a different system. You get the emails.
+        Submit your estimate and contact details with the quote request. You can use the same estimate to compare bids.
       </p>
       <input type="hidden" name="scenario" value={scenario} />
       <input type="hidden" name="source" value="calculator" />
       {status === 'sent' ? (
-        <p className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
+        <p role="status" className="mt-3 rounded-md bg-white/10 px-3 py-2 text-sm">
           Your request was saved.
         </p>
       ) : (

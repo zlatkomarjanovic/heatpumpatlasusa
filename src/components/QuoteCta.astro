@@ -96,7 +96,7 @@ const formId = 'quote';
 
           <ul class="mt-5 space-y-2.5 text-sm">
             {[
-              'We attach the modeled range so the bid has to price that job, not a sales package',
+              'Use the modeled range when you compare bids for the same job',
               'Include details like existing ducts, current fuel and any quotes you already received',
               'Phone is optional. No account required',
             ].map((line) => (
@@ -207,9 +207,9 @@ const formId = 'quote';
               <a href="/about/" class="text-brand-700 underline decoration-brand-200 underline-offset-2">money model</a>.
             </p>
           </form>
-            <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status">
-              Your request was saved.
-            </p>
+          <p id={`${formId}-success`} class="hidden rounded-md bg-save-50 px-3 py-2 text-sm text-save-800" role="status" tabindex="-1">
+            Your request was saved.
+          </p>
           <script is:inline>
             (function () {
               var form = document.getElementById('quote-form');
@@ -234,7 +234,11 @@ const formId = 'quote';
                     if (saved) {
                       form.reset();
                       form.classList.add('hidden');
-                      if (success) success.classList.remove('hidden');
+                      if (success) {
+                        success.classList.remove('hidden');
+                        success.focus({ preventScroll: true });
+                        success.scrollIntoView({ block: 'center' });
+                      }
                       return;
                     }
                     if (error) error.classList.remove('hidden');
